@@ -1,0 +1,25 @@
+{
+  "id": "reading-headings-1",
+  "title": "Computational Linguistics and Language Acquisition",
+  "passage": "Digital learning applications have revolutionized self-paced language acquisition through algorithmic spaced repetition. By analyzing user recall intervals, adaptive software presents vocabulary precisely before memory decay occurs. While algorithmic flashcards significantly increase lexical breadth, communicative fluency requires interactive conversational practice. Educational psychologists emphasize that artificial intelligence tools should supplement, rather than replace, human-led seminar discussions.",
+  "blanks": [
+    {
+      "index": 1,
+      "question": "Language software optimizes memorization using algorithmic ______ repetition.",
+      "answer": "spaced",
+      "alternatives": ["interval"]
+    },
+    {
+      "index": 2,
+      "question": "Adaptive learning platforms schedule reviews immediately before memory ______ happens.",
+      "answer": "decay",
+      "alternatives": ["loss", "fading"]
+    },
+    {
+      "index": 3,
+      "question": "Experts maintain that artificial tools should ______ rather than supplant human seminars.",
+      "answer": "supplement",
+      "alternatives": ["augment", "assist"]
+    }
+  ]
+}

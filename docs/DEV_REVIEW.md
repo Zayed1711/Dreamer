@@ -2,7 +2,7 @@
 
 **Author:** Antigravity (Developer Agent)  
 **Date:** 20 November 2026  
-**Repository Branch:** `phase-3/streaks-and-reminders` (and `phase-2/daily-quest`, `phase-0/ci-check`)  
+**Repository Branch:** `phase-4/course-and-lessons` (and `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
 **Purpose:** Comprehensive log of all modifications, additions, architectural decisions, and verification steps for senior developer review.
 
 ---
@@ -21,6 +21,10 @@
 | **Phase 2: Daily Quest** | 2.6 UI | Completed | Daily Quest card on Dashboard + new route `/daily` |
 | **Phase 3: Streaks & Reminders** | 3.1 Weekly Journey Streak | Completed | `packages/journey-engine/src/streak.ts` + status window UI + unit tests |
 | **Phase 3: Streaks & Reminders** | 3.2 In-App Reminders | Completed | `packages/journey-engine/src/reminders.ts` + prioritized single-line banner on Home |
+| **Phase 4: Founder's IELTS Course** | 4.1 Lessons & Practice Content | Completed | 12 structured lessons in `content/course/lessons.json` + 4 reading comprehension practice sets |
+| **Phase 4: Founder's IELTS Course** | 4.2 Engine Logic & EXP Unlocks | Completed | `packages/journey-engine/src/course.ts` (`unlockedLessons`, `nextUnlock`, `markReadingPractice`) + 7 vitest tests |
+| **Phase 4: Founder's IELTS Course** | 4.3 Data Layer | Completed | Added `loadCompletedPractices()`, `submitPracticeCompletion()` with EXP awards, and migration in `store.ts` |
+| **Phase 4: Founder's IELTS Course** | 4.4 UI & Video Player | Completed | Swappable YouTube player (`LessonVideo.tsx`), `/course`, `/course/[id]`, `/course/practice/[id]`, and Home banner |
 
 ---
 
@@ -177,15 +181,78 @@
 
 ---
 
+### Phase 4: Founder's IELTS Course (EXP-Unlocked Lessons)
+
+#### 4.1 Content Architecture (`content/course/`)
+- **Masterclass Lessons (`lessons.json`)**:
+  - 12 progressive lessons covering all four IELTS Academic modules (Reading, Writing, Listening, Speaking).
+  - Open Question 3 alignment: Unlocked progressively by student journey EXP. The first 2 introductory lessons unlock at 0 EXP, with each subsequent lesson unlocking every 100 EXP (0, 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 EXP).
+  - Open Question 2 alignment: Configured for unlisted YouTube video streaming via `videoUrl`.
+  - Content structure includes duration, module section, summary takeaways, and linked practice comprehension sets.
+- **Reading Practice Sets (`content/course/reading/`)**:
+  - 4 original, academic-style passages with fill-in-the-blank comprehension questions:
+    - `reading-intro-1.json`: "International Student Mobility in Higher Education" (3 blanks).
+    - `reading-skimming-1.json`: "Renewable Energy Transitions in Developing Nations" (3 blanks).
+    - `reading-tfng-1.json`: "Cognitive Benefits of Bilingualism in Adult Learners" (3 blanks).
+    - `reading-headings-1.json`: "Urban Microclimates and Sustainable Architectural Design" (3 blanks).
+  - Compliant with `AGENTS.md` (no scraped or copyrighted Cambridge/IELTS test materials).
+
+#### 4.2 Journey Engine (`packages/journey-engine/`)
+- **Types (`src/types.ts`)**:
+  - Added `CourseSection`, `Lesson`, `CourseData`, `ReadingBlank`, `ReadingPracticeSet`, and `ReadingMarkResult`.
+- **Pure Functions (`src/course.ts`)**:
+  - `unlockedLessons(lessons, exp)`: Filters lessons whose `unlockExp <= exp`.
+  - `nextUnlock(lessons, exp)`: Returns the next locked lesson and the remaining EXP required (`expNeeded = unlockExp - exp`), or `null` when all lessons are unlocked.
+  - `markReadingPractice(practice, answers)`: Evaluates user submissions case-insensitively, trims whitespace, supports valid synonymous alternatives, calculates accuracy percentage, and returns `passed: true` if accuracy >= 67% (2 out of 3).
+- **Vitest Unit Tests (`packages/journey-engine/test/course.test.ts`)**:
+  - 7 unit tests covering unlock thresholds, next unlock calculations, case-insensitivity, alternative answers, and 67% pass thresholds.
+  - Total monorepo tests: 68/68 passing.
+
+#### 4.3 Data Layer & EXP Architecture (`apps/web/src/lib/store.ts`)
+- **Reading Practice Persistence**:
+  - Added `loadCompletedPractices()`: Fetches completed practice IDs from Supabase `daily_quest_submissions` (with `quest_type = 'reading_practice'`) or localStorage (`dreamer-preview-practices`).
+  - Added `submitPracticeCompletion(practiceId)`:
+    - Awards +20 EXP upon first passing completion.
+    - Prevents double-claiming of EXP for already-completed practice sets.
+    - Logs completion date to `activity_days` to feed the student's weekly streak.
+    - Supabase upsert with RLS: Stores submission and activity records.
+- **EXP Aggregation (`loadStudent`)**:
+  - Integrates practice completion EXP into `extraExp`.
+  - Propagated to `computeProgress(journey, completed, today, defaultContent, extraExp)`.
+  - Correctly boosts student EXP, level, and English stat without altering rank milestone gates or flight journey progress bar.
+- **Account Migration (`moveLocalProgressToAccount`)**:
+  - Migrates preview-mode completed practice sets to the student's Supabase account upon first sign-in.
+
+#### 4.4 User Interface (`apps/web/`)
+- **Swappable Video Player (`apps/web/src/components/LessonVideo.tsx`)**:
+  - Responsive 16:9 iframe embed supporting standard and unlisted YouTube video URLs.
+  - Configured with `rel=0&modestbranding=1` for distraction-free learning.
+- **Course Index Page (`apps/web/src/app/course/page.tsx`)**:
+  - Groups lessons by IELTS module (Reading, Writing, Listening, Speaking).
+  - Visual indicators for unlocked lessons (Play button, duration, practice tag) and locked lessons (Lock icon, exact EXP required to unlock).
+  - Status banner displaying current student EXP and the remaining EXP needed for the next lesson.
+- **Lesson Detail Page (`apps/web/src/app/course/[id]/page.tsx`)**:
+  - When unlocked: Embeds the video player, structured notes, and a direct launch button for the corresponding reading practice (+20 EXP). Shows completion status if already passed.
+  - When locked: Displays a System window card detailing the required EXP, current student EXP, and a guide on how to earn EXP.
+- **Reading Practice Page (`apps/web/src/app/course/practice/[id]/page.tsx`)**:
+  - Displays academic reading passage in a `.window` card.
+  - Interactive fill-in-the-blank inputs.
+  - Instant client-side marking via `markReadingPractice`.
+  - Displays per-question feedback with accepted answers, pass/fail banner, and automatically claims +20 EXP on passing.
+- **Home Dashboard Integration (`apps/web/src/components/Dashboard.tsx`)**:
+  - Added Founder's IELTS Masterclass banner below the flight progress bar.
+  - Displays dynamic status: `"Next unlock in {expNeeded} EXP ›"` or `"12/12 unlocked ›"`.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-0/ci-check`, `phase-2/daily-quest`, and `phase-3/streaks-and-reminders`.
+- [x] **No Direct Commits to Main**: All work performed on `phase-4/course-and-lessons` (and previous phases `phase-0/ci-check`, `phase-2/daily-quest`, `phase-3/streaks-and-reminders`).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/quests/english/`, data access strictly through `store.ts`.
-- [x] **Migrations**: Migrations maintained with row-level security.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified.
-- [x] **Tests Passing**: 61 vitest tests passing in `packages/journey-engine` (engine, daily, and streak test suites).
-- [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled 11 routes cleanly).
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, course content in `content/course/`, data access strictly through `store.ts`.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/course`, `/course/[id]`, `/course/practice/[id]`, and Dashboard.
+- [x] **Tests Passing**: All 68 vitest tests passing in `packages/journey-engine` (engine, daily, streak, and course test suites).
+- [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 12 routes cleanly with static and dynamic optimizations).
 
 

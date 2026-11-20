@@ -1,0 +1,25 @@
+{
+  "id": "reading-intro-1",
+  "title": "International Student Mobility in Higher Education",
+  "passage": "Global student mobility has surged over the past two decades as universities worldwide expand their international recruitment programs. Cross-border education fosters academic collaboration and drives economic contributions in destination cities. International students often face initial challenges, including cultural acclimatization and language adjustments. However, institutions that provide dedicated orientation programs and language support witness significantly higher retention rates and academic achievement among their international cohorts.",
+  "blanks": [
+    {
+      "index": 1,
+      "question": "Universities expand international recruitment to foster academic ______ across borders.",
+      "answer": "collaboration",
+      "alternatives": ["partnerships", "exchange"]
+    },
+    {
+      "index": 2,
+      "question": "Initial challenges faced by students include cultural ______ and language adjustments.",
+      "answer": "acclimatization",
+      "alternatives": ["adaptation", "adjustment"]
+    },
+    {
+      "index": 3,
+      "question": "Higher student retention is observed when institutions offer dedicated ______ programs.",
+      "answer": "orientation",
+      "alternatives": ["mentoring", "support"]
+    }
+  ]
+}

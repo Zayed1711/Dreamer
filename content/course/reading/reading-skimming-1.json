@@ -1,0 +1,25 @@
+{
+  "id": "reading-skimming-1",
+  "title": "On-Campus Accommodation vs. Private Tenancy",
+  "passage": "Choosing between living in a university hall of residence and leasing a private off-campus apartment represents a pivotal financial decision for overseas scholars. On-campus dormitories generally include utility bills and broadband internet within a fixed termly fee, simplifying monthly budgeting. Conversely, private rentals often require personal utility contracts and substantial damage deposits. Nonetheless, private apartments provide greater privacy and independence, making them popular among postgraduate researchers with intensive laboratory schedules.",
+  "blanks": [
+    {
+      "index": 1,
+      "question": "On-campus halls typically include utility bills within a fixed ______ fee.",
+      "answer": "termly",
+      "alternatives": ["semester", "monthly"]
+    },
+    {
+      "index": 2,
+      "question": "Private accommodation typically requires personal contracts and substantial damage ______.",
+      "answer": "deposits",
+      "alternatives": ["deposit", "fees"]
+    },
+    {
+      "index": 3,
+      "question": "Greater privacy makes private apartments attractive to ______ researchers.",
+      "answer": "postgraduate",
+      "alternatives": ["graduate", "doctoral"]
+    }
+  ]
+}

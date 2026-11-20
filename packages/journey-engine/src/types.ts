@@ -223,3 +223,54 @@ export interface CheckResult {
   problems: string[];
 }
 
+// ---------- Course & Lessons ----------
+
+export type CourseSection = "reading" | "writing" | "listening" | "speaking";
+
+export interface Lesson {
+  id: string;
+  title: string;
+  section: CourseSection;
+  videoUrl: string;
+  durationMin: number;
+  unlockExp: number;
+  summary: string;
+  practiceId?: string;
+}
+
+export interface CourseData {
+  version: number;
+  courseTitle: string;
+  instructor: string;
+  description: string;
+  lessons: Lesson[];
+}
+
+export interface ReadingBlank {
+  index: number;
+  question: string;
+  answer: string;
+  alternatives?: string[];
+}
+
+export interface ReadingPracticeSet {
+  id: string;
+  title: string;
+  passage: string;
+  blanks: ReadingBlank[];
+}
+
+export interface ReadingMarkResult {
+  passed: boolean;
+  score: number;
+  total: number;
+  percentage: number;
+  results: {
+    index: number;
+    correct: boolean;
+    expected: string;
+    given: string;
+  }[];
+}
+
+

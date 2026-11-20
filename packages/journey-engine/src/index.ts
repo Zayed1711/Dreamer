@@ -16,5 +16,13 @@ export {
 } from "./daily";
 export { getMondayOfWeek, computeWeeklyStreak } from "./streak";
 export { getUrgentReminder, type UrgentReminder, type ReminderType } from "./reminders";
+export {
+  defaultCourse,
+  defaultReadingPractices,
+  unlockedLessons,
+  nextUnlock,
+  markReadingPractice,
+} from "./course";
+
 
 

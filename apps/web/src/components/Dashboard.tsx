@@ -5,8 +5,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   computeProgress,
   defaultContent,
+  defaultCourse,
   getUrgentReminder,
   levelForExp,
+  nextUnlock,
   parseMonth,
   pickDailyQuest,
   questDate,
@@ -98,6 +100,11 @@ export function Dashboard({
   const levelStart = expForLevel(progress.level);
   const levelEnd = expForLevel(progress.level + 1);
   const levelPct = ((progress.exp - levelStart) / (levelEnd - levelStart)) * 100;
+
+  const nextIeltsUnlock = useMemo(
+    () => nextUnlock(defaultCourse.lessons, progress.exp),
+    [progress.exp],
+  );
 
   const gateItems = (nextRankDef?.gate?.requires ?? [])
     .map((req) => journey.items.find((i) => i.key === req.split(".")[0]))
@@ -206,6 +213,26 @@ export function Dashboard({
       </section>
 
       <FlightBar journey={journey} progress={progress} />
+
+      {/* IELTS Masterclass banner */}
+      <Link
+        href="/course"
+        className="window flex items-center justify-between p-3.5 transition-colors hover:border-[var(--accent)]"
+      >
+        <div className="flex items-center gap-2">
+          <span className="font-mono text-[10px] uppercase tracking-wider border border-[var(--accent)] px-1.5 py-0.5 text-[var(--accent)]">
+            IELTS
+          </span>
+          <span className="font-title text-xs font-semibold tracking-wide uppercase text-[var(--text)] sm:text-sm">
+            Founder&apos;s IELTS Masterclass
+          </span>
+        </div>
+        <span className="font-mono text-xs text-[var(--accent)]">
+          {nextIeltsUnlock
+            ? `Next unlock in ${nextIeltsUnlock.expNeeded} EXP ›`
+            : "12/12 unlocked ›"}
+        </span>
+      </Link>
 
       {/* Daily Quest window */}
       <section className="window p-4">

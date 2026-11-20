@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "courseTitle": "Founder's IELTS Masterclass",
+  "instructor": "Dreamer Founder",
+  "description": "Comprehensive band 7.5+ preparation course. Master active test-taking strategies with lessons unlocked through your journey EXP.",
+  "lessons": [
+    {
+      "id": "intro-overview",
+      "title": "IELTS Academic Structure & Band Descriptors",
+      "section": "reading",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 14,
+      "unlockExp": 0,
+      "summary": "Introduction to the four IELTS modules, scoring criteria, and how examiner band descriptors determine your overall score.",
+      "practiceId": "reading-intro-1"
+    },
+    {
+      "id": "reading-skimming",
+      "title": "Skimming & Scanning Academic Passages",
+      "section": "reading",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 18,
+      "unlockExp": 0,
+      "summary": "Master speed reading techniques to locate topic sentences, headings, and quantitative data without getting bogged down in unfamiliar vocabulary.",
+      "practiceId": "reading-skimming-1"
+    },
+    {
+      "id": "writing-task1-charts",
+      "title": "Writing Task 1: Deciphering Charts & Graphs",
+      "section": "writing",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 22,
+      "unlockExp": 100,
+      "summary": "How to write a high-scoring 150-word report on bar charts, line graphs, and pie charts with an impactful overview statement."
+    },
+    {
+      "id": "listening-section1",
+      "title": "Listening Part 1: Form Completion & Spelled Details",
+      "section": "listening",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 15,
+      "unlockExp": 200,
+      "summary": "Techniques for catching telephone numbers, addresses, British vs American names, and avoiding common distractor traps."
+    },
+    {
+      "id": "speaking-part1",
+      "title": "Speaking Part 1: Fluency, Range & Natural Rhythm",
+      "section": "speaking",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 16,
+      "unlockExp": 300,
+      "summary": "How to answer familiar introductory questions with expanded details, idiom variety, and confident intonation."
+    },
+    {
+      "id": "reading-true-false",
+      "title": "Reading: True, False, Not Given Decoded",
+      "section": "reading",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 20,
+      "unlockExp": 400,
+      "summary": "The exact logical boundary between 'False' (contradicts the text) and 'Not Given' (unmentioned or speculative).",
+      "practiceId": "reading-tfng-1"
+    },
+    {
+      "id": "writing-task2-opinion",
+      "title": "Writing Task 2: Agree or Disagree Essays",
+      "section": "writing",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 25,
+      "unlockExp": 500,
+      "summary": "Structuring a 250-word argumentative essay: balanced viewpoint, clear thesis statement, and topic sentences supported by evidence."
+    },
+    {
+      "id": "listening-maps",
+      "title": "Listening Part 2: Map & Diagram Labeling",
+      "section": "listening",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 17,
+      "unlockExp": 600,
+      "summary": "Navigating spatial layout descriptions, directional vocabulary (adjacent, opposite, corridor), and speaker orientation."
+    },
+    {
+      "id": "speaking-cue-card",
+      "title": "Speaking Part 2: Conquering the 2-Minute Cue Card",
+      "section": "speaking",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 21,
+      "unlockExp": 700,
+      "summary": "One-minute note-taking strategy using the story-arc method to speak fluently for the full 120 seconds."
+    },
+    {
+      "id": "reading-matching-headings",
+      "title": "Reading: Matching Paragraph Headings",
+      "section": "reading",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 19,
+      "unlockExp": 800,
+      "summary": "Identifying the macro argument of each paragraph rather than falling for keyword matches in secondary sentences.",
+      "practiceId": "reading-headings-1"
+    },
+    {
+      "id": "writing-task2-discussion",
+      "title": "Writing Task 2: Discussion Essays & Cohesion",
+      "section": "writing",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 24,
+      "unlockExp": 900,
+      "summary": "Mastering cohesive devices, paragraph transitions, and giving both sides equal analytical depth before your conclusion."
+    },
+    {
+      "id": "speaking-part3",
+      "title": "Speaking Part 3: Abstract Academic Discourse",
+      "section": "speaking",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "durationMin": 22,
+      "unlockExp": 1000,
+      "summary": "Expressing abstract opinions, speculating about future societal trends, and employing academic hedges and qualifiers."
+    }
+  ]
+}

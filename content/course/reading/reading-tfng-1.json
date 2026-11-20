@@ -1,0 +1,25 @@
+{
+  "id": "reading-tfng-1",
+  "title": "Renewable Energy Research Clusters",
+  "passage": "European technological institutes have heavily invested in specialized solar and wind testing centers. Funding stems from both European Union competitive innovation grants and regional clean-technology consortiums. While solar cell efficiency has improved steadily in laboratory trials, commercial viability depends on battery storage scalability. Critics argue that grid integration costs are understated in government transition timelines, whereas proponents emphasize long-term environmental dividends.",
+  "blanks": [
+    {
+      "index": 1,
+      "question": "European institutes obtain research funding from competitive innovation ______.",
+      "answer": "grants",
+      "alternatives": ["grant", "subsidies"]
+    },
+    {
+      "index": 2,
+      "question": "Commercial deployment of solar technology depends on the scalability of ______ storage.",
+      "answer": "battery",
+      "alternatives": ["energy", "power"]
+    },
+    {
+      "index": 3,
+      "question": "Opponents argue that the costs of ______ integration are underestimated in public roadmaps.",
+      "answer": "grid",
+      "alternatives": ["network", "system"]
+    }
+  ]
+}

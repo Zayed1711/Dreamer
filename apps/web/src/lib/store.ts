@@ -25,6 +25,7 @@ const COMPLETED_KEY = "dreamer-preview-completed";
 const DAILY_KEY = "dreamer-preview-daily";
 const ACTIVITY_KEY = "dreamer-preview-activity";
 const STREAKS_KEY = "dreamer-preview-streaks";
+const PRACTICE_KEY = "dreamer-preview-practice";
 
 export interface DailySubmission {
   quest_date: string;
@@ -67,6 +68,7 @@ function localClear() {
     localStorage.removeItem(DAILY_KEY);
     localStorage.removeItem(ACTIVITY_KEY);
     localStorage.removeItem(STREAKS_KEY);
+    localStorage.removeItem(PRACTICE_KEY);
   } catch {}
 }
 
@@ -137,9 +139,11 @@ export async function loadStudent(): Promise<StudentData> {
   const uid = await currentUserId();
   if (!supabase || !uid) {
     const dailySubmissions = localGet<Record<string, DailySubmission>>(DAILY_KEY) ?? {};
-    const extraExp = Object.values(dailySubmissions)
+    const dailyExp = Object.values(dailySubmissions)
       .filter((s) => s.passed)
       .reduce((sum, s) => sum + (s.exp || 0), 0);
+    const practices = localGet<string[]>(PRACTICE_KEY) ?? [];
+    const extraExp = dailyExp + practices.length * 20;
     return {
       profile: localGet<Profile>(PROFILE_KEY),
       completed: localGet<string[]>(COMPLETED_KEY) ?? [],
@@ -437,6 +441,65 @@ export async function loadWeeklyStreak(
   return streak;
 }
 
+// ---------- Course Reading Practices ----------
+
+export async function loadCompletedPractices(): Promise<string[]> {
+  const uid = await currentUserId();
+  if (!supabase || !uid) {
+    return localGet<string[]>(PRACTICE_KEY) ?? [];
+  }
+  const { data } = await supabase
+    .from("daily_quest_submissions")
+    .select("payload")
+    .eq("user_id", uid)
+    .eq("quest_type", "reading_practice");
+  return (data ?? [])
+    .map((r: { payload: unknown }) => (r.payload as { practiceId?: string })?.practiceId)
+    .filter(Boolean) as string[];
+}
+
+export async function submitPracticeCompletion(
+  practiceId: string,
+): Promise<{ expAwarded: number; totalCompleted: string[] }> {
+  const uid = await currentUserId();
+  const today = questDate();
+  const completed = await loadCompletedPractices();
+  if (completed.includes(practiceId)) {
+    return { expAwarded: 0, totalCompleted: completed };
+  }
+
+  const expAwarded = 20;
+  const updatedCompleted = [...completed, practiceId];
+
+  if (!supabase || !uid) {
+    localSet(PRACTICE_KEY, updatedCompleted);
+    // Record activity day
+    const days = localGet<string[]>(ACTIVITY_KEY) ?? [];
+    if (!days.includes(today)) {
+      localSet(ACTIVITY_KEY, [...days, today]);
+    }
+    return { expAwarded, totalCompleted: updatedCompleted };
+  }
+
+  // Supabase mode
+  await Promise.all([
+    supabase.from("daily_quest_submissions").upsert(
+      {
+        user_id: uid,
+        quest_date: today,
+        track: "practice",
+        quest_type: "reading_practice",
+        payload: { practiceId },
+        passed: true,
+        exp: expAwarded,
+      },
+      { onConflict: "user_id,quest_date,track" },
+    ),
+    supabase.from("activity_days").upsert({ user_id: uid, day: today }, { ignoreDuplicates: true }),
+  ]);
+
+  return { expAwarded, totalCompleted: updatedCompleted };
+}
 
 /**
  * After a student signs in on a browser where they already used the preview,
@@ -502,6 +565,24 @@ export async function moveLocalProgressToAccount(): Promise<void> {
         freezes_reset_at: s.freezesResetAt,
       },
       { onConflict: "user_id,kind" },
+    );
+  }
+
+  // Migrate completed practice sets
+  const localPractices = localGet<string[]>(PRACTICE_KEY) ?? [];
+  if (localPractices.length > 0) {
+    const today = questDate();
+    await supabase.from("daily_quest_submissions").upsert(
+      localPractices.map((practiceId) => ({
+        user_id: uid,
+        quest_date: today,
+        track: "practice",
+        quest_type: "reading_practice",
+        payload: { practiceId },
+        passed: true,
+        exp: 20,
+      })),
+      { onConflict: "user_id,quest_date,track" },
     );
   }
 
