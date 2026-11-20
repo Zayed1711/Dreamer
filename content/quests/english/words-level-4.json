@@ -1,0 +1,608 @@
+{
+  "level": 4,
+  "name": "Level 4 (B2 IELTS Academic)",
+  "source": "Dreamer Academic English Corpus (original compilation)",
+  "license": "Dreamer Open Educational Content License",
+  "words": [
+    {
+      "word": "advocate",
+      "meaning": "publicly recommend or support",
+      "sentence": "Student leaders advocate for expanded mental health resources.",
+      "bn": "সমর্থন করা"
+    },
+    {
+      "word": "aggregate",
+      "meaning": "a whole formed by combining several separate elements",
+      "sentence": "Admissions review committees aggregate your GPA, test scores, and essays.",
+      "bn": "সমষ্টিগত"
+    },
+    {
+      "word": "allocate",
+      "meaning": "distribute for a particular purpose",
+      "sentence": "Universities allocate merit fellowships based on academic rank.",
+      "bn": "বরাদ্দ করা"
+    },
+    {
+      "word": "ambiguity",
+      "meaning": "the quality of being open to more than one interpretation; inexactness",
+      "sentence": "Eliminate rhetorical ambiguity by choosing precise verbs.",
+      "bn": "অস্পষ্টতা"
+    },
+    {
+      "word": "analogy",
+      "meaning": "a comparison between two things, typically for the purpose of explanation or clarification",
+      "sentence": "The professor used an electrical circuit analogy to explain blood flow.",
+      "bn": "সাদৃশ্য"
+    },
+    {
+      "word": "coherent",
+      "meaning": "logical and consistent; forming a unified whole",
+      "sentence": "Ensure every body paragraph connects to a coherent thesis argument.",
+      "bn": "সুসঙ্গত"
+    },
+    {
+      "word": "commodity",
+      "meaning": "a raw material or primary agricultural product that can be bought and sold",
+      "sentence": "In modern economies, specialized data is a valuable commodity.",
+      "bn": "পণ্য"
+    },
+    {
+      "word": "compatible",
+      "meaning": "able to exist or occur together without conflict",
+      "sentence": "Verify that your degree modules are compatible with transfer policies.",
+      "bn": "সামঞ্জস্যপূর্ণ"
+    },
+    {
+      "word": "compensate",
+      "meaning": "give someone something, typically money, in recognition of loss, suffering, or injury",
+      "sentence": "Teaching assistantships compensate students with monthly stipends.",
+      "bn": "ক্ষতিপূরণ দেওয়া"
+    },
+    {
+      "word": "compile",
+      "meaning": "produce something by assembling information collected from other sources",
+      "sentence": "Compile all required recommendation letters into a single PDF.",
+      "bn": "সংকলন করা"
+    },
+    {
+      "word": "complement",
+      "meaning": "a thing that completes or brings to perfection",
+      "sentence": "Practical laboratory experiments complement theoretical lectures.",
+      "bn": "পরিপূরক"
+    },
+    {
+      "word": "comprehensive",
+      "meaning": "complete; including all or nearly all elements or aspects of something",
+      "sentence": "Our university directory provides a comprehensive guide to funding.",
+      "bn": "বিস্তৃত / পূর্ণাঙ্গ"
+    },
+    {
+      "word": "comprise",
+      "meaning": "consist of; be made up of",
+      "sentence": "The admissions committee comprises department chairs and deans.",
+      "bn": "গঠিত হওয়া"
+    },
+    {
+      "word": "conceive",
+      "meaning": "form or devise a plan or idea in the mind",
+      "sentence": "Researchers conceive innovative hypotheses through rigorous literature review.",
+      "bn": "ধারণা করা / উদ্ভাবন করা"
+    },
+    {
+      "word": "concurrent",
+      "meaning": "existing, happening, or done at the same time",
+      "sentence": "Students may enroll in concurrent language and computing workshops.",
+      "bn": "যুগপৎ / সমসাময়িক"
+    },
+    {
+      "word": "confine",
+      "meaning": "keep or restrict someone or something within certain limits of space, scope, quantity, or time",
+      "sentence": "Do not confine your university search to big metropolitan capitals.",
+      "bn": "সীমাবদ্ধ রাখা"
+    },
+    {
+      "word": "conform",
+      "meaning": "comply with rules, standards, or laws",
+      "sentence": "Ensure your submitted thesis formatting conforms to institutional norms.",
+      "bn": "মেনে চলা"
+    },
+    {
+      "word": "consent",
+      "meaning": "permission for something to happen or agreement to do something",
+      "sentence": "Participants must sign written consent forms before the clinical trial.",
+      "bn": "সম্মতি"
+    },
+    {
+      "word": "constraint",
+      "meaning": "a limitation or restriction",
+      "sentence": "Budget constraints require students to cook meals at home.",
+      "bn": "সীমাবদ্ধতা"
+    },
+    {
+      "word": "contemporary",
+      "meaning": "living or occurring at the same time; belonging to or occurring in the present",
+      "sentence": "Analyze contemporary issues in international environmental law.",
+      "bn": "সমসাময়িক"
+    },
+    {
+      "word": "contradict",
+      "meaning": "deny the truth of a statement by asserting the opposite",
+      "sentence": "Empirical lab results should not contradict basic physical laws.",
+      "bn": "বিরোধিতা করা"
+    },
+    {
+      "word": "contrary",
+      "meaning": "opposite in nature, direction, or meaning",
+      "sentence": "Contrary to common belief, international scholarships exist for all majors.",
+      "bn": "বিপরীত"
+    },
+    {
+      "word": "controversy",
+      "meaning": "disagreement, typically when prolonged, public, and heated",
+      "sentence": "Scientific controversies are resolved through peer-reviewed replication.",
+      "bn": "বিতর্ক"
+    },
+    {
+      "word": "convene",
+      "meaning": "come or bring together for a meeting or activity; assemble",
+      "sentence": "The international student council will convene next Wednesday afternoon.",
+      "bn": "সমাবেশ করা"
+    },
+    {
+      "word": "conversely",
+      "meaning": "introducing a statement or idea which reverses one that has just been made or referred to",
+      "sentence": "High grades open doors; conversely, academic dishonesty ends careers.",
+      "bn": "বিপরীতভাবে"
+    },
+    {
+      "word": "convert",
+      "meaning": "cause to change in form, character, or function",
+      "sentence": "Convert your local GPA into international four-point scale metrics.",
+      "bn": "রূপান্তর করা"
+    },
+    {
+      "word": "convince",
+      "meaning": "cause someone to believe firmly in the truth of something",
+      "sentence": "A strong statement of purpose will convince admissions officers of your focus.",
+      "bn": "বিশ্বাস করানো"
+    },
+    {
+      "word": "crucial",
+      "meaning": "of great importance",
+      "sentence": "Proofreading your personal statement is crucial before final submission.",
+      "bn": "অত্যন্ত প্রয়োজনীয়"
+    },
+    {
+      "word": "cumulative",
+      "meaning": "increasing or increased in quantity, degree, or force by successive additions",
+      "sentence": "Your cumulative grade point average reflects four years of sustained diligence.",
+      "bn": "ক্রমপুঞ্জিত"
+    },
+    {
+      "word": "decline",
+      "meaning": "diminish in number or quality; politely refuse",
+      "sentence": "Politely decline secondary offers once your primary admission is accepted.",
+      "bn": "হ্রাস পাওয়া / প্রত্যাখ্যান করা"
+    },
+    {
+      "word": "definite",
+      "meaning": "clearly stated or decided; not vague or doubtful",
+      "sentence": "Establish a definite timeline for completing standard English exams.",
+      "bn": "সুনির্দিষ্ট"
+    },
+    {
+      "word": "demonstrate",
+      "meaning": "clearly show proof or evidence",
+      "sentence": "Demonstrate your research capability through your capstone report.",
+      "bn": "প্রদর্শন করা"
+    },
+    {
+      "word": "denote",
+      "meaning": "indicate or be a sign of",
+      "sentence": "Standard phonetic symbols denote proper English pronunciation.",
+      "bn": "বোঝানো"
+    },
+    {
+      "word": "depict",
+      "meaning": "represent by a drawing, painting, or other art form; portray in words",
+      "sentence": "Academic bar charts depict quantitative trends over sequential decades.",
+      "bn": "চিত্রিত করা"
+    },
+    {
+      "word": "derive",
+      "meaning": "obtain something from a source",
+      "sentence": "Linguists derive modern etymologies from ancient root words.",
+      "bn": "আহরণ করা"
+    },
+    {
+      "word": "designate",
+      "meaning": "appoint someone to a specified position; indicate",
+      "sentence": "Designate two professors who know your laboratory work personally.",
+      "bn": "মনোনীত করা"
+    },
+    {
+      "word": "deviation",
+      "meaning": "the action of departing from an established course or accepted standard",
+      "sentence": "Any deviation from academic honesty codes will be flagged.",
+      "bn": "বিচ্যুতি"
+    },
+    {
+      "word": "differentiate",
+      "meaning": "distinguish between items",
+      "sentence": "Be able to differentiate between correlated phenomena and causal factors.",
+      "bn": "পার্থক্য করা"
+    },
+    {
+      "word": "diminish",
+      "meaning": "reduce in size or importance",
+      "sentence": "Language barriers diminish as you converse daily with roommates.",
+      "bn": "কমে যাওয়া"
+    },
+    {
+      "word": "discretion",
+      "meaning": "the freedom to decide what should be done in a particular situation",
+      "sentence": "Admissions committees use holistic discretion when evaluating candidates.",
+      "bn": "বিবেচনা / স্বাধীনতা"
+    },
+    {
+      "word": "discriminate",
+      "meaning": "recognize a distinction; differentiate",
+      "sentence": "Learners must discriminate between authoritative sources and unvetted blogs.",
+      "bn": "পার্থক্য নিরূপণ করা"
+    },
+    {
+      "word": "displace",
+      "meaning": "cause something to move from its proper or usual place",
+      "sentence": "Technological advancements displace repetitive manual workflows.",
+      "bn": "স্থানান্তরিত করা"
+    },
+    {
+      "word": "dispose",
+      "meaning": "get rid of by throwing away, giving, or selling to someone else",
+      "sentence": "Properly dispose of chemical reagents according to lab protocols.",
+      "bn": "নিষ্পত্তি করা / ফেলা"
+    },
+    {
+      "word": "disseminate",
+      "meaning": "spread something, especially information, widely",
+      "sentence": "Scholars disseminate groundbreaking discoveries in open-access journals.",
+      "bn": "ছড়িয়ে দেওয়া"
+    },
+    {
+      "word": "distinct",
+      "meaning": "readily distinguishable by the senses or the intellect",
+      "sentence": "Each engineering discipline requires a distinct set of foundational skills.",
+      "bn": "সুস্পষ্ট"
+    },
+    {
+      "word": "distort",
+      "meaning": "pull or twist out of shape; give a misleading or false account or impression of",
+      "sentence": "Avoid biased wording that might distort factual research data.",
+      "bn": "বিকৃত করা"
+    },
+    {
+      "word": "diverse",
+      "meaning": "showing variety",
+      "sentence": "Join a diverse study circle to examine problems from multiple perspectives.",
+      "bn": "নানা প্রকার"
+    },
+    {
+      "word": "domain",
+      "meaning": "a sphere of activity or knowledge",
+      "sentence": "Natural language processing is a fascinating domain in data science.",
+      "bn": "কর্মক্ষেত্র"
+    },
+    {
+      "word": "draft",
+      "meaning": "preliminary version of a written work",
+      "sentence": "Submit your thesis draft to your supervisor ahead of the review session.",
+      "bn": "খসড়া"
+    },
+    {
+      "word": "duration",
+      "meaning": "the time during which something continues",
+      "sentence": "The standard duration of a master's degree program is twenty-four months.",
+      "bn": "মেয়াদ / স্থিতিকাল"
+    },
+    {
+      "word": "dynamic",
+      "meaning": "characterized by constant change, activity, or progress",
+      "sentence": "Modern software engineering is an exceptionally dynamic industry.",
+      "bn": "গতিশীল"
+    },
+    {
+      "word": "eliminate",
+      "meaning": "completely remove",
+      "sentence": "Eliminate distracting background noise when studying for exams.",
+      "bn": "বর্জন করা"
+    },
+    {
+      "word": "emerge",
+      "meaning": "become apparent or prominent",
+      "sentence": "Clear research paradigms emerge after extensive literature review.",
+      "bn": "উঠে আসা"
+    },
+    {
+      "word": "empirical",
+      "meaning": "originating in or based on observation or experience",
+      "sentence": "Present empirical measurements to corroborate theoretical simulations.",
+      "bn": "বাস্তবসম্মত / প্রায়োগিক"
+    },
+    {
+      "word": "enable",
+      "meaning": "make possible",
+      "sentence": "Campus tutoring centers enable students to strengthen their quantitative skills.",
+      "bn": "সমর্থ করা"
+    },
+    {
+      "word": "encounter",
+      "meaning": "unexpectedly experience or be faced with something difficult",
+      "sentence": "International freshmen often encounter unfamiliar grading methods.",
+      "bn": "মুখোমুখি হওয়া"
+    },
+    {
+      "word": "enhance",
+      "meaning": "intensify, increase, or further improve the quality, value, or extent of",
+      "sentence": "Independent research projects enhance your competitive scholarship standing.",
+      "bn": "বৃদ্ধি করা / উন্নত করা"
+    },
+    {
+      "word": "enormous",
+      "meaning": "very large in size, quantity, or extent",
+      "sentence": "The university library contains an enormous repository of digital dissertations.",
+      "bn": "বিশাল"
+    },
+    {
+      "word": "ensure",
+      "meaning": "make certain that something will happen",
+      "sentence": "Ensure your bank balance certificate matches visa requirements.",
+      "bn": "নিশ্চিত করা"
+    },
+    {
+      "word": "entity",
+      "meaning": "an organization or distinct existence",
+      "sentence": "The research institute operates as a non-profit scientific entity.",
+      "bn": "প্রতিষ্ঠান / সত্তা"
+    },
+    {
+      "word": "equate",
+      "meaning": "regard as equal or equivalent",
+      "sentence": "Never equate test preparation speed with deep conceptual comprehension.",
+      "bn": "সমান করা"
+    },
+    {
+      "word": "equip",
+      "meaning": "supply with the necessary items for a particular purpose",
+      "sentence": "Graduate programs equip candidates with rigorous methodology skills.",
+      "bn": "সজ্জিত করা"
+    },
+    {
+      "word": "equivalent",
+      "meaning": "equal in value, amount, function, meaning, etc.",
+      "sentence": "A three-year honours degree may require equivalent bridge coursework abroad.",
+      "bn": "সমকক্ষ"
+    },
+    {
+      "word": "establish",
+      "meaning": "set up on a firm basis",
+      "sentence": "Establish clear academic goals before embarking on your overseas journey.",
+      "bn": "প্রতিষ্ঠিত করা"
+    },
+    {
+      "word": "estimate",
+      "meaning": "approximate calculation",
+      "sentence": "Estimate living costs realistically before committing to an overseas university.",
+      "bn": "অনুমান"
+    },
+    {
+      "word": "evaluate",
+      "meaning": "assess the quality of",
+      "sentence": "Peer reviewers evaluate journal submissions for rigor and originality.",
+      "bn": "মূল্যায়ন করা"
+    },
+    {
+      "word": "evident",
+      "meaning": "plain or obvious",
+      "sentence": "It was evident that she had prepared extensively for the technical interview.",
+      "bn": "স্পষ্টত প্রতীয়মান"
+    },
+    {
+      "word": "evolve",
+      "meaning": "develop gradually, especially from a simple to a more complex form",
+      "sentence": "Academic theories evolve as new empirical data is verified.",
+      "bn": "বিবর্তিত হওয়া"
+    },
+    {
+      "word": "exceed",
+      "meaning": "be greater in number or size than a quantity or number",
+      "sentence": "Ensure your luggage does not exceed airline weight restrictions.",
+      "bn": "অতিক্রম করা"
+    },
+    {
+      "word": "exclude",
+      "meaning": "deny someone or something access to or bar from a place, group, or privilege",
+      "sentence": "Do not exclude less famous universities with high faculty rankings.",
+      "bn": "বাদ দেওয়া"
+    },
+    {
+      "word": "exhibit",
+      "meaning": "manifest or deliberately display a quality or type of behavior",
+      "sentence": "Successful scholars exhibit intellectual curiosity and persistence.",
+      "bn": "প্রদর্শন করা"
+    },
+    {
+      "word": "expand",
+      "meaning": "grow larger",
+      "sentence": "International study will expand your career horizons across continents.",
+      "bn": "প্রসারিত হওয়া"
+    },
+    {
+      "word": "explicit",
+      "meaning": "clearly and directly expressed",
+      "sentence": "Admissions instructions provide explicit word limit expectations.",
+      "bn": "সুনির্দিষ্ট"
+    },
+    {
+      "word": "exploit",
+      "meaning": "use productively",
+      "sentence": "Exploit university networking fairs to connect with hiring executives.",
+      "bn": "কাজে লাগানো"
+    },
+    {
+      "word": "expose",
+      "meaning": "make visible or introduce",
+      "sentence": "Visiting professorships expose undergraduates to cutting-edge research.",
+      "bn": "উন্মোচিত করা"
+    },
+    {
+      "word": "external",
+      "meaning": "originating outside",
+      "sentence": "External examiners review master's theses to ensure standard quality.",
+      "bn": "বহিরাগত"
+    },
+    {
+      "word": "extract",
+      "meaning": "remove or take out, especially by effort or force",
+      "sentence": "Data analysts extract actionable insights from vast consumer datasets.",
+      "bn": "উদ্ধার করা / নিষ্কাশন করা"
+    },
+    {
+      "word": "facilitate",
+      "meaning": "make easier",
+      "sentence": "Discussion boards facilitate ongoing discourse outside lecture halls.",
+      "bn": "সহজতর করা"
+    },
+    {
+      "word": "fluctuate",
+      "meaning": "rise and fall irregularly in number or amount",
+      "sentence": "Foreign currency exchange rates fluctuate continuously throughout the term.",
+      "bn": "উঠা-নামা করা"
+    },
+    {
+      "word": "format",
+      "meaning": "arrangement or style",
+      "sentence": "Adhere strictly to the requested font and citation format.",
+      "bn": "কাঠামো"
+    },
+    {
+      "word": "formulate",
+      "meaning": "create or devise methodically a strategy or a proposal",
+      "sentence": "Formulate a clear hypothesis before beginning laboratory trials.",
+      "bn": "প্রণয়ন করা"
+    },
+    {
+      "word": "framework",
+      "meaning": "an essential supporting structure of a building, vehicle, or system",
+      "sentence": "The research paper follows a rigorous theoretical framework.",
+      "bn": "কাঠামো / ফ্রেমওয়ার্ক"
+    },
+    {
+      "word": "function",
+      "meaning": "an activity or purpose natural to or intended for a person or thing",
+      "sentence": "The primary function of an abstract is summarizing key findings.",
+      "bn": "কাজ / ক্রিয়াকলাপ"
+    },
+    {
+      "word": "fundamental",
+      "meaning": "forming a necessary base or core; of central importance",
+      "sentence": "Grammatical accuracy is a fundamental component of clear scholarly prose.",
+      "bn": "মৌলিক"
+    },
+    {
+      "word": "generate",
+      "meaning": "produce or create",
+      "sentence": "Collaborative brain-storming sessions generate innovative engineering solutions.",
+      "bn": "উৎপন্ন করা"
+    },
+    {
+      "word": "hierarchy",
+      "meaning": "a system or organization in which people or groups are ranked one above the other according to status or authority",
+      "sentence": "Understand the faculty hierarchy when reaching out to research labs.",
+      "bn": "ক্রমোচ্চ শ্রেণীবিভাগ"
+    },
+    {
+      "word": "highlight",
+      "meaning": "draw special attention to",
+      "sentence": "Highlight your quantitative publications on your academic resume.",
+      "bn": "বিশেষভাবে উল্লেখ করা"
+    },
+    {
+      "word": "hypothesis",
+      "meaning": "a proposed explanation made on the basis of limited evidence as a starting point for further investigation",
+      "sentence": "Test each hypothesis through controlled laboratory experiments.",
+      "bn": "অনুকল্প / হাইপোথিসিস"
+    },
+    {
+      "word": "identical",
+      "meaning": "similar in every detail; exactly alike",
+      "sentence": "Two identical transcripts are required by the credential evaluator.",
+      "bn": "হুবহু এক"
+    },
+    {
+      "word": "identify",
+      "meaning": "establish or indicate who or what someone or something is",
+      "sentence": "Identify three potential faculty advisors before submitting applications.",
+      "bn": "চিহ্নিত করা"
+    },
+    {
+      "word": "ideology",
+      "meaning": "a system of ideas and ideals, especially one which forms the basis of economic or political theory and policy",
+      "sentence": "Examine historical texts without projecting modern ideology onto them.",
+      "bn": "মতাদর্শ"
+    },
+    {
+      "word": "illustrate",
+      "meaning": "explain or make something clear by using examples, charts, or pictures",
+      "sentence": "Use relevant historical examples to illustrate your central argument.",
+      "bn": "উদাহরণ দিয়ে ব্যাখ্যা করা"
+    },
+    {
+      "word": "impact",
+      "meaning": "a marked effect or influence",
+      "sentence": "Early preparation has a profound impact on scholarship success.",
+      "bn": "প্রভাব"
+    },
+    {
+      "word": "implement",
+      "meaning": "put a decision, plan, or agreement into effect",
+      "sentence": "Implement a structured review system for daily vocabulary retention.",
+      "bn": "বাস্তবায়ন করা"
+    },
+    {
+      "word": "implication",
+      "meaning": "the conclusion that can be drawn from something, although it is not explicitly stated",
+      "sentence": "Discuss the broader societal implication of your ecological research.",
+      "bn": "তাৎপর্য / ইঙ্গিত"
+    },
+    {
+      "word": "implicit",
+      "meaning": "implied though not plainly expressed",
+      "sentence": "An implicit assumption in the paper was subjected to critical debate.",
+      "bn": "অন্তর্নিহিত"
+    },
+    {
+      "word": "incentive",
+      "meaning": "a thing that motivates or encourages one to do something",
+      "sentence": "Full tuition remission provides a tremendous incentive for top applicants.",
+      "bn": "প্রণোদনা"
+    },
+    {
+      "word": "incorporate",
+      "meaning": "take in or contain something as part of a whole; include",
+      "sentence": "Incorporate supervisor feedback into your final thesis submission.",
+      "bn": "অন্তর্ভুক্ত করা"
+    },
+    {
+      "word": "indicate",
+      "meaning": "point out; show",
+      "sentence": "Preliminary survey results indicate widespread student support for online archives.",
+      "bn": "নির্দেশ করা"
+    },
+    {
+      "word": "individual",
+      "meaning": "single; separate",
+      "sentence": "Schedule an individual meeting with your advisor to discuss course credits.",
+      "bn": "ব্যক্তিগত / স্বতন্ত্র"
+    }
+  ]
+}

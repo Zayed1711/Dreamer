@@ -169,3 +169,57 @@ export interface Progress {
   completedMilestones: string[];
   overdue: string[];
 }
+
+// ---------- Daily Quests ----------
+
+export interface WordItem {
+  word: string;
+  meaning: string;
+  sentence: string;
+  bn?: string;
+}
+
+export interface WordListFile {
+  level: number;
+  name: string;
+  source: string;
+  license: string;
+  words: WordItem[];
+}
+
+export interface PromptItem {
+  id: string;
+  level: number;
+  prompt: string;
+  bn?: string;
+}
+
+export interface PromptsFile {
+  version: number;
+  prompts: PromptItem[];
+}
+
+export type DailyQuestType = "words" | "sentences" | "writing";
+
+export interface DailyQuest {
+  date: string;
+  track: string;
+  type: DailyQuestType;
+  level: number;
+  prompt?: PromptItem;
+  words?: WordItem[];
+}
+
+export interface DailyStreak {
+  currentCount: number;
+  bestCount: number;
+  lastPeriod: string;
+  freezesLeft: number;
+  freezesResetAt: string;
+}
+
+export interface CheckResult {
+  passed: boolean;
+  problems: string[];
+}
+

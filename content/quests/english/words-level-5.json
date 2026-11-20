@@ -1,0 +1,614 @@
+{
+  "level": 5,
+  "name": "Level 5 (B2+ Research & Analysis)",
+  "source": "Dreamer Academic English Corpus (original compilation)",
+  "license": "Dreamer Open Educational Content License",
+  "words": [
+    {
+      "word": "accentuate",
+      "meaning": "make more noticeable or prominent",
+      "sentence": "Use crisp paragraph openings to accentuate your key claims.",
+      "bn": "জোর দেওয়া"
+    },
+    {
+      "word": "adhere",
+      "meaning": "believe in and follow the practices of; stick fast to",
+      "sentence": "Scholars must adhere strictly to established citation standards.",
+      "bn": "মেনে চলা"
+    },
+    {
+      "word": "advocate",
+      "meaning": "recommend publicly",
+      "sentence": "Faculty mentors advocate for increased conference travel grants.",
+      "bn": "সমর্থন করা"
+    },
+    {
+      "word": "aggregate",
+      "meaning": "formed by the conjunction or collection of particulars into a whole mass or sum",
+      "sentence": "Aggregate survey findings provide reliable statistical power.",
+      "bn": "সমষ্টিগত"
+    },
+    {
+      "word": "alleviate",
+      "meaning": "make suffering, deficiency, or a problem less severe",
+      "sentence": "Generous stipends alleviate financial anxiety for international graduate scholars.",
+      "bn": "উপশম করা"
+    },
+    {
+      "word": "allocate",
+      "meaning": "designate funds",
+      "sentence": "Departments allocate competitive teaching positions to incoming scholars.",
+      "bn": "বরাদ্দ দেওয়া"
+    },
+    {
+      "word": "ambivalent",
+      "meaning": "having mixed feelings or contradictory ideas about something or someone",
+      "sentence": "He was ambivalent about choosing between two top research offers.",
+      "bn": "দ্বিধাগ্রস্ত"
+    },
+    {
+      "word": "amorphous",
+      "meaning": "without a clearly defined shape or form",
+      "sentence": "An amorphous research topic must be narrowed into a tangible question.",
+      "bn": "আকারহীন / অস্পষ্ট"
+    },
+    {
+      "word": "analogous",
+      "meaning": "comparable in certain respects, typically in a way which makes clearer the nature of the things compared",
+      "sentence": "Brain neural pathways are somewhat analogous to distributed computing networks.",
+      "bn": "অনুরূপ"
+    },
+    {
+      "word": "articulate",
+      "meaning": "express an idea or feeling fluently and coherently",
+      "sentence": "Articulate your academic goals with clarity during the interview.",
+      "bn": "স্পষ্টভাবে প্রকাশ করা"
+    },
+    {
+      "word": "ascertain",
+      "meaning": "find something out for certain; make sure of",
+      "sentence": "Contact the embassy to ascertain exact visa financial documentation.",
+      "bn": "নিশ্চিত করা"
+    },
+    {
+      "word": "assert",
+      "meaning": "state a fact or belief confidently and forcefully",
+      "sentence": "The author asserts that economic incentives drive technological breakthroughs.",
+      "bn": "দাবি করা"
+    },
+    {
+      "word": "assimilate",
+      "meaning": "take in information, ideas, or culture and understand fully",
+      "sentence": "International students assimilate into campus life through clubs.",
+      "bn": "আত্মস্থ করা"
+    },
+    {
+      "word": "augment",
+      "meaning": "make something greater by adding to it; increase",
+      "sentence": "Augment your standard curriculum with independent machine learning projects.",
+      "bn": "বৃদ্ধি করা"
+    },
+    {
+      "word": "authentic",
+      "meaning": "of undisputed origin; genuine",
+      "sentence": "Ensure all submitted degree documents are authentic and certified.",
+      "bn": "খাঁটি / আসল"
+    },
+    {
+      "word": "autonomous",
+      "meaning": "having the freedom to act independently",
+      "sentence": "Doctoral candidates must become autonomous researchers.",
+      "bn": "স্বায়ত্তশাসিত"
+    },
+    {
+      "word": "bolster",
+      "meaning": "support or strengthen; prop up",
+      "sentence": "Publishing conference papers will bolster your scholarship application.",
+      "bn": "শক্তিশালী করা"
+    },
+    {
+      "word": "catalyst",
+      "meaning": "a person or thing that precipitates an event",
+      "sentence": "Receiving the scholarship was a catalyst for her overseas career.",
+      "bn": "অনুঘটক"
+    },
+    {
+      "word": "circuitous",
+      "meaning": "longer than the most direct way",
+      "sentence": "Avoid a circuitous line of reasoning in short essay prompts.",
+      "bn": "ঘোরানো / অপ্রত্যক্ষ"
+    },
+    {
+      "word": "circumscribe",
+      "meaning": "restrict something within limits",
+      "sentence": "Budget limits circumscribe the scope of our laboratory field tests.",
+      "bn": "সীমাবদ্ধ করা"
+    },
+    {
+      "word": "clarity",
+      "meaning": "the quality of being clear, in particular easily perceived or understood",
+      "sentence": "Clarity of purpose is the hallmark of an exceptional research proposal.",
+      "bn": "স্পষ্টতা"
+    },
+    {
+      "word": "coalesce",
+      "meaning": "come together to form one mass or whole",
+      "sentence": "Diverse interdisciplinary ideas coalesce in our collaborative lab meetings.",
+      "bn": "একত্রিত হওয়া"
+    },
+    {
+      "word": "coherent",
+      "meaning": "logically connected",
+      "sentence": "Drafting an outline helps write a coherent graduate thesis.",
+      "bn": "সুসঙ্গত"
+    },
+    {
+      "word": "compensate",
+      "meaning": "offset or make up for",
+      "sentence": "Strong laboratory achievements compensate for slightly lower test percentiles.",
+      "bn": "ঘাটতি পূরণ করা"
+    },
+    {
+      "word": "compile",
+      "meaning": "collect and organize",
+      "sentence": "Compile a literature review synthesizing seventy recent papers.",
+      "bn": "সংকলন করা"
+    },
+    {
+      "word": "comprehensive",
+      "meaning": "broad and thorough",
+      "sentence": "The department conducts a comprehensive oral qualifying exam in year two.",
+      "bn": "বিস্তৃত"
+    },
+    {
+      "word": "concede",
+      "meaning": "admit that something is true or valid after first denying or resisting it",
+      "sentence": "The researcher had to concede that preliminary data was inconclusive.",
+      "bn": "স্বীকার করা"
+    },
+    {
+      "word": "conceive",
+      "meaning": "formulate an idea",
+      "sentence": "Scholars conceive bold new paradigms to tackle global climate problems.",
+      "bn": "পরিকল্পনা করা"
+    },
+    {
+      "word": "concise",
+      "meaning": "giving a lot of information clearly and in a few words; brief but comprehensive",
+      "sentence": "Write concise abstracts that convey impact within two hundred words.",
+      "bn": "সংক্ষিপ্ত ও অর্থপূর্ণ"
+    },
+    {
+      "word": "conclusive",
+      "meaning": "serving to prove a case; decisive or convincing",
+      "sentence": "Provide conclusive statistical evidence before claiming causality.",
+      "bn": "চূড়ান্ত / মীমাংসামূলক"
+    },
+    {
+      "word": "concurrent",
+      "meaning": "simultaneously occurring",
+      "sentence": "Completing concurrent internships and coursework requires time management.",
+      "bn": "একই সময়ে চলমান"
+    },
+    {
+      "word": "condone",
+      "meaning": "accept and allow behavior that is considered morally wrong or offensive to continue",
+      "sentence": "Academic committees will never condone plagiarism or data falsification.",
+      "bn": "উপেক্ষা করা / মাফ করা"
+    },
+    {
+      "word": "confer",
+      "meaning": "grant or bestow a title, degree, benefit, or right",
+      "sentence": "The university will confer doctoral degrees during the summer ceremony.",
+      "bn": "প্রদান করা"
+    },
+    {
+      "word": "conform",
+      "meaning": "comply with standards",
+      "sentence": "All experimental methods must conform to safety regulations.",
+      "bn": "মান্যতা দেওয়া"
+    },
+    {
+      "word": "conjecture",
+      "meaning": "an opinion or conclusion formed on the basis of incomplete information",
+      "sentence": "Separate grounded empirical facts from speculative theoretical conjecture.",
+      "bn": "অনুমান"
+    },
+    {
+      "word": "consecutive",
+      "meaning": "following continuously; in unbroken or logical sequence",
+      "sentence": "Maintain high grades for three consecutive semesters to qualify for awards.",
+      "bn": "ধারাবাহিক"
+    },
+    {
+      "word": "consensus",
+      "meaning": "a general agreement",
+      "sentence": "Scientific consensus confirms that global temperatures are steadily rising.",
+      "bn": "ঐকমত্য"
+    },
+    {
+      "word": "consolidate",
+      "meaning": "combine a number of things into a single more effective or coherent whole",
+      "sentence": "Consolidate your diverse research notes into unified thematic files.",
+      "bn": "দৃঢ় বা সংহত করা"
+    },
+    {
+      "word": "conspicuous",
+      "meaning": "standing out so as to be clearly visible",
+      "sentence": "Her dedication to laboratory precision was conspicuous to faculty supervisors.",
+      "bn": "সুস্পষ্ট / দৃষ্টিগোচর"
+    },
+    {
+      "word": "constitute",
+      "meaning": "be a part of a whole; combine to form a whole",
+      "sentence": "International scholars constitute forty percent of the STEM graduate body.",
+      "bn": "গঠন করা"
+    },
+    {
+      "word": "constrain",
+      "meaning": "severely restrict the scope, extent, or activity of",
+      "sentence": "Regulatory boundaries constrain the deployment of experimental drones.",
+      "bn": "সীমিত করা"
+    },
+    {
+      "word": "contemporary",
+      "meaning": "current and modern",
+      "sentence": "The course examines contemporary debates in algorithmic ethics.",
+      "bn": "সমকালীন"
+    },
+    {
+      "word": "contend",
+      "meaning": "assert something as a position in an argument",
+      "sentence": "Scholars contend that early bilingual exposure enhances problem-solving skills.",
+      "bn": "দাবি করা / যুক্তি দেওয়া"
+    },
+    {
+      "word": "contextualize",
+      "meaning": "place or study in context",
+      "sentence": "Contextualize historical findings within prevailing socio-economic frameworks.",
+      "bn": "প্রেক্ষাপট বিচার করা"
+    },
+    {
+      "word": "contingent",
+      "meaning": "subject to chance; occurring or existing only if certain circumstances are the case; dependent on",
+      "sentence": "The scholarship offer is contingent upon submitting certified graduation records.",
+      "bn": "নির্ভরশীল / শর্তাধীন"
+    },
+    {
+      "word": "contradict",
+      "meaning": "dispute or state the opposite",
+      "sentence": "Replicated lab measurements did not contradict the mathematical theorem.",
+      "bn": "পরস্পরবিরোধী হওয়া"
+    },
+    {
+      "word": "contrary",
+      "meaning": "opposite",
+      "sentence": "On the contrary, qualitative interviews provided unexpected practical insights.",
+      "bn": "বিপরীত"
+    },
+    {
+      "word": "contribute",
+      "meaning": "furnish or add to",
+      "sentence": "Graduate students actively contribute to peer-reviewed scholarly publications.",
+      "bn": "অবদান রাখা"
+    },
+    {
+      "word": "converge",
+      "meaning": "come together from different directions so as to eventually meet",
+      "sentence": "Computer science and neurobiology converge in computational neuroscience.",
+      "bn": "একত্রিত হওয়া"
+    },
+    {
+      "word": "converse",
+      "meaning": "having a contrary or reverse nature; engage in conversation",
+      "sentence": "Students converse regularly with international peers to refine fluency.",
+      "bn": "কথা বলা / বিপরীত"
+    },
+    {
+      "word": "convey",
+      "meaning": "communicate a message or information",
+      "sentence": "Use precise terminology to convey your scientific observations.",
+      "bn": "বহন বা প্রকাশ করা"
+    },
+    {
+      "word": "corroborate",
+      "meaning": "confirm or give support to a statement, theory, or finding",
+      "sentence": "Additional experimental trials corroborate the original discovery.",
+      "bn": "সমর্থন বা নিশ্চিত করা"
+    },
+    {
+      "word": "credible",
+      "meaning": "able to be believed; convincing",
+      "sentence": "Always cite credible peer-reviewed academic journals in research papers.",
+      "bn": "বিশ্বাসযোগ্য"
+    },
+    {
+      "word": "criterion",
+      "meaning": "a principle or standard by which something may be judged or decided",
+      "sentence": "Analytical clarity is the primary criterion for grading research essays.",
+      "bn": "মানদণ্ড"
+    },
+    {
+      "word": "crucial",
+      "meaning": "essential",
+      "sentence": "Building an academic rapport with your thesis advisor is crucial.",
+      "bn": "অতীব গুরুত্বপূর্ণ"
+    },
+    {
+      "word": "cultivate",
+      "meaning": "try to acquire or develop a quality, sentiment, or skill",
+      "sentence": "Cultivate a habit of reading complex articles every single morning.",
+      "bn": "চর্চা করা"
+    },
+    {
+      "word": "cumulative",
+      "meaning": "accumulated over time",
+      "sentence": "A student's cumulative GPA is evaluated closely by fellowship committees.",
+      "bn": "ক্রমপুঞ্জিত"
+    },
+    {
+      "word": "curtail",
+      "meaning": "reduce in extent or quantity; impose a restriction on",
+      "sentence": "Budget emergencies forced the university to curtail overseas conference sponsorships.",
+      "bn": "সংক্ষিপ্ত করা / ছাঁটাই করা"
+    },
+    {
+      "word": "debunk",
+      "meaning": "expose the falseness or hollowness of a myth, idea, or belief",
+      "sentence": "Controlled clinical trials debunk popular health pseudoscience claims.",
+      "bn": "ভুল প্রমাণ করা"
+    },
+    {
+      "word": "decisive",
+      "meaning": "settling an issue; producing a definite result",
+      "sentence": "The admissions interview played a decisive role in the final award decision.",
+      "bn": "চূড়ান্ত / সিদ্ধান্তমূলক"
+    },
+    {
+      "word": "deduce",
+      "meaning": "reason logically from known principles",
+      "sentence": "From these equations, we can deduce optimal aerodynamic efficiency.",
+      "bn": "নির্ণয় করা"
+    },
+    {
+      "word": "deference",
+      "meaning": "polite submission and respect",
+      "sentence": "The candidate listened with respectful deference to the committee's questions.",
+      "bn": "শ্রদ্ধা / সম্মান"
+    },
+    {
+      "word": "deficient",
+      "meaning": "not having enough of a specified quality or ingredient",
+      "sentence": "The proposal was deemed deficient in quantitative error analysis.",
+      "bn": "ত্রুটিপূর্ণ / অপর্যাপ্ত"
+    },
+    {
+      "word": "definitive",
+      "meaning": "done or reached decisively and with authority",
+      "sentence": "This volume remains the definitive textbook on algorithmic complexity.",
+      "bn": "চূড়ান্ত / নির্ভরযোগ্য"
+    },
+    {
+      "word": "delineate",
+      "meaning": "describe or portray something precisely",
+      "sentence": "The syllabus must clearly delineate student responsibilities and exam weights.",
+      "bn": "সুস্পষ্টভাবে বর্ণনা করা"
+    },
+    {
+      "word": "demonstrate",
+      "meaning": "prove conclusively",
+      "sentence": "Provide rigorous empirical testing to demonstrate computational scalability.",
+      "bn": "প্রমাণ করা"
+    },
+    {
+      "word": "denote",
+      "meaning": "indicate specifically",
+      "sentence": "Parentheses in the mathematical proof denote intermediate matrix operations.",
+      "bn": "চিহ্নিত করা"
+    },
+    {
+      "word": "depict",
+      "meaning": "characterize accurately",
+      "sentence": "Case studies depict how small startups scale into multinational corporations.",
+      "bn": "চিত্রায়িত করা"
+    },
+    {
+      "word": "deplete",
+      "meaning": "use up the supply or resources of",
+      "sentence": "Exhausting all test attempts can deplete your financial preparation budget.",
+      "bn": "নিঃশেষ করা"
+    },
+    {
+      "word": "derive",
+      "meaning": "originate from",
+      "sentence": "Linguistic theories derive grammatical rules from universal cognitive principles.",
+      "bn": "উদ্ভূত হওয়া"
+    },
+    {
+      "word": "designate",
+      "meaning": "specify or assign",
+      "sentence": "Designate an institutional email address for all official admissions correspondence.",
+      "bn": "নির্ধারণ করা"
+    },
+    {
+      "word": "deter",
+      "meaning": "discourage someone from doing something by instilling doubt or fear",
+      "sentence": "High application fees should not deter students from applying for fee waivers.",
+      "bn": "বাধা দেওয়া / নিরুৎসাহিত করা"
+    },
+    {
+      "word": "deteriorate",
+      "meaning": "become progressively worse",
+      "sentence": "Without continuous upkeep, laboratory equipment will deteriorate rapidly.",
+      "bn": "অবনতি হওয়া"
+    },
+    {
+      "word": "determine",
+      "meaning": "cause something to occur in a particular way; be the decisive factor in",
+      "sentence": "Careful document preparation will determine your visa application outcome.",
+      "bn": "নির্ধারণ করা"
+    },
+    {
+      "word": "deviate",
+      "meaning": "depart from an established course or norm",
+      "sentence": "Do not deviate from the recommended word counts in admissions essays.",
+      "bn": "বিচ্যুত হওয়া"
+    },
+    {
+      "word": "differentiate",
+      "meaning": "distinguish differences",
+      "sentence": "Experienced scholars differentiate between initial correlations and genuine causation.",
+      "bn": "পার্থক্য করা"
+    },
+    {
+      "word": "diffuse",
+      "meaning": "spread out over a large area; not concentrated",
+      "sentence": "The professor's lecture was somewhat diffuse and difficult to summarize.",
+      "bn": "ছড়িয়ে পড়া"
+    },
+    {
+      "word": "dignity",
+      "meaning": "the state or quality of being worthy of honor or respect",
+      "sentence": "Treat every peer with dignity regardless of national or cultural background.",
+      "bn": "মর্যাদা"
+    },
+    {
+      "word": "diligent",
+      "meaning": "having or showing care and conscientiousness in one's work or duties",
+      "sentence": "Diligent daily review leads to outstanding academic accomplishments.",
+      "bn": "পরিশ্রমী"
+    },
+    {
+      "word": "diminish",
+      "meaning": "lessen severity",
+      "sentence": "Proper time management will diminish last-minute thesis submission anxiety.",
+      "bn": "কমানো"
+    },
+    {
+      "word": "discern",
+      "meaning": "distinguish someone or something with difficulty by sight or with the other senses",
+      "sentence": "Admissions evaluators discern authentic enthusiasm from generic flattery.",
+      "bn": "চিহ্নিত করা / বোঝা"
+    },
+    {
+      "word": "discrete",
+      "meaning": "distinct elements",
+      "sentence": "The machine learning algorithm parses discrete textual tokens in real time.",
+      "bn": "পৃথক"
+    },
+    {
+      "word": "disparity",
+      "meaning": "a great difference",
+      "sentence": "Scholarships aim to bridge the economic disparity between student applicants.",
+      "bn": "বৈষম্য"
+    },
+    {
+      "word": "disseminate",
+      "meaning": "broadcast widely",
+      "sentence": "International symposiums help disseminate scientific research across continents.",
+      "bn": "প্রচার করা"
+    },
+    {
+      "word": "distinct",
+      "meaning": "readily perceived as separate",
+      "sentence": "The two departments have distinct degree requirements and qualifying milestones.",
+      "bn": "স্বতন্ত্র"
+    },
+    {
+      "word": "diverge",
+      "meaning": "develop in different directions",
+      "sentence": "The opinions of the committee members diverge on the grant proposal.",
+      "bn": "ভিন্নমুখী হওয়া"
+    },
+    {
+      "word": "diverse",
+      "meaning": "varied",
+      "sentence": "The laboratory includes a diverse cohort of international postdocs.",
+      "bn": "বৈচিত্র্যপূর্ণ"
+    },
+    {
+      "word": "doctrine",
+      "meaning": "a belief or set of beliefs held and taught by a church, political party, or other group",
+      "sentence": "Review foundational legal doctrine before taking the qualifying exam.",
+      "bn": "নীতিবাদ / তত্ত্ব"
+    },
+    {
+      "word": "document",
+      "meaning": "keep record of",
+      "sentence": "Document every laboratory software revision on an open-source code repository.",
+      "bn": "রেকর্ড করা"
+    },
+    {
+      "word": "domain",
+      "meaning": "field of expertise",
+      "sentence": "Quantum cryptography is an emerging domain within computer science.",
+      "bn": "ক্ষেত্র"
+    },
+    {
+      "word": "dubious",
+      "meaning": "hesitating or doubting; not to be relied upon; suspect",
+      "sentence": "Be cautious of dubious visa consultancies making unrealistic promises.",
+      "bn": "সন্দেহজনক"
+    },
+    {
+      "word": "dynamic",
+      "meaning": "active and changing",
+      "sentence": "Participate actively in the dynamic scholarly discourse of your discipline.",
+      "bn": "গতিশীল"
+    },
+    {
+      "word": "elicit",
+      "meaning": "evoke or draw out a reaction, answer, or fact from someone",
+      "sentence": "Open-ended interview questions elicit genuine and reflective responses.",
+      "bn": "প্রকাশ করানো / বের করা"
+    },
+    {
+      "word": "elucidate",
+      "meaning": "make something clear; explain",
+      "sentence": "The guest speaker used vivid graphs to elucidate complex macroeconomic trends.",
+      "bn": "ব্যাখ্যা করা / স্পষ্ট করা"
+    },
+    {
+      "word": "elusive",
+      "meaning": "difficult to find, catch, or achieve",
+      "sentence": "A comprehensive cure for the viral pathogen remains elusive to scientists.",
+      "bn": "দুর্লভ / হাতছাড়া"
+    },
+    {
+      "word": "empirical",
+      "meaning": "observable in nature",
+      "sentence": "Our conclusions rest on rigorous empirical evidence collected over five years.",
+      "bn": "অভিজ্ঞতালব্ধ"
+    },
+    {
+      "word": "emulate",
+      "meaning": "match or surpass a person or achievement, typically by imitation",
+      "sentence": "Young scholars strive to emulate the rigorous standards of senior mentors.",
+      "bn": "অনুকরণ করা"
+    },
+    {
+      "word": "encompass",
+      "meaning": "surround and have or hold within; include comprehensively",
+      "sentence": "The interdisciplinary syllabus will encompass ethics, coding, and statistics.",
+      "bn": "অন্তর্ভুক্ত করা"
+    },
+    {
+      "word": "endure",
+      "meaning": "suffer something painful or difficult patiently; remain in existence; last",
+      "sentence": "International students endure initial cultural shock before feeling at home.",
+      "bn": "সহ্য করা / টিকে থাকা"
+    },
+    {
+      "word": "engender",
+      "meaning": "cause or give rise to a feeling, situation, or condition",
+      "sentence": "Transparent grading guidelines engender trust between professors and students.",
+      "bn": "জন্ম দেওয়া / সৃষ্টি করা"
+    },
+    {
+      "word": "enhance",
+      "meaning": "make better",
+      "sentence": "Taking intensive reading seminars will enhance your analytical writing skills.",
+      "bn": "উন্নত করা"
+    }
+  ]
+}

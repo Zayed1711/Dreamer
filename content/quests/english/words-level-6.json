@@ -1,0 +1,608 @@
+{
+  "level": 6,
+  "name": "Level 6 (C1 Scholarly Discourse)",
+  "source": "Dreamer Academic English Corpus (original compilation)",
+  "license": "Dreamer Open Educational Content License",
+  "words": [
+    {
+      "word": "aberration",
+      "meaning": "a departure from what is normal, usual, or expected, typically an unwelcome one",
+      "sentence": "A sudden spike in error rates was an aberration in the simulation.",
+      "bn": "বিচ্যুতি / অস্বাভাবিকতা"
+    },
+    {
+      "word": "abstruse",
+      "meaning": "difficult to understand; obscure",
+      "sentence": "The author's abstruse philosophical treatise challenged even senior professors.",
+      "bn": "দুর্বোধ্য"
+    },
+    {
+      "word": "acuity",
+      "meaning": "sharpness or keenness of thought, vision, or hearing",
+      "sentence": "Scholarly debate demands high intellectual acuity and logical precision.",
+      "bn": "তীক্ষ্ণতা"
+    },
+    {
+      "word": "admonish",
+      "meaning": "warn or reprimand someone firmly",
+      "sentence": "Advisors admonish students against relying on unverified internet summaries.",
+      "bn": "সতর্ক করা"
+    },
+    {
+      "word": "adroit",
+      "meaning": "clever or skillful in using the hands or mind",
+      "sentence": "She was adroit at synthesizing conflicting qualitative testimonies.",
+      "bn": "দক্ষ / চতুর"
+    },
+    {
+      "word": "aesthetic",
+      "meaning": "concerned with beauty or the appreciation of beauty",
+      "sentence": "The campus design balances modern architectural utility with aesthetic charm.",
+      "bn": "নান্দনিক"
+    },
+    {
+      "word": "alacrity",
+      "meaning": "brisk and cheerful readiness",
+      "sentence": "The motivated cohort accepted the challenging research assignment with alacrity.",
+      "bn": "আগ্রহ / তৎপরতা"
+    },
+    {
+      "word": "altruistic",
+      "meaning": "showing a disinterested and selfless concern for the well-being of others",
+      "sentence": "She dedicated her thesis to altruistic public health initiatives in rural areas.",
+      "bn": "পরোপকারী"
+    },
+    {
+      "word": "ambiguity",
+      "meaning": "lack of certainty",
+      "sentence": "Rigorous academic writing strives to eliminate unnecessary ambiguity.",
+      "bn": "সংশয়"
+    },
+    {
+      "word": "ameliorate",
+      "meaning": "make something bad or unsatisfactory better",
+      "sentence": "Targeted subsidies help ameliorate student financial distress during terms.",
+      "bn": "উন্নতি সাধন করা"
+    },
+    {
+      "word": "anachronism",
+      "meaning": "a thing belonging or appropriate to a period other than that in which it exists",
+      "sentence": "Using outdated 19th-century terminology in modern essays is an anachronism.",
+      "bn": "কালবৈষম্য"
+    },
+    {
+      "word": "analogous",
+      "meaning": "comparable in essence",
+      "sentence": "The molecular structure is analogous to a flexible mechanical spring.",
+      "bn": "সাদৃশ্যপূর্ণ"
+    },
+    {
+      "word": "anomaly",
+      "meaning": "something that deviates from what is standard, normal, or expected",
+      "sentence": "The astrophysicist identified a gravitational anomaly in the observational dataset.",
+      "bn": "অসঙ্গতি / ব্যতিক্রম"
+    },
+    {
+      "word": "antipathy",
+      "meaning": "a deep-seated feeling of dislike; aversion",
+      "sentence": "There was palpable antipathy between rival factions in the student debate.",
+      "bn": "তীব্র বিদ্বেষ"
+    },
+    {
+      "word": "antithesis",
+      "meaning": "a person or thing that is the direct opposite of someone or something else",
+      "sentence": "Authoritarian censorship is the exact antithesis of free scholarly inquiry.",
+      "bn": "বিপরীত রূপ"
+    },
+    {
+      "word": "apathy",
+      "meaning": "lack of interest, enthusiasm, or concern",
+      "sentence": "Widespread student apathy toward governance can weaken campus accountability.",
+      "bn": "উদাসীনতা"
+    },
+    {
+      "word": "appease",
+      "meaning": "pacify or placate someone by acceding to their demands",
+      "sentence": "The administration revised the curfew rules to appease student protests.",
+      "bn": "শান্ত করা"
+    },
+    {
+      "word": "arbitrary",
+      "meaning": "based on random choice or personal whim, rather than any reason or system",
+      "sentence": "Admissions standards must never feel arbitrary to qualified applicants.",
+      "bn": "খামখেয়ালী / অযৌক্তিক"
+    },
+    {
+      "word": "arcane",
+      "meaning": "understood by few; mysterious or secret",
+      "sentence": "The archaic legal terminology seemed arcane to first-year law students.",
+      "bn": "রহস্যময় / গুপ্ত"
+    },
+    {
+      "word": "archetype",
+      "meaning": "a very typical example of a certain person or thing",
+      "sentence": "He represented the archetype of the selfless, dedicated laboratory scholar.",
+      "bn": "আদর্শ রূপ"
+    },
+    {
+      "word": "arduous",
+      "meaning": "involving or requiring strenuous effort; difficult and tiring",
+      "sentence": "Writing a doctoral dissertation is an arduous multi-year academic endeavor.",
+      "bn": "কঠোর / শ্রমসাধ্য"
+    },
+    {
+      "word": "artful",
+      "meaning": "clever or skillful, typically in a crafty or cunning way",
+      "sentence": "The diplomat gave an artful response that offended neither delegation.",
+      "bn": "ধূর্ত / কৌশলী"
+    },
+    {
+      "word": "articulate",
+      "meaning": "fluent and coherent in expression",
+      "sentence": "She delivered an articulate defense of her dissertation findings.",
+      "bn": "স্পষ্টভাষী"
+    },
+    {
+      "word": "ascetic",
+      "meaning": "characterized by severe self-discipline and abstention from all forms of indulgence",
+      "sentence": "During exam preparation, he adopted a nearly ascetic daily lifestyle.",
+      "bn": "তপস্বীসুলভ / সংযমী"
+    },
+    {
+      "word": "assiduous",
+      "meaning": "showing great care and perseverance",
+      "sentence": "Through assiduous archival research, the historian uncovered lost manuscripts.",
+      "bn": "পরিশ্রমী / অধ্যবসায়ী"
+    },
+    {
+      "word": "assuage",
+      "meaning": "make an unpleasant feeling less intense",
+      "sentence": "The university president took prompt action to assuage student safety fears.",
+      "bn": "প্রশমিত করা"
+    },
+    {
+      "word": "audacious",
+      "meaning": "showing a willingness to take surprisingly bold risks",
+      "sentence": "The young engineer proposed an audacious plan to harness deep thermal energy.",
+      "bn": "দুঃসাহসী"
+    },
+    {
+      "word": "austere",
+      "meaning": "severe or strict in manner, attitude, or appearance",
+      "sentence": "The austere library reading hall inspired solemn, quiet academic focus.",
+      "bn": "কঠোর / অনাড়ম্বর"
+    },
+    {
+      "word": "autonomous",
+      "meaning": "acting independently",
+      "sentence": "An autonomous researcher formulates hypotheses without constant supervisory prompts.",
+      "bn": "স্বশাসিত"
+    },
+    {
+      "word": "banal",
+      "meaning": "so lacking in originality as to be obvious and boring",
+      "sentence": "Avoid banal introductions such as 'Since the dawn of human civilization'.",
+      "bn": "গতানুগতিক / তুচ্ছ"
+    },
+    {
+      "word": "belie",
+      "meaning": "fail to give a true notion or impression of something; disguise or contradict",
+      "sentence": "Her calm speaking demeanor belied the immense pressure she was under.",
+      "bn": "মিথ্যা প্রতিপন্ন করা"
+    },
+    {
+      "word": "benevolent",
+      "meaning": "well meaning and kindly",
+      "sentence": "A benevolent alumnus established an endowment for underprivileged scholars.",
+      "bn": "হিতৈষী / দয়ালু"
+    },
+    {
+      "word": "berate",
+      "meaning": "scold or criticize someone angrily",
+      "sentence": "Constructive mentors guide their students rather than berate their mistakes.",
+      "bn": "তিরস্কার করা"
+    },
+    {
+      "word": "bolster",
+      "meaning": "provide support",
+      "sentence": "Cite historical precedent to bolster your thesis argumentation.",
+      "bn": "দৃঢ় করা"
+    },
+    {
+      "word": "bombastic",
+      "meaning": "high-sounding but with little meaning; inflated",
+      "sentence": "The candidate's bombastic speech failed to impress discerning academics.",
+      "bn": "বাগাড়ম্বরপূর্ণ"
+    },
+    {
+      "word": "brevity",
+      "meaning": "concise and exact use of words in writing or speech",
+      "sentence": "Brevity is the soul of wit in academic executive summaries.",
+      "bn": "সংক্ষিপ্ততা"
+    },
+    {
+      "word": "cacophony",
+      "meaning": "a harsh, discordant mixture of sounds",
+      "sentence": "A cacophony of street traffic broke the tranquil silence of the lecture hall.",
+      "bn": "কর্কশ কোলাহল"
+    },
+    {
+      "word": "callous",
+      "meaning": "showing or having an insensitive and cruel disregard for others",
+      "sentence": "The administration was criticized for its callous response to student housing woes.",
+      "bn": "কঠোর / অনুভূতিহীন"
+    },
+    {
+      "word": "candor",
+      "meaning": "the quality of being open and honest in expression; frankness",
+      "sentence": "The professor spoke with refreshing candor about the challenges of tenure.",
+      "bn": "সরলতা / স্পষ্টবাদিতা"
+    },
+    {
+      "word": "capricious",
+      "meaning": "given to sudden and unaccountable changes of mood or behavior",
+      "sentence": "Unpredictable and capricious grading criteria undermine student motivation.",
+      "bn": "খামখেয়ালী"
+    },
+    {
+      "word": "castigate",
+      "meaning": "reprimand someone severely",
+      "sentence": "Reviewers castigate papers that exhibit sloppy data provenance.",
+      "bn": "কঠোর শাস্তি বা তিরস্কার করা"
+    },
+    {
+      "word": "catalyst",
+      "meaning": "an agent that sparks change",
+      "sentence": "Interdisciplinary symposiums serve as a catalyst for novel research projects.",
+      "bn": "অনুঘটক"
+    },
+    {
+      "word": "caustic",
+      "meaning": "sarcastic in a scathing and bitter way",
+      "sentence": "Avoid making caustic remarks during peer-review rebuttal sessions.",
+      "bn": "তীক্ষ্ণ / দগ্ধকারী"
+    },
+    {
+      "word": "chicanery",
+      "meaning": "the use of trickery to achieve a political, financial, or legal purpose",
+      "sentence": "Academic integrity rules protect scholarship from administrative chicanery.",
+      "bn": "প্রতারণা / ছলচাতুরি"
+    },
+    {
+      "word": "circuitous",
+      "meaning": "roundabout and indirect",
+      "sentence": "The essay followed a circuitous route before stating its central claim.",
+      "bn": "আঁকাবাঁকা"
+    },
+    {
+      "word": "circumspect",
+      "meaning": "wary and unwilling to take risks",
+      "sentence": "Scientists remain circumspect when announcing preliminary clinical findings.",
+      "bn": "সতর্ক / দূরদর্শী"
+    },
+    {
+      "word": "clandestine",
+      "meaning": "kept secret or done secretively, especially because illicit",
+      "sentence": "The ethics committee investigated clandestine dealings between agents and students.",
+      "bn": "গোপন / চোরাগোপ্তা"
+    },
+    {
+      "word": "coalesce",
+      "meaning": "fuse together",
+      "sentence": "Separate research threads coalesce into a breakthrough unified framework.",
+      "bn": "একত্রিত হওয়া"
+    },
+    {
+      "word": "cogent",
+      "meaning": "clear, logical, and convincing",
+      "sentence": "She presented a cogent defense of qualitative methodologies in sociology.",
+      "bn": "অকাট্য / যুক্তিযুক্ত"
+    },
+    {
+      "word": "commensurate",
+      "meaning": "corresponding in size or degree; in proportion",
+      "sentence": "Compensation should be commensurate with a graduate assistant's workload.",
+      "bn": "সমানুপাতিক"
+    },
+    {
+      "word": "complacent",
+      "meaning": "showing smug or uncritical satisfaction with oneself or one's achievements",
+      "sentence": "Scholars cannot afford to become complacent after an initial publication.",
+      "bn": "আত্মতুষ্ট"
+    },
+    {
+      "word": "conciliatory",
+      "meaning": "intended or likely to placate or pacify",
+      "sentence": "The department chair adopted a conciliatory tone during the faculty dispute.",
+      "bn": "সমঝোতামূলক"
+    },
+    {
+      "word": "condone",
+      "meaning": "overlook wrongdoing",
+      "sentence": "Our academic charter will never condone unauthorized collaboration on exams.",
+      "bn": "ক্ষমা করা"
+    },
+    {
+      "word": "connoisseur",
+      "meaning": "an expert judge in matters of taste",
+      "sentence": "A connoisseur of English prose admires elegance, rhythm, and clarity.",
+      "bn": "রসজ্ঞ / সমঝদার"
+    },
+    {
+      "word": "conspicuous",
+      "meaning": "clearly visible",
+      "sentence": "There was a conspicuous absence of experimental controls in the methodology.",
+      "bn": "স্পষ্ট"
+    },
+    {
+      "word": "consummate",
+      "meaning": "showing a high degree of skill and flair; complete or perfect",
+      "sentence": "He handled the contentious doctoral defense with consummate scholarly grace.",
+      "bn": "নিখুঁত / চূড়ান্ত"
+    },
+    {
+      "word": "contentious",
+      "meaning": "causing or likely to cause an argument; controversial",
+      "sentence": "Affirmative action admissions policies remain a contentious topic in academia.",
+      "bn": "বিতর্কিত"
+    },
+    {
+      "word": "copious",
+      "meaning": "abundant in supply or quantity",
+      "sentence": "She took copious notes throughout the three-hour clinical neurology lecture.",
+      "bn": "প্রচুর"
+    },
+    {
+      "word": "corroborate",
+      "meaning": "support with evidence",
+      "sentence": "Further independent replications are required to corroborate the discovery.",
+      "bn": "প্রমাণ করা"
+    },
+    {
+      "word": "cosmopolitan",
+      "meaning": "familiar with and at ease in many different countries and cultures",
+      "sentence": "Living in London fosters a vibrant cosmopolitan outlook among students.",
+      "bn": "বিশ্বজনীন"
+    },
+    {
+      "word": "cryptic",
+      "meaning": "having a meaning that is mysterious or obscure",
+      "sentence": "The reviewer left a cryptic comment regarding section four's mathematical proof.",
+      "bn": "রহস্যময়"
+    },
+    {
+      "word": "cursory",
+      "meaning": "hasty and therefore not thorough or detailed",
+      "sentence": "A cursory glance over your references will not catch formatting errors.",
+      "bn": "ভাসা-ভাসা / দ্রুত"
+    },
+    {
+      "word": "daunting",
+      "meaning": "seeming difficult to deal with in prospect; intimidating",
+      "sentence": "Mastering graduate statistical mechanics is an undeniably daunting task.",
+      "bn": "ভীতিপ্রদ / নিরুৎসাহজনক"
+    },
+    {
+      "word": "dearth",
+      "meaning": "a scarcity or lack of something",
+      "sentence": "There is a severe dearth of reliable archival evidence from that era.",
+      "bn": "ঘাটতি / অভাব"
+    },
+    {
+      "word": "debacle",
+      "meaning": "a sudden and ignominious failure; a fiasco",
+      "sentence": "The flawed software rollout turned the online registration into a debacle.",
+      "bn": "ধ্বংস / চরম ব্যর্থতা"
+    },
+    {
+      "word": "decorum",
+      "meaning": "behavior in keeping with good taste and propriety",
+      "sentence": "Scholarly debates must be conducted with dignity and academic decorum.",
+      "bn": "ভদ্রতা / শিষ্টাচার"
+    },
+    {
+      "word": "deleterious",
+      "meaning": "causing harm or damage",
+      "sentence": "Chronic sleep deprivation has deleterious effects on cognitive recall.",
+      "bn": "ক্ষতিকর"
+    },
+    {
+      "word": "delineate",
+      "meaning": "outline precisely",
+      "sentence": "The contract must delineate intellectual property ownership for student patents.",
+      "bn": "চিত্রাঙ্কন করা"
+    },
+    {
+      "word": "demagogue",
+      "meaning": "a political leader who seeks support by appealing to popular desires and prejudices rather than by using rational argument",
+      "sentence": "Historians analyze how demagogues exploit public economic insecurity.",
+      "bn": "জননেতা / উত্তেজনা সৃষ্টিকারী"
+    },
+    {
+      "word": "denounce",
+      "meaning": "publicly declare to be wrong or evil",
+      "sentence": "University faculties universally denounce acts of ideological censorship.",
+      "bn": "নিন্দা করা"
+    },
+    {
+      "word": "deprecate",
+      "meaning": "express disapproval of",
+      "sentence": "Ethical scholars deprecate any form of selective data omission in research.",
+      "bn": "নিন্দা বা অসমর্থন করা"
+    },
+    {
+      "word": "deride",
+      "meaning": "express contempt for; ridicule",
+      "sentence": "Do not deride unconventional hypotheses before testing them empirically.",
+      "bn": "উপহাস করা"
+    },
+    {
+      "word": "desecrate",
+      "meaning": "treat a sacred place or thing with violent disrespect; violate",
+      "sentence": "Vandals desecrated the historic university library memorial statue.",
+      "bn": "অপবিত্র করা"
+    },
+    {
+      "word": "destitute",
+      "meaning": "without the basic necessities of life",
+      "sentence": "Financial aid programs support students from destitute rural backgrounds.",
+      "bn": "নিঃস্ব / সর্বস্বান্ত"
+    },
+    {
+      "word": "deter",
+      "meaning": "dissuade",
+      "sentence": "Setbacks should not deter aspiring researchers from pursuing high-impact projects.",
+      "bn": "নিরস্ত করা"
+    },
+    {
+      "word": "devious",
+      "meaning": "showing a skillful use of underhanded tactics to achieve goals",
+      "sentence": "Avoid devious commercial agencies offering fake academic certificates.",
+      "bn": "কুটিল / অসদুপায়ী"
+    },
+    {
+      "word": "didactic",
+      "meaning": "intended to teach, particularly in having moral instruction as an ulterior motive",
+      "sentence": "The essay was overly didactic rather than analytically exploratory.",
+      "bn": "উপদেশমূলক"
+    },
+    {
+      "word": "disdain",
+      "meaning": "the feeling that someone or something is unworthy of one's consideration or respect; contempt",
+      "sentence": "He treated unsubstantiated internet rumors with polite scholarly disdain.",
+      "bn": "অবজ্ঞা"
+    },
+    {
+      "word": "disparage",
+      "meaning": "regard or represent as being of little worth",
+      "sentence": "Do not disparage introductory research; every breakthrough starts with basics.",
+      "bn": "খাটো করা / অবমূল্যায়ন করা"
+    },
+    {
+      "word": "disparate",
+      "meaning": "essentially different in kind; not allowing comparison",
+      "sentence": "The committee synthesized disparate viewpoints into a coherent campus policy.",
+      "bn": "সম্পূর্ণ ভিন্ন"
+    },
+    {
+      "word": "disparity",
+      "meaning": "imbalance or gap",
+      "sentence": "Addressing socio-economic disparity in STEM education is a national priority.",
+      "bn": "বৈষম্য"
+    },
+    {
+      "word": "dissemble",
+      "meaning": "conceal one's true motives, feelings, or beliefs",
+      "sentence": "A genuine academic does not dissemble about limitations in their dataset.",
+      "bn": "গোপন করা / ভান করা"
+    },
+    {
+      "word": "disseminate",
+      "meaning": "spread",
+      "sentence": "Online open-access archives disseminate scientific knowledge without paywalls.",
+      "bn": "ছড়িয়ে দেওয়া"
+    },
+    {
+      "word": "dissent",
+      "meaning": "the expression or holding of opinions at variance with those previously, commonly, or officially held",
+      "sentence": "Scholarly progress thrives on constructive intellectual dissent.",
+      "bn": "ভিন্নমত"
+    },
+    {
+      "word": "dissonance",
+      "meaning": "a lack of harmony or agreement",
+      "sentence": "Cognitive dissonance occurs when empirical facts conflict with deeply held beliefs.",
+      "bn": "অমিল / অসঙ্গতি"
+    },
+    {
+      "word": "divergent",
+      "meaning": "tending to be different or develop in different directions",
+      "sentence": "Divergent experimental outcomes indicated hidden environmental variables.",
+      "bn": "অপসারী / ভিন্নমুখী"
+    },
+    {
+      "word": "dogma",
+      "meaning": "a principle or set of principles laid down by an authority as incontrovertibly true",
+      "sentence": "Science rejects rigid dogma in favor of continuous experimental scrutiny.",
+      "bn": "গোঁড়ামি / অন্ধবিশ্বাস"
+    },
+    {
+      "word": "dubious",
+      "meaning": "questionable",
+      "sentence": "Claims lacking reproducible experimental methodology are scientifically dubious.",
+      "bn": "সন্দেহজনক"
+    },
+    {
+      "word": "duplicity",
+      "meaning": "deceitfulness; double-dealing",
+      "sentence": "The fraudulent researcher was dismissed for academic duplicity.",
+      "bn": "দ্বিমুখী আচরণ / প্রতারণা"
+    },
+    {
+      "word": "ebullient",
+      "meaning": "cheerful and full of energy",
+      "sentence": "The ebullient crowd cheered as graduates walked across the commencement stage.",
+      "bn": "উচ্ছ্বসিত"
+    },
+    {
+      "word": "eclectic",
+      "meaning": "deriving ideas, style, or taste from a broad and diverse range of sources",
+      "sentence": "The humanities professor maintains an eclectic library of global literature.",
+      "bn": "বহুবিধ / বিভিন্ন উৎস থেকে সংগৃহীত"
+    },
+    {
+      "word": "efficacy",
+      "meaning": "the ability to produce a desired or intended result",
+      "sentence": "Extensive clinical trials verified the therapeutic efficacy of the new medicine.",
+      "bn": "কার্যকারিতা"
+    },
+    {
+      "word": "effrontery",
+      "meaning": "insolent or impertinent behavior",
+      "sentence": "He had the effrontery to claim another researcher's code as his own work.",
+      "bn": "নির্লজ্জতা / ধৃষ্টতা"
+    },
+    {
+      "word": "egalitarian",
+      "meaning": "believing in or based on the principle that all people are equal and deserve equal rights and opportunities",
+      "sentence": "The lab fostered an egalitarian culture where undergraduate opinions were valued.",
+      "bn": "সাম্যবাদী"
+    },
+    {
+      "word": "egregious",
+      "meaning": "outstandingly bad; shocking",
+      "sentence": "Fabricating laboratory control measurements is an egregious violation of ethics.",
+      "bn": "চরম খারাপ / শোচনীয়"
+    },
+    {
+      "word": "eloquent",
+      "meaning": "fluent or persuasive in speaking or writing",
+      "sentence": "The student speaker delivered an eloquent oration on global peace and scholarship.",
+      "bn": "বাকপটু / সুললিত"
+    },
+    {
+      "word": "elucidate",
+      "meaning": "explain clearly",
+      "sentence": "The diagrams elucidate the geometric symmetry of the crystal lattice.",
+      "bn": "ব্যাখ্যা করা"
+    },
+    {
+      "word": "elusive",
+      "meaning": "difficult to grasp",
+      "sentence": "A definitive mathematical proof for the conjecture remains elusive.",
+      "bn": "মায়াবী / ধরাছোঁয়ার বাইরে"
+    },
+    {
+      "word": "embellish",
+      "meaning": "make a statement or story more interesting or entertaining by adding extra details, especially ones that are not true",
+      "sentence": "Never embellish your resume with unearned honors or fabricated publications.",
+      "bn": "অতিরঞ্জিত করা"
+    },
+    {
+      "word": "eminent",
+      "meaning": "famous and respected within a particular sphere or profession",
+      "sentence": "The seminar was chaired by an eminent professor of theoretical physics.",
+      "bn": "বিশিষ্ট / প্রখ্যাত"
+    }
+  ]
+}

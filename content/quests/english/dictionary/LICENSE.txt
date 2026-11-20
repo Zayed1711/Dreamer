@@ -1,0 +1,4 @@
+Word list dictionary for Dreamer Quests
+Contains public domain English vocabulary, SCOWL-derived common English words, and original Dreamer academic vocabulary.
+License: Creative Commons Zero (CC0) / Public Domain.
+Feel free to use, modify, and distribute.

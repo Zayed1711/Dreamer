@@ -8,7 +8,7 @@ import { useStudent } from "@/lib/student";
 
 export default function Home() {
   const router = useRouter();
-  const { ready, needsSignIn, profile, journey, completed, today, error } = useStudent();
+  const { ready, needsSignIn, profile, journey, completed, extraExp, today, error } = useStudent();
 
   // Signed-out students sign in first; new students go through onboarding.
   useEffect(() => {
@@ -25,5 +25,5 @@ export default function Home() {
     );
   }
   if (!journey) return null;
-  return <Dashboard journey={journey} today={today} initialCompleted={completed} />;
+  return <Dashboard journey={journey} today={today} initialCompleted={completed} extraExp={extraExp} />;
 }

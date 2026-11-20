@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "prompts": [
+    {
+      "id": "p1_1",
+      "level": 1,
+      "prompt": "Describe your daily morning routine in 5 sentences."
+    },
+    {
+      "id": "p1_2",
+      "level": 1,
+      "prompt": "Describe your hometown or village in 5 sentences."
+    },
+    {
+      "id": "p1_3",
+      "level": 1,
+      "prompt": "Describe your favorite meal and how it tastes in 5 sentences."
+    },
+    {
+      "id": "p1_4",
+      "level": 1,
+      "prompt": "Describe your best friend and what you do together in 5 sentences."
+    },
+    {
+      "id": "p1_5",
+      "level": 1,
+      "prompt": "Describe your study room or desk in 5 sentences."
+    },
+    {
+      "id": "p1_6",
+      "level": 1,
+      "prompt": "Describe your favorite season in Bangladesh in 5 sentences."
+    },
+    {
+      "id": "p1_7",
+      "level": 1,
+      "prompt": "Describe what you like to do on weekends in 5 sentences."
+    },
+    {
+      "id": "p1_8",
+      "level": 1,
+      "prompt": "Describe a pet or animal you like in 5 sentences."
+    },
+    {
+      "id": "p1_9",
+      "level": 1,
+      "prompt": "Describe the city or area you live in in 5 sentences."
+    },
+    {
+      "id": "p1_10",
+      "level": 1,
+      "prompt": "Describe what you do after returning home from school or college in 5 sentences."
+    },
+    {
+      "id": "p2_1",
+      "level": 2,
+      "prompt": "Explain why you want to study abroad in 5 sentences."
+    },
+    {
+      "id": "p2_2",
+      "level": 2,
+      "prompt": "Describe a memorable trip you took in Bangladesh in 5 sentences."
+    },
+    {
+      "id": "p2_3",
+      "level": 2,
+      "prompt": "Explain how you practice English speaking and listening in 5 sentences."
+    },
+    {
+      "id": "p2_4",
+      "level": 2,
+      "prompt": "Describe a hobby you enjoy and why it relaxes you in 5 sentences."
+    },
+    {
+      "id": "p2_5",
+      "level": 2,
+      "prompt": "Describe the college or university campus you attend in 5 sentences."
+    },
+    {
+      "id": "p2_6",
+      "level": 2,
+      "prompt": "Explain how you manage your monthly study expenses in 5 sentences."
+    },
+    {
+      "id": "p2_7",
+      "level": 2,
+      "prompt": "Describe an interesting book or article you recently read in 5 sentences."
+    },
+    {
+      "id": "p2_8",
+      "level": 2,
+      "prompt": "Explain what you pack when preparing for a long journey in 5 sentences."
+    },
+    {
+      "id": "p2_9",
+      "level": 2,
+      "prompt": "Describe your favorite teacher and why they inspired you in 5 sentences."
+    },
+    {
+      "id": "p2_10",
+      "level": 2,
+      "prompt": "Describe how public transportation in your city works in 5 sentences."
+    },
+    {
+      "id": "p3_1",
+      "level": 3,
+      "prompt": "Explain why you chose your target major or academic field in 5 sentences."
+    },
+    {
+      "id": "p3_2",
+      "level": 3,
+      "prompt": "Describe a challenging project you completed and what you learned in 5 sentences."
+    },
+    {
+      "id": "p3_3",
+      "level": 3,
+      "prompt": "Explain how you organize your daily study schedule for exams in 5 sentences."
+    },
+    {
+      "id": "p3_4",
+      "level": 3,
+      "prompt": "Describe a problem in your local community and a possible solution in 5 sentences."
+    },
+    {
+      "id": "p3_5",
+      "level": 3,
+      "prompt": "Explain how technology has influenced the way you study in 5 sentences."
+    },
+    {
+      "id": "p3_6",
+      "level": 3,
+      "prompt": "Describe an extracurricular activity or club you participated in in 5 sentences."
+    },
+    {
+      "id": "p3_7",
+      "level": 3,
+      "prompt": "Explain how you handle academic stress and deadlines in 5 sentences."
+    },
+    {
+      "id": "p3_8",
+      "level": 3,
+      "prompt": "Describe your long-term career ambition after graduating abroad in 5 sentences."
+    },
+    {
+      "id": "p3_9",
+      "level": 3,
+      "prompt": "Explain why teamwork was important in a group assignment in 5 sentences."
+    },
+    {
+      "id": "p3_10",
+      "level": 3,
+      "prompt": "Describe how you intend to adapt to life in a new country in 5 sentences."
+    },
+    {
+      "id": "p4_1",
+      "level": 4,
+      "prompt": "Discuss the advantages and disadvantages of living in a university dorm in 5 sentences."
+    },
+    {
+      "id": "p4_2",
+      "level": 4,
+      "prompt": "Explain how cultural exchange enriches university classrooms in 5 sentences."
+    },
+    {
+      "id": "p4_3",
+      "level": 4,
+      "prompt": "Discuss how climate change affects agriculture in developing nations in 5 sentences."
+    },
+    {
+      "id": "p4_4",
+      "level": 4,
+      "prompt": "Explain why learning a second language improves cognitive flexibility in 5 sentences."
+    },
+    {
+      "id": "p4_5",
+      "level": 4,
+      "prompt": "Discuss whether remote internships offer the same value as in-person roles in 5 sentences."
+    },
+    {
+      "id": "p4_6",
+      "level": 4,
+      "prompt": "Explain how ethical considerations should guide modern scientific research in 5 sentences."
+    },
+    {
+      "id": "p4_7",
+      "level": 4,
+      "prompt": "Discuss how social media shapes contemporary public discourse in 5 sentences."
+    },
+    {
+      "id": "p4_8",
+      "level": 4,
+      "prompt": "Explain why critical thinking skills are essential in higher education in 5 sentences."
+    },
+    {
+      "id": "p4_9",
+      "level": 4,
+      "prompt": "Discuss how urbanization alters traditional family structures in 5 sentences."
+    },
+    {
+      "id": "p4_10",
+      "level": 4,
+      "prompt": "Explain how renewable energy initiatives can boost economic development in 5 sentences."
+    },
+    {
+      "id": "p5_1",
+      "level": 5,
+      "prompt": "Analyze how artificial intelligence might redefine academic integrity in 5 sentences."
+    },
+    {
+      "id": "p5_2",
+      "level": 5,
+      "prompt": "Evaluate the balance between state regulation and digital privacy in 5 sentences."
+    },
+    {
+      "id": "p5_3",
+      "level": 5,
+      "prompt": "Analyze how international trade agreements influence domestic market stability in 5 sentences."
+    },
+    {
+      "id": "p5_4",
+      "level": 5,
+      "prompt": "Evaluate whether standardized testing accurately gauges student potential in 5 sentences."
+    },
+    {
+      "id": "p5_5",
+      "level": 5,
+      "prompt": "Analyze how architectural design impacts mental well-being in dense cities in 5 sentences."
+    },
+    {
+      "id": "p5_6",
+      "level": 5,
+      "prompt": "Evaluate the role of independent journalism in preserving democratic accountability in 5 sentences."
+    },
+    {
+      "id": "p5_7",
+      "level": 5,
+      "prompt": "Analyze the ethical dilemmas surrounding genetic engineering in modern medicine in 5 sentences."
+    },
+    {
+      "id": "p5_8",
+      "level": 5,
+      "prompt": "Evaluate how economic disparities affect access to global educational resources in 5 sentences."
+    },
+    {
+      "id": "p5_9",
+      "level": 5,
+      "prompt": "Analyze the impact of automation on future employment paradigms in 5 sentences."
+    },
+    {
+      "id": "p5_10",
+      "level": 5,
+      "prompt": "Evaluate how cultural heritage preservation interacts with urban modernization in 5 sentences."
+    },
+    {
+      "id": "p6_1",
+      "level": 6,
+      "prompt": "Articulate how epistemic humility enhances scholarly debate in 5 sentences."
+    },
+    {
+      "id": "p6_2",
+      "level": 6,
+      "prompt": "Examine the dichotomy between utilitarian efficiency and individual autonomy in 5 sentences."
+    },
+    {
+      "id": "p6_3",
+      "level": 6,
+      "prompt": "Critique how globalization mediates the tension between homogenization and pluralism in 5 sentences."
+    },
+    {
+      "id": "p6_4",
+      "level": 6,
+      "prompt": "Examine how historical narratives are instrumentalized in contemporary geopolitics in 5 sentences."
+    },
+    {
+      "id": "p6_5",
+      "level": 6,
+      "prompt": "Articulate the philosophical implications of algorithmic governance on human agency in 5 sentences."
+    },
+    {
+      "id": "p6_6",
+      "level": 6,
+      "prompt": "Critique the commodification of intellectual inquiry in contemporary academia in 5 sentences."
+    },
+    {
+      "id": "p6_7",
+      "level": 6,
+      "prompt": "Examine how linguistic relativity shapes perceptual frameworks across cultures in 5 sentences."
+    },
+    {
+      "id": "p6_8",
+      "level": 6,
+      "prompt": "Articulate how aesthetic experience fosters moral imagination in 5 sentences."
+    },
+    {
+      "id": "p6_9",
+      "level": 6,
+      "prompt": "Critique the presumption of perpetual economic expansion within finite planetary boundaries in 5 sentences."
+    },
+    {
+      "id": "p6_10",
+      "level": 6,
+      "prompt": "Examine how collective memory informs post-conflict reconciliation efforts in 5 sentences."
+    }
+  ]
+}

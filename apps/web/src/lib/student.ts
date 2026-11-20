@@ -17,6 +17,7 @@ type State = {
   needsSignIn: boolean;
   profile: Profile | null;
   completed: string[];
+  extraExp: number;
   error: string | null;
 };
 
@@ -27,6 +28,7 @@ export function useStudent() {
     needsSignIn: false,
     profile: null,
     completed: [],
+    extraExp: 0,
     error: null,
   });
 

@@ -1,22 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   computeProgress,
   defaultContent,
   levelForExp,
   parseMonth,
+  pickDailyQuest,
+  questDate,
   taskId,
   type Journey,
   type JourneyItem,
   type Stat,
 } from "@dreamer/journey-engine";
-import { Check, Lock } from "lucide-react";
+import { Check, Flame, Lock } from "lucide-react";
 import { FlightBar } from "./FlightBar";
 import { MilestoneIcon, StatIcon } from "./MilestoneIcon";
 import { monthLabel } from "@/lib/format";
-import { setTaskDone, signOut } from "@/lib/store";
+import { loadDailyState, setTaskDone, signOut, type DailyState } from "@/lib/store";
 import { supabaseEnabled } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 
@@ -36,21 +38,35 @@ export function Dashboard({
   journey,
   today,
   initialCompleted,
+  extraExp = 0,
 }: {
   journey: Journey;
   today: string;
   initialCompleted: string[];
+  extraExp?: number;
 }) {
   const [completed, setCompleted] = useState<Set<string>>(() => new Set(initialCompleted));
   const [notice, setNotice] = useState<Notice | null>(null);
   const [rankUp, setRankUp] = useState<string | null>(null);
+  const [dailyState, setDailyState] = useState<DailyState | null>(null);
   const noticeId = useRef(0);
   const router = useRouter();
 
-  const progress = useMemo(() => computeProgress(journey, completed, today), [journey, completed, today]);
+  useEffect(() => {
+    loadDailyState("english").then(setDailyState).catch(() => {});
+  }, []);
+
+  const progress = useMemo(
+    () => computeProgress(journey, completed, today, defaultContent, extraExp),
+    [journey, completed, today, extraExp],
+  );
   const ranks = defaultContent.ranks;
   const rankDef = ranks.find((r) => r.rank === progress.rank)!;
   const nextRankDef = ranks.find((r) => r.rank === progress.nextRank);
+
+  const dhakaToday = questDate();
+  const todayQuest = useMemo(() => pickDailyQuest(dhakaToday, progress.level), [dhakaToday, progress.level]);
+  const isHolding = progress.flightStatus === "holding";
 
   const now = parseMonth(today);
   const isDone = (i: JourneyItem) => i.tasks.every((t) => completed.has(taskId(i.key, t.key)));
@@ -159,6 +175,57 @@ export function Dashboard({
       </section>
 
       <FlightBar journey={journey} progress={progress} />
+
+      {/* Daily Quest window */}
+      <section className="window p-4">
+        <div className="flex items-center justify-between">
+          <h2 className="window-title mb-0">Daily Quest</h2>
+          <div className="flex items-center gap-1 font-mono text-xs text-[var(--accent)]">
+            <Flame size={14} className="stroke-[1.5]" />
+            <span>Streak {dailyState?.streak.currentCount ?? 0}</span>
+          </div>
+        </div>
+
+        <div className="mt-3 flex items-start justify-between gap-3 border-t border-[var(--line-soft)] pt-3">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">
+                {todayQuest.type === "words"
+                  ? "5 New Words"
+                  : todayQuest.type === "sentences"
+                    ? "5 Sentences About You"
+                    : "Writing Practice"}
+              </span>
+              <span className="font-mono text-[11px] text-[var(--muted)]">+20 EXP</span>
+            </div>
+            {isHolding ? (
+              <p className="mt-1 font-mono text-[11px] text-[var(--muted)]">Exam season: optional today</p>
+            ) : (
+              <p className="mt-1 truncate text-xs text-[var(--muted)]">
+                {todayQuest.type === "words"
+                  ? "Review and verify 5 academic words"
+                  : todayQuest.prompt?.prompt ?? "Daily language practice"}
+              </p>
+            )}
+          </div>
+
+          <div className="shrink-0">
+            {dailyState?.isDoneToday ? (
+              <div className="flex items-center gap-1 py-1 font-mono text-xs text-[#4ade80]">
+                <Check size={14} className="stroke-[2]" />
+                <span>Done ✓</span>
+              </div>
+            ) : (
+              <Link
+                href="/daily"
+                className="inline-block border border-[var(--accent)] px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-black"
+              >
+                Start
+              </Link>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Quest window */}
       <section className="window px-4 pt-3 pb-3">

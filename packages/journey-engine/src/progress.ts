@@ -29,6 +29,7 @@ export function computeProgress(
   completedTasks: Iterable<string>,
   today: Date | MonthString,
   content: Content = defaultContent,
+  extraExp: number = 0,
 ): Progress {
   const now = fromInput(today);
   const done = new Set(completedTasks);
@@ -53,6 +54,10 @@ export function computeProgress(
       if (item.stamp) stamps.push(item.stamp);
     }
   }
+
+  // Daily quests and practice sets grant extra EXP
+  const totalExp = exp + extraExp;
+  stats.english += extraExp;
 
   // ----- Rank gates, in order -----
   // A requirement is "milestone" or "milestone.task". Requirements outside this
@@ -109,8 +114,8 @@ export function computeProgress(
 
   const rank = ranks[rankIndex]!;
   return {
-    exp,
-    level: levelForExp(exp),
+    exp: totalExp,
+    level: levelForExp(totalExp),
     rank: rank.rank,
     rankTitle: rank.title,
     ...(next ? { nextRank: next.rank } : {}),

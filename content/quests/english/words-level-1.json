@@ -1,0 +1,608 @@
+{
+  "level": 1,
+  "name": "Level 1 (A2 Everyday)",
+  "source": "Dreamer Academic English Corpus (original compilation)",
+  "license": "Dreamer Open Educational Content License",
+  "words": [
+    {
+      "word": "airport",
+      "meaning": "a place where airplanes land and take off",
+      "sentence": "We arrived at the airport two hours before departure.",
+      "bn": "বিমানবন্দর"
+    },
+    {
+      "word": "ticket",
+      "meaning": "a piece of paper or digital pass allowing travel",
+      "sentence": "She showed her flight ticket at the check-in counter.",
+      "bn": "টিকেট"
+    },
+    {
+      "word": "travel",
+      "meaning": "to go from one place to another",
+      "sentence": "They travel to university by bus every day.",
+      "bn": "ভ্রমণ করা"
+    },
+    {
+      "word": "study",
+      "meaning": "to spend time learning about a subject",
+      "sentence": "He plans to study computer science abroad.",
+      "bn": "পড়াশোনা করা"
+    },
+    {
+      "word": "school",
+      "meaning": "a place where children learn",
+      "sentence": "Her school organized a seminar on international education.",
+      "bn": "বিদ্যালয়"
+    },
+    {
+      "word": "friend",
+      "meaning": "a person you know and like",
+      "sentence": "My friend helped me fill out the registration form.",
+      "bn": "বন্ধু"
+    },
+    {
+      "word": "family",
+      "meaning": "a group of people related to one another",
+      "sentence": "His family supported his decision to study in Germany.",
+      "bn": "পরিবার"
+    },
+    {
+      "word": "morning",
+      "meaning": "the early part of the day",
+      "sentence": "I review new vocabulary every morning.",
+      "bn": "সকাল"
+    },
+    {
+      "word": "evening",
+      "meaning": "the close of the day before night",
+      "sentence": "She attends English grammar classes in the evening.",
+      "bn": "সন্ধ্যা"
+    },
+    {
+      "word": "country",
+      "meaning": "a nation with its own government",
+      "sentence": "Canada is a popular country for higher education.",
+      "bn": "দেশ"
+    },
+    {
+      "word": "capital",
+      "meaning": "the city where a government is based",
+      "sentence": "Dhaka is the capital and largest city of Bangladesh.",
+      "bn": "রাজধানী"
+    },
+    {
+      "word": "weather",
+      "meaning": "atmospheric conditions at a time and place",
+      "sentence": "The weather is chilly during European winters.",
+      "bn": "আবহাওয়া"
+    },
+    {
+      "word": "season",
+      "meaning": "one of four natural periods of the year",
+      "sentence": "Autumn is the favorite season of many students.",
+      "bn": "ঋতু"
+    },
+    {
+      "word": "market",
+      "meaning": "a place where goods are bought and sold",
+      "sentence": "Local markets offer fresh vegetables and spices.",
+      "bn": "বাজার"
+    },
+    {
+      "word": "money",
+      "meaning": "coins or banknotes used to pay for items",
+      "sentence": "Save money each month for your test fees.",
+      "bn": "টাকা"
+    },
+    {
+      "word": "budget",
+      "meaning": "an estimate of income and expenditure",
+      "sentence": "She created a monthly budget for food and rent.",
+      "bn": "বাজেট"
+    },
+    {
+      "word": "habit",
+      "meaning": "a regular practice that is hard to give up",
+      "sentence": "Daily reading is an excellent language habit.",
+      "bn": "অভ্যাস"
+    },
+    {
+      "word": "health",
+      "meaning": "the state of being free from illness",
+      "sentence": "Good health is necessary for academic success.",
+      "bn": "স্বাস্থ্য"
+    },
+    {
+      "word": "doctor",
+      "meaning": "a qualified medical practitioner",
+      "sentence": "Visit a doctor if you feel unwell during exams.",
+      "bn": "ডাক্তার"
+    },
+    {
+      "word": "hospital",
+      "meaning": "an institution providing medical treatment",
+      "sentence": "The university has an emergency hospital on campus.",
+      "bn": "হাসপাতাল"
+    },
+    {
+      "word": "library",
+      "meaning": "a building or room containing books to read",
+      "sentence": "The campus library stays open until midnight.",
+      "bn": "গ্রন্থাগার"
+    },
+    {
+      "word": "classroom",
+      "meaning": "a room in which classes are held",
+      "sentence": "Smart projectors are installed in every classroom.",
+      "bn": "শ্রেণিকক্ষ"
+    },
+    {
+      "word": "teacher",
+      "meaning": "a person who instructs students",
+      "sentence": "Our English teacher explains difficult concepts clearly.",
+      "bn": "শিক্ষক"
+    },
+    {
+      "word": "student",
+      "meaning": "a person enrolled in a course of study",
+      "sentence": "Every student received an orientation guidebook.",
+      "bn": "শিক্ষার্থী"
+    },
+    {
+      "word": "lesson",
+      "meaning": "a period of learning or instruction",
+      "sentence": "Today's lesson focused on paragraph structure.",
+      "bn": "পাঠ"
+    },
+    {
+      "word": "homework",
+      "meaning": "schoolwork assigned to be done at home",
+      "sentence": "Finish your homework before watching television.",
+      "bn": "বাড়ির কাজ"
+    },
+    {
+      "word": "exam",
+      "meaning": "a formal test of knowledge or ability",
+      "sentence": "He passed his final chemistry exam with distinction.",
+      "bn": "পরীক্ষা"
+    },
+    {
+      "word": "score",
+      "meaning": "the number of points achieved in a test",
+      "sentence": "She achieved an impressive score in her exam.",
+      "bn": "নম্বর"
+    },
+    {
+      "word": "grade",
+      "meaning": "a mark indicating a student's performance",
+      "sentence": "High grades open up scholarship opportunities.",
+      "bn": "গ্রেড"
+    },
+    {
+      "word": "college",
+      "meaning": "an educational institution for higher learning",
+      "sentence": "He enrolled at Notre Dame College in Dhaka.",
+      "bn": "কলেজ"
+    },
+    {
+      "word": "degree",
+      "meaning": "an academic title conferred by a university",
+      "sentence": "She earned a bachelor's degree in engineering.",
+      "bn": "ডিগ্রি"
+    },
+    {
+      "word": "campus",
+      "meaning": "the grounds and buildings of a university",
+      "sentence": "The campus has lush green trees and quiet walkways.",
+      "bn": "ক্যাম্পাস"
+    },
+    {
+      "word": "office",
+      "meaning": "a room or set of rooms used for business",
+      "sentence": "Submit your documents to the admissions office.",
+      "bn": "কার্যালয়"
+    },
+    {
+      "word": "letter",
+      "meaning": "a written message sent to a person",
+      "sentence": "He received an official offer letter yesterday.",
+      "bn": "চিঠি"
+    },
+    {
+      "word": "message",
+      "meaning": "a verbal, written, or recorded communication",
+      "sentence": "She sent a polite message to her academic advisor.",
+      "bn": "বার্তা"
+    },
+    {
+      "word": "phone",
+      "meaning": "a device used for voice or text communication",
+      "sentence": "Keep your phone on silent mode during lectures.",
+      "bn": "ফোন"
+    },
+    {
+      "word": "computer",
+      "meaning": "an electronic device for storing and processing data",
+      "sentence": "Modern research requires basic computer skills.",
+      "bn": "কম্পিউটার"
+    },
+    {
+      "word": "internet",
+      "meaning": "a global computer network providing information",
+      "sentence": "Fast internet access is essential for online lectures.",
+      "bn": "ইন্টারনেট"
+    },
+    {
+      "word": "search",
+      "meaning": "to look for something carefully",
+      "sentence": "Search for university ranking details online.",
+      "bn": "অনুসন্ধান করা"
+    },
+    {
+      "word": "learn",
+      "meaning": "to gain knowledge or skill through experience",
+      "sentence": "Students learn practical problem-solving in lab sessions.",
+      "bn": "শেখা"
+    },
+    {
+      "word": "write",
+      "meaning": "to mark letters or words on a surface",
+      "sentence": "Write your personal statement with honesty.",
+      "bn": "লেখা"
+    },
+    {
+      "word": "read",
+      "meaning": "to look at and comprehend written text",
+      "sentence": "Read academic essays to expand your vocabulary.",
+      "bn": "পড়া"
+    },
+    {
+      "word": "speak",
+      "meaning": "to say words and communicate orally",
+      "sentence": "Practice daily to speak English fluently.",
+      "bn": "কথা বলা"
+    },
+    {
+      "word": "listen",
+      "meaning": "to give attention to sound or action",
+      "sentence": "Listen carefully to the lecture instructions.",
+      "bn": "শোনা"
+    },
+    {
+      "word": "answer",
+      "meaning": "a thing said or written in reaction to a question",
+      "sentence": "Write a concise answer to each question.",
+      "bn": "উত্তর"
+    },
+    {
+      "word": "question",
+      "meaning": "a sentence worded so as to elicit information",
+      "sentence": "Raise your hand if you have a question.",
+      "bn": "প্রশ্ন"
+    },
+    {
+      "word": "problem",
+      "meaning": "a matter or situation regarded as unwelcome",
+      "sentence": "Discuss any visa application problem with an advisor.",
+      "bn": "সমস্যা"
+    },
+    {
+      "word": "solution",
+      "meaning": "a means of solving a problem",
+      "sentence": "Careful planning is the best solution for stress.",
+      "bn": "সমাধান"
+    },
+    {
+      "word": "decision",
+      "meaning": "a conclusion or resolution reached after consideration",
+      "sentence": "Choosing your major is a significant life decision.",
+      "bn": "সিদ্ধান্ত"
+    },
+    {
+      "word": "choice",
+      "meaning": "an act of selecting between options",
+      "sentence": "Students have a wide choice of elective subjects.",
+      "bn": "পছন্দ"
+    },
+    {
+      "word": "chance",
+      "meaning": "a possibility of something happening",
+      "sentence": "Early submission increases your chance of admission.",
+      "bn": "সুযোগ"
+    },
+    {
+      "word": "future",
+      "meaning": "a period of time following the present",
+      "sentence": "Invest in your future through consistent learning.",
+      "bn": "ভবিষ্যৎ"
+    },
+    {
+      "word": "dream",
+      "meaning": "a cherished aspiration or ambition",
+      "sentence": "Her dream is to conduct research in robotics.",
+      "bn": "স্বপ্ন"
+    },
+    {
+      "word": "goal",
+      "meaning": "the object of a person's ambition or effort",
+      "sentence": "Set a clear goal for each academic semester.",
+      "bn": "লক্ষ্য"
+    },
+    {
+      "word": "effort",
+      "meaning": "vigorous or determined attempt",
+      "sentence": "Success requires sustained effort and discipline.",
+      "bn": "প্রচেষ্টা"
+    },
+    {
+      "word": "success",
+      "meaning": "the accomplishment of an aim or purpose",
+      "sentence": "Perseverance is the foundation of academic success.",
+      "bn": "সাফল্য"
+    },
+    {
+      "word": "simple",
+      "meaning": "easily understood or done; presenting no difficulty",
+      "sentence": "Keep your application essays clear and simple.",
+      "bn": "সহজ"
+    },
+    {
+      "word": "clear",
+      "meaning": "easy to perceive, understand, or interpret",
+      "sentence": "Provide a clear explanation for your study gap.",
+      "bn": "স্পষ্ট"
+    },
+    {
+      "word": "strong",
+      "meaning": "having the power to withstand force or pressure",
+      "sentence": "A strong recommendation letter strengthens your profile.",
+      "bn": "শক্তিশালী"
+    },
+    {
+      "word": "useful",
+      "meaning": "able to be used for a practical purpose",
+      "sentence": "Grammar checklists are useful for editing essays.",
+      "bn": "দরকারী"
+    },
+    {
+      "word": "honest",
+      "meaning": "free of deceit and truthful",
+      "sentence": "Always provide honest information on visa forms.",
+      "bn": "সৎ"
+    },
+    {
+      "word": "polite",
+      "meaning": "having or showing respectful behavior",
+      "sentence": "Send polite inquiries to university admissions officers.",
+      "bn": "ভদ্র"
+    },
+    {
+      "word": "active",
+      "meaning": "engaging or ready to engage in physically energetic pursuits",
+      "sentence": "Be an active participant during classroom seminars.",
+      "bn": "সক্রিয়"
+    },
+    {
+      "word": "ready",
+      "meaning": "in a suitable state for an action or situation",
+      "sentence": "Check if your travel documents are ready.",
+      "bn": "প্রস্তুত"
+    },
+    {
+      "word": "happy",
+      "meaning": "feeling or showing pleasure or contentment",
+      "sentence": "The students were happy after receiving their test scores.",
+      "bn": "খুশি"
+    },
+    {
+      "word": "careful",
+      "meaning": "making sure of avoiding potential danger or mistake",
+      "sentence": "Be careful when entering your passport details.",
+      "bn": "সতর্ক"
+    },
+    {
+      "word": "famous",
+      "meaning": "known about by many people",
+      "sentence": "Oxford is a famous university with ancient traditions.",
+      "bn": "বিখ্যাত"
+    },
+    {
+      "word": "modern",
+      "meaning": "relating to the present or recent times",
+      "sentence": "The new laboratory has modern scientific equipment.",
+      "bn": "আধুনিক"
+    },
+    {
+      "word": "ancient",
+      "meaning": "belonging to the very distant past",
+      "sentence": "Historians analyze ancient manuscripts in the archives.",
+      "bn": "প্রাচীন"
+    },
+    {
+      "word": "public",
+      "meaning": "concerning the people as a whole",
+      "sentence": "Public universities often have lower tuition fees.",
+      "bn": "সরকারি / সার্বজনীন"
+    },
+    {
+      "word": "private",
+      "meaning": "belonging to or for the use of a particular individual",
+      "sentence": "Private colleges may provide merit-based tuition discounts.",
+      "bn": "বেসরকারি"
+    },
+    {
+      "word": "global",
+      "meaning": "relating to the whole world; worldwide",
+      "sentence": "Higher education offers a truly global perspective.",
+      "bn": "বিশ্বব্যাপী"
+    },
+    {
+      "word": "local",
+      "meaning": "relating to a particular area or neighborhood",
+      "sentence": "Consult your local bank for currency exchange rates.",
+      "bn": "স্থানীয়"
+    },
+    {
+      "word": "foreign",
+      "meaning": "of, from, in, or characteristic of a country other than one's own",
+      "sentence": "Living in a foreign country expands your horizons.",
+      "bn": "বিদেশী"
+    },
+    {
+      "word": "native",
+      "meaning": "associated with the place or circumstances of one's birth",
+      "sentence": "She teaches her native language to international peers.",
+      "bn": "মাতৃ / দেশীয়"
+    },
+    {
+      "word": "daily",
+      "meaning": "done, produced, or occurring every day",
+      "sentence": "Spend thirty minutes on daily vocabulary drills.",
+      "bn": "দৈনিক"
+    },
+    {
+      "word": "weekly",
+      "meaning": "done, produced, or occurring once a week",
+      "sentence": "Our squad holds a weekly progress review.",
+      "bn": "সাপ্তাহিক"
+    },
+    {
+      "word": "monthly",
+      "meaning": "done, produced, or occurring once every month",
+      "sentence": "Calculate your monthly rent and living expenses.",
+      "bn": "মাসিক"
+    },
+    {
+      "word": "annual",
+      "meaning": "occurring once every year",
+      "sentence": "The university holds an annual international student festival.",
+      "bn": "বার্ষিক"
+    },
+    {
+      "word": "center",
+      "meaning": "the middle point of a circle or sphere",
+      "sentence": "The student center has dining areas and meeting rooms.",
+      "bn": "কেন্দ্র"
+    },
+    {
+      "word": "street",
+      "meaning": "a public road in a city or town",
+      "sentence": "Her apartment is located on a quiet street.",
+      "bn": "রাস্তা"
+    },
+    {
+      "word": "station",
+      "meaning": "a regular stopping place on a public transport route",
+      "sentence": "The railway station is within walking distance of campus.",
+      "bn": "স্টেশন"
+    },
+    {
+      "word": "village",
+      "meaning": "a group of houses in a rural area",
+      "sentence": "His grandparents live in a quiet rural village.",
+      "bn": "গ্রাম"
+    },
+    {
+      "word": "island",
+      "meaning": "a piece of land surrounded by water",
+      "sentence": "Ireland is an island nation with top universities.",
+      "bn": "দ্বীপ"
+    },
+    {
+      "word": "river",
+      "meaning": "a large natural stream of water",
+      "sentence": "The Padma is a mighty river flowing through Bangladesh.",
+      "bn": "নদী"
+    },
+    {
+      "word": "mountain",
+      "meaning": "a large natural elevation of the earth's surface",
+      "sentence": "The campus overlooks picturesque snow-capped mountains.",
+      "bn": "পাহাড় / পর্বত"
+    },
+    {
+      "word": "forest",
+      "meaning": "a large area covered chiefly with trees and undergrowth",
+      "sentence": "Sundarbans is the largest mangrove forest in the world.",
+      "bn": "বন / জঙ্গল"
+    },
+    {
+      "word": "animal",
+      "meaning": "a living organism that feeds on organic matter",
+      "sentence": "Biology students study animal behavior in nature reserves.",
+      "bn": "প্রাণী"
+    },
+    {
+      "word": "plant",
+      "meaning": "a living organism of the kind exemplified by trees and herbs",
+      "sentence": "Botany courses examine rare medicinal plant species.",
+      "bn": "উদ্ভিদ"
+    },
+    {
+      "word": "hotel",
+      "meaning": "an establishment providing accommodation and meals",
+      "sentence": "They booked a comfortable hotel near the campus.",
+      "bn": "হোটেল"
+    },
+    {
+      "word": "pencil",
+      "meaning": "an instrument for writing or drawing",
+      "sentence": "Bring a pencil and an eraser to the test hall.",
+      "bn": "পেন্সিল"
+    },
+    {
+      "word": "afternoon",
+      "meaning": "the time from noon or lunchtime to evening",
+      "sentence": "Group discussions take place every Tuesday afternoon.",
+      "bn": "বিকাল"
+    },
+    {
+      "word": "night",
+      "meaning": "the period of darkness between sunset and sunrise",
+      "sentence": "Rest properly at night before major examination days.",
+      "bn": "রাত"
+    },
+    {
+      "word": "clock",
+      "meaning": "a mechanical or electrical device for measuring time",
+      "sentence": "Check the clock so you arrive on time.",
+      "bn": "ঘড়ি"
+    },
+    {
+      "word": "watch",
+      "meaning": "a small timepiece worn typically on a strap on one's wrist",
+      "sentence": "Wear a simple watch during timed exam sessions.",
+      "bn": "হাতঘড়ি"
+    },
+    {
+      "word": "window",
+      "meaning": "an opening in a wall fitted with glass",
+      "sentence": "He looked out the library window while thinking.",
+      "bn": "জানালা"
+    },
+    {
+      "word": "price",
+      "meaning": "the amount of money expected in payment for something",
+      "sentence": "Check the book price before ordering textbooks.",
+      "bn": "দাম"
+    },
+    {
+      "word": "cost",
+      "meaning": "an amount that has to be paid or spent to buy something",
+      "sentence": "Compare the total cost of attendance across colleges.",
+      "bn": "খরচ"
+    },
+    {
+      "word": "cheap",
+      "meaning": "costing little money; inexpensive",
+      "sentence": "Cooking at home is cheap compared to dining out.",
+      "bn": "সস্তা"
+    },
+    {
+      "word": "rich",
+      "meaning": "having a great deal of money or assets",
+      "sentence": "The curriculum is rich in practical case studies.",
+      "bn": "সমৃদ্ধ"
+    }
+  ]
+}

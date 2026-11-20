@@ -1,0 +1,608 @@
+{
+  "level": 3,
+  "name": "Level 3 (B1+ Academic Foundations)",
+  "source": "Dreamer Academic English Corpus (original compilation)",
+  "license": "Dreamer Open Educational Content License",
+  "words": [
+    {
+      "word": "academic",
+      "meaning": "relating to education and scholarship",
+      "sentence": "Maintain a consistent academic record throughout university.",
+      "bn": "শিক্ষা সংক্রান্ত"
+    },
+    {
+      "word": "accurate",
+      "meaning": "correct in all details; exact",
+      "sentence": "Provide accurate data in your financial declarations.",
+      "bn": "সঠিক / নির্ভুল"
+    },
+    {
+      "word": "achieve",
+      "meaning": "successfully bring about or reach a desired objective",
+      "sentence": "Hard work enables students to achieve high test scores.",
+      "bn": "অর্জন করা"
+    },
+    {
+      "word": "acquire",
+      "meaning": "buy or obtain an asset or object; learn a skill",
+      "sentence": "Graduate school helps you acquire advanced analytical skills.",
+      "bn": "অর্জন করা / লাভ করা"
+    },
+    {
+      "word": "adequate",
+      "meaning": "satisfactory or acceptable in quality or quantity",
+      "sentence": "Show adequate bank funds for your first year of tuition.",
+      "bn": "পর্যাপ্ত"
+    },
+    {
+      "word": "adjust",
+      "meaning": "alter or move something slightly in order to achieve the desired fit or appearance",
+      "sentence": "Students adjust their schedules to balance part-time work and labs.",
+      "bn": "সমন্বয় করা"
+    },
+    {
+      "word": "allocate",
+      "meaning": "distribute resources or duties for a particular purpose",
+      "sentence": "Allocate two hours every afternoon for GRE practice.",
+      "bn": "বরাদ্দ করা"
+    },
+    {
+      "word": "alter",
+      "meaning": "change or cause to change in character or composition",
+      "sentence": "You cannot alter your answers after submitting the test.",
+      "bn": "পরিবর্তন করা"
+    },
+    {
+      "word": "alternative",
+      "meaning": "available as another possibility",
+      "sentence": "Community colleges offer an affordable alternative pathway.",
+      "bn": "বিকল্প"
+    },
+    {
+      "word": "analyze",
+      "meaning": "examine methodically and in detail the constitution or structure of something",
+      "sentence": "Analyze the sample essays to understand effective rhetoric.",
+      "bn": "বিশ্লেষণ করা"
+    },
+    {
+      "word": "annual",
+      "meaning": "occurring once every year",
+      "sentence": "Review your annual tuition expenses carefully.",
+      "bn": "বার্ষিক"
+    },
+    {
+      "word": "anticipate",
+      "meaning": "regard as probable; expect or predict",
+      "sentence": "Anticipate visa processing delays during summer peak periods.",
+      "bn": "প্রত্যাশা করা"
+    },
+    {
+      "word": "apparent",
+      "meaning": "clearly visible or understood; obvious",
+      "sentence": "His dedication was apparent from his detailed research notes.",
+      "bn": "স্পষ্ট"
+    },
+    {
+      "word": "approach",
+      "meaning": "a way of dealing with something",
+      "sentence": "Take a systematic approach to reading comprehension questions.",
+      "bn": "পন্থা / পদ্ধতি"
+    },
+    {
+      "word": "appropriate",
+      "meaning": "suitable or proper in the circumstances",
+      "sentence": "Use appropriate formal vocabulary in academic cover letters.",
+      "bn": "উপযুক্ত"
+    },
+    {
+      "word": "approximate",
+      "meaning": "close to the actual, but not completely accurate or exact",
+      "sentence": "Give an approximate estimate of your initial relocation expenses.",
+      "bn": "আনুমানিক"
+    },
+    {
+      "word": "aspect",
+      "meaning": "a particular part or feature of something",
+      "sentence": "Cultural immersion is a rewarding aspect of living abroad.",
+      "bn": "দিক / বৈশিষ্ট্য"
+    },
+    {
+      "word": "assess",
+      "meaning": "evaluate or estimate the nature, ability, or quality of",
+      "sentence": "Assess your strengths before choosing an academic thesis topic.",
+      "bn": "মূল্যায়ন করা"
+    },
+    {
+      "word": "assign",
+      "meaning": "allocate a job or duty to someone",
+      "sentence": "Professors assign weekly readings before each seminar.",
+      "bn": "দায়িত্ব অর্পণ করা"
+    },
+    {
+      "word": "assume",
+      "meaning": "suppose to be the case, without proof",
+      "sentence": "Do not assume that all universities have identical criteria.",
+      "bn": "অনুমান করা"
+    },
+    {
+      "word": "attitude",
+      "meaning": "a settled way of thinking or feeling about someone or something",
+      "sentence": "A positive attitude helps in overcoming homesickness.",
+      "bn": "মনোভাব"
+    },
+    {
+      "word": "attribute",
+      "meaning": "regard something as being caused by",
+      "sentence": "He attributes his success to disciplined preparation.",
+      "bn": "গুণ / কারণ হিসেবে গণ্য করা"
+    },
+    {
+      "word": "available",
+      "meaning": "able to be used or obtained",
+      "sentence": "Check whether on-campus housing is available for freshmen.",
+      "bn": "সহজলভ্য"
+    },
+    {
+      "word": "aware",
+      "meaning": "having knowledge or perception of a situation or fact",
+      "sentence": "Be aware of application deadlines for each funding tier.",
+      "bn": "সচেতন"
+    },
+    {
+      "word": "brief",
+      "meaning": "of short duration; concise in words",
+      "sentence": "Write a brief summary of your undergraduate research paper.",
+      "bn": "সংক্ষিপ্ত"
+    },
+    {
+      "word": "capable",
+      "meaning": "having the ability, fitness, or quality necessary to do something",
+      "sentence": "She is capable of handling rigorous graduate coursework.",
+      "bn": "সক্ষম"
+    },
+    {
+      "word": "category",
+      "meaning": "a class or division of people or things regarded as having particular shared characteristics",
+      "sentence": "Scholarships fall into merit-based and need-based categories.",
+      "bn": "বিভাগ / শ্রেণী"
+    },
+    {
+      "word": "circumstance",
+      "meaning": "a fact or condition connected with or relevant to an event or action",
+      "sentence": "Explain any extenuating circumstance in an addendum.",
+      "bn": "পরিস্থিতি"
+    },
+    {
+      "word": "clarify",
+      "meaning": "make a statement or situation less confused and more clearly comprehensible",
+      "sentence": "Email the department secretary to clarify course prerequisites.",
+      "bn": "স্পষ্ট করা"
+    },
+    {
+      "word": "collapse",
+      "meaning": "fall down or in; give way",
+      "sentence": "Do not let your study schedule collapse under exam pressure.",
+      "bn": "ভেঙে পড়া"
+    },
+    {
+      "word": "colleague",
+      "meaning": "a person with whom one works in a profession or business",
+      "sentence": "Collaborate with student colleagues on laboratory projects.",
+      "bn": "সহকর্মী"
+    },
+    {
+      "word": "commence",
+      "meaning": "begin; start",
+      "sentence": "Classes commence in the first week of September.",
+      "bn": "শুরু করা"
+    },
+    {
+      "word": "commit",
+      "meaning": "pledge or bind to a certain course or policy",
+      "sentence": "Commit thirty minutes every morning to academic vocabulary.",
+      "bn": "প্রতিশ্রুতিবদ্ধ হওয়া"
+    },
+    {
+      "word": "complex",
+      "meaning": "consisting of many different and connected parts",
+      "sentence": "Scientific papers often present complex data structures.",
+      "bn": "জটিল"
+    },
+    {
+      "word": "component",
+      "meaning": "a part or element of a larger whole",
+      "sentence": "The writing component requires coherent paragraph development.",
+      "bn": "উপাদান"
+    },
+    {
+      "word": "concentrate",
+      "meaning": "focus one's attention or mental effort on a particular object or activity",
+      "sentence": "Concentrate on mastering one grammar concept at a time.",
+      "bn": "মনোযোগ দেওয়া"
+    },
+    {
+      "word": "concept",
+      "meaning": "an abstract idea; a general notion",
+      "sentence": "Understand the foundational concept before attempting equations.",
+      "bn": "ধারণা"
+    },
+    {
+      "word": "conclude",
+      "meaning": "bring something to an end; arrive at a judgment or opinion by reasoning",
+      "sentence": "Conclude your essay with a forward-looking reflection.",
+      "bn": "উপসংহারে পৌঁছানো"
+    },
+    {
+      "word": "conduct",
+      "meaning": "organize and carry out",
+      "sentence": "Students conduct surveys to gather empirical research data.",
+      "bn": "পরিচালনা করা"
+    },
+    {
+      "word": "conflict",
+      "meaning": "a serious disagreement or argument; incompatibility",
+      "sentence": "Resolve schedule conflicts between lectures and lab sessions.",
+      "bn": "দ্বন্দ্ব / সংঘাত"
+    },
+    {
+      "word": "consequence",
+      "meaning": "a result or effect of an action or condition",
+      "sentence": "Plagiarism carries severe disciplinary consequences.",
+      "bn": "পরিণতি / ফলাফল"
+    },
+    {
+      "word": "considerable",
+      "meaning": "notably large in size, amount, or extent",
+      "sentence": "The university invested considerable funds into new labs.",
+      "bn": "উল্লেখযোগ্য"
+    },
+    {
+      "word": "consist",
+      "meaning": "be composed or made up of",
+      "sentence": "The exam consists of multiple-choice and short-answer sections.",
+      "bn": "গঠিত হওয়া"
+    },
+    {
+      "word": "constant",
+      "meaning": "occurring continuously over a period of time",
+      "sentence": "Consistent practice produces constant improvement.",
+      "bn": "ধ্রুব / অবিরাম"
+    },
+    {
+      "word": "construct",
+      "meaning": "build or erect something; form an idea",
+      "sentence": "Construct well-supported arguments in your statement of purpose.",
+      "bn": "নির্মাণ করা"
+    },
+    {
+      "word": "consume",
+      "meaning": "use up a resource; eat or drink",
+      "sentence": "Writing long essays can consume substantial mental energy.",
+      "bn": "ব্যয় করা / খরচ করা"
+    },
+    {
+      "word": "context",
+      "meaning": "the circumstances that form the setting for an event, statement, or idea",
+      "sentence": "Interpret historical evidence within its original social context.",
+      "bn": "প্রেক্ষাপট"
+    },
+    {
+      "word": "contract",
+      "meaning": "a written or spoken agreement intended to be enforceable by law",
+      "sentence": "Read your apartment tenancy contract thoroughly.",
+      "bn": "চুক্তি"
+    },
+    {
+      "word": "contribute",
+      "meaning": "give something in order to help achieve or provide something",
+      "sentence": "Active students contribute insightful ideas during class seminars.",
+      "bn": "অবদান রাখা"
+    },
+    {
+      "word": "coordinate",
+      "meaning": "bring the different elements of a complex activity or organization into a harmonious relationship",
+      "sentence": "The club will coordinate the annual international food fair.",
+      "bn": "সমন্বয় করা"
+    },
+    {
+      "word": "core",
+      "meaning": "the central or most important part of something",
+      "sentence": "Calculus and linear algebra form the core of the engineering curriculum.",
+      "bn": "মূল / কেন্দ্রবিন্দু"
+    },
+    {
+      "word": "corporate",
+      "meaning": "relating to a large company or group",
+      "sentence": "Interning at a corporate headquarters provides valuable industry exposure.",
+      "bn": "কর্পোরেট"
+    },
+    {
+      "word": "correspond",
+      "meaning": "have a close similarity; match or agree almost exactly; communicate by exchanging letters",
+      "sentence": "Ensure the spelling on your application corresponds with your passport.",
+      "bn": "মিল থাকা / চিঠিপত্র বিনিময়"
+    },
+    {
+      "word": "criteria",
+      "meaning": "principles or standards by which something may be judged or decided",
+      "sentence": "Review the eligibility criteria before applying for assistantships.",
+      "bn": "মানদণ্ড"
+    },
+    {
+      "word": "crucial",
+      "meaning": "decisive or critical, especially in the success or failure of something",
+      "sentence": "Securing a faculty recommendation is crucial for graduate admission.",
+      "bn": "অত্যন্ত গুরুত্বপূর্ণ"
+    },
+    {
+      "word": "deduce",
+      "meaning": "arrive at a fact or a conclusion by reasoning",
+      "sentence": "Scientists deduce underlying laws from repeated experimental data.",
+      "bn": "অনুমান করা / সিদ্ধান্তে আসা"
+    },
+    {
+      "word": "define",
+      "meaning": "state or describe exactly the nature, scope, or meaning of",
+      "sentence": "Clearly define the key terms in your introductory paragraph.",
+      "bn": "সংজ্ঞায়িত করা"
+    },
+    {
+      "word": "demonstrate",
+      "meaning": "clearly show the existence or truth of something by giving proof or evidence",
+      "sentence": "Use concrete project examples to demonstrate leadership ability.",
+      "bn": "প্রদর্শন করা / প্রমাণ করা"
+    },
+    {
+      "word": "denote",
+      "meaning": "be a sign of; indicate",
+      "sentence": "Asterisks in the syllabus denote mandatory reading assignments.",
+      "bn": "চিহ্নিত করা / বোঝানো"
+    },
+    {
+      "word": "derive",
+      "meaning": "obtain something from a specified source",
+      "sentence": "Engineers derive mathematical formulas to simulate fluid dynamics.",
+      "bn": "উৎপন্ন করা / আহরণ করা"
+    },
+    {
+      "word": "differentiate",
+      "meaning": "recognize or ascertain what makes someone or something different",
+      "sentence": "Differentiate between formal rhetoric and colloquial speech.",
+      "bn": "পার্থক্য নির্ণয় করা"
+    },
+    {
+      "word": "dimension",
+      "meaning": "a measurable extent of some kind, such as length, breadth, depth, or height; an aspect",
+      "sentence": "International study adds an intellectual dimension to your resume.",
+      "bn": "মাত্রা"
+    },
+    {
+      "word": "diminish",
+      "meaning": "make or become less",
+      "sentence": "Do not let setbacks diminish your enthusiasm for academic research.",
+      "bn": "হ্রাস পাওয়া"
+    },
+    {
+      "word": "discrete",
+      "meaning": "individually separate and distinct",
+      "sentence": "The syllabus is divided into five discrete learning modules.",
+      "bn": "পৃথক / স্বতন্ত্র"
+    },
+    {
+      "word": "displace",
+      "meaning": "take over the place, position, or role of",
+      "sentence": "Renewable energy will gradually displace fossil fuel consumption.",
+      "bn": "স্থানচ্যুত করা"
+    },
+    {
+      "word": "distinct",
+      "meaning": "recognizably different in nature from something else of a similar type",
+      "sentence": "Each university has distinct departmental culture and research centers.",
+      "bn": "স্বতন্ত্র / সুস্পষ্ট"
+    },
+    {
+      "word": "distribute",
+      "meaning": "give shares of something; deal out",
+      "sentence": "Teaching assistants distribute homework sheets after each lecture.",
+      "bn": "বিতরণ করা"
+    },
+    {
+      "word": "diverse",
+      "meaning": "showing a great deal of variety; very different",
+      "sentence": "The campus boasts a vibrant and culturally diverse student population.",
+      "bn": "বৈচিত্র্যময়"
+    },
+    {
+      "word": "document",
+      "meaning": "record something in written, photographic, or other form",
+      "sentence": "Carefully document every experiment step in your lab diary.",
+      "bn": "নথিভুক্ত করা"
+    },
+    {
+      "word": "domain",
+      "meaning": "an area of territory owned or controlled by a ruler or government; a sphere of knowledge",
+      "sentence": "Biotechnology is a rapidly expanding domain of modern research.",
+      "bn": "ক্ষেত্র / এলাকা"
+    },
+    {
+      "word": "domestic",
+      "meaning": "relating to the running of a home or to family relations; existing or occurring inside a particular country",
+      "sentence": "Compare international tuition rates with domestic student costs.",
+      "bn": "অভ্যন্তরীণ / গার্হস্থ্য"
+    },
+    {
+      "word": "dominate",
+      "meaning": "have a commanding influence on; exercise control over",
+      "sentence": "Collaborative algorithms dominate current artificial intelligence research.",
+      "bn": "আধিপত্য বিস্তার করা"
+    },
+    {
+      "word": "draft",
+      "meaning": "a preliminary version of a piece of writing",
+      "sentence": "Revise your personal statement draft at least four times.",
+      "bn": "খসড়া"
+    },
+    {
+      "word": "economy",
+      "meaning": "the wealth and resources of a country or region",
+      "sentence": "Knowledge-based economies prioritize investments in scientific research.",
+      "bn": "অর্থনীতি"
+    },
+    {
+      "word": "element",
+      "meaning": "an essential or characteristic part of something abstract",
+      "sentence": "Clear structure is a vital element of persuasive writing.",
+      "bn": "উপাদান"
+    },
+    {
+      "word": "eliminate",
+      "meaning": "completely remove or get rid of",
+      "sentence": "Careful proofreading helps eliminate careless grammatical mistakes.",
+      "bn": "দূর করা / বর্জন করা"
+    },
+    {
+      "word": "emerge",
+      "meaning": "move out of or away from something and become visible",
+      "sentence": "New career opportunities emerge as clean tech industries expand.",
+      "bn": "উদ্বেলিত হওয়া / আবির্ভূত হওয়া"
+    },
+    {
+      "word": "emphasis",
+      "meaning": "special importance, value, or prominence given to something",
+      "sentence": "The department places strong emphasis on practical lab coursework.",
+      "bn": "জোর / গুরুত্ব"
+    },
+    {
+      "word": "empirical",
+      "meaning": "based on, concerned with, or verifiable by observation or experience rather than theory or pure logic",
+      "sentence": "Provide empirical data to validate your scientific hypotheses.",
+      "bn": "পরীক্ষামূলক / বাস্তবভিত্তিক"
+    },
+    {
+      "word": "enable",
+      "meaning": "give someone or something the authority or means to do something",
+      "sentence": "Mastering English will enable you to participate in global forums.",
+      "bn": "সক্ষম করা"
+    },
+    {
+      "word": "energy",
+      "meaning": "the strength and vitality required for sustained physical or mental activity",
+      "sentence": "Channel your energy into systematic preparation for exam gates.",
+      "bn": "শক্তি"
+    },
+    {
+      "word": "enforce",
+      "meaning": "compel observance of or compliance with a law, rule, or obligation",
+      "sentence": "Campus administrators strictly enforce rules against academic fraud.",
+      "bn": "কার্যকর করা"
+    },
+    {
+      "word": "entity",
+      "meaning": "a thing with distinct and independent existence",
+      "sentence": "A research university functions as an autonomous academic entity.",
+      "bn": "সত্তা"
+    },
+    {
+      "word": "equate",
+      "meaning": "consider one thing to be the same as or equivalent to another",
+      "sentence": "Do not equate high word counts with persuasive essay quality.",
+      "bn": "সমান মনে করা"
+    },
+    {
+      "word": "establish",
+      "meaning": "set up on a firm or permanent basis",
+      "sentence": "Establish a disciplined daily study timetable before exam terms.",
+      "bn": "প্রতিষ্ঠা করা"
+    },
+    {
+      "word": "estimate",
+      "meaning": "roughly calculate or judge the value, number, quantity, or extent of",
+      "sentence": "Estimate the total cost of relocation including visa and airfare.",
+      "bn": "অনুমান করা"
+    },
+    {
+      "word": "ethical",
+      "meaning": "relating to moral principles or the branch of knowledge dealing with these",
+      "sentence": "Researchers must follow ethical protocols when handling human data.",
+      "bn": "নৈতিক"
+    },
+    {
+      "word": "evaluate",
+      "meaning": "form an idea of the amount, number, or value of; assess",
+      "sentence": "Admissions committees evaluate applicants using holistic benchmarks.",
+      "bn": "মূল্যায়ন করা"
+    },
+    {
+      "word": "evident",
+      "meaning": "plain or obvious; clearly seen or understood",
+      "sentence": "Her enthusiasm for machine learning was evident in her project work.",
+      "bn": "সুস্পষ্ট"
+    },
+    {
+      "word": "expand",
+      "meaning": "become or make larger or more extensive",
+      "sentence": "Read international news publications to expand your general knowledge.",
+      "bn": "প্রসারিত করা"
+    },
+    {
+      "word": "expert",
+      "meaning": "a person who has a comprehensive and authoritative knowledge of or skill in a particular area",
+      "sentence": "Consult an expert faculty advisor when finalizing thesis proposals.",
+      "bn": "বিশেষজ্ঞ"
+    },
+    {
+      "word": "explicit",
+      "meaning": "stated clearly and in detail, leaving no room for confusion or doubt",
+      "sentence": "Follow the explicit formatting guidelines posted in the portal.",
+      "bn": "সুনির্দিষ্ট / প্রকাশ্য"
+    },
+    {
+      "word": "exploit",
+      "meaning": "make full use of and derive benefit from a resource",
+      "sentence": "Exploit campus library subscriptions to download peer-reviewed papers.",
+      "bn": "কাজে লাগানো / সদ্ব্যবহার করা"
+    },
+    {
+      "word": "export",
+      "meaning": "send goods or services to another country for sale",
+      "sentence": "Software companies export IT services to global client bases.",
+      "bn": "রপ্তানি করা"
+    },
+    {
+      "word": "expose",
+      "meaning": "make something visible by uncovering it; introduce someone to something",
+      "sentence": "Undergraduate exchange programs expose students to cutting-edge labs.",
+      "bn": "উন্মোচিত করা / পরিচয় করিয়ে দেওয়া"
+    },
+    {
+      "word": "external",
+      "meaning": "belonging to or forming the outer surface or structure of something",
+      "sentence": "Seek external scholarship funding from non-governmental foundations.",
+      "bn": "বাহ্যিক"
+    },
+    {
+      "word": "facilitate",
+      "meaning": "make an action or process easy or easier",
+      "sentence": "Bilingual peer advisors facilitate smooth cultural adaptation.",
+      "bn": "সহজতর করা"
+    },
+    {
+      "word": "factor",
+      "meaning": "a circumstance, fact, or influence that contributes to a result or outcome",
+      "sentence": "Academic prestige is only one factor when selecting universities.",
+      "bn": "উপাদান / কারণ"
+    },
+    {
+      "word": "feature",
+      "meaning": "a distinctive attribute or aspect of something",
+      "sentence": "Interactive discussion seminars are a hallmark feature of liberal arts.",
+      "bn": "বৈশিষ্ট্য"
+    },
+    {
+      "word": "federal",
+      "meaning": "having or relating to a system of government in which several states form a unity but remain independent in internal affairs",
+      "sentence": "Check federal immigration regulations for student employment limits.",
+      "bn": "যুক্তরাষ্ট্রীয় / কেন্দ্রীয়"
+    }
+  ]
+}

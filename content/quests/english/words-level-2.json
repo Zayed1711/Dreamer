@@ -1,0 +1,608 @@
+{
+  "level": 2,
+  "name": "Level 2 (B1 Travel & Study)",
+  "source": "Dreamer Academic English Corpus (original compilation)",
+  "license": "Dreamer Open Educational Content License",
+  "words": [
+    {
+      "word": "abroad",
+      "meaning": "in or to a foreign country",
+      "sentence": "Studying abroad expands your cultural understanding.",
+      "bn": "বিদেশে"
+    },
+    {
+      "word": "accept",
+      "meaning": "consent to receive something offered",
+      "sentence": "She was thrilled to accept the scholarship offer.",
+      "bn": "গ্রহণ করা"
+    },
+    {
+      "word": "adapt",
+      "meaning": "become adjusted to new conditions",
+      "sentence": "International students adapt quickly with peer support.",
+      "bn": "মানিয়ে নেওয়া"
+    },
+    {
+      "word": "admission",
+      "meaning": "the process of being allowed to enter a place or institution",
+      "sentence": "Apply early to secure university admission.",
+      "bn": "ভর্তি"
+    },
+    {
+      "word": "advice",
+      "meaning": "guidance or recommendations offered with regard to prudent future action",
+      "sentence": "Seek advice from seniors who studied in Sweden.",
+      "bn": "পরামর্শ"
+    },
+    {
+      "word": "advisor",
+      "meaning": "a person who offers advice, often in a specialized subject",
+      "sentence": "Consult your academic advisor about course credits.",
+      "bn": "উপদেষ্টা"
+    },
+    {
+      "word": "afford",
+      "meaning": "have enough money to pay for",
+      "sentence": "Choose universities where you can afford the tuition.",
+      "bn": "সামর্থ্য থাকা"
+    },
+    {
+      "word": "agency",
+      "meaning": "a business or organization providing a specific service",
+      "sentence": "Avoid any agency that makes unrealistic visa guarantees.",
+      "bn": "সংস্থা / এজেন্সি"
+    },
+    {
+      "word": "application",
+      "meaning": "a formal request to an authority for something",
+      "sentence": "Submit your online application before the priority deadline.",
+      "bn": "আবেদন"
+    },
+    {
+      "word": "apply",
+      "meaning": "make a formal application or request",
+      "sentence": "Students can apply to multiple universities simultaneously.",
+      "bn": "আবেদন করা"
+    },
+    {
+      "word": "attend",
+      "meaning": "be present at an event, meeting, or function",
+      "sentence": "Attend the virtual open day to ask faculty questions.",
+      "bn": "উপস্থিত থাকা"
+    },
+    {
+      "word": "bank",
+      "meaning": "a financial establishment that uses money for loans and deposits",
+      "sentence": "Open a student bank account upon arrival.",
+      "bn": "ব্যাংক"
+    },
+    {
+      "word": "benefit",
+      "meaning": "an advantage or profit gained from something",
+      "sentence": "A master's degree provides long-term career benefits.",
+      "bn": "সুবিধা / উপকার"
+    },
+    {
+      "word": "career",
+      "meaning": "an occupation undertaken for a significant period of a person's life",
+      "sentence": "Internships help build a successful technical career.",
+      "bn": "পেশা / কর্মজীবন"
+    },
+    {
+      "word": "certificate",
+      "meaning": "an official document attesting a certain fact",
+      "sentence": "Keep your high school graduation certificate safe.",
+      "bn": "সনদপত্র"
+    },
+    {
+      "word": "challenge",
+      "meaning": "a task or situation that tests someone's abilities",
+      "sentence": "Adapting to cold weather was an unexpected challenge.",
+      "bn": "চ্যালেঞ্জ"
+    },
+    {
+      "word": "citizen",
+      "meaning": "a legally recognized subject or national of a state",
+      "sentence": "Every global citizen should respect cultural diversity.",
+      "bn": "নাগরিক"
+    },
+    {
+      "word": "community",
+      "meaning": "a group of people living in the same place or having a particular characteristic in common",
+      "sentence": "Join the international student community on campus.",
+      "bn": "সম্প্রদায়"
+    },
+    {
+      "word": "compare",
+      "meaning": "estimate, measure, or note the similarity or dissimilarity between",
+      "sentence": "Compare living costs between Berlin and Munich.",
+      "bn": "তুলনা করা"
+    },
+    {
+      "word": "complete",
+      "meaning": "having all the necessary or appropriate parts; finished",
+      "sentence": "Ensure your application package is 100% complete.",
+      "bn": "সম্পূর্ণ করা"
+    },
+    {
+      "word": "confirm",
+      "meaning": "establish the truth or correctness of something",
+      "sentence": "Check your email inbox to confirm your test booking.",
+      "bn": "নিশ্চিত করা"
+    },
+    {
+      "word": "connect",
+      "meaning": "bring together or into contact so that a real or notional link is established",
+      "sentence": "Connect with alumni on professional networking platforms.",
+      "bn": "সংযুক্ত হওয়া"
+    },
+    {
+      "word": "contact",
+      "meaning": "the state or condition of physical or communicative touching",
+      "sentence": "Keep emergency contact numbers saved in your phone.",
+      "bn": "যোগাযোগ"
+    },
+    {
+      "word": "continue",
+      "meaning": "persist in an activity or process",
+      "sentence": "Continue practicing grammar even after your exam.",
+      "bn": "চালিয়ে যাওয়া"
+    },
+    {
+      "word": "course",
+      "meaning": "a series of lectures or lessons in a particular subject",
+      "sentence": "The calculus course includes weekly problem sets.",
+      "bn": "কোর্স / পাঠক্রম"
+    },
+    {
+      "word": "culture",
+      "meaning": "the customs, arts, social institutions, and achievements of a social group",
+      "sentence": "Embrace the local culture while retaining your identity.",
+      "bn": "সংস্কৃতি"
+    },
+    {
+      "word": "currency",
+      "meaning": "a system of money in general use in a particular country",
+      "sentence": "Exchange some local currency before your international flight.",
+      "bn": "মুদ্রা"
+    },
+    {
+      "word": "deadline",
+      "meaning": "the latest time or date by which something should be completed",
+      "sentence": "Missing a scholarship deadline disqualifies your file.",
+      "bn": "শেষ সময়সীমা"
+    },
+    {
+      "word": "describe",
+      "meaning": "give a detailed account in words of",
+      "sentence": "Describe your academic projects in concise bullet points.",
+      "bn": "বর্ণনা করা"
+    },
+    {
+      "word": "detail",
+      "meaning": "an individual feature, fact, or item",
+      "sentence": "Pay close attention to every visa document detail.",
+      "bn": "বিবরণ"
+    },
+    {
+      "word": "develop",
+      "meaning": "grow or cause to grow and become more mature, advanced, or elaborate",
+      "sentence": "Workshops help students develop strong presentation skills.",
+      "bn": "উন্নতি করা"
+    },
+    {
+      "word": "different",
+      "meaning": "not the same as another or each other; unlike in nature, form, or quality",
+      "sentence": "Academic grading systems are different across countries.",
+      "bn": "ভিন্ন / আলাদা"
+    },
+    {
+      "word": "difficult",
+      "meaning": "needing much effort or skill to accomplish, deal with, or understand",
+      "sentence": "Standardized reading passages can be difficult under time pressure.",
+      "bn": "কঠিন"
+    },
+    {
+      "word": "discuss",
+      "meaning": "talk about something with another person or in a group",
+      "sentence": "Discuss your draft essay with a language mentor.",
+      "bn": "আলোচনা করা"
+    },
+    {
+      "word": "document",
+      "meaning": "a piece of written, printed, or electronic matter that provides information or evidence",
+      "sentence": "Scan every academic document into high-resolution PDFs.",
+      "bn": "নথি / দলিল"
+    },
+    {
+      "word": "dorm",
+      "meaning": "a dormitory or student residence hall",
+      "sentence": "Living in a dorm helps you make friends quickly.",
+      "bn": "হোস্টেল / ডর্ম"
+    },
+    {
+      "word": "education",
+      "meaning": "the process of receiving or giving systematic instruction",
+      "sentence": "Quality education empowers young leaders to solve problems.",
+      "bn": "শিক্ষা"
+    },
+    {
+      "word": "email",
+      "meaning": "messages distributed by electronic means from one system user to one or more recipients",
+      "sentence": "Always use a formal tone when sending an email to a professor.",
+      "bn": "ইমেল"
+    },
+    {
+      "word": "embassy",
+      "meaning": "the official residence or offices of an ambassador",
+      "sentence": "Book your student visa appointment at the embassy.",
+      "bn": "দূতাবাস"
+    },
+    {
+      "word": "ensure",
+      "meaning": "make certain that something will occur or be the case",
+      "sentence": "Ensure your passport has at least six months of validity.",
+      "bn": "নিশ্চিত করা"
+    },
+    {
+      "word": "enter",
+      "meaning": "come or go into a place",
+      "sentence": "You need a valid student visa to enter the country.",
+      "bn": "প্রবেশ করা"
+    },
+    {
+      "word": "environment",
+      "meaning": "the surroundings or conditions in which a person, animal, or plant lives or operates",
+      "sentence": "A quiet environment improves concentration while studying.",
+      "bn": "পরিবেশ"
+    },
+    {
+      "word": "essay",
+      "meaning": "a short piece of writing on a particular subject",
+      "sentence": "Write an essay explaining your academic motivations.",
+      "bn": "প্রবন্ধ"
+    },
+    {
+      "word": "exchange",
+      "meaning": "an act of giving one thing and receiving another in return",
+      "sentence": "Participating in a cultural exchange broadens your mindset.",
+      "bn": "বিনিময়"
+    },
+    {
+      "word": "expense",
+      "meaning": "the cost required for something; the money spent on something",
+      "sentence": "Track your daily expense using a budgeting app.",
+      "bn": "ব্যয় / খরচ"
+    },
+    {
+      "word": "experience",
+      "meaning": "practical contact with and observation of facts or events",
+      "sentence": "International experience makes your resume stand out.",
+      "bn": "অভিজ্ঞতা"
+    },
+    {
+      "word": "explain",
+      "meaning": "make an idea or situation clear to someone by describing it in more detail",
+      "sentence": "Explain your research interests in the cover letter.",
+      "bn": "ব্যাখ্যা করা"
+    },
+    {
+      "word": "faculty",
+      "meaning": "the teaching staff of a university or college",
+      "sentence": "The computer science faculty includes award-winning professors.",
+      "bn": "অনুষদ / শিক্ষকবৃন্দ"
+    },
+    {
+      "word": "fee",
+      "meaning": "a payment made to a professional person or to a professional body in exchange for advice or services",
+      "sentence": "Pay the semester tuition fee before the due date.",
+      "bn": "ফি"
+    },
+    {
+      "word": "flight",
+      "meaning": "a journey made by air, especially in a plane",
+      "sentence": "Book your international flight well in advance.",
+      "bn": "বিমানযাত্রা"
+    },
+    {
+      "word": "fluent",
+      "meaning": "able to express oneself easily and articulately",
+      "sentence": "Practice speaking daily to become fluent in English.",
+      "bn": "সাবলীল"
+    },
+    {
+      "word": "foreign",
+      "meaning": "characteristic of a country or language other than one's own",
+      "sentence": "Learning foreign languages opens global employment avenues.",
+      "bn": "বিদেশী"
+    },
+    {
+      "word": "format",
+      "meaning": "the way in which something is arranged or set out",
+      "sentence": "Follow the standard format for academic resumes.",
+      "bn": "বিন্যাস / ফরম্যাট"
+    },
+    {
+      "word": "grant",
+      "meaning": "a sum of money given by a government or other organization for a particular purpose",
+      "sentence": "She received a research grant for her thesis work.",
+      "bn": "অনুদান"
+    },
+    {
+      "word": "guide",
+      "meaning": "a person who advises or shows the way to others",
+      "sentence": "A mentor acts as a trusted guide during your journey.",
+      "bn": "পথপ্রদর্শক"
+    },
+    {
+      "word": "improve",
+      "meaning": "make or become better",
+      "sentence": "Consistent reading will improve your reading comprehension speed.",
+      "bn": "উন্নত করা"
+    },
+    {
+      "word": "include",
+      "meaning": "comprise or contain as part of a whole",
+      "sentence": "Include all certified academic transcripts in your submission.",
+      "bn": "অন্তর্ভুক্ত করা"
+    },
+    {
+      "word": "income",
+      "meaning": "money received, especially on a regular basis, for work or through investments",
+      "sentence": "Proof of family income is required for financial sponsorship.",
+      "bn": "আয়"
+    },
+    {
+      "word": "inform",
+      "meaning": "give facts or information; tell",
+      "sentence": "Inform the university if your arrival date changes.",
+      "bn": "জানানো"
+    },
+    {
+      "word": "instruction",
+      "meaning": "detailed directions on what to do",
+      "sentence": "Read every test instruction before answering the questions.",
+      "bn": "নির্দেশনা"
+    },
+    {
+      "word": "insurance",
+      "meaning": "an arrangement by which a company undertakes to provide a guarantee of compensation",
+      "sentence": "Health insurance is mandatory for international students.",
+      "bn": "বীমা"
+    },
+    {
+      "word": "interview",
+      "meaning": "a meeting of people face to face, especially for consultation",
+      "sentence": "Prepare common answers for your visa interview.",
+      "bn": "সাক্ষাৎকার"
+    },
+    {
+      "word": "journey",
+      "meaning": "an act of traveling from one place to another",
+      "sentence": "Your study abroad journey begins with clear planning.",
+      "bn": "যাত্রা"
+    },
+    {
+      "word": "knowledge",
+      "meaning": "facts, information, and skills acquired through experience or education",
+      "sentence": "Theoretical knowledge must be paired with practical labs.",
+      "bn": "জ্ঞান"
+    },
+    {
+      "word": "language",
+      "meaning": "the principal method of human communication",
+      "sentence": "English is the global language of scientific publication.",
+      "bn": "ভাষা"
+    },
+    {
+      "word": "lecture",
+      "meaning": "an educational talk to an audience, especially one of students in a university",
+      "sentence": "Attend every lecture and take organized notes.",
+      "bn": "বক্তৃতা / লেকচার"
+    },
+    {
+      "word": "letter",
+      "meaning": "a written, typed, or printed communication",
+      "sentence": "Request a recommendation letter from your department chair.",
+      "bn": "চিঠি"
+    },
+    {
+      "word": "level",
+      "meaning": "a position on a real or imaginary scale of amount, quantity, or quality",
+      "sentence": "Assess your current English proficiency level honestly.",
+      "bn": "স্তর"
+    },
+    {
+      "word": "lifestyle",
+      "meaning": "the way in which a person or group lives",
+      "sentence": "Maintaining an active lifestyle supports academic performance.",
+      "bn": "জীবনধারা"
+    },
+    {
+      "word": "living",
+      "meaning": "the pursuit of a lifestyle of the specified type",
+      "sentence": "Cost of living varies significantly between cities.",
+      "bn": "জীবনযাপন"
+    },
+    {
+      "word": "loan",
+      "meaning": "a thing that is borrowed, especially a sum of money that is expected to be paid back",
+      "sentence": "Check interest rates before applying for an education loan.",
+      "bn": "ঋণ"
+    },
+    {
+      "word": "luggage",
+      "meaning": "suitcases or other bags in which to pack personal belongings for traveling",
+      "sentence": "Weigh your luggage to comply with airline baggage limits.",
+      "bn": "লাগেজ / মালপত্র"
+    },
+    {
+      "word": "major",
+      "meaning": "a student's principal subject or course of study",
+      "sentence": "She decided to choose data science as her undergraduate major.",
+      "bn": "প্রধান বিষয়"
+    },
+    {
+      "word": "manage",
+      "meaning": "be in charge of; succeed in surviving or in attaining one's aim",
+      "sentence": "Use calendar reminders to manage your study hours.",
+      "bn": "পরিচালনা করা"
+    },
+    {
+      "word": "master",
+      "meaning": "a person who has dominance over another; a postgraduate degree",
+      "sentence": "A master of science degree usually takes two years.",
+      "bn": "মাস্টার্স"
+    },
+    {
+      "word": "method",
+      "meaning": "a particular form of procedure for accomplishing or approaching something",
+      "sentence": "Active recall is an effective study method.",
+      "bn": "পদ্ধতি"
+    },
+    {
+      "word": "mentor",
+      "meaning": "an experienced and trusted advisor",
+      "sentence": "A senior student mentor can answer campus life questions.",
+      "bn": "পরামর্শদাতা"
+    },
+    {
+      "word": "minor",
+      "meaning": "a secondary academic discipline during undergraduate study",
+      "sentence": "He completed a minor in economics alongside mathematics.",
+      "bn": "গৌণ বিষয়"
+    },
+    {
+      "word": "modern",
+      "meaning": "characterized by or using the most up-to-date techniques, ideas, or equipment",
+      "sentence": "Modern libraries offer private study pods and digital archives.",
+      "bn": "আধুনিক"
+    },
+    {
+      "word": "motivate",
+      "meaning": "provide someone with a reason for doing something",
+      "sentence": "Clear goals motivate you to overcome temporary setbacks.",
+      "bn": "অনুপ্রাণিত করা"
+    },
+    {
+      "word": "notice",
+      "meaning": "the fact of observing or paying attention to something",
+      "sentence": "Take notice of changing visa policy requirements.",
+      "bn": "লক্ষ্য করা / বিজ্ঞপ্তি"
+    },
+    {
+      "word": "online",
+      "meaning": "controlled by or connected to another computer or to a network",
+      "sentence": "Attend online webinars hosted by university admissions teams.",
+      "bn": "অনলাইন"
+    },
+    {
+      "word": "opportunity",
+      "meaning": "a set of circumstances that makes it possible to do something",
+      "sentence": "Studying abroad provides an opportunity to build a global network.",
+      "bn": "সুযোগ"
+    },
+    {
+      "word": "option",
+      "meaning": "a thing that is or may be chosen",
+      "sentence": "Compare every accommodation option before signing a lease.",
+      "bn": "বিকল্প"
+    },
+    {
+      "word": "organize",
+      "meaning": "arrange into a structured whole; order",
+      "sentence": "Organize your digital files into clear, labelled folders.",
+      "bn": "সংগঠিত করা"
+    },
+    {
+      "word": "package",
+      "meaning": "an object or group of objects wrapped in paper or plastic, or a set of proposals",
+      "sentence": "The scholarship package covers tuition and living stipends.",
+      "bn": "প্যাকেজ"
+    },
+    {
+      "word": "passport",
+      "meaning": "an official document issued by a government certifying identity and citizenship",
+      "sentence": "Keep your original passport in a waterproof holder.",
+      "bn": "পাসপোর্ট"
+    },
+    {
+      "word": "percent",
+      "meaning": "one part in every hundred",
+      "sentence": "Eighty percent of students passed the qualification exam.",
+      "bn": "শতাংশ"
+    },
+    {
+      "word": "prepare",
+      "meaning": "make something ready for use or consideration",
+      "sentence": "Prepare your statement of purpose months in advance.",
+      "bn": "প্রস্তুত করা"
+    },
+    {
+      "word": "program",
+      "meaning": "a planned series of future events or performances, or an academic curriculum",
+      "sentence": "The master's program includes a mandatory research internship.",
+      "bn": "প্রোগ্রাম"
+    },
+    {
+      "word": "progress",
+      "meaning": "forward or onward movement toward a destination or goal",
+      "sentence": "Track your weekly progress using the Dreamer flight bar.",
+      "bn": "অগ্রগতি"
+    },
+    {
+      "word": "project",
+      "meaning": "an individual or collaborative enterprise that is planned and designed to achieve an aim",
+      "sentence": "The capstone project tested our collaborative software skills.",
+      "bn": "প্রকল্প"
+    },
+    {
+      "word": "punctual",
+      "meaning": "happening or doing something at the agreed or proper time",
+      "sentence": "Being punctual is essential for academic integrity.",
+      "bn": "সময়নিষ্ঠ"
+    },
+    {
+      "word": "ranking",
+      "meaning": "a position in a hierarchy or list of people or things",
+      "sentence": "University rankings reflect research output and faculty ratio.",
+      "bn": "র‌্যাঙ্কিং"
+    },
+    {
+      "word": "register",
+      "meaning": "enter or record on an official list or directory",
+      "sentence": "Register for your required courses before classes fill up.",
+      "bn": "নিবন্ধন করা"
+    },
+    {
+      "word": "regular",
+      "meaning": "done or happening frequently, with equal intervals between",
+      "sentence": "Maintain a regular sleep schedule during exam weeks.",
+      "bn": "নিয়মিত"
+    },
+    {
+      "word": "require",
+      "meaning": "need for a particular purpose",
+      "sentence": "Most graduate programs require two academic references.",
+      "bn": "প্রয়োজন হওয়া"
+    },
+    {
+      "word": "research",
+      "meaning": "the systematic investigation into and study of materials and sources",
+      "sentence": "Conduct research into scholarship criteria before applying.",
+      "bn": "গবেষণা"
+    },
+    {
+      "word": "result",
+      "meaning": "a thing that is caused or produced by something else; an outcome",
+      "sentence": "The HSC result determined his eligibility for overseas admission.",
+      "bn": "ফলাফল"
+    },
+    {
+      "word": "routine",
+      "meaning": "a sequence of actions regularly followed; a fixed program",
+      "sentence": "A healthy morning routine boosts study concentration.",
+      "bn": "দৈনন্দিন রুটিন"
+    }
+  ]
+}
