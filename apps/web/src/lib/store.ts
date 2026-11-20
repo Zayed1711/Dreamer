@@ -8,6 +8,8 @@ import {
   type Stage,
   type Degree,
   type DailyStreak,
+  type LanguageCode,
+  type LanguageProgress,
   computeWeeklyStreak,
   nextStreak,
   questDate,
@@ -26,6 +28,7 @@ const DAILY_KEY = "dreamer-preview-daily";
 const ACTIVITY_KEY = "dreamer-preview-activity";
 const STREAKS_KEY = "dreamer-preview-streaks";
 const PRACTICE_KEY = "dreamer-preview-practice";
+const LANG_PROGRESS_KEY = "dreamer-preview-lang";
 
 export interface DailySubmission {
   quest_date: string;
@@ -501,6 +504,55 @@ export async function submitPracticeCompletion(
   return { expAwarded, totalCompleted: updatedCompleted };
 }
 
+// ---------- Language Track Progress ----------
+
+export async function loadLanguageProgress(lang: LanguageCode): Promise<LanguageProgress> {
+  const uid = await currentUserId();
+  const defaultProgress: LanguageProgress = {
+    lang,
+    level: 1,
+    quizzesCompleted: 0,
+  };
+
+  if (!supabase || !uid) {
+    return localGet<LanguageProgress>(`${LANG_PROGRESS_KEY}_${lang}`) ?? defaultProgress;
+  }
+
+  const { data, error } = await supabase
+    .from("language_progress")
+    .select("lang, level, quizzes_completed, updated_at")
+    .eq("user_id", uid)
+    .eq("lang", lang)
+    .maybeSingle();
+
+  if (error || !data) return defaultProgress;
+  return {
+    lang: data.lang as LanguageCode,
+    level: data.level,
+    quizzesCompleted: data.quizzes_completed,
+    updatedAt: data.updated_at,
+  };
+}
+
+export async function saveLanguageProgress(progress: LanguageProgress): Promise<void> {
+  const uid = await currentUserId();
+  if (!supabase || !uid) {
+    localSet(`${LANG_PROGRESS_KEY}_${progress.lang}`, progress);
+    return;
+  }
+
+  await supabase.from("language_progress").upsert(
+    {
+      user_id: uid,
+      lang: progress.lang,
+      level: progress.level,
+      quizzes_completed: progress.quizzesCompleted,
+      updated_at: new Date().toISOString(),
+    },
+    { onConflict: "user_id,lang" },
+  );
+}
+
 /**
  * After a student signs in on a browser where they already used the preview,
  * move that local progress into their account (only if the account has no profile yet).
@@ -584,6 +636,23 @@ export async function moveLocalProgressToAccount(): Promise<void> {
       })),
       { onConflict: "user_id,quest_date,track" },
     );
+  }
+
+  // Migrate language progress
+  for (const lang of ["de", "ja"] as const) {
+    const localProg = localGet<LanguageProgress>(`${LANG_PROGRESS_KEY}_${lang}`);
+    if (localProg) {
+      await supabase.from("language_progress").upsert(
+        {
+          user_id: uid,
+          lang: localProg.lang,
+          level: localProg.level,
+          quizzes_completed: localProg.quizzesCompleted,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "user_id,lang" },
+      );
+    }
   }
 
   localClear();

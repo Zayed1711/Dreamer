@@ -1,0 +1,100 @@
+{
+  "lang": "ja",
+  "level": 1,
+  "title": "Alphabet & Sounds (Hiragana)",
+  "description": "Master Japanese Hiragana vowel foundations, basic consonants, and pitch patterns.",
+  "reviewedBy": "Kazi Sakib (Founding Mentor, University of Tokyo)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "ja-1-1",
+      "type": "multiple_choice",
+      "prompt": "あ",
+      "soundText": "あ",
+      "explanation": "Hiragana for the pure vowel sound 'a' (like 'ah' in father).",
+      "options": ["a", "i", "u", "e"],
+      "correctAnswer": "a"
+    },
+    {
+      "id": "ja-1-2",
+      "type": "multiple_choice",
+      "prompt": "い",
+      "soundText": "い",
+      "explanation": "Hiragana for the vowel sound 'i' (like 'ee' in see or feet).",
+      "options": ["i", "a", "u", "o"],
+      "correctAnswer": "i"
+    },
+    {
+      "id": "ja-1-3",
+      "type": "multiple_choice",
+      "prompt": "う",
+      "soundText": "う",
+      "explanation": "Hiragana for 'u' (unrounded 'oo' sound).",
+      "options": ["u", "o", "a", "e"],
+      "correctAnswer": "u"
+    },
+    {
+      "id": "ja-1-4",
+      "type": "multiple_choice",
+      "prompt": "え",
+      "soundText": "え",
+      "explanation": "Hiragana for 'e' (like 'e' in pet or bed).",
+      "options": ["e", "i", "a", "u"],
+      "correctAnswer": "e"
+    },
+    {
+      "id": "ja-1-5",
+      "type": "multiple_choice",
+      "prompt": "お",
+      "soundText": "お",
+      "explanation": "Hiragana for 'o' (like 'o' in boat).",
+      "options": ["o", "a", "u", "e"],
+      "correctAnswer": "o"
+    },
+    {
+      "id": "ja-1-6",
+      "type": "multiple_choice",
+      "prompt": "か",
+      "soundText": "か",
+      "explanation": "Hiragana character combining the consonant 'k' with vowel 'a' ('ka').",
+      "options": ["ka", "ki", "ku", "ta"],
+      "correctAnswer": "ka"
+    },
+    {
+      "id": "ja-1-7",
+      "type": "multiple_choice",
+      "prompt": "さ",
+      "soundText": "さ",
+      "explanation": "Hiragana character for 'sa'.",
+      "options": ["sa", "shi", "su", "chi"],
+      "correctAnswer": "sa"
+    },
+    {
+      "id": "ja-1-8",
+      "type": "multiple_choice",
+      "prompt": "し",
+      "soundText": "し",
+      "explanation": "Notice the irregular consonant pronunciation: 'shi' (not 'si').",
+      "options": ["shi", "si", "hi", "su"],
+      "correctAnswer": "shi"
+    },
+    {
+      "id": "ja-1-9",
+      "type": "multiple_choice",
+      "prompt": "つ",
+      "soundText": "つ",
+      "explanation": "Irregular consonant sound: 'tsu' (like 'ts' in tsunami or cats).",
+      "options": ["tsu", "tu", "su", "te"],
+      "correctAnswer": "tsu"
+    },
+    {
+      "id": "ja-1-10",
+      "type": "multiple_choice",
+      "prompt": "ん",
+      "soundText": "ん",
+      "explanation": "The only standalone consonant character in Japanese: nasal 'n' / 'm'.",
+      "options": ["n", "so", "ri", "mu"],
+      "correctAnswer": "n"
+    }
+  ]
+}

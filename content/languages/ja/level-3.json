@@ -1,0 +1,55 @@
+{
+  "lang": "ja",
+  "level": 3,
+  "title": "Core Words",
+  "description": "Essential nouns, numbers, days, and campus vocabulary for international students in Japan.",
+  "reviewedBy": "Kazi Sakib (Founding Mentor, University of Tokyo)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "ja-3-1",
+      "type": "multiple_choice",
+      "prompt": "大学 (Daigaku)",
+      "soundText": "だいがく",
+      "explanation": "Kanji / word for university or college.",
+      "options": ["university / college", "high school", "library", "laboratory"],
+      "correctAnswer": "university / college"
+    },
+    {
+      "id": "ja-3-2",
+      "type": "multiple_choice",
+      "prompt": "留学生 (Ryuugakusei)",
+      "soundText": "りゅうがくせい",
+      "explanation": "Designation for international study-abroad students.",
+      "options": ["international student", "professor", "dormitory resident", "tourist"],
+      "correctAnswer": "international student"
+    },
+    {
+      "id": "ja-3-3",
+      "type": "multiple_choice",
+      "prompt": "図書館 (Toshokan)",
+      "soundText": "としょかん",
+      "explanation": "Library on or off campus.",
+      "options": ["library", "classroom", "hospital", "bookstore"],
+      "correctAnswer": "library"
+    },
+    {
+      "id": "ja-3-4",
+      "type": "multiple_choice",
+      "prompt": "先生 (Sensei)",
+      "soundText": "せんせい",
+      "explanation": "Honorific title for teacher, professor, doctor, or master.",
+      "options": ["teacher / professor", "student", "classmate", "advisor assistant"],
+      "correctAnswer": "teacher / professor"
+    },
+    {
+      "id": "ja-3-5",
+      "type": "multiple_choice",
+      "prompt": "今日 (Kyou)",
+      "soundText": "きょう",
+      "explanation": "Common time noun meaning 'today'.",
+      "options": ["today", "tomorrow", "yesterday", "next week"],
+      "correctAnswer": "today"
+    }
+  ]
+}

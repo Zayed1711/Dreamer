@@ -6,6 +6,7 @@ import {
   computeProgress,
   defaultContent,
   defaultCourse,
+  getLanguageTrack,
   getUrgentReminder,
   levelForExp,
   nextUnlock,
@@ -43,19 +44,24 @@ export function Dashboard({
   today,
   initialCompleted,
   extraExp = 0,
+  targetCountries,
 }: {
   journey: Journey;
   today: string;
   initialCompleted: string[];
   extraExp?: number;
+  targetCountries?: string[];
 }) {
   const [completed, setCompleted] = useState<Set<string>>(() => new Set(initialCompleted));
   const [notice, setNotice] = useState<Notice | null>(null);
   const [rankUp, setRankUp] = useState<string | null>(null);
   const [dailyState, setDailyState] = useState<DailyState | null>(null);
+  const [langDailyState, setLangDailyState] = useState<DailyState | null>(null);
   const [weeklyStreak, setWeeklyStreak] = useState<DailyStreak | null>(null);
   const noticeId = useRef(0);
   const router = useRouter();
+
+  const targetLang = useMemo(() => getLanguageTrack(targetCountries), [targetCountries]);
 
   const progress = useMemo(
     () => computeProgress(journey, completed, today, defaultContent, extraExp),
@@ -71,8 +77,11 @@ export function Dashboard({
 
   useEffect(() => {
     loadDailyState("english").then(setDailyState).catch(() => {});
+    if (targetLang) {
+      loadDailyState(targetLang).then(setLangDailyState).catch(() => {});
+    }
     loadWeeklyStreak(dhakaToday, { holding: isHolding }).then(setWeeklyStreak).catch(() => {});
-  }, [dhakaToday, isHolding]);
+  }, [dhakaToday, isHolding, targetLang]);
 
   const reminder = useMemo(
     () => getUrgentReminder(journey, progress, Boolean(dailyState?.isDoneToday), today),
@@ -283,6 +292,40 @@ export function Dashboard({
             )}
           </div>
         </div>
+
+        {targetLang && (
+          <div className="mt-3 flex items-start justify-between gap-3 border-t border-[var(--line-soft)] pt-3">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">
+                  {targetLang === "de" ? "German Track" : "Japanese Track"}
+                </span>
+                <span className="font-mono text-[11px] text-[var(--muted)]">+20 EXP</span>
+              </div>
+              <p className="mt-1 truncate text-xs text-[var(--muted)]">
+                {targetLang === "de"
+                  ? "Phonetics, survival phrases & vocabulary"
+                  : "Hiragana, survival phrases & vocabulary"}
+              </p>
+            </div>
+
+            <div className="shrink-0">
+              {langDailyState?.isDoneToday ? (
+                <div className="flex items-center gap-1 py-1 font-mono text-xs text-[#4ade80]">
+                  <Check size={14} className="stroke-[2]" />
+                  <span>Done ✓</span>
+                </div>
+              ) : (
+                <Link
+                  href="/daily"
+                  className="inline-block border border-[var(--accent)] px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-black"
+                >
+                  Start
+                </Link>
+              )}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Quest window */}

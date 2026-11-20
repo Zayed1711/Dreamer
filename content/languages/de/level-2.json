@@ -1,0 +1,82 @@
+{
+  "lang": "de",
+  "level": 2,
+  "title": "Survival Phrases",
+  "description": "Essential polite greetings, directions, university campus navigation, and asking for assistance.",
+  "reviewedBy": "Tanvir Ahmed (Founding Mentor, TU Munich)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "de-2-1",
+      "type": "multiple_choice",
+      "prompt": "Guten Morgen",
+      "soundText": "Guten Morgen",
+      "explanation": "Standard German morning greeting used until around midday.",
+      "options": ["Good morning", "Good evening", "Goodbye", "Thank you"],
+      "correctAnswer": "Good morning"
+    },
+    {
+      "id": "de-2-2",
+      "type": "multiple_choice",
+      "prompt": "Entschuldigung, wo ist die Universität?",
+      "soundText": "Entschuldigung, wo ist die Universität?",
+      "explanation": "'Entschuldigung' means excuse me / sorry, and 'wo ist' asks for location.",
+      "options": ["Excuse me, where is the university?", "Excuse me, what time is it?", "Where can I buy a ticket?", "How do I get to the airport?"],
+      "correctAnswer": "Excuse me, where is the university?"
+    },
+    {
+      "id": "de-2-3",
+      "type": "multiple_choice",
+      "prompt": "Ich verstehe nicht",
+      "soundText": "Ich verstehe nicht",
+      "explanation": "'verstehen' means to understand; 'nicht' negates the clause.",
+      "options": ["I do not understand", "I don't know the answer", "I cannot speak German", "I am not a student"],
+      "correctAnswer": "I do not understand"
+    },
+    {
+      "id": "de-2-4",
+      "type": "multiple_choice",
+      "prompt": "Können Sie mir bitte helfen?",
+      "soundText": "Können Sie mir bitte helfen?",
+      "explanation": "Polite formal request using modal verb 'können' and 'bitte' (please).",
+      "options": ["Can you please help me?", "Would you like something to drink?", "Where is the library?", "Do you know the professor?"],
+      "correctAnswer": "Can you please help me?"
+    },
+    {
+      "id": "de-2-5",
+      "type": "multiple_choice",
+      "prompt": "Wie viel kostet das?",
+      "soundText": "Wie viel kostet das?",
+      "explanation": "Essential phrase for grocery shopping, cafeteria, or transport tickets.",
+      "options": ["How much does that cost?", "How late is it?", "How many are there?", "What is that called?"],
+      "correctAnswer": "How much does that cost?"
+    },
+    {
+      "id": "de-2-6",
+      "type": "multiple_choice",
+      "prompt": "Vielen Dank!",
+      "soundText": "Vielen Dank!",
+      "explanation": "Common and polite expression for 'Thank you very much!'.",
+      "options": ["Thank you very much!", "You are very welcome!", "Have a great day!", "See you soon!"],
+      "correctAnswer": "Thank you very much!"
+    },
+    {
+      "id": "de-2-7",
+      "type": "multiple_choice",
+      "prompt": "Sprechen Sie Englisch?",
+      "soundText": "Sprechen Sie Englisch?",
+      "explanation": "Formal question asking if the conversation partner speaks English.",
+      "options": ["Do you speak English?", "Do you understand German?", "Are you from England?", "Can I speak to someone else?"],
+      "correctAnswer": "Do you speak English?"
+    },
+    {
+      "id": "de-2-8",
+      "type": "multiple_choice",
+      "prompt": "Auf Wiedersehen",
+      "soundText": "Auf Wiedersehen",
+      "explanation": "Formal farewell ('until we see each other again').",
+      "options": ["Goodbye (formal)", "Hello (informal)", "Good night", "See you tomorrow"],
+      "correctAnswer": "Goodbye (formal)"
+    }
+  ]
+}

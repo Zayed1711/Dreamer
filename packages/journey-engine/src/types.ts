@@ -273,4 +273,51 @@ export interface ReadingMarkResult {
   }[];
 }
 
+// ---------- Language Tracks ----------
+
+export type LanguageCode = "de" | "ja";
+
+export type QuizType = "match" | "multiple_choice" | "sentence_build";
+
+export interface QuizQuestion {
+  id: string;
+  type: QuizType;
+  prompt: string;
+  soundText?: string;
+  explanation?: string;
+  options: string[];
+  correctAnswer: string;
+}
+
+export interface LanguageLevelContent {
+  lang: LanguageCode;
+  level: number;
+  title: string;
+  description: string;
+  reviewedBy?: string;
+  reviewedAt?: string;
+  items: QuizQuestion[];
+}
+
+export interface LanguageQuizResult {
+  passed: boolean;
+  score: number;
+  total: number;
+  percentage: number;
+  results: {
+    questionId: string;
+    given: string;
+    expected: string;
+    correct: boolean;
+  }[];
+}
+
+export interface LanguageProgress {
+  lang: LanguageCode;
+  level: number;
+  quizzesCompleted: number;
+  updatedAt?: string;
+}
+
+
 

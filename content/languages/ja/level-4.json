@@ -1,0 +1,55 @@
+{
+  "lang": "ja",
+  "level": 4,
+  "title": "About Me & Self Introductions",
+  "description": "Constructing self-introduction (Jikoshoukai) sentences: origin, research area, and courtesy closings.",
+  "reviewedBy": "Kazi Sakib (Founding Mentor, University of Tokyo)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "ja-4-1",
+      "type": "multiple_choice",
+      "prompt": "はじめまして (Hajimemashite)",
+      "soundText": "はじめまして",
+      "explanation": "Customary greeting when meeting someone for the first time ('Nice to meet you').",
+      "options": ["Nice to meet you (first meeting)", "Good afternoon", "Long time no see", "See you later"],
+      "correctAnswer": "Nice to meet you (first meeting)"
+    },
+    {
+      "id": "ja-4-2",
+      "type": "multiple_choice",
+      "prompt": "バングラデシュから来ました (Banguradeshu kara kimashita)",
+      "soundText": "バングラデシュから来ました",
+      "explanation": "'kara kimashita' means 'came from' (expressing origin country).",
+      "options": ["I came from Bangladesh.", "I am traveling to Bangladesh.", "I live in Japan now.", "My friend is Bangladeshi."],
+      "correctAnswer": "I came from Bangladesh."
+    },
+    {
+      "id": "ja-4-3",
+      "type": "multiple_choice",
+      "prompt": "私の専門は工学です (Watashi no senmon wa kougaku desu)",
+      "soundText": "わたしのせんもんはこうがくです",
+      "explanation": "'senmon' = major/specialization, 'kougaku' = engineering.",
+      "options": ["My major is engineering.", "My major is medicine.", "I work at a university.", "I study Japanese literature."],
+      "correctAnswer": "My major is engineering."
+    },
+    {
+      "id": "ja-4-4",
+      "type": "multiple_choice",
+      "prompt": "どうぞよろしくお願いします (Douzo yoroshiku onegaishimasu)",
+      "soundText": "どうぞよろしくおねがいします",
+      "explanation": "Essential cultural closing of a self-introduction: 'Please treat me favorably / Looking forward to working with you'.",
+      "options": ["Please treat me well / Pleased to meet you", "Thank you for the meal", "Excuse my interruption", "Good night"],
+      "correctAnswer": "Please treat me well / Pleased to meet you"
+    },
+    {
+      "id": "ja-4-5",
+      "type": "multiple_choice",
+      "prompt": "日本語を勉強しています (Nihongo o benkyou shite imasu)",
+      "soundText": "にほんごをべんきょうしています",
+      "explanation": "'~te imasu' expresses ongoing progressive action ('am studying').",
+      "options": ["I am studying Japanese.", "I can speak fluent Japanese.", "Japanese is my native language.", "I will study Japanese next year."],
+      "correctAnswer": "I am studying Japanese."
+    }
+  ]
+}

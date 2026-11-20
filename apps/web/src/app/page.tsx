@@ -25,5 +25,13 @@ export default function Home() {
     );
   }
   if (!journey) return null;
-  return <Dashboard journey={journey} today={today} initialCompleted={completed} extraExp={extraExp} />;
+  return (
+    <Dashboard
+      journey={journey}
+      today={today}
+      initialCompleted={completed}
+      extraExp={extraExp}
+      targetCountries={profile?.countries}
+    />
+  );
 }

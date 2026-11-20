@@ -1,0 +1,55 @@
+{
+  "lang": "de",
+  "level": 3,
+  "title": "Core Vocabulary",
+  "description": "Essential nouns, verbs, and daily terminology for academic students in Germany.",
+  "reviewedBy": "Tanvir Ahmed (Founding Mentor, TU Munich)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "de-3-1",
+      "type": "multiple_choice",
+      "prompt": "das Zimmer",
+      "soundText": "das Zimmer",
+      "explanation": "Essential word when looking for student housing or dorm rooms.",
+      "options": ["the room", "the apartment", "the bed", "the door"],
+      "correctAnswer": "the room"
+    },
+    {
+      "id": "de-3-2",
+      "type": "multiple_choice",
+      "prompt": "die Vorlesung",
+      "soundText": "die Vorlesung",
+      "explanation": "University academic term for a university lecture.",
+      "options": ["the lecture", "the exam", "the library", "the textbook"],
+      "correctAnswer": "the lecture"
+    },
+    {
+      "id": "de-3-3",
+      "type": "multiple_choice",
+      "prompt": "lernen vs. studieren",
+      "soundText": "studieren",
+      "explanation": "In German, 'studieren' specifically means studying a subject at a university degree level.",
+      "options": ["studieren = study at university", "lernen = study at university", "studieren = learn a recipe", "Both are interchangeable"],
+      "correctAnswer": "studieren = study at university"
+    },
+    {
+      "id": "de-3-4",
+      "type": "multiple_choice",
+      "prompt": "die Mensa",
+      "soundText": "die Mensa",
+      "explanation": "The subsidized student dining hall and cafeteria on German campuses.",
+      "options": ["student dining hall / cafeteria", "university laboratory", "sports hall", "admissions office"],
+      "correctAnswer": "student dining hall / cafeteria"
+    },
+    {
+      "id": "de-3-5",
+      "type": "multiple_choice",
+      "prompt": "die Prüfung",
+      "soundText": "die Prüfung",
+      "explanation": "Academic term for an examination or test.",
+      "options": ["the examination / test", "the grade report", "the thesis defense", "the presentation"],
+      "correctAnswer": "the examination / test"
+    }
+  ]
+}

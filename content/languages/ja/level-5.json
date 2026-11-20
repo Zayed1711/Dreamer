@@ -1,0 +1,55 @@
+{
+  "lang": "ja",
+  "level": 5,
+  "title": "Student Life & Administration",
+  "description": "Ward office registration (Kuyakusho), commuter passes (Teikiken), convenience store phrases, and dormitory life.",
+  "reviewedBy": "Kazi Sakib (Founding Mentor, University of Tokyo)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "ja-5-1",
+      "type": "multiple_choice",
+      "prompt": "区役所 (Kuyakusho) / 市役所 (Shiyakusho)",
+      "soundText": "くやくしょ",
+      "explanation": "Municipal ward/city office where students register residence within 14 days and enroll in National Health Insurance (Kokumin Kenko Hoken).",
+      "options": ["Ward office / City hall", "Train station headquarters", "Immigration bureau", "Police station"],
+      "correctAnswer": "Ward office / City hall"
+    },
+    {
+      "id": "ja-5-2",
+      "type": "multiple_choice",
+      "prompt": "在留カード (Zairyuu kaado)",
+      "soundText": "ざいりゅうカード",
+      "explanation": "Official Residence Card issued to foreign nationals living in Japan for mid-to-long term.",
+      "options": ["Residence Card", "Student ID Card", "Commuter Train Pass", "Bank ATM Card"],
+      "correctAnswer": "Residence Card"
+    },
+    {
+      "id": "ja-5-3",
+      "type": "multiple_choice",
+      "prompt": "通学定期券 (Tsuugaku teikiken)",
+      "soundText": "つうがくていきけん",
+      "explanation": "Discounted student commuter rail pass between residence station and campus station.",
+      "options": ["Student commuter train pass", "Express train ticket", "Airport bus voucher", "Luggage locker receipt"],
+      "correctAnswer": "Student commuter train pass"
+    },
+    {
+      "id": "ja-5-4",
+      "type": "multiple_choice",
+      "prompt": "袋は要りません (Fukuro wa irimasen)",
+      "soundText": "ふくろはいりません",
+      "explanation": "Common phrase used at convenience stores (Konbini) and supermarkets: 'I don't need a bag'.",
+      "options": ["I don't need a plastic bag.", "Please warm this up.", "Can I have a receipt?", "Do you take credit cards?"],
+      "correctAnswer": "I don't need a plastic bag."
+    },
+    {
+      "id": "ja-5-5",
+      "type": "multiple_choice",
+      "prompt": "国民健康保険 (Kokumin Kenkou Hoken)",
+      "soundText": "こくみんけんこうほけん",
+      "explanation": "National Health Insurance covering 70% of medical costs for students residing in Japan.",
+      "options": ["National Health Insurance", "Personal Pension Plan", "Travel Accident Cover", "Dormitory Damage Deposit"],
+      "correctAnswer": "National Health Insurance"
+    }
+  ]
+}

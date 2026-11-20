@@ -1,0 +1,55 @@
+{
+  "lang": "de",
+  "level": 4,
+  "title": "About Me & Introductions",
+  "description": "Constructing personal profile sentences: origins, academic major, and personal aspirations.",
+  "reviewedBy": "Tanvir Ahmed (Founding Mentor, TU Munich)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "de-4-1",
+      "type": "multiple_choice",
+      "prompt": "Ich komme aus Bangladesch.",
+      "soundText": "Ich komme aus Bangladesch.",
+      "explanation": "'aus' is used to indicate origin or country of departure.",
+      "options": ["I come from Bangladesh.", "I am going to Bangladesh.", "I live in Bangladesh.", "I like Bangladesh."],
+      "correctAnswer": "I come from Bangladesh."
+    },
+    {
+      "id": "de-4-2",
+      "type": "multiple_choice",
+      "prompt": "Ich studiere Informatik.",
+      "soundText": "Ich studiere Informatik.",
+      "explanation": "'Informatik' is the German term for Computer Science.",
+      "options": ["I study Computer Science.", "I study Information Technology.", "I am an engineer.", "I work in an office."],
+      "correctAnswer": "I study Computer Science."
+    },
+    {
+      "id": "de-4-3",
+      "type": "multiple_choice",
+      "prompt": "Mein Name ist...",
+      "soundText": "Mein Name ist",
+      "explanation": "Standard formal or neutral phrase to introduce your name.",
+      "options": ["My name is...", "My friend is...", "I call you...", "Where is..."],
+      "correctAnswer": "My name is..."
+    },
+    {
+      "id": "de-4-4",
+      "type": "multiple_choice",
+      "prompt": "Ich möchte in Deutschland studieren.",
+      "soundText": "Ich möchte in Deutschland studieren.",
+      "explanation": "'möchte' is the polite modal verb meaning 'would like to'.",
+      "options": ["I would like to study in Germany.", "I have studied in Germany.", "I must leave Germany.", "I work in Germany."],
+      "correctAnswer": "I would like to study in Germany."
+    },
+    {
+      "id": "de-4-5",
+      "type": "multiple_choice",
+      "prompt": "Ich lerne Deutsch seit drei Monaten.",
+      "soundText": "Ich lerne Deutsch seit drei Monaten.",
+      "explanation": "'seit' with dative expresses an action that started in the past and continues ('since' / 'for').",
+      "options": ["I have been learning German for three months.", "I will learn German in three months.", "German is difficult for three months.", "I lived in Germany three months ago."],
+      "correctAnswer": "I have been learning German for three months."
+    }
+  ]
+}

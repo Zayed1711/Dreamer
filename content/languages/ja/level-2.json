@@ -1,0 +1,82 @@
+{
+  "lang": "ja",
+  "level": 2,
+  "title": "Survival Phrases",
+  "description": "Essential courteous phrases, daily greetings, and navigating Tokyo campus environments.",
+  "reviewedBy": "Kazi Sakib (Founding Mentor, University of Tokyo)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "ja-2-1",
+      "type": "multiple_choice",
+      "prompt": "おはようございます (Ohayou gozaimasu)",
+      "soundText": "おはようございます",
+      "explanation": "Polite morning greeting used with professors, colleagues, and seniors.",
+      "options": ["Good morning (polite)", "Good afternoon", "Good evening", "Goodbye"],
+      "correctAnswer": "Good morning (polite)"
+    },
+    {
+      "id": "ja-2-2",
+      "type": "multiple_choice",
+      "prompt": "すみません (Sumimasen)",
+      "soundText": "すみません",
+      "explanation": "The most versatile polite phrase in Japan: 'Excuse me', 'I am sorry', and 'Thank you for your trouble'.",
+      "options": ["Excuse me / Sorry", "Goodbye", "Please give me this", "You are welcome"],
+      "correctAnswer": "Excuse me / Sorry"
+    },
+    {
+      "id": "ja-2-3",
+      "type": "multiple_choice",
+      "prompt": "ありがとうございます (Arigatou gozaimasu)",
+      "soundText": "ありがとうございます",
+      "explanation": "Standard polite expression of sincere gratitude.",
+      "options": ["Thank you very much (polite)", "Good day", "Excuse me", "Take care"],
+      "correctAnswer": "Thank you very much (polite)"
+    },
+    {
+      "id": "ja-2-4",
+      "type": "multiple_choice",
+      "prompt": "英語を話せますか (Eigo o hanasemasu ka)",
+      "soundText": "英語を話せますか",
+      "explanation": "Polite question asking if the listener can speak English.",
+      "options": ["Can you speak English?", "Do you understand Japanese?", "Where is the English class?", "Are you from England?"],
+      "correctAnswer": "Can you speak English?"
+    },
+    {
+      "id": "ja-2-5",
+      "type": "multiple_choice",
+      "prompt": "駅はどこですか (Eki wa doko desu ka)",
+      "soundText": "駅はどこですか",
+      "explanation": "'eki' = train station, 'doko' = where, 'desu ka' = question particle.",
+      "options": ["Where is the train station?", "Where is the airport?", "How much is the train ticket?", "What time does the train leave?"],
+      "correctAnswer": "Where is the train station?"
+    },
+    {
+      "id": "ja-2-6",
+      "type": "multiple_choice",
+      "prompt": "これはいくらですか (Kore wa ikura desu ka)",
+      "soundText": "これはいくらですか",
+      "explanation": "'kore' = this, 'ikura' = how much. Essential for stores and restaurants.",
+      "options": ["How much is this?", "What is this called?", "Where is this made?", "Can I have two of these?"],
+      "correctAnswer": "How much is this?"
+    },
+    {
+      "id": "ja-2-7",
+      "type": "multiple_choice",
+      "prompt": "わかりません (Wakarimasen)",
+      "soundText": "わかりません",
+      "explanation": "Polite negative form of 'wakaru' (to understand): 'I don't understand / I don't know'.",
+      "options": ["I don't understand / I don't know", "I didn't hear you", "I don't like it", "I am busy"],
+      "correctAnswer": "I don't understand / I don't know"
+    },
+    {
+      "id": "ja-2-8",
+      "type": "multiple_choice",
+      "prompt": "お願いします (Onegaishimasu)",
+      "soundText": "お願いします",
+      "explanation": "Polite request phrase ('Please' / 'I leave it in your care').",
+      "options": ["Please / If you would be so kind", "Excuse me", "Good evening", "Not at all"],
+      "correctAnswer": "Please / If you would be so kind"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "lang": "de",
+  "level": 1,
+  "title": "Alphabet & Phonetics",
+  "description": "Master German umlauts, special vowel combinations, and unique consonant sounds.",
+  "reviewedBy": "Tanvir Ahmed (Founding Mentor, TU Munich)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "de-1-1",
+      "type": "multiple_choice",
+      "prompt": "ä (Umlaut A)",
+      "soundText": "ä",
+      "explanation": "ä is pronounced like the short 'e' in English 'bed' or 'air'.",
+      "options": ["Like 'e' in 'bed'", "Like 'a' in 'father'", "Like 'oo' in 'boot'", "Like 'ee' in 'see'"],
+      "correctAnswer": "Like 'e' in 'bed'"
+    },
+    {
+      "id": "de-1-2",
+      "type": "multiple_choice",
+      "prompt": "ö (Umlaut O)",
+      "soundText": "ö",
+      "explanation": "ö is formed by rounding your lips as if to say 'o', but pronouncing 'ay' or 'er' (like in 'bird').",
+      "options": ["Like 'er' in 'bird'", "Like 'o' in 'boat'", "Like 'u' in 'cup'", "Like 'ah' in 'calm'"],
+      "correctAnswer": "Like 'er' in 'bird'"
+    },
+    {
+      "id": "de-1-3",
+      "type": "multiple_choice",
+      "prompt": "ü (Umlaut U)",
+      "soundText": "ü",
+      "explanation": "ü is made by pursing lips to whistle and trying to say 'ee' (similar to French 'u').",
+      "options": ["Pursed lips saying 'ee'", "Like 'oo' in 'food'", "Like 'uh' in 'bus'", "Like 'eye' in 'light'"],
+      "correctAnswer": "Pursed lips saying 'ee'"
+    },
+    {
+      "id": "de-1-4",
+      "type": "multiple_choice",
+      "prompt": "ß (Eszett / Sharp S)",
+      "soundText": "Straße",
+      "explanation": "ß is pronounced as a sharp unvoiced 'ss' sound (never voiced like 'z'). Example: Straße.",
+      "options": ["Sharp unvoiced 'ss'", "Hard 'b' sound", "Voiced 'z' sound", "Silent letter"],
+      "correctAnswer": "Sharp unvoiced 'ss'"
+    },
+    {
+      "id": "de-1-5",
+      "type": "multiple_choice",
+      "prompt": "ei (Diphthong)",
+      "soundText": "mein",
+      "explanation": "'ei' in German is pronounced like the English word 'eye' or 'my'.",
+      "options": ["Like 'eye' in 'bite'", "Like 'ee' in 'feet'", "Like 'ay' in 'say'", "Like 'o' in 'low'"],
+      "correctAnswer": "Like 'eye' in 'bite'"
+    },
+    {
+      "id": "de-1-6",
+      "type": "multiple_choice",
+      "prompt": "ie (Diphthong)",
+      "soundText": "sie",
+      "explanation": "'ie' in German is pronounced as a long 'ee' sound (like in 'brief' or 'see').",
+      "options": ["Long 'ee' in 'see'", "Like 'eye' in 'sky'", "Like 'eh' in 'get'", "Like 'ow' in 'now'"],
+      "correctAnswer": "Long 'ee' in 'see'"
+    },
+    {
+      "id": "de-1-7",
+      "type": "multiple_choice",
+      "prompt": "sch (Consonant combination)",
+      "soundText": "Schule",
+      "explanation": "'sch' in German is always pronounced as 'sh' (like in 'English shoe').",
+      "options": ["Like 'sh' in 'shoe'", "Like 'sk' in 'skill'", "Like 'ch' in 'chair'", "Like 's' in 'sun'"],
+      "correctAnswer": "Like 'sh' in 'shoe'"
+    },
+    {
+      "id": "de-1-8",
+      "type": "multiple_choice",
+      "prompt": "st at the beginning of a word (e.g., Student)",
+      "soundText": "Student",
+      "explanation": "At the start of words or syllables, 'st' is pronounced 'sht' (e.g. Shtudent, Shtadt).",
+      "options": ["Pronounced as 'sht'", "Pronounced as plain 'st'", "Silent 's'", "Pronounced as 'ts'"],
+      "correctAnswer": "Pronounced as 'sht'"
+    },
+    {
+      "id": "de-1-9",
+      "type": "multiple_choice",
+      "prompt": "W in German (e.g., Wasser)",
+      "soundText": "Wasser",
+      "explanation": "German 'w' is pronounced like English 'v' (e.g., Wasser sounds like 'Vasser').",
+      "options": ["Pronounced like English 'v'", "Pronounced like English 'w'", "Pronounced like 'f'", "Silent letter"],
+      "correctAnswer": "Pronounced like English 'v'"
+    },
+    {
+      "id": "de-1-10",
+      "type": "multiple_choice",
+      "prompt": "V in German (e.g., Vater, Vier)",
+      "soundText": "Vater",
+      "explanation": "German 'v' in native German words is pronounced like English 'f' (e.g., Vater = 'Fater').",
+      "options": ["Pronounced like English 'f'", "Pronounced like English 'v'", "Pronounced like 'w'", "Pronounced like 'b'"],
+      "correctAnswer": "Pronounced like English 'f'"
+    }
+  ]
+}

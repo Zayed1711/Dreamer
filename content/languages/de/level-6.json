@@ -1,0 +1,55 @@
+{
+  "lang": "de",
+  "level": 6,
+  "title": "Test-Ready Basics (A1/A2)",
+  "description": "Essential grammatical foundations: grammatical gender (der, die, das), accusative case, and verb conjugations.",
+  "reviewedBy": "Tanvir Ahmed (Founding Mentor, TU Munich)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "de-6-1",
+      "type": "multiple_choice",
+      "prompt": "Which definite article is used for masculine nouns in the nominative case?",
+      "soundText": "der",
+      "explanation": "German has three grammatical genders: masculine (der), feminine (die), and neuter (das).",
+      "options": ["der", "die", "das", "den"],
+      "correctAnswer": "der"
+    },
+    {
+      "id": "de-6-2",
+      "type": "multiple_choice",
+      "prompt": "In the accusative case (direct object), 'der' changes to:",
+      "soundText": "den",
+      "explanation": "Only masculine articles change in the accusative case: der -> den (die and das remain unchanged).",
+      "options": ["den", "dem", "des", "die"],
+      "correctAnswer": "den"
+    },
+    {
+      "id": "de-6-3",
+      "type": "multiple_choice",
+      "prompt": "Conjugate 'haben' (to have) for 'du' (you, informal):",
+      "soundText": "du hast",
+      "explanation": "The irregular present tense conjugation is: ich habe, du hast, er/sie/es hat.",
+      "options": ["du hast", "du habst", "du habt", "du haben"],
+      "correctAnswer": "du hast"
+    },
+    {
+      "id": "de-6-4",
+      "type": "multiple_choice",
+      "prompt": "Where does the conjugated finite verb sit in a standard German main clause?",
+      "soundText": "Position 2",
+      "explanation": "The V2 (Verb Second) rule is a fundamental pillar of German main clause syntax.",
+      "options": ["Position 2 (second element)", "Always at the very end", "Always at the very beginning", "Position 3"],
+      "correctAnswer": "Position 2 (second element)"
+    },
+    {
+      "id": "de-6-5",
+      "type": "multiple_choice",
+      "prompt": "Which preposition takes the dative case to express origin ('from')?",
+      "soundText": "aus",
+      "explanation": "'aus' is a dative preposition expressing origin or coming out of a place (e.g. aus Bangladesch, aus dem Zimmer).",
+      "options": ["aus", "durch", "für", "ohne"],
+      "correctAnswer": "aus"
+    }
+  ]
+}

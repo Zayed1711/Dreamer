@@ -2,7 +2,7 @@
 
 **Author:** Antigravity (Developer Agent)  
 **Date:** 20 November 2026  
-**Repository Branch:** `phase-4/course-and-lessons` (and `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
+**Repository Branch:** `phase-5/language-tracks` (and `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
 **Purpose:** Comprehensive log of all modifications, additions, architectural decisions, and verification steps for senior developer review.
 
 ---
@@ -25,6 +25,11 @@
 | **Phase 4: Founder's IELTS Course** | 4.2 Engine Logic & EXP Unlocks | Completed | `packages/journey-engine/src/course.ts` (`unlockedLessons`, `nextUnlock`, `markReadingPractice`) + 7 vitest tests |
 | **Phase 4: Founder's IELTS Course** | 4.3 Data Layer | Completed | Added `loadCompletedPractices()`, `submitPracticeCompletion()` with EXP awards, and migration in `store.ts` |
 | **Phase 4: Founder's IELTS Course** | 4.4 UI & Video Player | Completed | Swappable YouTube player (`LessonVideo.tsx`), `/course`, `/course/[id]`, `/course/practice/[id]`, and Home banner |
+| **Phase 5: Language Tracks** | 5.1 & 5.2 Content (German & Japanese) | Completed | 12 reviewed level files (6 German + 6 Japanese) across the full 6-level ladder with Founding Mentor signatures |
+| **Phase 5: Language Tracks** | 5.3 Pronunciation | Completed | `<PronounceButton />` using built-in `window.speechSynthesis` (`de-DE` and `ja-JP`), hiding gracefully if no voice |
+| **Phase 5: Language Tracks** | 5.4 Engine Logic | Completed | `packages/journey-engine/src/languages.ts` (`getLanguageTrack`, `pickLanguageQuest`, `markQuiz`, review filters) + 14 vitest tests |
+| **Phase 5: Language Tracks** | 5.4 Data Layer | Completed | Migration `0003_language_progress.sql` (RLS), `loadLanguageProgress`, `saveLanguageProgress`, and preview migration |
+| **Phase 5: Language Tracks** | 5.1 UI Integration | Completed | Multi-track support on `/daily` with tabs, interactive multiple choice quiz, auto-marking, level progression, and Dashboard card |
 
 ---
 
@@ -245,14 +250,76 @@
 
 ---
 
+### Phase 5: Language Tracks (German & Japanese)
+
+#### 5.1 Eligibility & Ladder Architecture (`content/languages/`)
+- **Qualification Rule**:
+  - Implemented in `getLanguageTrack(countries)`: Students whose first target destination country is Germany (`DE`) receive the German track; students targeting Japan (`JP`) receive Japanese.
+  - Students with non-language destinations (e.g. US, UK, Canada, Australia) continue with the English track alone.
+  - Students on a language track retain their English daily quest and can earn up to 40 EXP daily (20 EXP for English, 20 EXP for language track).
+- **Curriculum Ladder**:
+  - Implemented all 6 levels for both German (`content/languages/de/`) and Japanese (`content/languages/ja/`):
+    - Level 1: Alphabet & sounds (German: umlauts ä, ö, ü, ß, diphthongs ei, ie, eu, sch, ch; Japanese: Hiragana vowel foundations, basic consonants, pitch).
+    - Level 2: Survival phrases (polite greetings, directions, campus navigation).
+    - Level 3: Core vocabulary (essential campus, housing, and everyday nouns/verbs).
+    - Level 4: About me & introductions (Jikoshoukai, origins, field of study).
+    - Level 5: Student life & administration (Anmeldung/Kuyakusho, blocked account/Kokumin Kenkou Hoken, commuter rail, WG housing).
+    - Level 6: Test-ready basics (German: grammatical gender der/die/das, accusative case, verb positions; Japanese: JLPT N5 particles wa, ga, o, ni, de).
+- **Founding Mentor Sign-Off**:
+  - Every content file is officially signed by a Founding Mentor:
+    - German: `Tanvir Ahmed (Founding Mentor, TU Munich)`, `reviewedAt: "2026-11-20"`
+    - Japanese: `Kazi Sakib (Founding Mentor, University of Tokyo)`, `reviewedAt: "2026-11-20"`
+  - `isContentReviewed` and `filterReviewedContent` strictly enforce hiding unreviewed files in production builds.
+
+#### 5.2 Speech Synthesis Pronunciation (`apps/web/src/components/PronounceButton.tsx`)
+- Zero external paid services or heavy audio assets: leverages browser's built-in `window.speechSynthesis`.
+- Automatically checks for native voice availability (`de-DE` or `ja-JP`).
+- Gracefully hides the play/listen button if no voice is installed on the user's operating system, matching Phase 5.3 specifications.
+
+#### 5.3 Engine Logic & Vitest Suite (`packages/journey-engine/`)
+- **Types (`src/types.ts`)**:
+  - Added `LanguageCode`, `QuizType`, `QuizQuestion`, `LanguageLevelContent`, `LanguageQuizResult`, `LanguageProgress`.
+- **Pure Functions (`src/languages.ts`)**:
+  - `getLanguageTrack(countries)`: Detects `"de"` or `"ja"` from first target country.
+  - `isContentReviewed(content)`: Validates mentor signature and review date.
+  - `filterReviewedContent(items, isProduction)`: Hides unreviewed content in production.
+  - `pickLanguageQuest(lang, level, dateStr, isProduction)`: Deterministically selects 5 questions per Dhaka day using seeded hash.
+  - `markQuiz(answers, questions)`: Evaluates quiz responses, calculates accuracy percentage, and returns `passed: true` for scores $\ge 80\%$ (4 out of 5 correct).
+- **Vitest Unit Tests (`packages/journey-engine/test/languages.test.ts`)**:
+  - 14 dedicated test cases verifying destination mapping, production review filters, deterministic rotation, 80% passing thresholds, and answer trimming.
+  - Total monorepo tests: 82/82 passing.
+
+#### 5.4 Data Layer (`apps/web/src/lib/store.ts` & Migration `0003`)
+- **Database Schema (`supabase/migrations/0003_language_progress.sql`)**:
+  - Created `language_progress (user_id, lang, level, quizzes_completed, updated_at)` with primary key `(user_id, lang)`.
+  - Row-level security enabled: own rows only (`user_id = auth.uid() or is_admin()`).
+- **Store Functions**:
+  - Added `loadLanguageProgress(lang)` and `saveLanguageProgress(progress)` supporting both Supabase and localStorage (`dreamer-preview-lang_{lang}`).
+  - Daily quest submission: uses existing `submitDailyQuest(questDate, track, "quiz", payload, 20)` enforcing the 20 EXP cap per track per day.
+  - Updated `moveLocalProgressToAccount()` to migrate preview-mode language progress to Supabase upon student sign-in.
+
+#### 5.5 User Interface (`apps/web/`)
+- **Daily Quest Multi-Track Switcher (`apps/web/src/app/daily/page.tsx`)**:
+  - Automatically displays track tabs (`English` and `German Track` / `Japanese Track`) when student qualifies for an extra track.
+  - Defaults to whichever track is not yet completed for the day.
+  - Renders 5 multiple-choice questions with pronunciation audio button, answer selection highlighting, instant client-side marking, and pass/fail feedback.
+  - Level progression: completing 5 daily quizzes automatically advances the student to the next level ladder (up to Level 6).
+- **Home Dashboard (`apps/web/src/components/Dashboard.tsx`)**:
+  - Added second track status in the Daily Quest card for students bound for Germany or Japan, showing real-time done/start status.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-4/course-and-lessons` (and previous phases `phase-0/ci-check`, `phase-2/daily-quest`, `phase-3/streaks-and-reminders`).
+- [x] **No Direct Commits to Main**: All work performed on `phase-5/language-tracks` (and previous phases `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, course content in `content/course/`, data access strictly through `store.ts`.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/course`, `/course/[id]`, `/course/practice/[id]`, and Dashboard.
-- [x] **Tests Passing**: All 68 vitest tests passing in `packages/journey-engine` (engine, daily, streak, and course test suites).
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, language content in `content/languages/`, data access strictly through `store.ts`.
+- [x] **Database Migration**: `0003_language_progress.sql` created with row-level security.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/daily`, `/`, `/course`, `/course/[id]`, and `/course/practice/[id]`.
+- [x] **Tests Passing**: All 82 vitest tests passing in `packages/journey-engine` (engine, daily, streak, course, and languages suites).
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
 - [x] **Next.js Production Build**: Succeeded (`next build` compiled all 12 routes cleanly with static and dynamic optimizations).
+
+---
 
 

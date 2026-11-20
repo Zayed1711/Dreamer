@@ -1,0 +1,55 @@
+{
+  "lang": "ja",
+  "level": 6,
+  "title": "Test-Ready Basics (JLPT N5)",
+  "description": "Essential grammar particles (wa, ga, o, ni, de) and foundational polite copula and verb conjugations.",
+  "reviewedBy": "Kazi Sakib (Founding Mentor, University of Tokyo)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "ja-6-1",
+      "type": "multiple_choice",
+      "prompt": "Which particle marks the overarching topic of a sentence (written as 'ha' but pronounced 'wa')?",
+      "soundText": "は",
+      "explanation": "The topic marker particle is written as は (ha) but pronounced 'wa' when functioning as a particle.",
+      "options": ["は (wa)", "を (o)", "が (ga)", "に (ni)"],
+      "correctAnswer": "は (wa)"
+    },
+    {
+      "id": "ja-6-2",
+      "type": "multiple_choice",
+      "prompt": "Which particle marks the direct object of an action verb (e.g. 'hon ___ yomu')?",
+      "soundText": "を",
+      "explanation": "The direct object marker particle is を (o/wo).",
+      "options": ["を (o)", "で (de)", "と (to)", "へ (e)"],
+      "correctAnswer": "を (o)"
+    },
+    {
+      "id": "ja-6-3",
+      "type": "multiple_choice",
+      "prompt": "Which particle indicates the location where an action takes place (e.g. 'toshokan ___ benkyou suru')?",
+      "soundText": "で",
+      "explanation": "で (de) indicates location of action ('at/in'), instrument/means ('by train'), or materials.",
+      "options": ["で (de)", "に (ni)", "へ (e)", "から (kara)"],
+      "correctAnswer": "で (de)"
+    },
+    {
+      "id": "ja-6-4",
+      "type": "multiple_choice",
+      "prompt": "What is the polite past tense of 'desu' (is/are)?",
+      "soundText": "でした",
+      "explanation": "The polite past tense of です (desu) is でした (deshita).",
+      "options": ["でした (deshita)", "ではありません (dewa arimasen)", "だ (da)", "だった (datta)"],
+      "correctAnswer": "でした (deshita)"
+    },
+    {
+      "id": "ja-6-5",
+      "type": "multiple_choice",
+      "prompt": "Which particle marks a specific time point or destination target (e.g. '7-ji ___ okiru')?",
+      "soundText": "に",
+      "explanation": "に (ni) marks specific time points ('at 7:00'), destinations ('go to Japan'), and indirect objects.",
+      "options": ["に (ni)", "は (wa)", "で (de)", "を (o)"],
+      "correctAnswer": "に (ni)"
+    }
+  ]
+}

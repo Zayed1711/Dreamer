@@ -1,0 +1,55 @@
+{
+  "lang": "de",
+  "level": 5,
+  "title": "Student Life & Administration",
+  "description": "City registration (Anmeldung), blocked accounts (Sperrkonto), health insurance, and flat-hunting.",
+  "reviewedBy": "Tanvir Ahmed (Founding Mentor, TU Munich)",
+  "reviewedAt": "2026-11-20",
+  "items": [
+    {
+      "id": "de-5-1",
+      "type": "multiple_choice",
+      "prompt": "die Anmeldung beim Bürgeramt",
+      "soundText": "die Anmeldung beim Bürgeramt",
+      "explanation": "Mandatory legal registration of address at the local citizens' office within 14 days of arriving in Germany.",
+      "options": ["City address registration", "University semester enrollment", "Bank account opening", "Health insurance contract"],
+      "correctAnswer": "City address registration"
+    },
+    {
+      "id": "de-5-2",
+      "type": "multiple_choice",
+      "prompt": "das Sperrkonto",
+      "soundText": "das Sperrkonto",
+      "explanation": "The legally required blocked bank account proving living financial resources for a German student visa.",
+      "options": ["Blocked bank account", "Credit card limit", "Cash deposit receipt", "Tuition fee waiver"],
+      "correctAnswer": "Blocked bank account"
+    },
+    {
+      "id": "de-5-3",
+      "type": "multiple_choice",
+      "prompt": "die WG (Wohngemeinschaft)",
+      "soundText": "die Wohngemeinschaft",
+      "explanation": "A shared student flat where students have private bedrooms and share the kitchen and bathroom.",
+      "options": ["Shared student apartment", "Single private studio", "Campus dining hall", "University library"],
+      "correctAnswer": "Shared student apartment"
+    },
+    {
+      "id": "de-5-4",
+      "type": "multiple_choice",
+      "prompt": "die Immatrikulation",
+      "soundText": "die Immatrikulation",
+      "explanation": "Official formal enrollment and matriculation as an enrolled university student.",
+      "options": ["University enrollment / matriculation", "Graduation ceremony", "Dormitory check-in", "Visa interview"],
+      "correctAnswer": "University enrollment / matriculation"
+    },
+    {
+      "id": "de-5-5",
+      "type": "multiple_choice",
+      "prompt": "die Krankenversicherung",
+      "soundText": "die Krankenversicherung",
+      "explanation": "Mandatory statutory health insurance required for all university students in Germany (e.g. TK, Barmer, AOK).",
+      "options": ["Health insurance", "Liability insurance", "Travel insurance", "Life insurance"],
+      "correctAnswer": "Health insurance"
+    }
+  ]
+}
