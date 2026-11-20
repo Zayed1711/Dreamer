@@ -21,6 +21,7 @@ import {
   Rocket,
   School,
   Send,
+  ShieldCheck,
   Signpost,
   Stamp,
   Target,
@@ -35,6 +36,7 @@ import type { Stat } from "@dreamer/journey-engine";
 
 const BY_MILESTONE: Record<string, LucideIcon> = {
   profile_setup: UserRound,
+  scam_shield: ShieldCheck,
   hsc_study_plan: Target,
   english_habit: Languages,
   english_foundation: BookOpen,

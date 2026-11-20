@@ -1,8 +1,8 @@
-import { AU, BD, CA, CN, DE, FI, FR, GB, HU, IE, IT, JP, KR, MY, NL, NZ, SE, US } from "country-flag-icons/react/3x2";
+import { AU, BD, CA, CN, DE, FI, FR, GB, HU, IE, IT, JP, KR, MY, NL, NZ, PL, SE, US } from "country-flag-icons/react/3x2";
 
 // Only the flags the app uses, so the rest are not bundled.
 const FLAGS: Record<string, typeof GB> = {
-  AU, BD, CA, CN, DE, FI, FR, GB, HU, IE, IT, JP, KR, MY, NL, NZ, SE, US,
+  AU, BD, CA, CN, DE, FI, FR, GB, HU, IE, IT, JP, KR, MY, NL, NZ, PL, SE, US,
 };
 
 /** A small rectangular flag with a thin border. Renders nothing for an unknown code. */

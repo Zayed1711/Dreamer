@@ -142,6 +142,21 @@ describe("late entries", () => {
   });
 });
 
+describe("Scam Shield", () => {
+  it("is in every journey from day one, including late joiners", () => {
+    const profiles: Profile[] = [
+      hsc1Weak,
+      { stage: "hsc1", degree: "masters", englishLevel: "intermediate", countries: [] },
+      { stage: "after_hsc", degree: "bachelors", englishLevel: "advanced", countries: ["AU"] },
+      { stage: "ug3", degree: "masters", englishLevel: "intermediate", countries: ["US"] },
+      { stage: "graduated", degree: "masters", englishLevel: "intermediate", countries: ["CA"] },
+    ];
+    for (const p of profiles) {
+      expect(item(generateJourney(p, TODAY), "scam_shield")).toMatchObject({ start: TODAY, required: true, stamp: "scam_spotter" });
+    }
+  });
+});
+
 describe("J2: HSC to a bachelor's at home", () => {
   const j = generateJourney(
     { stage: "hsc1", degree: "masters", englishLevel: "intermediate", countries: [] },

@@ -275,6 +275,7 @@ export function Dashboard({
         </ul>
         <div className="font-mono mt-6 flex justify-center gap-6 text-[11px] text-[var(--muted)]">
           <Link href="/onboarding">EDIT PROFILE</Link>
+          <Link href="/scam-check">SCAM CHECK</Link>
           <Link href="/credits">CREDITS</Link>
           {supabaseEnabled && (
             <button

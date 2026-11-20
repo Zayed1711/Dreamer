@@ -1,38 +1,112 @@
 {
   "key": "hsc-bachelors-home",
-  "title": { "en": "HSC to a bachelor's at home, then a master's abroad" },
+  "title": {
+    "en": "HSC to a bachelor's at home, then a master's abroad"
+  },
   "degree": "masters",
-  "entryStages": ["hsc1", "hsc2", "after_hsc"],
+  "entryStages": [
+    "hsc1",
+    "hsc2",
+    "after_hsc"
+  ],
   "next": "ug-masters-abroad",
-  "quietWindow": { "anchor": "hsc_exam", "offset": -3, "duration": 3 },
+  "quietWindow": {
+    "anchor": "hsc_exam",
+    "offset": -3,
+    "duration": 3
+  },
   "phases": [
     {
       "key": "explore",
-      "title": { "en": "HSC year 1: explore and build habits" },
-      "stages": ["hsc1"],
+      "title": {
+        "en": "HSC year 1: explore and build habits"
+      },
+      "stages": [
+        "hsc1"
+      ],
       "milestones": [
-        { "key": "profile_setup", "anchor": "start", "offset": 0, "duration": 1, "required": true },
-        { "key": "hsc_study_plan", "anchor": "start", "offset": 0, "duration": 1 },
-        { "key": "english_habit", "anchor": "start", "offset": 1, "duration": 1, "required": true },
-        { "key": "explore_paths", "anchor": "hsc_exam", "offset": -22, "duration": 4 },
-        { "key": "docs_folder", "anchor": "hsc_exam", "offset": -16, "duration": 3, "required": true },
-        { "key": "path_decision", "anchor": "hsc_exam", "offset": -14, "duration": 2, "required": true }
+        {
+          "key": "profile_setup",
+          "anchor": "start",
+          "offset": 0,
+          "duration": 1,
+          "required": true
+        },
+        {
+          "key": "scam_shield",
+          "anchor": "start",
+          "offset": 0,
+          "duration": 3,
+          "required": true
+        },
+        {
+          "key": "hsc_study_plan",
+          "anchor": "start",
+          "offset": 0,
+          "duration": 1
+        },
+        {
+          "key": "english_habit",
+          "anchor": "start",
+          "offset": 1,
+          "duration": 1,
+          "required": true
+        },
+        {
+          "key": "explore_paths",
+          "anchor": "hsc_exam",
+          "offset": -22,
+          "duration": 4
+        },
+        {
+          "key": "docs_folder",
+          "anchor": "hsc_exam",
+          "offset": -16,
+          "duration": 3,
+          "required": true
+        },
+        {
+          "key": "path_decision",
+          "anchor": "hsc_exam",
+          "offset": -14,
+          "duration": 2,
+          "required": true
+        }
       ]
     },
     {
       "key": "results_first",
-      "title": { "en": "HSC year 2: results first" },
-      "stages": ["hsc2"],
+      "title": {
+        "en": "HSC year 2: results first"
+      },
+      "stages": [
+        "hsc2"
+      ],
       "milestones": [
-        { "key": "english_level_check", "anchor": "hsc_exam", "offset": -10, "duration": 2 }
+        {
+          "key": "english_level_check",
+          "anchor": "hsc_exam",
+          "offset": -10,
+          "duration": 2
+        }
       ]
     },
     {
       "key": "admission",
-      "title": { "en": "After the HSC exam: university at home" },
-      "stages": ["after_hsc"],
+      "title": {
+        "en": "After the HSC exam: university at home"
+      },
+      "stages": [
+        "after_hsc"
+      ],
       "milestones": [
-        { "key": "university_admission_home", "anchor": "hsc_exam", "offset": 1, "duration": 5, "required": true }
+        {
+          "key": "university_admission_home",
+          "anchor": "hsc_exam",
+          "offset": 1,
+          "duration": 5,
+          "required": true
+        }
       ]
     }
   ]

@@ -35,6 +35,7 @@ export const COUNTRY_OPTIONS: { code: string; name: string }[] = [
   { code: "IT", name: "Italy" },
   { code: "FR", name: "France" },
   { code: "NL", name: "Netherlands" },
+  { code: "PL", name: "Poland" },
 ];
 
 export const DIVISION_OPTIONS: { value: string; label: string }[] = [

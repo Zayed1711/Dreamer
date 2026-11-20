@@ -12,6 +12,17 @@
       ]
     },
     {
+      "key": "scam_shield",
+      "title": { "en": "Scam Shield" },
+      "stat": "profile",
+      "help": { "en": "Learn the red flags before you meet any agent. Check an agent or an offer, and practise spotting scams in real-looking messages." },
+      "stamp": "scam_spotter",
+      "tasks": [
+        { "key": "run_check", "title": { "en": "Check an agent or offer with Scam Check" }, "exp": 40 },
+        { "key": "spot_quiz", "title": { "en": "Pass the Spot-the-scam quiz" }, "exp": 60 }
+      ]
+    },
+    {
       "key": "hsc_study_plan",
       "title": { "en": "Plan for strong HSC results" },
       "stat": "academics",

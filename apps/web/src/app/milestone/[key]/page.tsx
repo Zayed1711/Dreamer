@@ -104,6 +104,15 @@ export default function MilestonePage() {
         )}
       </section>
 
+      {item.key === "scam_shield" && (
+        <Link
+          href="/scam-check"
+          className="font-title block border border-[var(--accent)] bg-[var(--accent)] py-3 text-center text-sm font-semibold tracking-[0.2em] text-[var(--bg)] uppercase"
+        >
+          Open Scam Check
+        </Link>
+      )}
+
       {/* Tasks */}
       <section className="window px-4 pt-3 pb-3">
         <h2 className="window-title">Tasks</h2>

@@ -55,4 +55,5 @@ export const STAMP_NAMES: Record<string, string> = {
   scholarship_hunter: "Scholarship Hunter",
   application_raid: "Application Raid",
   visa_gate: "Visa Gate",
+  scam_spotter: "Scam Spotter",
 };

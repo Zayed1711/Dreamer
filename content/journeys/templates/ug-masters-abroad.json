@@ -1,59 +1,225 @@
 {
   "key": "ug-masters-abroad",
-  "title": { "en": "Undergraduate to a master's abroad" },
+  "title": {
+    "en": "Undergraduate to a master's abroad"
+  },
   "degree": "masters",
-  "entryStages": ["ug1", "ug2", "ug3", "ug4", "graduated"],
-  "defaultIntake": { "anchor": "graduation", "offset": 3 },
+  "entryStages": [
+    "ug1",
+    "ug2",
+    "ug3",
+    "ug4",
+    "graduated"
+  ],
+  "defaultIntake": {
+    "anchor": "graduation",
+    "offset": 3
+  },
   "phases": [
     {
       "key": "build_profile",
-      "title": { "en": "Undergraduate years 1 and 2: build your profile" },
-      "stages": ["ug1", "ug2"],
+      "title": {
+        "en": "Undergraduate years 1 and 2: build your profile"
+      },
+      "stages": [
+        "ug1",
+        "ug2"
+      ],
       "milestones": [
-        { "key": "profile_setup", "anchor": "start", "offset": 0, "duration": 1, "required": true },
-        { "key": "cgpa_goal", "anchor": "start", "offset": 0, "duration": 1 },
-        { "key": "english_habit", "anchor": "start", "offset": 1, "duration": 1, "required": true },
-        { "key": "projects_activities", "anchor": "graduation", "offset": -40, "duration": 12 },
-        { "key": "faculty_relationships", "anchor": "graduation", "offset": -36, "duration": 12 },
-        { "key": "cv_draft", "anchor": "graduation", "offset": -30, "duration": 2 },
-        { "key": "passport", "anchor": "graduation", "offset": -30, "duration": 6, "required": true },
-        { "key": "docs_folder", "anchor": "graduation", "offset": -28, "duration": 3, "required": true }
+        {
+          "key": "profile_setup",
+          "anchor": "start",
+          "offset": 0,
+          "duration": 1,
+          "required": true
+        },
+        {
+          "key": "scam_shield",
+          "anchor": "start",
+          "offset": 0,
+          "duration": 3,
+          "required": true
+        },
+        {
+          "key": "cgpa_goal",
+          "anchor": "start",
+          "offset": 0,
+          "duration": 1
+        },
+        {
+          "key": "english_habit",
+          "anchor": "start",
+          "offset": 1,
+          "duration": 1,
+          "required": true
+        },
+        {
+          "key": "projects_activities",
+          "anchor": "graduation",
+          "offset": -40,
+          "duration": 12
+        },
+        {
+          "key": "faculty_relationships",
+          "anchor": "graduation",
+          "offset": -36,
+          "duration": 12
+        },
+        {
+          "key": "cv_draft",
+          "anchor": "graduation",
+          "offset": -30,
+          "duration": 2
+        },
+        {
+          "key": "passport",
+          "anchor": "graduation",
+          "offset": -30,
+          "duration": 6,
+          "required": true
+        },
+        {
+          "key": "docs_folder",
+          "anchor": "graduation",
+          "offset": -28,
+          "duration": 3,
+          "required": true
+        }
       ]
     },
     {
       "key": "plan_and_prove",
-      "title": { "en": "Undergraduate year 3: plan and prove" },
-      "stages": ["ug3"],
+      "title": {
+        "en": "Undergraduate year 3: plan and prove"
+      },
+      "stages": [
+        "ug3"
+      ],
       "milestones": [
-        { "key": "english_level_check", "anchor": "graduation", "offset": -21, "duration": 1 },
-        { "key": "english_foundation", "anchor": "graduation", "offset": -20, "duration": 3, "when": "weak_english" },
-        { "key": "ielts_coaching", "anchor": "graduation", "offset": -18, "duration": 3, "required": true },
-        { "key": "ielts_test", "anchor": "graduation", "offset": -15, "duration": 1, "required": true },
-        { "key": "gre_prep", "anchor": "graduation", "offset": -15, "duration": 4, "when": "us_target" },
-        { "key": "research_internship", "anchor": "graduation", "offset": -20, "duration": 8 },
-        { "key": "shortlist", "anchor": "intake", "offset": -20, "duration": 5, "required": true },
-        { "key": "scholarship_calendar", "anchor": "intake", "offset": -18, "duration": 2 }
+        {
+          "key": "english_level_check",
+          "anchor": "graduation",
+          "offset": -21,
+          "duration": 1
+        },
+        {
+          "key": "english_foundation",
+          "anchor": "graduation",
+          "offset": -20,
+          "duration": 3,
+          "when": "weak_english"
+        },
+        {
+          "key": "ielts_coaching",
+          "anchor": "graduation",
+          "offset": -18,
+          "duration": 3,
+          "required": true
+        },
+        {
+          "key": "ielts_test",
+          "anchor": "graduation",
+          "offset": -15,
+          "duration": 1,
+          "required": true
+        },
+        {
+          "key": "gre_prep",
+          "anchor": "graduation",
+          "offset": -15,
+          "duration": 4,
+          "when": "us_target"
+        },
+        {
+          "key": "research_internship",
+          "anchor": "graduation",
+          "offset": -20,
+          "duration": 8
+        },
+        {
+          "key": "shortlist",
+          "anchor": "intake",
+          "offset": -20,
+          "duration": 5,
+          "required": true
+        },
+        {
+          "key": "scholarship_calendar",
+          "anchor": "intake",
+          "offset": -18,
+          "duration": 2
+        }
       ]
     },
     {
       "key": "apply",
-      "title": { "en": "Final year: apply" },
-      "stages": ["ug4"],
+      "title": {
+        "en": "Final year: apply"
+      },
+      "stages": [
+        "ug4"
+      ],
       "milestones": [
-        { "key": "scholarships", "anchor": "intake", "offset": -15, "duration": 4 },
-        { "key": "documents_ready", "anchor": "intake", "offset": -14, "duration": 4, "required": true },
-        { "key": "sop", "anchor": "intake", "offset": -13, "duration": 4, "required": true },
-        { "key": "apply", "anchor": "intake", "offset": -12, "duration": 6, "required": true, "fixed": true }
+        {
+          "key": "scholarships",
+          "anchor": "intake",
+          "offset": -15,
+          "duration": 4
+        },
+        {
+          "key": "documents_ready",
+          "anchor": "intake",
+          "offset": -14,
+          "duration": 4,
+          "required": true
+        },
+        {
+          "key": "sop",
+          "anchor": "intake",
+          "offset": -13,
+          "duration": 4,
+          "required": true
+        },
+        {
+          "key": "apply",
+          "anchor": "intake",
+          "offset": -12,
+          "duration": 6,
+          "required": true,
+          "fixed": true
+        }
       ]
     },
     {
       "key": "take_off",
-      "title": { "en": "After graduation: offers to take-off" },
-      "stages": ["graduated"],
+      "title": {
+        "en": "After graduation: offers to take-off"
+      },
+      "stages": [
+        "graduated"
+      ],
       "milestones": [
-        { "key": "offers_funding", "anchor": "intake", "offset": -7, "duration": 3, "required": true },
-        { "key": "visa", "anchor": "intake", "offset": -4, "duration": 3, "required": true, "fixed": true },
-        { "key": "pre_departure", "anchor": "intake", "offset": -2, "duration": 2 }
+        {
+          "key": "offers_funding",
+          "anchor": "intake",
+          "offset": -7,
+          "duration": 3,
+          "required": true
+        },
+        {
+          "key": "visa",
+          "anchor": "intake",
+          "offset": -4,
+          "duration": 3,
+          "required": true,
+          "fixed": true
+        },
+        {
+          "key": "pre_departure",
+          "anchor": "intake",
+          "offset": -2,
+          "duration": 2
+        }
       ]
     }
   ]
