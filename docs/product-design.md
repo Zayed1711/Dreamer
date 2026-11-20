@@ -7,7 +7,7 @@ Decisions as of 19 November 2026. The longer background, including the market, p
 - **Free for students.** There is no subscription.
 - **Ads.** Agencies and IELTS or English course providers buy labelled "Sponsored" slots attached to journey milestones, targeted by stage, country and English level. They are sold as a flat monthly fee per slot. Every ad carries a referral code so that results can be measured without sharing student data.
 - **Advisor sessions.** Verified students who have made it abroad run online group sessions: 2 a week, at most 20–25 students each, at a low price. The advisor keeps 70% (a placeholder) and the platform keeps 30%.
-- We never sell courses ourselves, and we never take commission on tuition.
+- We never take commission on tuition. We don't sell other providers' courses. The founder's own IELTS course is **free, with lessons unlocked by EXP** (see "Learning layer").
 
 ### Trust rules
 
@@ -87,19 +87,30 @@ The main progress bar is a flight from the student's home airport in Bangladesh 
 
 At S-Rank the boarding pass unlocks. After the visa, the flight lands, and the student is invited to become a Mentor.
 
+## Learning layer (decided 20 November 2026)
+
+- **The daily quest is a habit layer,** not a course: one short quest a day, resetting at midnight Bangladesh time. Early levels are 5 new words or 5 sentences about yourself. Later levels add IELTS-style tasks (reading blanks, essays, chart descriptions) once or twice a week. Checking is rule-based at first; AI checking (Google AI Studio free tier or a small self-hosted model) is to be decided later.
+- **The founder's own IELTS course** (recorded videos) is a separate section. **Lessons unlock at EXP milestones.** EXP is never spent, so levels never go down. The course is labelled as Dreamer's own, and the IELTS coaching ad slot stays.
+- **Language tracks** for non-English destinations, alongside English: **German and Japanese first**, then Korean, Chinese and Polish if Founding Mentors commit to reviewing. Every language follows the same ladder: alphabet, survival phrases, core words, about me, student life, test-ready basics. Pronunciation uses the browser's built-in speech, at no cost.
+- **Founding Mentors:** friends abroad (Germany, Japan, Korea, China, Poland, Australia; Finland unconfirmed) as mentors, language reviewers and creators, under the same advisor rules and verification.
+
 ## Technology
 
 | Part | Choice |
 |---|---|
 | App | Next.js web app, installable as a PWA, mobile-first. Student, advisor and admin screens in one codebase. Play Store later as a TWA wrapper |
-| Backend | Supabase (Postgres, row-level security, phone OTP, storage, edge functions) |
+| Backend | Supabase (Postgres, row-level security, storage, edge functions) |
+| Sign-in | **Email OTP** with JWT sessions (Supabase Auth issues JWTs). Decided 20 Nov 2026; replaces phone OTP, so no SMS cost. Not built yet: the current sign-in screen still asks for a phone number |
 | Journey engine | TypeScript package, imported directly by the web app |
 | Push | Web push (Android), via Firebase Cloud Messaging |
-| SMS / OTP | A Bangladeshi SMS gateway |
+| SMS | Not needed for sign-in. A Bangladeshi SMS gateway only if SMS reminders are added later |
 | Payments | bKash / Nagad / SSLCommerz, for session fees only |
 | Video | Google Meet or Zoom links |
 
 ## Build order
+
+> **Replaced on 20 November 2026** by the phases in `docs/IMPLEMENTATION_PLAN.md`, which put the learning layer before admin, ads and advisor sessions. The list below is kept for history.
+
 
 1. Journey engine and content (this setup)
 2. Student app: onboarding, journey, tasks, flight bar, reminders
