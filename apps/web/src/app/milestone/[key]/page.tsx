@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Users } from "lucide-react";
-import { defaultContent, taskId } from "@dreamer/journey-engine";
+import { defaultContent, findMentorsForTopic, taskId, type MentorProfile } from "@dreamer/journey-engine";
 import { MilestoneIcon } from "@/components/MilestoneIcon";
 import { ErrorLine } from "@/components/ui";
 import { monthLabel } from "@/lib/format";
 import { ADVISOR_TOPICS, SLOTS, STAMP_NAMES } from "@/lib/slots";
-import { setTaskDone } from "@/lib/store";
+import { loadMentors, setTaskDone } from "@/lib/store";
 import { useStudent } from "@/lib/student";
 
 export default function MilestonePage() {
@@ -17,8 +17,13 @@ export default function MilestonePage() {
   const { key } = useParams<{ key: string }>();
   const { ready, needsSignIn, profile, journey, completed: loaded, error } = useStudent();
   const [completed, setCompleted] = useState<Set<string> | null>(null);
+  const [mentors, setMentors] = useState<MentorProfile[]>([]);
   const [notice, setNotice] = useState<{ id: number; text: string } | null>(null);
   const noticeId = useRef(0);
+
+  useEffect(() => {
+    loadMentors().then(setMentors).catch(() => {});
+  }, []);
 
   useEffect(() => {
     if (!ready) return;
@@ -175,13 +180,53 @@ export default function MilestonePage() {
       {/* Advisor sessions for this topic */}
       {item.advisorTopic && (
         <section className="window p-4">
-          <div className="flex items-center gap-2 text-[var(--accent)]">
-            <Users size={15} aria-hidden="true" />
-            <span className="font-mono text-[11px] tracking-wider uppercase">Advisor sessions</span>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 text-[var(--accent)]">
+              <Users size={15} aria-hidden="true" />
+              <span className="font-mono text-[11px] tracking-wider uppercase">Advisor sessions</span>
+            </div>
+            <Link
+              href="/mentors"
+              className="font-mono text-[11px] text-[var(--accent)] hover:underline"
+            >
+              All Mentors ›
+            </Link>
           </div>
-          <p className="mt-2 text-sm">{ADVISOR_TOPICS[item.advisorTopic] ?? item.advisorTopic}</p>
-          <p className="mt-1 text-xs text-[var(--muted)]">
-            Small group sessions with students who made it abroad. No sessions are open yet.
+
+          <p className="mt-2 text-sm font-semibold text-[var(--text)]">
+            {ADVISOR_TOPICS[item.advisorTopic] ?? item.advisorTopic}
+          </p>
+
+          {/* Mentors advising on this specific milestone topic */}
+          {findMentorsForTopic(mentors, item.advisorTopic).length > 0 && (
+            <div className="mt-3 border-t border-[var(--line-soft)] pt-2.5 space-y-1.5">
+              <span className="font-mono text-[11px] text-[var(--muted)] block">
+                Mentors advising on this topic:
+              </span>
+              <div className="divide-y divide-[var(--line-soft)]">
+                {findMentorsForTopic(mentors, item.advisorTopic).slice(0, 3).map((m) => (
+                  <Link
+                    key={m.id}
+                    href={`/mentors/${m.id}`}
+                    className="py-2 flex items-center justify-between hover:text-[var(--accent)] group"
+                  >
+                    <div>
+                      <span className="font-mono text-xs font-semibold text-[var(--text)] group-hover:text-[var(--accent)]">
+                        {m.name}
+                      </span>
+                      <span className="font-mono text-[11px] text-[var(--muted)] ml-2">
+                        {m.university} ({m.country})
+                      </span>
+                    </div>
+                    <span className="font-mono text-xs text-[var(--accent)]">Profile ›</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <p className="mt-3 border-t border-[var(--line-soft)] pt-2 text-xs text-[var(--muted)]">
+            Small group interactive sessions with students who made it abroad. No sessions are open yet.
           </p>
         </section>
       )}

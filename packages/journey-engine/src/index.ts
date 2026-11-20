@@ -31,6 +31,13 @@ export {
   pickLanguageQuest,
   markQuiz,
 } from "./languages";
+export {
+  defaultMentors,
+  filterMentors,
+  findMentorsForTopic,
+  validateMentorApplication,
+} from "./mentors";
+
 
 
 

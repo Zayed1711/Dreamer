@@ -441,10 +441,12 @@ export function Dashboard({
             </li>
           ))}
         </ul>
-        <div className="font-mono mt-6 flex justify-center gap-6 text-[11px] text-[var(--muted)]">
-          <Link href="/onboarding">EDIT PROFILE</Link>
-          <Link href="/scam-check">SCAM CHECK</Link>
-          <Link href="/credits">CREDITS</Link>
+        <div className="font-mono mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] text-[var(--muted)]">
+          <Link href="/course" className="hover:text-[var(--accent)]">IELTS COURSE</Link>
+          <Link href="/mentors" className="hover:text-[var(--accent)]">MENTORS</Link>
+          <Link href="/onboarding" className="hover:text-[var(--accent)]">EDIT PROFILE</Link>
+          <Link href="/scam-check" className="hover:text-[var(--accent)]">SCAM CHECK</Link>
+          <Link href="/credits" className="hover:text-[var(--accent)]">CREDITS</Link>
           {supabaseEnabled && (
             <button
               type="button"

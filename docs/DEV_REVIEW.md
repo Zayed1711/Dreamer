@@ -2,7 +2,7 @@
 
 **Author:** Antigravity (Developer Agent)  
 **Date:** 20 November 2026  
-**Repository Branch:** `phase-5/language-tracks` (and `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
+**Repository Branch:** `phase-6/mentors` (and `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
 **Purpose:** Comprehensive log of all modifications, additions, architectural decisions, and verification steps for senior developer review.
 
 ---
@@ -30,6 +30,12 @@
 | **Phase 5: Language Tracks** | 5.4 Engine Logic | Completed | `packages/journey-engine/src/languages.ts` (`getLanguageTrack`, `pickLanguageQuest`, `markQuiz`, review filters) + 14 vitest tests |
 | **Phase 5: Language Tracks** | 5.4 Data Layer | Completed | Migration `0003_language_progress.sql` (RLS), `loadLanguageProgress`, `saveLanguageProgress`, and preview migration |
 | **Phase 5: Language Tracks** | 5.1 UI Integration | Completed | Multi-track support on `/daily` with tabs, interactive multiple choice quiz, auto-marking, level progression, and Dashboard card |
+| **Phase 6: Mentors** | 6.1 Founding Mentors & Profiles | Completed | 6 Founding Mentors seeded in `content/mentors/mentors.json` (Tanvir Ahmed, Kazi Sakib, Nafis Rahman, Ayesha Siddiqua, Farhan Chowdhury, Tasnim Jahan) |
+| **Phase 6: Mentors** | 6.2 Engine Logic & Validation | Completed | `packages/journey-engine/src/mentors.ts` (`filterMentors`, `findMentorsForTopic`, `validateMentorApplication`) + 8 vitest tests |
+| **Phase 6: Mentors** | 6.3 Data Layer & Schema | Completed | Migration `0004_mentor_profiles.sql` (adding `topics text[]` and `is_founding boolean` to `advisors`), `loadMentors`, `loadMentorById`, `submitMentorApplication` in `store.ts` |
+| **Phase 6: Mentors** | 6.4 UI: Directory & Profile | Completed | `/mentors` directory with country/topic/founding filters, `/mentors/[id]` profile with verified & founding badges, proof documents kept strictly private |
+| **Phase 6: Mentors** | 6.5 Advisor Application | Completed | `/advisor/apply` multi-field application with student ID proof upload and pending approval status |
+| **Phase 6: Mentors** | 6.6 Milestone Linking | Completed | Milestone detail pages (`/milestone/[key]`) dynamically display matching approved mentors for milestone's `advisorTopic` |
 
 ---
 
@@ -309,16 +315,81 @@
 
 ---
 
+### Phase 6: Mentors (Founding Mentors First)
+
+#### 6.1 Founding Mentors Seed Content (`content/mentors/mentors.json`)
+- Seeded 6 approved mentors (including our Founding Mentors who signed the Phase 5 language tracks):
+  1. `mentor-tanvir-de`: Tanvir Ahmed (TU Munich, Germany, M.Sc. Informatics, 2023) - Founding Mentor (German Track, Blocked Account, Visa).
+  2. `mentor-sakib-jp`: Kazi Sakib (University of Tokyo, Japan, M.Eng. Electrical Engineering, 2022) - Founding Mentor (Japanese Track, MEXT Scholarship, Part-Time Work).
+  3. `mentor-nafis-us`: Nafis Rahman (UT Austin, United States, Computer Science, 2021) - Founding Mentor (SOP, GRE, RA/TA Funding).
+  4. `mentor-ayesha-ca`: Ayesha Siddiqua (University of Toronto, Canada, Data Science, 2023) - Founding Mentor (Study Permit, GIC, Co-op).
+  5. `mentor-farhan-uk`: Farhan Chowdhury (University of Manchester, United Kingdom, Mechanical Engineering, 2022) - (CAS, Chevening, Student Visa).
+  6. `mentor-tasnim-au`: Tasnim Jahan (University of Melbourne, Australia, Public Health, 2023) - (Subclass 500, OSHC, GTE/GS).
+- Each profile includes:
+  - Canonical identifier (`id`) and user link.
+  - University, Country code (`DE`, `JP`, `US`, `CA`, `GB`, `AU`), Subject, Intake year.
+  - Bio, verified status (`approved`), `is_founding: true/false`.
+  - Topics array (`sop`, `ielts`, `german`, `japanese`, `visa`, `funding`, etc.).
+  - Curriculum contributions (e.g. "Reviewer & Author for German Track Levels 1–6").
+- **Privacy Boundary**: Student ID cards and proof documents (`proof_path`) are never included in public profiles or mentor directory listings.
+
+#### 6.2 Journey Engine (`packages/journey-engine/`)
+- **Types (`src/types.ts`)**:
+  - `MentorProfile`: Full public mentor schema.
+  - `MentorApplicationInput`: Validation input schema for prospective student advisors.
+- **Pure Functions (`src/mentors.ts`)**:
+  - `defaultMentors`: Fallback array of 6 Founding Mentors.
+  - `filterMentors(mentors, filters)`: Filters by `country`, `topic`, and `isFounding`.
+  - `findMentorsForTopic(mentors, topic)`: Returns active mentors offering guidance on specific journey milestone topics.
+  - `validateMentorApplication(input)`: Validates university, subject, intake year, country, bio (min 50 chars), at least one topic, and mandatory proof document file/path.
+- **Vitest Unit Tests (`packages/journey-engine/test/mentors.test.ts`)**:
+  - 8 test cases validating filtering, topic discovery, and application submission validation (empty fields, bio length, topic selection, proof requirements).
+  - Monorepo suite now has 90 passing tests across 6 suites.
+
+#### 6.3 Data Layer (`apps/web/src/lib/store.ts` & Migration `0004`)
+- **Database Schema (`supabase/migrations/0004_mentor_profiles.sql`)**:
+  - Altered `advisors` table to add `topics text[]` (array of advisory topics) and `is_founding boolean` (default `false`).
+  - Created GIN index on `topics` (`advisors_topics_gin_idx`).
+  - Created index on `is_founding` (`advisors_founding_idx`).
+- **Store Functions**:
+  - `loadMentors()`: Loads approved mentors from Supabase `advisors` table; falls back to `content/mentors/mentors.json` in preview/offline mode.
+  - `loadMentorById(id)`: Loads a single mentor by ID or user ID.
+  - `submitMentorApplication(input)`: Validates and saves application with `status: 'pending'`. In Supabase mode, uploads proof document to private storage bucket `mentor-proofs`. In preview mode, persists locally.
+
+#### 6.4 User Interface (`apps/web/`)
+- **Mentors Directory (`/mentors`)**:
+  - Visual filters by Country, Topic, and "Founding Mentors Only".
+  - System `.window` cards displaying University, Subject, Intake Year, Country flag/tag, Advisory Topics, and Curriculum Contributions.
+  - Callout banner encouraging senior Bangladeshi students abroad to apply (`/advisor/apply`).
+- **Mentor Profile (`/mentors/[id]`)**:
+  - Detailed advisor overview with "FOUNDING MENTOR" and "VERIFIED ADVISOR" badges.
+  - Advisory topics tags and verified curriculum contributions.
+  - Notice on upcoming 1-on-1 advisor sessions (advisors keep 80% revenue share per product design).
+- **Advisor Application Form (`/advisor/apply`)**:
+  - Multi-input form adhering to System window theme.
+  - Fields: Full Name, University, Country, Subject, Intake Year, Topics checklist, Bio (minimum 50 characters), and Student ID proof upload.
+  - Instant client-side validation using `validateMentorApplication`.
+  - Upon submission, marks application status as `pending` review.
+- **Milestone Detail Integration (`/milestone/[key]`)**:
+  - Replaced static advisor placeholder in the "Advisor sessions" card.
+  - Dynamically displays matching mentors for the milestone's `advisorTopic` (e.g. Visa, SOP, Funding).
+  - Direct links to mentor profile and advisor application.
+- **Dashboard Navigation (`Dashboard.tsx`)**:
+  - Added "MENTORS" shortcut in the dashboard system footer alongside "IELTS COURSE".
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-5/language-tracks` (and previous phases `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`).
+- [x] **No Direct Commits to Main**: All work performed on `phase-6/mentors` (and previous phases `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, language content in `content/languages/`, data access strictly through `store.ts`.
-- [x] **Database Migration**: `0003_language_progress.sql` created with row-level security.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/daily`, `/`, `/course`, `/course/[id]`, and `/course/practice/[id]`.
-- [x] **Tests Passing**: All 82 vitest tests passing in `packages/journey-engine` (engine, daily, streak, course, and languages suites).
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, mentor seed content in `content/mentors/`, data access strictly through `store.ts`.
+- [x] **Database Migration**: `0004_mentor_profiles.sql` created with row-level security and indexing.
+- [x] **Privacy & Compliance**: Advisor student ID proofs stored securely in private storage bucket, never rendered in public UI.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/mentors`, `/mentors/[id]`, `/advisor/apply`, `/daily`, `/`, `/course`, `/course/[id]`, and `/course/practice/[id]`.
+- [x] **Tests Passing**: All 90 vitest tests passing in `packages/journey-engine` across 6 test suites (engine, daily, streak, course, languages, mentors).
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 12 routes cleanly with static and dynamic optimizations).
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 14 routes cleanly with static and dynamic optimizations).
 
 ---
 

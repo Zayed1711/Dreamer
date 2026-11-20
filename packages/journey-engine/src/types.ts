@@ -319,5 +319,38 @@ export interface LanguageProgress {
   updatedAt?: string;
 }
 
+// ---------- Mentors & Advisors ----------
+
+export interface MentorProfile {
+  id: string;
+  name: string;
+  university: string;
+  country: string; // ISO 3166-1 alpha-2
+  subject: string;
+  intakeYear: number;
+  bio: string;
+  photoPath?: string;
+  topics: string[];
+  isFounding: boolean;
+  status: "pending" | "approved" | "rejected" | "suspended";
+  contentReviewed?: {
+    type: string;
+    title: string;
+    link?: string;
+  }[];
+}
+
+export interface MentorApplicationInput {
+  name: string;
+  university: string;
+  country: string;
+  subject: string;
+  intakeYear: number;
+  bio: string;
+  topics: string[];
+  proofFileName?: string;
+}
+
+
 
 

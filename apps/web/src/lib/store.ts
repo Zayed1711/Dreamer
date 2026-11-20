@@ -10,6 +10,10 @@ import {
   type DailyStreak,
   type LanguageCode,
   type LanguageProgress,
+  type MentorApplicationInput,
+  type MentorProfile,
+  defaultMentors,
+  validateMentorApplication,
   computeWeeklyStreak,
   nextStreak,
   questDate,
@@ -29,6 +33,7 @@ const ACTIVITY_KEY = "dreamer-preview-activity";
 const STREAKS_KEY = "dreamer-preview-streaks";
 const PRACTICE_KEY = "dreamer-preview-practice";
 const LANG_PROGRESS_KEY = "dreamer-preview-lang";
+const MENTOR_APP_KEY = "dreamer-preview-mentor-app";
 
 export interface DailySubmission {
   quest_date: string;
@@ -551,6 +556,115 @@ export async function saveLanguageProgress(progress: LanguageProgress): Promise<
     },
     { onConflict: "user_id,lang" },
   );
+}
+
+// ---------- Mentors & Advisors ----------
+
+interface AdvisorRow {
+  user_id: string;
+  university: string;
+  country: string;
+  subject: string;
+  intake_year: number;
+  bio: string;
+  photo_path: string | null;
+  status: "pending" | "approved" | "rejected" | "suspended";
+  topics: string[] | null;
+  is_founding: boolean | null;
+  profiles: { display_name?: string } | null;
+}
+
+export async function loadMentors(): Promise<MentorProfile[]> {
+  const uid = await currentUserId();
+  if (!supabase || !uid) {
+    return defaultMentors;
+  }
+
+  const { data, error } = await supabase
+    .from("advisors")
+    .select(
+      "user_id, university, country, subject, intake_year, bio, photo_path, status, topics, is_founding, profiles (display_name)",
+    )
+    .eq("status", "approved");
+
+  if (error || !data || data.length === 0) {
+    return defaultMentors;
+  }
+
+  const dbMentors: MentorProfile[] = (data as unknown as AdvisorRow[]).map((row) => ({
+    id: row.user_id,
+    name: row.profiles?.display_name || "Verified Mentor",
+    university: row.university,
+    country: row.country,
+    subject: row.subject,
+    intakeYear: row.intake_year,
+    bio: row.bio,
+    photoPath: row.photo_path ?? undefined,
+    topics: row.topics ?? [],
+    isFounding: Boolean(row.is_founding),
+    status: row.status,
+  }));
+
+  const existingIds = new Set(dbMentors.map((m) => m.id));
+  const merged = [...dbMentors, ...defaultMentors.filter((m) => !existingIds.has(m.id))];
+  return merged;
+}
+
+export async function loadMentorById(id: string): Promise<MentorProfile | null> {
+  const mentors = await loadMentors();
+  return mentors.find((m) => m.id === id) ?? null;
+}
+
+export async function submitMentorApplication(
+  input: MentorApplicationInput,
+  proofFile?: File | Blob,
+): Promise<{ success: boolean; id: string; error?: string }> {
+  const check = validateMentorApplication(input);
+  if (!check.valid) {
+    return { success: false, id: "", error: check.problems.join(" ") };
+  }
+
+  const uid = await currentUserId();
+  if (!supabase || !uid) {
+    localSet(MENTOR_APP_KEY, { ...input, status: "pending", submittedAt: new Date().toISOString() });
+    return { success: true, id: "preview-mentor-app" };
+  }
+
+  let proofPath = "";
+  if (proofFile) {
+    const ext = input.proofFileName ? input.proofFileName.split(".").pop() : "pdf";
+    const filename = `${uid}/${Date.now()}.${ext}`;
+    const { data: uploadData, error: uploadErr } = await supabase.storage
+      .from("advisor-proofs")
+      .upload(filename, proofFile, { upsert: true });
+
+    if (!uploadErr && uploadData) {
+      proofPath = uploadData.path;
+    }
+  }
+
+  await supabase.from("profiles").update({ display_name: input.name }).eq("id", uid);
+
+  const { error } = await supabase.from("advisors").upsert(
+    {
+      user_id: uid,
+      university: input.university,
+      country: input.country.toUpperCase(),
+      subject: input.subject,
+      intake_year: input.intakeYear,
+      bio: input.bio,
+      topics: input.topics,
+      proof_path: proofPath || input.proofFileName || "proof_attached",
+      status: "pending",
+    },
+    { onConflict: "user_id" },
+  );
+
+  if (error) {
+    return { success: false, id: "", error: error.message };
+  }
+
+  return { success: true, id: uid };
 }
 
 /**

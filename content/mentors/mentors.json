@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "mentors": [
+    {
+      "id": "mentor-tanvir-de",
+      "name": "Tanvir Ahmed",
+      "university": "Technical University of Munich (TUM)",
+      "country": "DE",
+      "subject": "Informatik / Computer Science",
+      "intakeYear": 2023,
+      "bio": "Master's student at TU Munich. Reviewer of Dreamer's German language curriculum. Passionate about helping Bangladeshi engineers navigate German public university admissions, DAAD scholarships, Sperrkonto, and embassy appointments.",
+      "photoPath": "/destinations/berlin.jpg",
+      "topics": ["life-abroad", "scholarships", "shortlisting", "visa-interview"],
+      "isFounding": true,
+      "status": "approved",
+      "contentReviewed": [
+        {
+          "type": "Language Track",
+          "title": "German Language Track (Levels 1–6)",
+          "link": "/daily"
+        }
+      ]
+    },
+    {
+      "id": "mentor-sakib-jp",
+      "name": "Kazi Sakib",
+      "university": "The University of Tokyo",
+      "country": "JP",
+      "subject": "Electrical Engineering & Information Systems",
+      "intakeYear": 2022,
+      "bio": "MEXT Scholar and graduate research assistant at Todai. Reviewer of Dreamer's Japanese curriculum. Guiding prospective students on professor outreach, research proposals, MEXT Embassy screenings, and living in Tokyo on a budget.",
+      "photoPath": "/destinations/tokyo.jpg",
+      "topics": ["scholarships", "shortlisting", "sop-review", "life-abroad"],
+      "isFounding": true,
+      "status": "approved",
+      "contentReviewed": [
+        {
+          "type": "Language Track",
+          "title": "Japanese Language Track (Levels 1–6)",
+          "link": "/daily"
+        }
+      ]
+    },
+    {
+      "id": "mentor-nafis-au",
+      "name": "Nafis Rahman",
+      "university": "University of Melbourne",
+      "country": "AU",
+      "subject": "Data Science",
+      "intakeYear": 2024,
+      "bio": "Graduate student at UniMelb. Assisting applicants with Group of Eight admissions, Genuine Student (GS) statements, post-study work rights, and navigating Australian cost of living.",
+      "photoPath": "/destinations/sydney.jpg",
+      "topics": ["life-abroad", "bachelors-vs-masters", "visa-interview", "shortlisting"],
+      "isFounding": true,
+      "status": "approved",
+      "contentReviewed": [
+        {
+          "type": "Journey Guidance",
+          "title": "Australia Admissions & GS Criteria"
+        }
+      ]
+    },
+    {
+      "id": "mentor-ayesha-pl",
+      "name": "Ayesha Siddiqua",
+      "university": "Warsaw University of Technology",
+      "country": "PL",
+      "subject": "Mechanical Engineering",
+      "intakeYear": 2023,
+      "bio": "Studying in Poland on a European fellowship. Dedicated to helping students identify low-tuition English-taught STEM degrees in Central and Eastern Europe with NAWA scholarships.",
+      "photoPath": "/destinations/munich.jpg",
+      "topics": ["scholarships", "life-abroad", "cgpa", "sop-review"],
+      "isFounding": true,
+      "status": "approved",
+      "contentReviewed": [
+        {
+          "type": "Admissions Strategy",
+          "title": "Central Europe English Programs"
+        }
+      ]
+    },
+    {
+      "id": "mentor-farhan-ca",
+      "name": "Farhan Chowdhury",
+      "university": "University of British Columbia (UBC)",
+      "country": "CA",
+      "subject": "Civil Engineering",
+      "intakeYear": 2023,
+      "bio": "UBC graduate teaching assistant. Advising on Canadian study permits, PAL provincial attestation letters, funding supervisor emails, and co-op work terms.",
+      "photoPath": "/destinations/toronto.jpg",
+      "topics": ["visa-interview", "scholarships", "shortlisting", "sop-review"],
+      "isFounding": false,
+      "status": "approved",
+      "contentReviewed": []
+    },
+    {
+      "id": "mentor-tasnim-fi",
+      "name": "Tasnim Jahan",
+      "university": "University of Helsinki",
+      "country": "FI",
+      "subject": "Atmospheric Sciences",
+      "intakeYear": 2024,
+      "bio": "Master's researcher in Finland. Supporting students with Finland Scholarship applications, student housing (HOAS), and surviving Nordic winters.",
+      "photoPath": "/destinations/london.jpg",
+      "topics": ["scholarships", "life-abroad", "shortlisting"],
+      "isFounding": false,
+      "status": "approved",
+      "contentReviewed": []
+    }
+  ]
+}
