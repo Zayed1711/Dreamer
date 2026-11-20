@@ -1,0 +1,59 @@
+{
+  "key": "hsc-bachelors-abroad",
+  "title": { "en": "HSC to a bachelor's abroad" },
+  "degree": "bachelors",
+  "entryStages": ["hsc1", "hsc2", "after_hsc"],
+  "defaultIntake": { "anchor": "hsc_exam", "offset": 15 },
+  "quietWindow": { "anchor": "hsc_exam", "offset": -3, "duration": 3 },
+  "phases": [
+    {
+      "key": "explore",
+      "title": { "en": "HSC year 1: explore and build habits" },
+      "stages": ["hsc1"],
+      "milestones": [
+        { "key": "profile_setup", "anchor": "start", "offset": 0, "duration": 1, "required": true },
+        { "key": "hsc_study_plan", "anchor": "start", "offset": 0, "duration": 1 },
+        { "key": "english_habit", "anchor": "start", "offset": 1, "duration": 1, "required": true },
+        { "key": "explore_paths", "anchor": "hsc_exam", "offset": -22, "duration": 4 },
+        { "key": "passport", "anchor": "hsc_exam", "offset": -18, "duration": 6, "required": true },
+        { "key": "docs_folder", "anchor": "hsc_exam", "offset": -16, "duration": 3, "required": true },
+        { "key": "path_decision", "anchor": "hsc_exam", "offset": -14, "duration": 2, "required": true }
+      ]
+    },
+    {
+      "key": "results_first",
+      "title": { "en": "HSC year 2: results first" },
+      "stages": ["hsc2"],
+      "milestones": [
+        { "key": "english_level_check", "anchor": "hsc_exam", "offset": -10, "duration": 2, "required": true },
+        { "key": "college_referees", "anchor": "hsc_exam", "offset": -6, "duration": 2, "required": true }
+      ]
+    },
+    {
+      "key": "test_prep",
+      "title": { "en": "After the HSC exam: IELTS and shortlist" },
+      "stages": ["after_hsc"],
+      "milestones": [
+        { "key": "english_foundation", "anchor": "hsc_exam", "offset": 1, "duration": 3, "when": "weak_english" },
+        { "key": "ielts_coaching", "anchor": "hsc_exam", "offset": 1, "duration": 3, "required": true },
+        { "key": "ielts_test", "anchor": "hsc_exam", "offset": 4, "duration": 1, "required": true },
+        { "key": "sat_prep", "anchor": "hsc_exam", "offset": 1, "duration": 4, "when": "us_target" },
+        { "key": "shortlist", "anchor": "hsc_exam", "offset": 1, "duration": 3, "required": true },
+        { "key": "sop", "anchor": "hsc_exam", "offset": 3, "duration": 3, "required": true }
+      ]
+    },
+    {
+      "key": "application",
+      "title": { "en": "Applications to take-off" },
+      "stages": ["after_hsc"],
+      "milestones": [
+        { "key": "documents_ready", "anchor": "hsc_result", "offset": 0, "duration": 2, "required": true },
+        { "key": "scholarships", "anchor": "intake", "offset": -12, "duration": 4 },
+        { "key": "apply", "anchor": "intake", "offset": -11, "duration": 6, "required": true, "fixed": true },
+        { "key": "offers_funding", "anchor": "intake", "offset": -6, "duration": 3, "required": true },
+        { "key": "visa", "anchor": "intake", "offset": -4, "duration": 3, "required": true, "fixed": true },
+        { "key": "pre_departure", "anchor": "intake", "offset": -2, "duration": 2 }
+      ]
+    }
+  ]
+}

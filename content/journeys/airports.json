@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "note": "Home airport by division (default DAC), destination airport by target country. Check before launch.",
+  "home": {
+    "default": { "code": "DAC", "city": "Dhaka" },
+    "byDivision": {
+      "dhaka": { "code": "DAC", "city": "Dhaka" },
+      "mymensingh": { "code": "DAC", "city": "Dhaka" },
+      "chattogram": { "code": "CGP", "city": "Chattogram" },
+      "sylhet": { "code": "ZYL", "city": "Sylhet" },
+      "rajshahi": { "code": "RJH", "city": "Rajshahi" },
+      "rangpur": { "code": "SPD", "city": "Saidpur" },
+      "khulna": { "code": "JSR", "city": "Jashore" },
+      "barishal": { "code": "BZL", "city": "Barishal" }
+    }
+  },
+  "destinations": {
+    "unknown": { "code": "???", "city": "Destination: ?" },
+    "byCountry": {
+      "GB": { "code": "LHR", "city": "London" },
+      "US": { "code": "JFK", "city": "New York" },
+      "CA": { "code": "YYZ", "city": "Toronto" },
+      "AU": { "code": "SYD", "city": "Sydney" },
+      "DE": { "code": "FRA", "city": "Frankfurt" },
+      "MY": { "code": "KUL", "city": "Kuala Lumpur" },
+      "JP": { "code": "HND", "city": "Tokyo" },
+      "KR": { "code": "ICN", "city": "Seoul" },
+      "FI": { "code": "HEL", "city": "Helsinki" },
+      "SE": { "code": "ARN", "city": "Stockholm" },
+      "IE": { "code": "DUB", "city": "Dublin" },
+      "NZ": { "code": "AKL", "city": "Auckland" },
+      "CN": { "code": "PEK", "city": "Beijing" },
+      "HU": { "code": "BUD", "city": "Budapest" },
+      "IT": { "code": "FCO", "city": "Rome" },
+      "FR": { "code": "CDG", "city": "Paris" },
+      "NL": { "code": "AMS", "city": "Amsterdam" }
+    }
+  }
+}

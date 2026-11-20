@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "note": "Gates are passed in order. A requirement is a milestone key, or 'milestone.task' for a single task. Requirements that are not in a student's journey are ignored, but a gate with none of its requirements in the journey cannot be passed yet.",
+  "ranks": [
+    { "rank": "E", "title": { "en": "E-Rank Dreamer" }, "color": "#8A94A6", "gate": null },
+    {
+      "rank": "D",
+      "title": { "en": "D-Rank Dreamer" },
+      "color": "#3BA55C",
+      "gate": { "name": { "en": "Habit Gate" }, "requires": ["profile_setup", "english_habit", "passport", "docs_folder"] }
+    },
+    {
+      "rank": "C",
+      "title": { "en": "C-Rank Dreamer" },
+      "color": "#3A7BD5",
+      "gate": { "name": { "en": "IELTS Gate" }, "requires": ["ielts_test"] }
+    },
+    {
+      "rank": "B",
+      "title": { "en": "B-Rank Dreamer" },
+      "color": "#8E5BD9",
+      "gate": { "name": { "en": "Profile Gate" }, "requires": ["shortlist", "documents_ready", "sop.draft"] }
+    },
+    {
+      "rank": "A",
+      "title": { "en": "A-Rank Dreamer" },
+      "color": "#F08A24",
+      "gate": { "name": { "en": "Application Raid" }, "requires": ["apply"] }
+    },
+    {
+      "rank": "S",
+      "title": { "en": "S-Rank Dreamer" },
+      "color": "#E3B23C",
+      "gate": { "name": { "en": "Visa Gate" }, "requires": ["offers_funding", "visa"] }
+    }
+  ]
+}

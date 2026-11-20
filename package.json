@@ -1,0 +1,12 @@
+{
+  "name": "dreamer",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm test --workspace @dreamer/journey-engine",
+    "demo": "npm run demo --workspace @dreamer/journey-engine"
+  }
+}

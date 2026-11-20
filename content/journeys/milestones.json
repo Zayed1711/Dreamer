@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "milestones": [
+    {
+      "key": "profile_setup",
+      "title": { "en": "Set up your Dreamer profile" },
+      "stat": "profile",
+      "help": { "en": "Tell us your stage, your target degree and where you dream of studying. Your plan is built from this." },
+      "tasks": [
+        { "key": "complete_profile", "title": { "en": "Complete your profile" }, "exp": 20 },
+        { "key": "pick_country", "title": { "en": "Pick a target country (you can change it later)" }, "exp": 30 }
+      ]
+    },
+    {
+      "key": "hsc_study_plan",
+      "title": { "en": "Plan for strong HSC results" },
+      "stat": "academics",
+      "help": { "en": "Your HSC results open or close doors abroad. Set a target GPA and a simple study plan for each term." },
+      "tasks": [
+        { "key": "target_gpa", "title": { "en": "Set a target GPA" }, "exp": 20 },
+        { "key": "term_plan", "title": { "en": "Write a study plan for this term" }, "exp": 30 }
+      ]
+    },
+    {
+      "key": "english_habit",
+      "title": { "en": "Build a daily English habit" },
+      "stat": "english",
+      "help": { "en": "15 to 20 minutes a day of reading and listening. English is the slowest skill to build, so start early." },
+      "stamp": "habit_formed",
+      "slot": "english_course",
+      "tasks": [
+        { "key": "week_1", "title": { "en": "Week 1 of daily English" }, "exp": 25 },
+        { "key": "week_2", "title": { "en": "Week 2 of daily English" }, "exp": 25 },
+        { "key": "week_3", "title": { "en": "Week 3 of daily English" }, "exp": 25 },
+        { "key": "week_4", "title": { "en": "Week 4 of daily English" }, "exp": 25 }
+      ]
+    },
+    {
+      "key": "english_foundation",
+      "title": { "en": "English foundation months" },
+      "stat": "english",
+      "help": { "en": "Extra months of grammar, vocabulary and listening before IELTS coaching, so your first test attempt counts." },
+      "slot": "english_course",
+      "tasks": [
+        { "key": "month_1", "title": { "en": "Foundation month 1" }, "exp": 60 },
+        { "key": "month_2", "title": { "en": "Foundation month 2" }, "exp": 60 },
+        { "key": "month_3", "title": { "en": "Foundation month 3" }, "exp": 60 }
+      ]
+    },
+    {
+      "key": "explore_paths",
+      "title": { "en": "Explore countries and costs" },
+      "stat": "profile",
+      "help": { "en": "Compare tuition, living costs and part-time work rules in 4 or 5 countries." },
+      "advisorTopic": "life-abroad",
+      "tasks": [
+        { "key": "compare_countries", "title": { "en": "Compare 4 or 5 countries" }, "exp": 30 },
+        { "key": "cost_estimate", "title": { "en": "Estimate the yearly cost for your top 2" }, "exp": 30 }
+      ]
+    },
+    {
+      "key": "path_decision",
+      "title": { "en": "Choose your path" },
+      "stat": "profile",
+      "help": { "en": "Decide between a bachelor's abroad, or a bachelor's at home and a master's abroad later. Talk about the budget with your family." },
+      "advisorTopic": "bachelors-vs-masters",
+      "tasks": [
+        { "key": "family_budget", "title": { "en": "Talk about the budget with your family" }, "exp": 30 },
+        { "key": "decide", "title": { "en": "Choose your path" }, "exp": 50 }
+      ]
+    },
+    {
+      "key": "passport",
+      "title": { "en": "Get your passport" },
+      "stat": "documents",
+      "help": { "en": "Apply early. Every later step needs a valid passport." },
+      "stamp": "passport_ready",
+      "tasks": [
+        { "key": "apply", "title": { "en": "Apply for your passport" }, "exp": 40 },
+        { "key": "receive", "title": { "en": "Receive your passport" }, "exp": 60 }
+      ]
+    },
+    {
+      "key": "docs_folder",
+      "title": { "en": "Start your document folder" },
+      "stat": "documents",
+      "help": { "en": "Keep clear scans of every certificate in one folder, so you are never searching at the last minute." },
+      "tasks": [
+        { "key": "ssc", "title": { "en": "Scan your SSC certificate and marksheet" }, "exp": 20 },
+        { "key": "birth", "title": { "en": "Scan your birth certificate or NID" }, "exp": 20 },
+        { "key": "photos", "title": { "en": "Get passport-size photos" }, "exp": 10 }
+      ]
+    },
+    {
+      "key": "english_level_check",
+      "title": { "en": "Check your English level" },
+      "stat": "english",
+      "help": { "en": "Take a free level test and set a target band for IELTS." },
+      "slot": "level_test",
+      "tasks": [
+        { "key": "level_test", "title": { "en": "Take a free English level test" }, "exp": 40 },
+        { "key": "target_band", "title": { "en": "Set your target band" }, "exp": 20 }
+      ]
+    },
+    {
+      "key": "college_referees",
+      "title": { "en": "Ask college teachers for references" },
+      "stat": "documents",
+      "help": { "en": "Ask 2 teachers before you leave college. It is much harder to reach them later." },
+      "tasks": [
+        { "key": "ask_teachers", "title": { "en": "Ask 2 teachers to be your referees" }, "exp": 40 }
+      ]
+    },
+    {
+      "key": "sat_prep",
+      "title": { "en": "Prepare for the SAT" },
+      "stat": "academics",
+      "help": { "en": "Many US universities ask for or welcome SAT scores. Check what your shortlist requires." },
+      "slot": "sat_coaching",
+      "tasks": [
+        { "key": "diagnostic", "title": { "en": "Take a practice SAT" }, "exp": 50 },
+        { "key": "book", "title": { "en": "Book the SAT" }, "exp": 50 },
+        { "key": "take", "title": { "en": "Take the SAT and log your score" }, "exp": 150 }
+      ]
+    },
+    {
+      "key": "gre_prep",
+      "title": { "en": "Prepare for the GRE" },
+      "stat": "academics",
+      "help": { "en": "Some US programmes ask for the GRE. Check your shortlist before you spend on it." },
+      "slot": "gre_coaching",
+      "tasks": [
+        { "key": "check_need", "title": { "en": "Check which programmes need the GRE" }, "exp": 30 },
+        { "key": "prepare", "title": { "en": "Finish a preparation plan" }, "exp": 70 },
+        { "key": "take", "title": { "en": "Take the GRE and log your score" }, "exp": 150 }
+      ]
+    },
+    {
+      "key": "ielts_coaching",
+      "title": { "en": "IELTS coaching" },
+      "stat": "english",
+      "help": { "en": "About 3 to 4 months of structured preparation before the test. Self-study with official materials also works." },
+      "slot": "ielts_coaching",
+      "tasks": [
+        { "key": "book", "title": { "en": "Book a course or set a self-study plan" }, "exp": 50 },
+        { "key": "halfway", "title": { "en": "Finish half of your preparation" }, "exp": 75 },
+        { "key": "mock", "title": { "en": "Take a full mock test" }, "exp": 75 }
+      ]
+    },
+    {
+      "key": "ielts_test",
+      "title": { "en": "IELTS Gate" },
+      "stat": "english",
+      "help": { "en": "Book the test, take it and log your score. Any score clears the gate. If you need a higher band, we plan a retake." },
+      "stamp": "ielts_gate",
+      "slot": "test_booking",
+      "tasks": [
+        { "key": "book", "title": { "en": "Book your IELTS test" }, "exp": 50 },
+        { "key": "take", "title": { "en": "Take the test" }, "exp": 150 },
+        { "key": "log_score", "title": { "en": "Log your score" }, "exp": 100 }
+      ]
+    },
+    {
+      "key": "university_admission_home",
+      "title": { "en": "University admission at home" },
+      "stat": "academics",
+      "help": { "en": "Choose a subject that travels well for a master's abroad, and prepare for admission tests." },
+      "slot": "admission_coaching",
+      "tasks": [
+        { "key": "prepare", "title": { "en": "Prepare for admission tests" }, "exp": 50 },
+        { "key": "choose", "title": { "en": "Choose your university and subject" }, "exp": 50 }
+      ]
+    },
+    {
+      "key": "cgpa_goal",
+      "title": { "en": "Set a CGPA goal" },
+      "stat": "academics",
+      "help": { "en": "Funded master's programmes look closely at CGPA. Set a goal and check it every term." },
+      "advisorTopic": "cgpa",
+      "tasks": [
+        { "key": "set_goal", "title": { "en": "Set your CGPA goal" }, "exp": 20 },
+        { "key": "term_review", "title": { "en": "Review your CGPA after this term" }, "exp": 30 }
+      ]
+    },
+    {
+      "key": "projects_activities",
+      "title": { "en": "Projects and activities" },
+      "stat": "profile",
+      "help": { "en": "Clubs, competitions and real projects make your application stand out." },
+      "tasks": [
+        { "key": "join_club", "title": { "en": "Join a club or society" }, "exp": 30 },
+        { "key": "project", "title": { "en": "Start a project you can show" }, "exp": 50 }
+      ]
+    },
+    {
+      "key": "faculty_relationships",
+      "title": { "en": "Build relationships with teachers" },
+      "stat": "documents",
+      "help": { "en": "You will need 2 or 3 recommendation letters. Find the teachers who know your work well." },
+      "tasks": [
+        { "key": "identify", "title": { "en": "Name 2 or 3 likely referees" }, "exp": 30 },
+        { "key": "work_with", "title": { "en": "Take a course or project with one of them" }, "exp": 50 }
+      ]
+    },
+    {
+      "key": "cv_draft",
+      "title": { "en": "Write your first CV" },
+      "stat": "profile",
+      "help": { "en": "Start an academic CV now and add to it every term." },
+      "tasks": [
+        { "key": "draft", "title": { "en": "Write your first CV" }, "exp": 40 }
+      ]
+    },
+    {
+      "key": "research_internship",
+      "title": { "en": "Research or internship" },
+      "stat": "profile",
+      "help": { "en": "A thesis with a likely referee, a research assistant role or a summer internship." },
+      "tasks": [
+        { "key": "find", "title": { "en": "Find a thesis supervisor or internship" }, "exp": 50 },
+        { "key": "complete", "title": { "en": "Complete your research or internship" }, "exp": 100 }
+      ]
+    },
+    {
+      "key": "scholarship_calendar",
+      "title": { "en": "Build your scholarship calendar" },
+      "stat": "funding",
+      "help": { "en": "Big scholarships close 10 to 12 months before the intake. List every deadline for your target intake." },
+      "advisorTopic": "scholarships",
+      "tasks": [
+        { "key": "list", "title": { "en": "List scholarships and deadlines" }, "exp": 50 }
+      ]
+    },
+    {
+      "key": "shortlist",
+      "title": { "en": "Shortlist programmes" },
+      "stat": "profile",
+      "help": { "en": "Choose 2 or 3 countries and 8 to 12 programmes. Note each one's requirements and deadline." },
+      "slot": "agency",
+      "advisorTopic": "shortlisting",
+      "tasks": [
+        { "key": "countries", "title": { "en": "Choose 2 or 3 countries" }, "exp": 30 },
+        { "key": "programmes", "title": { "en": "List 8 to 12 programmes" }, "exp": 60 },
+        { "key": "requirements", "title": { "en": "Record requirements and deadlines" }, "exp": 40 }
+      ]
+    },
+    {
+      "key": "scholarships",
+      "title": { "en": "Scholarship applications" },
+      "stat": "funding",
+      "help": { "en": "Prepare scholarship applications before university applications. They close first." },
+      "stamp": "scholarship_hunter",
+      "advisorTopic": "scholarships",
+      "tasks": [
+        { "key": "pick", "title": { "en": "Pick the scholarships you will apply to" }, "exp": 40 },
+        { "key": "submit", "title": { "en": "Submit a scholarship application" }, "exp": 100 }
+      ]
+    },
+    {
+      "key": "documents_ready",
+      "title": { "en": "Get documents ready" },
+      "stat": "documents",
+      "help": { "en": "Transcripts, certificates, a final CV and recommendation letters, all ready before you apply." },
+      "tasks": [
+        { "key": "transcripts", "title": { "en": "Collect transcripts" }, "exp": 30 },
+        { "key": "certificates", "title": { "en": "Collect certificates" }, "exp": 30 },
+        { "key": "cv_final", "title": { "en": "Finish your CV" }, "exp": 30 },
+        { "key": "request_lors", "title": { "en": "Request recommendation letters" }, "exp": 60 }
+      ]
+    },
+    {
+      "key": "sop",
+      "title": { "en": "Statement of purpose" },
+      "stat": "profile",
+      "help": { "en": "Write your own story. Get feedback, then write one version for each programme." },
+      "advisorTopic": "sop-review",
+      "tasks": [
+        { "key": "draft", "title": { "en": "Write your first draft" }, "exp": 80 },
+        { "key": "feedback", "title": { "en": "Get feedback" }, "exp": 40 },
+        { "key": "final", "title": { "en": "Finish a version for each programme" }, "exp": 80 }
+      ]
+    },
+    {
+      "key": "apply",
+      "title": { "en": "Application Raid" },
+      "stat": "profile",
+      "help": { "en": "Submit your applications from your own accounts and track each one. Never share your passwords with anyone." },
+      "stamp": "application_raid",
+      "slot": "agency",
+      "tasks": [
+        { "key": "first", "title": { "en": "Submit your first application" }, "exp": 150 },
+        { "key": "all", "title": { "en": "Submit all your applications" }, "exp": 150 }
+      ]
+    },
+    {
+      "key": "offers_funding",
+      "title": { "en": "Offers and funding" },
+      "stat": "funding",
+      "help": { "en": "Compare offers on total cost, not only tuition. Prepare your proof of funds early." },
+      "tasks": [
+        { "key": "compare", "title": { "en": "Compare your offers" }, "exp": 50 },
+        { "key": "accept", "title": { "en": "Accept an offer and pay the deposit" }, "exp": 100 },
+        { "key": "funds", "title": { "en": "Prepare proof of funds" }, "exp": 100 }
+      ]
+    },
+    {
+      "key": "visa",
+      "title": { "en": "Visa Gate" },
+      "stat": "documents",
+      "help": { "en": "Apply for your visa yourself or with a business that gives a written contract. No one can guarantee a visa." },
+      "stamp": "visa_gate",
+      "advisorTopic": "visa-interview",
+      "tasks": [
+        { "key": "apply", "title": { "en": "Apply for your visa" }, "exp": 100 },
+        { "key": "interview", "title": { "en": "Prepare for the interview" }, "exp": 50 },
+        { "key": "granted", "title": { "en": "Visa granted" }, "exp": 300 }
+      ]
+    },
+    {
+      "key": "pre_departure",
+      "title": { "en": "Ready for take-off" },
+      "stat": "documents",
+      "help": { "en": "Accommodation, ticket and a pre-departure checklist." },
+      "tasks": [
+        { "key": "accommodation", "title": { "en": "Book accommodation" }, "exp": 50 },
+        { "key": "ticket", "title": { "en": "Book your ticket" }, "exp": 50 },
+        { "key": "checklist", "title": { "en": "Finish the pre-departure checklist" }, "exp": 50 }
+      ]
+    }
+  ]
+}
