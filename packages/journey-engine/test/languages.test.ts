@@ -64,6 +64,7 @@ describe("Language Tracks (Phase 5)", () => {
         for (let lvl = 1; lvl <= 6; lvl++) {
           const levelData = defaultLanguageContent[lang][lvl];
           expect(levelData).toBeDefined();
+          if (!levelData) throw new Error(`Missing level ${lvl} for ${lang}`);
           expect(isContentReviewed(levelData)).toBe(true);
           expect(levelData.reviewedBy).toBeTruthy();
           expect(levelData.items.length).toBeGreaterThanOrEqual(5);
