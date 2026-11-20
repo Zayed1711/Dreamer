@@ -2,7 +2,7 @@
 
 **Author:** Antigravity (Developer Agent)  
 **Date:** 20 November 2026  
-**Repository Branch:** `phase-2/daily-quest` (and `phase-0/ci-check`)  
+**Repository Branch:** `phase-3/streaks-and-reminders` (and `phase-2/daily-quest`, `phase-0/ci-check`)  
 **Purpose:** Comprehensive log of all modifications, additions, architectural decisions, and verification steps for senior developer review.
 
 ---
@@ -19,6 +19,8 @@
 | **Phase 2: Daily Quest** | 2.3 EXP Integration | Completed | `computeProgress(..., extraExp = 0)` in `progress.ts` + unit tests |
 | **Phase 2: Daily Quest** | 2.4 Data Layer | Completed | Migration `0002_daily_quests.sql` with RLS + `store.ts` (preview & Supabase) |
 | **Phase 2: Daily Quest** | 2.6 UI | Completed | Daily Quest card on Dashboard + new route `/daily` |
+| **Phase 3: Streaks & Reminders** | 3.1 Weekly Journey Streak | Completed | `packages/journey-engine/src/streak.ts` + status window UI + unit tests |
+| **Phase 3: Streaks & Reminders** | 3.2 In-App Reminders | Completed | `packages/journey-engine/src/reminders.ts` + prioritized single-line banner on Home |
 
 ---
 
@@ -140,14 +142,50 @@
 
 ---
 
+### Phase 3: Streaks and Reminders
+
+#### 3.1 Weekly Journey Streak (`packages/journey-engine/src/streak.ts`)
+- **Calendar & Week Calculation**:
+  - `getMondayOfWeek(dateStr: string)`: Determines the Monday (`YYYY-MM-DD`) for any given date string. A journey week runs Monday through Sunday in Asia/Dhaka time.
+  - `computeWeeklyStreak(activityDays, todayDateStr, { holding })`:
+    - Groups logged activity dates into distinct active weeks.
+    - Consecutive active weeks increment the streak count (`currentCount + 1`, updating `bestCount`).
+    - Missed weeks consume freezes from the student's pool (`freezesLeft - missedWeeks`).
+    - If missed weeks exceed available freezes, streak resets to 1 upon completing an activity in the current week.
+    - Exam season (`holding: true`): Streak is paused without breaking or consuming freezes.
+    - Term refill: Refills to 2 freezes every 4 months (tracked via `freezesResetAt`).
+    - Evaluates in-progress current weeks (if last week was active, streak remains active until Sunday night).
+- **Data Layer (`apps/web/src/lib/store.ts`)**:
+  - Added `loadActivityDays()`: Fetches all recorded activity days from `activity_days` (or localStorage `dreamer-preview-activity`).
+  - Added `loadWeeklyStreak()`: Computes and persists weekly streak in `streaks` (under `kind = 'weekly_journey'`).
+- **Dashboard UI (`apps/web/src/components/Dashboard.tsx`)**:
+  - Replaced the previous `NEXT LV` counter in the status window with the weekly journey streak: `STREAK {weeklyStreak?.currentCount ?? 0}W`.
+- **Vitest Tests (`packages/journey-engine/test/streak.test.ts`)**:
+  - 12 comprehensive unit test cases verifying Monday boundaries, consecutive weeks, single missed week with freeze, missed weeks exceeding freezes, holding mode pause, and 4-month freeze refills.
+
+#### 3.2 In-App Reminders (`packages/journey-engine/src/reminders.ts`)
+- **Pure Evaluation Logic (`getUrgentReminder`)**:
+  - Deterministically returns the single most urgent reminder in strict priority order:
+    1. **Priority 1 (Urgent)**: Overdue required milestone (`progress.overdue.length > 0`) → `"Catch-up"`, e.g., `"[Catch-up] IELTS Gate is overdue. Catch up now."` (links to `/milestone/[key]`).
+    2. **Priority 2 (Action)**: Today's daily quest not yet done (`!isDailyDone`) → `"[Daily Quest] Today's daily quest is ready (+20 EXP)."` (links to `/daily`).
+    3. **Priority 3 (Notice)**: Approaching fixed deadline within 30 days / due this month → `"[Deadline] GRE Exam is due soon (2026-11)."` (links to `/milestone/[key]`).
+    4. **None**: Returns `null` when the student is all caught up, daily quest is done, and no fixed deadline is imminent.
+- **Home UI Banner (`apps/web/src/components/Dashboard.tsx`)**:
+  - Rendered at the top of the Home dashboard as a single compact line with System window styling (`.window`).
+  - Color-coded borders based on severity: Red `#f87171` for urgent catch-up, Accent `#4db5ff` for daily quest action, Amber `#fbbf24` for upcoming deadlines.
+  - Verified on mobile viewport (375 × 812).
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-0/ci-check` and `phase-2/daily-quest`.
+- [x] **No Direct Commits to Main**: All work performed on `phase-0/ci-check`, `phase-2/daily-quest`, and `phase-3/streaks-and-reminders`.
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
 - [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/quests/english/`, data access strictly through `store.ts`.
-- [x] **Migrations**: New migration `0002_daily_quests.sql` created without modifying `0001_init.sql`.
+- [x] **Migrations**: Migrations maintained with row-level security.
 - [x] **Mobile Responsiveness**: 375 × 812 viewport verified.
-- [x] **Tests Passing**: 49 vitest tests passing in `packages/journey-engine`.
+- [x] **Tests Passing**: 61 vitest tests passing in `packages/journey-engine` (engine, daily, and streak test suites).
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint.
 - [x] **Next.js Production Build**: Succeeded (`next build` compiled 11 routes cleanly).
+
 

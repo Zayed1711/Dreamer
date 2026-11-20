@@ -5,11 +5,13 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   computeProgress,
   defaultContent,
+  getUrgentReminder,
   levelForExp,
   parseMonth,
   pickDailyQuest,
   questDate,
   taskId,
+  type DailyStreak,
   type Journey,
   type JourneyItem,
   type Stat,
@@ -18,7 +20,7 @@ import { Check, Flame, Lock } from "lucide-react";
 import { FlightBar } from "./FlightBar";
 import { MilestoneIcon, StatIcon } from "./MilestoneIcon";
 import { monthLabel } from "@/lib/format";
-import { loadDailyState, setTaskDone, signOut, type DailyState } from "@/lib/store";
+import { loadDailyState, loadWeeklyStreak, setTaskDone, signOut, type DailyState } from "@/lib/store";
 import { supabaseEnabled } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 
@@ -49,12 +51,9 @@ export function Dashboard({
   const [notice, setNotice] = useState<Notice | null>(null);
   const [rankUp, setRankUp] = useState<string | null>(null);
   const [dailyState, setDailyState] = useState<DailyState | null>(null);
+  const [weeklyStreak, setWeeklyStreak] = useState<DailyStreak | null>(null);
   const noticeId = useRef(0);
   const router = useRouter();
-
-  useEffect(() => {
-    loadDailyState("english").then(setDailyState).catch(() => {});
-  }, []);
 
   const progress = useMemo(
     () => computeProgress(journey, completed, today, defaultContent, extraExp),
@@ -67,6 +66,16 @@ export function Dashboard({
   const dhakaToday = questDate();
   const todayQuest = useMemo(() => pickDailyQuest(dhakaToday, progress.level), [dhakaToday, progress.level]);
   const isHolding = progress.flightStatus === "holding";
+
+  useEffect(() => {
+    loadDailyState("english").then(setDailyState).catch(() => {});
+    loadWeeklyStreak(dhakaToday, { holding: isHolding }).then(setWeeklyStreak).catch(() => {});
+  }, [dhakaToday, isHolding]);
+
+  const reminder = useMemo(
+    () => getUrgentReminder(journey, progress, Boolean(dailyState?.isDoneToday), today),
+    [journey, progress, dailyState?.isDoneToday, today],
+  );
 
   const now = parseMonth(today);
   const isDone = (i: JourneyItem) => i.tasks.every((t) => completed.has(taskId(i.key, t.key)));
@@ -136,6 +145,28 @@ export function Dashboard({
 
   return (
     <main className="mx-auto max-w-md space-y-4 px-4 pt-5 pb-12">
+      {/* In-app reminder banner */}
+      {reminder && (
+        <Link
+          href={reminder.link}
+          className={`window flex items-center justify-between px-3.5 py-2 font-mono text-xs transition-colors ${
+            reminder.severity === "urgent"
+              ? "border-[#f87171] text-[#f87171] hover:bg-[#f87171]/5"
+              : reminder.severity === "action"
+                ? "border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)]/5"
+                : "border-[#fbbf24] text-[#fbbf24] hover:bg-[#fbbf24]/5"
+          }`}
+        >
+          <div className="flex items-center gap-2 truncate">
+            <span className="shrink-0 font-semibold uppercase tracking-wider">[{reminder.title}]</span>
+            <span className="truncate text-[var(--text)]">{reminder.message}</span>
+          </div>
+          <span className="ml-2 shrink-0 font-mono text-sm" aria-hidden="true">
+            ›
+          </span>
+        </Link>
+      )}
+
       {/* Status window */}
       <section className="window p-4">
         <div className="flex items-center gap-4">
@@ -157,7 +188,7 @@ export function Dashboard({
               <span>
                 EXP {progress.exp}/{levelEnd}
               </span>
-              <span>NEXT LV {progress.level + 1}</span>
+              <span>STREAK {weeklyStreak?.currentCount ?? 0}W</span>
             </div>
           </div>
         </div>

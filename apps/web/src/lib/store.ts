@@ -8,6 +8,7 @@ import {
   type Stage,
   type Degree,
   type DailyStreak,
+  computeWeeklyStreak,
   nextStreak,
   questDate,
 } from "@dreamer/journey-engine";
@@ -388,6 +389,54 @@ export async function submitDailyQuest(
 
   return loadDailyState(track, questDateStr);
 }
+
+// ---------- Weekly Journey Streak & Activity Days ----------
+
+export async function loadActivityDays(): Promise<string[]> {
+  const uid = await currentUserId();
+  if (!supabase || !uid) {
+    return localGet<string[]>(ACTIVITY_KEY) ?? [];
+  }
+  const { data, error } = await supabase
+    .from("activity_days")
+    .select("day")
+    .eq("user_id", uid)
+    .order("day", { ascending: true });
+  if (error) throw error;
+  return (data ?? []).map((r: { day: string }) => r.day);
+}
+
+export async function loadWeeklyStreak(
+  forDate: string = questDate(),
+  options: { holding?: boolean } = {},
+): Promise<DailyStreak> {
+  const uid = await currentUserId();
+  const activityDays = await loadActivityDays();
+  const streak = computeWeeklyStreak(activityDays, forDate, options);
+
+  if (!supabase || !uid) {
+    const streaks = localGet<Record<string, DailyStreak>>(STREAKS_KEY) ?? {};
+    streaks["weekly_journey"] = streak;
+    localSet(STREAKS_KEY, streaks);
+    return streak;
+  }
+
+  await supabase.from("streaks").upsert(
+    {
+      user_id: uid,
+      kind: "weekly_journey",
+      current_count: streak.currentCount,
+      best_count: streak.bestCount,
+      last_period: streak.lastPeriod,
+      freezes_left: streak.freezesLeft,
+      freezes_reset_at: streak.freezesResetAt,
+    },
+    { onConflict: "user_id,kind" },
+  );
+
+  return streak;
+}
+
 
 /**
  * After a student signs in on a browser where they already used the preview,
