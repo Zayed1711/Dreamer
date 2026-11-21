@@ -46,13 +46,14 @@
     ],
     "overview": "Germany is the #1 choice for Bangladeshi engineering and science graduates seeking tuition-free world-class education with clear, structured permanent residency pathways.",
     "embassyDhaka": {
-      "waitlistMonths": "12-18 months",
+      "waitlistMonths": "Online Pre-Check (Digital Portal) + In-Person Biometrics",
       "interviewRequired": true,
-      "vfsLocation": "VFS Global Germany Visa Application Centre, Delta Life Tower, Gulshan-2, Dhaka",
+      "vfsLocation": "Consular Services Portal (digital.diplo.de) & Embassy of Germany Dhaka, Baridhara",
       "appointmentTips": [
-        "Register on the German Embassy Dhaka / VFS appointment waitlist as early as possible.",
-        "A Bachelor degree CGPA of 3.0+ from a recognized Bangladeshi university significantly smooths admission and visa processing.",
-        "Your Sperrkonto blocked account must be opened in your exact passport name."
+        "Apply online via the official Federal Foreign Office Consular Services Portal (digital.diplo.de).",
+        "Upload high-resolution PDF scans of your university admission letter, Sperrkonto confirmation (€11,904), health insurance, and attested transcripts for advance digital pre-check.",
+        "The embassy digitally reviews your documents to ensure completeness before issuing an in-person appointment slot in Dhaka.",
+        "Attend your in-person appointment at the German Embassy Visa Section in Baridhara, Dhaka with all original attested certificates and biometric photos."
       ]
     },
     "documentsChecklist": [
@@ -102,12 +103,12 @@
     },
     "commonFaqs": [
       {
-        "question": "Is German language knowledge mandatory for applying to German universities?",
-        "answer": "No. There are over 1,500 English-taught master programs in Germany where only an IELTS score (typically 6.5) is required. However, learning A1/A2 German before departure is strongly recommended for part-time student jobs and daily life."
+        "question": "How does the new German online visa application process work for Bangladeshi students?",
+        "answer": "The German Federal Foreign Office now uses the online Consular Services Portal (Auslandsportal at digital.diplo.de). You complete the visa form online and upload all required documents (admission letter, Sperrkonto blocked account confirmation, attested transcripts, CV, and motivation letter) for digital pre-checking. Once the embassy completes the digital pre-check, you are allocated an appointment in Dhaka to submit biometrics and show your original papers."
       },
       {
-        "question": "How long is the VFS Germany visa waitlist in Dhaka right now?",
-        "answer": "The current appointment waiting list for Category B (regular student visa) at VFS Dhaka is approximately 12 to 18 months. Students with CGPA 3.5+ or DAAD scholarships qualify for expedited appointment slots (Category A)."
+        "question": "Is German language knowledge mandatory for applying to German universities?",
+        "answer": "No. There are over 1,500 English-taught master programs in Germany where only an IELTS score (typically 6.5) is required. However, learning A1/A2 German before departure is strongly recommended for part-time student jobs and daily life."
       },
       {
         "question": "Are public universities in Germany really 100% tuition-free?",
