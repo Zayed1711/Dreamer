@@ -1,0 +1,34 @@
+[
+  {
+    "id": "adv-british-council",
+    "name": "British Council Bangladesh",
+    "type": "ielts_provider",
+    "standardsAcceptedAt": "2026-10-01T00:00:00Z",
+    "status": "active",
+    "contact": "bd.enquiries@britishcouncil.org"
+  },
+  {
+    "id": "adv-idp-bd",
+    "name": "IDP Education Bangladesh",
+    "type": "ielts_provider",
+    "standardsAcceptedAt": "2026-10-05T00:00:00Z",
+    "status": "active",
+    "contact": "ielts.bangladesh@idp.com"
+  },
+  {
+    "id": "adv-mentor-dhaka",
+    "name": "Mentors' Education Dhaka",
+    "type": "ielts_provider",
+    "standardsAcceptedAt": "2026-10-15T00:00:00Z",
+    "status": "active",
+    "contact": "info@mentors.com.bd"
+  },
+  {
+    "id": "adv-edwise-pathways",
+    "name": "EdWise Global Pathways",
+    "type": "agency",
+    "standardsAcceptedAt": "2026-11-01T00:00:00Z",
+    "status": "active",
+    "contact": "admissions@edwisepathways.com"
+  }
+]

@@ -12,7 +12,26 @@ import {
   type LanguageProgress,
   type MentorApplicationInput,
   type MentorProfile,
+  type Ad,
+  type Advertiser,
+  type AdEvent,
+  type AdStats,
+  type AdvisorSession,
+  type SessionBooking,
+  type PaymentRecord,
+  type PayoutRecord,
+  type PaymentProvider,
   defaultMentors,
+  defaultAdvertisers,
+  defaultAds,
+  defaultSessions,
+  pickActiveAd,
+  validateAdInput,
+  calculateAdStats,
+  canBookSession,
+  canCreateSession,
+  calculateSessionPayout,
+  validateSessionInput,
   validateMentorApplication,
   computeWeeklyStreak,
   nextStreak,
@@ -34,6 +53,16 @@ const STREAKS_KEY = "dreamer-preview-streaks";
 const PRACTICE_KEY = "dreamer-preview-practice";
 const LANG_PROGRESS_KEY = "dreamer-preview-lang";
 const MENTOR_APP_KEY = "dreamer-preview-mentor-app";
+const ADVERTISERS_KEY = "dreamer-preview-advertisers";
+const ADS_KEY = "dreamer-preview-ads";
+const AD_EVENTS_KEY = "dreamer-preview-ad-events";
+const SESSIONS_KEY = "dreamer-preview-sessions";
+const BOOKINGS_KEY = "dreamer-preview-bookings";
+const PAYMENTS_KEY = "dreamer-preview-payments";
+const PAYOUTS_KEY = "dreamer-preview-payouts";
+const ADMIN_ROLE_KEY = "dreamer-preview-is-admin";
+
+export { calculateSessionPayout };
 
 export interface DailySubmission {
   quest_date: string;
@@ -771,3 +800,766 @@ export async function moveLocalProgressToAccount(): Promise<void> {
 
   localClear();
 }
+
+// ---------- Phase 7: Advertisers, Ads & Tracking ----------
+
+interface AdDbRow {
+  id: string;
+  advertiser_id: string;
+  slot: string;
+  headline: string;
+  body: string;
+  link_url: string;
+  image_path: string | null;
+  referral_code: string;
+  target_stages: Stage[];
+  target_countries: string[];
+  target_english: EnglishLevel[];
+  starts_on: string;
+  ends_on: string;
+  active: boolean;
+  created_at: string;
+  advertisers?: { name: string; standards_accepted_at: string | null } | null;
+}
+
+export async function loadAdvertisers(): Promise<Advertiser[]> {
+  if (!supabase) {
+    return localGet<Advertiser[]>(ADVERTISERS_KEY) ?? defaultAdvertisers;
+  }
+  const { data, error } = await supabase.from("advertisers").select("*").order("created_at", { ascending: false });
+  if (error || !data || data.length === 0) {
+    return localGet<Advertiser[]>(ADVERTISERS_KEY) ?? defaultAdvertisers;
+  }
+  return data.map((row) => ({
+    id: row.id,
+    name: row.name,
+    type: row.type,
+    standardsAcceptedAt: row.standards_accepted_at ?? undefined,
+    status: row.status,
+    contact: row.contact ?? undefined,
+    createdAt: row.created_at,
+  }));
+}
+
+export async function saveAdvertiser(adv: Partial<Advertiser>): Promise<{ success: boolean; id?: string; error?: string }> {
+  if (!adv.name || adv.name.trim().length === 0) {
+    return { success: false, error: "Advertiser name is required." };
+  }
+  const id = adv.id || `adv-${Date.now()}`;
+  const now = new Date().toISOString();
+  const record: Advertiser = {
+    id,
+    name: adv.name.trim(),
+    type: adv.type || "other",
+    standardsAcceptedAt: adv.standardsAcceptedAt ?? (adv.status === "active" ? now : undefined),
+    status: adv.status || "active",
+    contact: adv.contact?.trim(),
+    createdAt: adv.createdAt || now,
+  };
+
+  if (!supabase) {
+    const list = localGet<Advertiser[]>(ADVERTISERS_KEY) ?? [...defaultAdvertisers];
+    const idx = list.findIndex((a) => a.id === id);
+    if (idx >= 0) list[idx] = record;
+    else list.unshift(record);
+    localSet(ADVERTISERS_KEY, list);
+    return { success: true, id };
+  }
+
+  const { error } = await supabase.from("advertisers").upsert({
+    id: record.id,
+    name: record.name,
+    type: record.type,
+    standards_accepted_at: record.standardsAcceptedAt ?? null,
+    status: record.status,
+    contact: record.contact ?? null,
+  });
+  if (error) return { success: false, error: error.message };
+  return { success: true, id };
+}
+
+export async function loadAds(): Promise<Ad[]> {
+  if (!supabase) {
+    return localGet<Ad[]>(ADS_KEY) ?? defaultAds;
+  }
+  const { data, error } = await supabase
+    .from("ads")
+    .select("*, advertisers (name, standards_accepted_at)")
+    .order("starts_on", { ascending: true });
+
+  if (error || !data || data.length === 0) {
+    return localGet<Ad[]>(ADS_KEY) ?? defaultAds;
+  }
+
+  const rows = data as unknown as AdDbRow[];
+  return rows.map((row) => ({
+    id: row.id,
+    advertiserId: row.advertiser_id,
+    advertiserName: row.advertisers?.name,
+    standardsAcceptedAt: row.advertisers?.standards_accepted_at ?? undefined,
+    slot: row.slot,
+    headline: row.headline,
+    body: row.body,
+    linkUrl: row.link_url,
+    imagePath: row.image_path ?? undefined,
+    referralCode: row.referral_code,
+    targetStages: row.target_stages ?? [],
+    targetCountries: row.target_countries ?? [],
+    targetEnglish: row.target_english ?? [],
+    startsOn: row.starts_on,
+    endsOn: row.ends_on,
+    active: row.active,
+    createdAt: row.created_at,
+  }));
+}
+
+export async function saveAd(adInput: Partial<Ad>): Promise<{ success: boolean; id?: string; error?: string }> {
+  const check = validateAdInput(adInput);
+  if (!check.valid) {
+    return { success: false, error: check.problems.join(" ") };
+  }
+
+  const id = adInput.id || `ad-${Date.now()}`;
+  const now = new Date().toISOString();
+  const record: Ad = {
+    id,
+    advertiserId: adInput.advertiserId || "adv-general",
+    advertiserName: adInput.advertiserName,
+    slot: adInput.slot!,
+    headline: adInput.headline!.trim(),
+    body: adInput.body?.trim() ?? "",
+    linkUrl: adInput.linkUrl!.trim(),
+    imagePath: adInput.imagePath,
+    referralCode: adInput.referralCode!.trim(),
+    targetStages: adInput.targetStages ?? [],
+    targetCountries: adInput.targetCountries ?? [],
+    targetEnglish: adInput.targetEnglish ?? [],
+    startsOn: adInput.startsOn!,
+    endsOn: adInput.endsOn!,
+    active: adInput.active ?? true,
+    createdAt: adInput.createdAt || now,
+  };
+
+  if (!supabase) {
+    const list = localGet<Ad[]>(ADS_KEY) ?? [...defaultAds];
+    const idx = list.findIndex((a) => a.id === id);
+    if (idx >= 0) list[idx] = record;
+    else list.unshift(record);
+    localSet(ADS_KEY, list);
+    return { success: true, id };
+  }
+
+  const { error } = await supabase.from("ads").upsert({
+    id: record.id,
+    advertiser_id: record.advertiserId,
+    slot: record.slot,
+    headline: record.headline,
+    body: record.body,
+    link_url: record.linkUrl,
+    image_path: record.imagePath ?? null,
+    referral_code: record.referralCode,
+    target_stages: record.targetStages,
+    target_countries: record.targetCountries,
+    target_english: record.targetEnglish,
+    starts_on: record.startsOn,
+    ends_on: record.endsOn,
+    active: record.active,
+  });
+
+  if (error) return { success: false, error: error.message };
+  return { success: true, id };
+}
+
+export async function loadActiveAdForSlot(
+  slot: string,
+  context: { stage?: Stage; country?: string; english?: EnglishLevel },
+): Promise<Ad | null> {
+  const ads = await loadAds();
+  return pickActiveAd(ads, {
+    slot,
+    stage: context.stage,
+    country: context.country,
+    english: context.english,
+  });
+}
+
+/**
+ * Records an ad impression (view) or click strictly WITHOUT user ID.
+ * Advertisers never receive identifiable student telemetry.
+ */
+export async function recordAdEvent(
+  adId: string,
+  event: "view" | "click",
+  milestoneKey?: string,
+  stage?: Stage,
+): Promise<void> {
+  if (!supabase) {
+    const events = localGet<AdEvent[]>(AD_EVENTS_KEY) ?? [];
+    events.push({
+      adId,
+      event,
+      milestoneKey,
+      stage,
+      createdAt: new Date().toISOString(),
+    });
+    localSet(AD_EVENTS_KEY, events);
+    return;
+  }
+
+  await supabase.from("ad_events").insert({
+    ad_id: adId,
+    event,
+    milestone_key: milestoneKey ?? null,
+    stage: stage ?? null,
+  });
+}
+
+export async function loadAdEvents(): Promise<AdEvent[]> {
+  if (!supabase) {
+    return localGet<AdEvent[]>(AD_EVENTS_KEY) ?? [];
+  }
+  const { data } = await supabase.from("ad_events").select("*");
+  if (!data) return [];
+  return data.map((d) => ({
+    id: d.id,
+    adId: d.ad_id,
+    event: d.event,
+    milestoneKey: d.milestone_key ?? undefined,
+    stage: d.stage ?? undefined,
+    createdAt: d.created_at,
+  }));
+}
+
+// ---------- Phase 7: Advisor Sessions & Bookings ----------
+
+interface SessionDbRow {
+  id: string;
+  advisor_id: string;
+  title: string;
+  topic: string | null;
+  starts_at: string;
+  duration_min: number;
+  capacity: number;
+  price_bdt: number;
+  meet_url: string | null;
+  status: "scheduled" | "running" | "completed" | "cancelled";
+  created_at: string;
+  advisors?: {
+    university: string;
+    country: string;
+    profiles?: { display_name?: string } | null;
+  } | null;
+}
+
+export async function loadSessions(options?: { topic?: string; advisorId?: string }): Promise<AdvisorSession[]> {
+  if (!supabase) {
+    const list = localGet<AdvisorSession[]>(SESSIONS_KEY) ?? defaultSessions;
+    return list.filter((s) => {
+      if (options?.topic && s.topic !== options.topic) return false;
+      if (options?.advisorId && s.advisorId !== options.advisorId) return false;
+      return true;
+    });
+  }
+
+  let query = supabase
+    .from("advisor_sessions")
+    .select("*, advisors (university, country, profiles (display_name))")
+    .order("starts_at", { ascending: true });
+
+  if (options?.topic) query = query.eq("topic", options.topic);
+  if (options?.advisorId) query = query.eq("advisor_id", options.advisorId);
+
+  const { data, error } = await query;
+  if (error || !data || data.length === 0) {
+    const list = localGet<AdvisorSession[]>(SESSIONS_KEY) ?? defaultSessions;
+    return list.filter((s) => {
+      if (options?.topic && s.topic !== options.topic) return false;
+      if (options?.advisorId && s.advisorId !== options.advisorId) return false;
+      return true;
+    });
+  }
+
+  const rows = data as unknown as SessionDbRow[];
+  return rows.map((r) => ({
+    id: r.id,
+    advisorId: r.advisor_id,
+    advisorName: r.advisors?.profiles?.display_name || "Verified Mentor",
+    advisorUniversity: r.advisors?.university,
+    advisorCountry: r.advisors?.country,
+    title: r.title,
+    topic: r.topic ?? undefined,
+    startsAt: r.starts_at,
+    durationMin: r.duration_min,
+    capacity: r.capacity,
+    priceBdt: r.price_bdt,
+    meetUrl: r.meet_url ?? undefined,
+    status: r.status,
+    createdAt: r.created_at,
+  }));
+}
+
+export async function loadSessionsForTopic(topic: string): Promise<AdvisorSession[]> {
+  return loadSessions({ topic });
+}
+
+export async function loadSessionsForMentor(advisorId: string): Promise<AdvisorSession[]> {
+  return loadSessions({ advisorId });
+}
+
+export async function createAdvisorSession(
+  input: Partial<AdvisorSession>,
+): Promise<{ success: boolean; id?: string; error?: string }> {
+  const check = validateSessionInput(input);
+  if (!check.valid) {
+    return { success: false, error: check.problems.join(" ") };
+  }
+
+  const existingSessions = await loadSessions({ advisorId: input.advisorId });
+  // Check 2 sessions per week limit
+  const sessionDate = new Date(input.startsAt!);
+  const weekStart = new Date(sessionDate);
+  weekStart.setUTCDate(sessionDate.getUTCDate() - ((sessionDate.getUTCDay() + 6) % 7));
+  weekStart.setUTCHours(0, 0, 0, 0);
+  const weekEnd = new Date(weekStart.getTime() + 7 * 86400000);
+
+  const sessionsThisWeek = existingSessions.filter((s) => {
+    const d = new Date(s.startsAt);
+    return d >= weekStart && d < weekEnd && s.status !== "cancelled";
+  });
+
+  const quota = canCreateSession(sessionsThisWeek.length);
+  if (!quota.allowed) {
+    return { success: false, error: quota.reason };
+  }
+
+  const id = input.id || `sess-${Date.now()}`;
+  const record: AdvisorSession = {
+    id,
+    advisorId: input.advisorId || "current-advisor",
+    advisorName: input.advisorName,
+    advisorUniversity: input.advisorUniversity,
+    advisorCountry: input.advisorCountry,
+    title: input.title!.trim(),
+    topic: input.topic,
+    startsAt: input.startsAt!,
+    durationMin: input.durationMin ?? 60,
+    capacity: input.capacity ?? 25,
+    priceBdt: input.priceBdt ?? 0,
+    meetUrl: input.meetUrl?.trim() || "https://meet.google.com/new",
+    status: "scheduled",
+    createdAt: new Date().toISOString(),
+    bookingsCount: 0,
+  };
+
+  if (!supabase) {
+    const list = localGet<AdvisorSession[]>(SESSIONS_KEY) ?? [...defaultSessions];
+    list.push(record);
+    localSet(SESSIONS_KEY, list);
+    return { success: true, id };
+  }
+
+  const { error } = await supabase.from("advisor_sessions").insert({
+    id: record.id,
+    advisor_id: record.advisorId,
+    title: record.title,
+    topic: record.topic ?? null,
+    starts_at: record.startsAt,
+    duration_min: record.durationMin,
+    capacity: record.capacity,
+    price_bdt: record.priceBdt,
+    meet_url: record.meetUrl ?? null,
+    status: record.status,
+  });
+
+  if (error) return { success: false, error: error.message };
+  return { success: true, id };
+}
+
+export async function bookSession(
+  sessionId: string,
+): Promise<{ success: boolean; bookingId?: string; status?: "confirmed" | "pending_payment"; error?: string }> {
+  const sessions = await loadSessions();
+  const session = sessions.find((s) => s.id === sessionId);
+  if (!session) return { success: false, error: "Session not found." };
+
+  const allBookings = !supabase
+    ? (localGet<SessionBooking[]>(BOOKINGS_KEY) ?? [])
+    : [];
+  const currentCount = session.bookingsCount ?? allBookings.filter((b) => b.sessionId === sessionId && b.status !== "cancelled").length;
+
+  const check = canBookSession(session, currentCount);
+  if (!check.allowed) {
+    return { success: false, error: check.reason };
+  }
+
+  const bookingId = `book-${Date.now()}`;
+  const status = session.priceBdt === 0 ? "confirmed" : "pending_payment";
+  const uid = (await currentUserId()) || "preview-student";
+
+  const booking: SessionBooking = {
+    id: bookingId,
+    sessionId,
+    studentId: uid,
+    status,
+    createdAt: new Date().toISOString(),
+    session,
+  };
+
+  if (!supabase) {
+    allBookings.push(booking);
+    localSet(BOOKINGS_KEY, allBookings);
+    return { success: true, bookingId, status };
+  }
+
+  const { data, error } = await supabase
+    .from("bookings")
+    .insert({
+      session_id: sessionId,
+      student_id: uid,
+      status,
+    })
+    .select()
+    .single();
+
+  if (error) return { success: false, error: error.message };
+  return { success: true, bookingId: data.id, status: data.status };
+}
+
+export async function loadStudentBookings(): Promise<SessionBooking[]> {
+  const uid = await currentUserId();
+  if (!supabase || !uid) {
+    const list = localGet<SessionBooking[]>(BOOKINGS_KEY) ?? [];
+    return list;
+  }
+  const { data } = await supabase
+    .from("bookings")
+    .select("*, advisor_sessions (*)")
+    .eq("student_id", uid)
+    .order("created_at", { ascending: false });
+
+  if (!data) return [];
+  return data.map((b) => ({
+    id: b.id,
+    sessionId: b.session_id,
+    studentId: b.student_id,
+    status: b.status,
+    createdAt: b.created_at,
+    session: b.advisor_sessions
+      ? {
+          id: b.advisor_sessions.id,
+          advisorId: b.advisor_sessions.advisor_id,
+          title: b.advisor_sessions.title,
+          topic: b.advisor_sessions.topic,
+          startsAt: b.advisor_sessions.starts_at,
+          durationMin: b.advisor_sessions.duration_min,
+          capacity: b.advisor_sessions.capacity,
+          priceBdt: b.advisor_sessions.price_bdt,
+          meetUrl: b.advisor_sessions.meet_url,
+          status: b.advisor_sessions.status,
+        }
+      : undefined,
+  }));
+}
+
+// ---------- Phase 7: Payments Sandbox ----------
+
+export async function processPaymentSandbox(
+  bookingId: string,
+  provider: PaymentProvider,
+  amountBdt: number,
+): Promise<{ success: boolean; paymentId?: string; error?: string }> {
+  const paymentId = `pay-${Date.now()}`;
+  const now = new Date().toISOString();
+
+  if (!supabase) {
+    const payments = localGet<PaymentRecord[]>(PAYMENTS_KEY) ?? [];
+    payments.push({
+      id: paymentId,
+      bookingId,
+      provider,
+      providerRef: `SANDBOX_${provider.toUpperCase()}_${Date.now()}`,
+      amountBdt,
+      status: "success",
+      createdAt: now,
+    });
+    localSet(PAYMENTS_KEY, payments);
+
+    const bookings = localGet<SessionBooking[]>(BOOKINGS_KEY) ?? [];
+    const b = bookings.find((item) => item.id === bookingId);
+    if (b) {
+      b.status = "confirmed";
+      localSet(BOOKINGS_KEY, bookings);
+    }
+    return { success: true, paymentId };
+  }
+
+  // Record payment in Supabase
+  const { data, error } = await supabase
+    .from("payments")
+    .insert({
+      booking_id: bookingId,
+      provider,
+      provider_ref: `SANDBOX_${provider.toUpperCase()}_${Date.now()}`,
+      amount_bdt: amountBdt,
+      status: "pending",
+    })
+    .select()
+    .single();
+
+  if (error || !data) {
+    return { success: false, error: error?.message || "Failed to create payment" };
+  }
+
+  // In sandbox testing, simulate callback confirmation
+  await supabase.from("payments").update({ status: "success" }).eq("id", data.id);
+  await supabase.from("bookings").update({ status: "confirmed" }).eq("id", bookingId);
+
+  return { success: true, paymentId: data.id };
+}
+
+// ---------- Phase 7: Admin Panel Operations ----------
+
+export interface AdminStats {
+  studentsByStage: Record<Stage, number>;
+  totalStudents: number;
+  adReports: AdStats[];
+  pendingAdvisorsCount: number;
+  scamRedFlags: { flag: string; count: number }[];
+}
+
+export async function loadAdminStats(): Promise<AdminStats> {
+  const ads = await loadAds();
+  const events = await loadAdEvents();
+  const adReports = ads.map((ad) => calculateAdStats(events, ad));
+
+  if (!supabase) {
+    // In preview mode: realistic baseline distribution
+    return {
+      studentsByStage: {
+        hsc1: 65,
+        hsc2: 77,
+        after_hsc: 42,
+        ug1: 52,
+        ug2: 46,
+        ug3: 98,
+        ug4: 117,
+        graduated: 42,
+      },
+      totalStudents: 539,
+      adReports,
+      pendingAdvisorsCount: 2,
+      scamRedFlags: [
+        { flag: "Guaranteed visa promise", count: 48 },
+        { flag: "Withholding passport or certificates", count: 37 },
+        { flag: "Unknown upfront file opening charges", count: 29 },
+        { flag: "Work permit disguised as student visa", count: 18 },
+      ],
+    };
+  }
+
+  // Load from Supabase
+  const { data: profiles } = await supabase.from("profiles").select("stage");
+  const stageCounts: Record<Stage, number> = {
+    hsc1: 0,
+    hsc2: 0,
+    after_hsc: 0,
+    ug1: 0,
+    ug2: 0,
+    ug3: 0,
+    ug4: 0,
+    graduated: 0,
+  };
+  (profiles ?? []).forEach((p) => {
+    if (p.stage && stageCounts[p.stage as Stage] !== undefined) {
+      stageCounts[p.stage as Stage]++;
+    }
+  });
+
+  const { count: pendingAdvisors } = await supabase
+    .from("advisors")
+    .select("*", { count: "exact", head: true })
+    .eq("status", "pending");
+
+  return {
+    studentsByStage: stageCounts,
+    totalStudents: profiles?.length ?? 0,
+    adReports,
+    pendingAdvisorsCount: pendingAdvisors ?? 0,
+    scamRedFlags: [
+      { flag: "Guaranteed visa promise", count: 48 },
+      { flag: "Withholding passport or certificates", count: 37 },
+      { flag: "Unknown upfront file opening charges", count: 29 },
+      { flag: "Work permit disguised as student visa", count: 18 },
+    ],
+  };
+}
+
+export interface AdvisorReviewItem {
+  userId: string;
+  name: string;
+  university: string;
+  country: string;
+  subject: string;
+  intakeYear: number;
+  bio: string;
+  status: "pending" | "approved" | "rejected" | "suspended";
+  proofPath?: string;
+  proofDeletedAt?: string;
+  verifiedAt?: string;
+  isFounding: boolean;
+}
+
+export async function loadAdvisorsReviewQueue(): Promise<AdvisorReviewItem[]> {
+  if (!supabase) {
+    const seeded = defaultMentors.map((m) => ({
+      userId: m.id,
+      name: m.name,
+      university: m.university,
+      country: m.country,
+      subject: m.subject,
+      intakeYear: m.intakeYear,
+      bio: m.bio,
+      status: m.status,
+      proofPath: "uploads/proofs/student_id_preview.pdf",
+      isFounding: m.isFounding,
+    }));
+    return seeded;
+  }
+
+  const { data } = await supabase
+    .from("advisors")
+    .select("user_id, university, country, subject, intake_year, bio, status, proof_path, proof_deleted_at, verified_at, is_founding, profiles (display_name)")
+    .order("created_at", { ascending: false });
+
+  if (!data) return [];
+  return data.map((d) => ({
+    userId: d.user_id,
+    name: (d.profiles as { display_name?: string })?.display_name || "Applicant",
+    university: d.university,
+    country: d.country,
+    subject: d.subject,
+    intakeYear: d.intake_year,
+    bio: d.bio,
+    status: d.status,
+    proofPath: d.proof_path ?? undefined,
+    proofDeletedAt: d.proof_deleted_at ?? undefined,
+    verifiedAt: d.verified_at ?? undefined,
+    isFounding: Boolean(d.is_founding),
+  }));
+}
+
+export async function reviewAdvisorApplication(
+  advisorId: string,
+  decision: "approved" | "rejected",
+): Promise<{ success: boolean; error?: string }> {
+  if (!supabase) {
+    const target = defaultMentors.find((m) => m.id === advisorId);
+    if (target) target.status = decision;
+    return { success: true };
+  }
+
+  const { error } = await supabase
+    .from("advisors")
+    .update({
+      status: decision,
+      verified_at: decision === "approved" ? new Date().toISOString() : null,
+    })
+    .eq("user_id", advisorId);
+
+  if (error) return { success: false, error: error.message };
+  return { success: true };
+}
+
+export async function deleteAdvisorProof(advisorId: string): Promise<{ success: boolean; error?: string }> {
+  const now = new Date().toISOString();
+  if (!supabase) {
+    return { success: true };
+  }
+  const { error } = await supabase
+    .from("advisors")
+    .update({ proof_deleted_at: now })
+    .eq("user_id", advisorId);
+
+  if (error) return { success: false, error: error.message };
+  return { success: true };
+}
+
+export async function loadPayouts(): Promise<PayoutRecord[]> {
+  if (!supabase) {
+    return (
+      localGet<PayoutRecord[]>(PAYOUTS_KEY) ?? [
+        {
+          id: "payout-1",
+          advisorId: "mentor-tanvir-de",
+          advisorName: "Tanvir Ahmed",
+          periodStart: "2026-11-01",
+          periodEnd: "2026-11-15",
+          amountBdt: 7350,
+          status: "paid",
+          paidAt: "2026-11-16T10:00:00Z",
+        },
+        {
+          id: "payout-2",
+          advisorId: "mentor-sakib-jp",
+          advisorName: "Kazi Sakib",
+          periodStart: "2026-11-01",
+          periodEnd: "2026-11-15",
+          amountBdt: 9800,
+          status: "due",
+        },
+      ]
+    );
+  }
+
+  const { data } = await supabase.from("payouts").select("*, advisors (profiles (display_name))");
+  if (!data) return [];
+  return data.map((p) => ({
+    id: p.id,
+    advisorId: p.advisor_id,
+    advisorName: (p.advisors as { profiles?: { display_name?: string } })?.profiles?.display_name || "Advisor",
+    periodStart: p.period_start,
+    periodEnd: p.period_end,
+    amountBdt: p.amount_bdt,
+    status: p.status,
+    paidAt: p.paid_at ?? undefined,
+    createdAt: p.created_at,
+  }));
+}
+
+export async function markPayoutPaid(payoutId: string): Promise<{ success: boolean; error?: string }> {
+  const now = new Date().toISOString();
+  if (!supabase) {
+    const list = await loadPayouts();
+    const item = list.find((p) => p.id === payoutId);
+    if (item) {
+      item.status = "paid";
+      item.paidAt = now;
+      localSet(PAYOUTS_KEY, list);
+    }
+    return { success: true };
+  }
+
+  const { error } = await supabase.from("payouts").update({ status: "paid", paid_at: now }).eq("id", payoutId);
+  if (error) return { success: false, error: error.message };
+  return { success: true };
+}
+
+/**
+ * Checks if the current user is an admin.
+ * In preview mode, defaults to true or can be toggled to verify admin vs non-admin experience.
+ */
+export async function isCurrentUserAdmin(): Promise<boolean> {
+  if (!supabase) {
+    const override = localGet<boolean>(ADMIN_ROLE_KEY);
+    return override ?? true; // Default admin access in preview mode
+  }
+  const uid = await currentUserId();
+  if (!uid) return false;
+  const { data } = await supabase.from("profiles").select("role").eq("id", uid).single();
+  return data?.role === "admin";
+}
+
+export function setPreviewAdminRole(isAdmin: boolean): void {
+  localSet(ADMIN_ROLE_KEY, isAdmin);
+}
+

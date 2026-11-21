@@ -351,6 +351,118 @@ export interface MentorApplicationInput {
   proofFileName?: string;
 }
 
+// ---------- Ads & Advertisers (Phase 7) ----------
 
+export type AdvertiserType = "ielts_provider" | "agency" | "bank" | "other";
 
+export type AdvertiserStatus = "active" | "suspended" | "removed";
+
+export interface Advertiser {
+  id: string;
+  name: string;
+  type: AdvertiserType;
+  standardsAcceptedAt?: string;
+  status: AdvertiserStatus;
+  contact?: string;
+  createdAt?: string;
+}
+
+export interface Ad {
+  id: string;
+  advertiserId: string;
+  advertiserName?: string;
+  slot: string;
+  headline: string;
+  body: string;
+  linkUrl: string;
+  imagePath?: string;
+  referralCode: string;
+  targetStages: Stage[];
+  targetCountries: string[];
+  targetEnglish: EnglishLevel[];
+  startsOn: string;
+  endsOn: string;
+  active: boolean;
+  standardsAcceptedAt?: string;
+  createdAt?: string;
+}
+
+export type AdEventType = "view" | "click";
+
+export interface AdEvent {
+  id?: number;
+  adId: string;
+  event: AdEventType;
+  milestoneKey?: string;
+  stage?: Stage;
+  createdAt?: string;
+}
+
+export interface AdStats {
+  adId: string;
+  headline: string;
+  slot: string;
+  views: number;
+  clicks: number;
+  ctr: number;
+}
+
+// ---------- Advisor Sessions & Bookings (Phase 7) ----------
+
+export type SessionStatus = "scheduled" | "running" | "completed" | "cancelled";
+
+export interface AdvisorSession {
+  id: string;
+  advisorId: string;
+  advisorName?: string;
+  advisorUniversity?: string;
+  advisorCountry?: string;
+  title: string;
+  topic?: string;
+  startsAt: string;
+  durationMin: number;
+  capacity: number;
+  priceBdt: number;
+  meetUrl?: string;
+  status: SessionStatus;
+  createdAt?: string;
+  bookingsCount?: number;
+}
+
+export type BookingStatus = "pending_payment" | "confirmed" | "attended" | "cancelled" | "refunded";
+
+export interface SessionBooking {
+  id: string;
+  sessionId: string;
+  studentId: string;
+  status: BookingStatus;
+  createdAt?: string;
+  session?: AdvisorSession;
+}
+
+export type PaymentProvider = "bkash" | "nagad" | "sslcommerz";
+
+export type PaymentStatus = "pending" | "success" | "failed" | "refunded";
+
+export interface PaymentRecord {
+  id: string;
+  bookingId: string;
+  provider: PaymentProvider;
+  providerRef?: string;
+  amountBdt: number;
+  status: PaymentStatus;
+  createdAt?: string;
+}
+
+export interface PayoutRecord {
+  id: string;
+  advisorId: string;
+  advisorName?: string;
+  periodStart: string;
+  periodEnd: string;
+  amountBdt: number;
+  status: "due" | "paid";
+  paidAt?: string;
+  createdAt?: string;
+}
 

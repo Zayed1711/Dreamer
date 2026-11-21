@@ -2,7 +2,7 @@
 
 **Author:** Antigravity (Developer Agent)  
 **Date:** 20 November 2026  
-**Repository Branch:** `phase-6/mentors` (and `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
+**Repository Branch:** `phase-7/admin-ads-sessions` (and `phase-6/mentors`, `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`)  
 **Purpose:** Comprehensive log of all modifications, additions, architectural decisions, and verification steps for senior developer review.
 
 ---
@@ -36,6 +36,10 @@
 | **Phase 6: Mentors** | 6.4 UI: Directory & Profile | Completed | `/mentors` directory with country/topic/founding filters, `/mentors/[id]` profile with verified & founding badges, proof documents kept strictly private |
 | **Phase 6: Mentors** | 6.5 Advisor Application | Completed | `/advisor/apply` multi-field application with student ID proof upload and pending approval status |
 | **Phase 6: Mentors** | 6.6 Milestone Linking | Completed | Milestone detail pages (`/milestone/[key]`) dynamically display matching approved mentors for milestone's `advisorTopic` |
+| **Phase 7: Admin, Ads & Sessions** | 7.1 Admin Operations Center | Completed | `/admin` control center: Telemetry & Reports, Advisor document verification & 30-day proof purge, Advertisers management, Slot Ads publisher, Content review queue, and 70% advisor payout processing |
+| **Phase 7: Admin, Ads & Sessions** | 7.2 Milestone Sponsored Ads | Completed | Real matching ads served in milestone slots via `pickActiveAd`, privacy-first telemetry recording views and clicks in `ad_events` without student ID, free alternative always displayed below |
+| **Phase 7: Admin, Ads & Sessions** | 7.3 Advisor Sessions & Booking | Completed | Mentors session scheduling (max 2/week, max 25 seats), `canBookSession` capacity checks, `BookingPaymentModal`, interactive group sessions linked on milestone and mentor profiles |
+| **Phase 7: Admin, Ads & Sessions** | 7.4 Payments Sandbox & Edge Functions | Completed | Supabase Edge Functions `create-payment` and `payment-callback` with sandbox simulation for bKash, Nagad, and SSLCommerz |
 
 ---
 
@@ -379,17 +383,83 @@
 
 ---
 
+### Phase 7: Admin Panel, Ads, Advisor Sessions and Payments
+
+#### 7.1 Admin Control Center (`apps/web/src/app/admin/page.tsx`)
+- **Access Control**:
+  - Gated by role check: `profiles.role === 'admin'`. In local preview mode, includes a preview switcher for verification.
+- **Reports & Cohort Telemetry**:
+  - Breakdown of active students across journey stages (`hsc1`, `hsc2`, `after_hsc`, `ug1`–`ug4`, `graduated`).
+  - Sponsored ad telemetry table reporting impressions (views), clicks, and CTR % by slot and headline.
+  - Scam Check telemetry reporting the most common red flags encountered by students.
+- **Advisor Verification & Proof Purge**:
+  - Verification queue displaying pending applicant details, academic credentials, and bio.
+  - Confidential proof viewer allowing admins to verify student ID and foreign enrollment documents.
+  - One-click "Approve" (sets `status: 'approved'`, `verified_at: now()`) and "Reject".
+  - One-click "Delete Proof" fulfilling the mandatory 30-day proof retention and deletion privacy rule.
+- **Advertisers Management**:
+  - Form to register advertisers with category (`ielts_provider`, `agency`, `bank`, `other`) and official contact.
+  - "Meets published standards" checkbox recording `standards_accepted_at`.
+  - Actions to activate or suspend advertisers.
+- **Slot Ads Publisher**:
+  - Form to attach sponsored campaigns to milestone slots (`ielts_coaching`, `agency`, `sat_coaching`, etc.).
+  - Targeting configuration by stage, country, and English proficiency level.
+  - Attribution tracking via privacy-first referral codes (`referral_code`) without telemetry identifying students.
+- **Content Review Queue**:
+  - Audit trail displaying language ladders (German DE & Japanese JA), IELTS Masterclass lessons, and English quest tracks with reviewer signatures.
+- **Advisor Revenue Payouts**:
+  - Transparent 70% advisor / 30% platform revenue distribution ledger.
+  - Listing of payout periods, amounts in BDT, and one-click "Mark Paid" administrative action.
+
+#### 7.2 Milestone Sponsored Ads Integration (`apps/web/src/app/milestone/[key]/page.tsx`)
+- **Trust Rules Enforced**:
+  1. *Rule 1*: At most one sponsored ad per milestone slot. Labelled with yellow `SPONSORED · {SLOT}` indicator, and the free alternative is ALWAYS rendered directly below it.
+  2. *Rule 2*: Every ad explicitly displays `"meets our standards as of [date]"`, never claiming "verified" or "safe".
+  3. *Rule 3*: Free alternatives from official non-profit and educational bodies remain available with direct links.
+- **Privacy-Preserving Telemetry**:
+  - View impressions (`view`) recorded on component mount strictly without user ID (`recordAdEvent`).
+  - Outbound referral clicks (`click`) recorded on button trigger without user ID.
+  - Every ad supplies a visible discount/referral code pill (e.g. `DREAMER26`) for off-platform attribution.
+
+#### 7.3 Advisor Group Sessions (`apps/web/src/components/BookingPaymentModal.tsx` & Pages)
+- **Session Rules Enforced**:
+  - Mentors can schedule at most 2 sessions per calendar week (enforced in `canCreateSession` and database trigger).
+  - Maximum 25 student seats per session (enforced in `canBookSession` and database trigger `enforce_capacity`).
+  - Duration between 30 and 180 minutes.
+- **Milestone & Mentor Profile Integration**:
+  - Milestone screens dynamically list upcoming group sessions matching `item.advisorTopic`.
+  - Mentor profiles (`/mentors/[id]`) display upcoming sessions with date in BST (Dhaka time), seat capacity, and price in BDT.
+- **Booking & Sandbox Payment Modal**:
+  - Clean System `.window` modal presenting session info, mentor credentials, and seat availability.
+  - Choice of Bangladeshi payment providers: **bKash**, **Nagad**, or **SSLCommerz**.
+  - Sandbox test simulation confirming booking without financial deduction.
+  - Upon booking confirmation, reveals meeting access link (`meet_url`) with one-click copy and join buttons.
+
+#### 7.4 Payments & Supabase Edge Functions (`supabase/functions/`)
+- **Edge Functions**:
+  - `create-payment/index.ts`: Verifies student booking, creates pending server-side `payments` record, and returns sandbox checkout payload.
+  - `payment-callback/index.ts`: Validates gateway callback, marks `payments.status = 'success'`, and transitions `bookings.status = 'confirmed'`.
+- **Revenue Split**:
+  - `calculateSessionPayout` computes standard 70% mentor / 30% platform revenue split.
+
+#### 7.5 Database Schema & Migrations (`supabase/migrations/0005_admin_and_sessions.sql`)
+- Added `proof_deleted_at timestamptz` on `advisors` to audit 30-day proof file deletion.
+- Added trigger `advisor_session_weekly_limit` preventing advisors from creating more than 2 sessions in a calendar week.
+- Added composite indexes on `ad_events(event, created_at desc)`, `advisor_sessions(topic, starts_at)`, and `bookings(session_id, status)`.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-6/mentors` (and previous phases `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`).
+- [x] **No Direct Commits to Main**: All work performed on `phase-7/admin-ads-sessions` (and previous phases `phase-6/mentors`, `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, mentor seed content in `content/mentors/`, data access strictly through `store.ts`.
-- [x] **Database Migration**: `0004_mentor_profiles.sql` created with row-level security and indexing.
-- [x] **Privacy & Compliance**: Advisor student ID proofs stored securely in private storage bucket, never rendered in public UI.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/mentors`, `/mentors/[id]`, `/advisor/apply`, `/daily`, `/`, `/course`, `/course/[id]`, and `/course/practice/[id]`.
-- [x] **Tests Passing**: All 90 vitest tests passing in `packages/journey-engine` across 6 test suites (engine, daily, streak, course, languages, mentors).
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, seed content in `content/ads/` and `content/sessions/`, data access strictly through `store.ts`.
+- [x] **Database Migration**: `0005_admin_and_sessions.sql` created with schema enhancements, trigger constraints, and indexing.
+- [x] **Privacy & Compliance**: Telemetry in `ad_events` recorded strictly without student IDs. Advisor proofs accessible only to admins with 30-day purge option.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/admin`, `/milestone/[key]`, `/mentors/[id]`, and `BookingPaymentModal`.
+- [x] **Tests Passing**: All 114 vitest tests passing in `packages/journey-engine` across 8 test suites (engine, daily, streak, course, languages, mentors, ads, sessions).
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 14 routes cleanly with static and dynamic optimizations).
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all routes cleanly with static and dynamic optimizations).
 
 ---
 

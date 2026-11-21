@@ -37,8 +37,20 @@ export {
   findMentorsForTopic,
   validateMentorApplication,
 } from "./mentors";
-
-
-
-
+export {
+  defaultAdvertisers,
+  defaultAds,
+  matchAd,
+  pickActiveAd,
+  validateAdInput,
+  calculateAdStats,
+  type AdMatchContext,
+} from "./ads";
+export {
+  defaultSessions,
+  canBookSession,
+  canCreateSession,
+  calculateSessionPayout,
+  validateSessionInput,
+} from "./sessions";
 
