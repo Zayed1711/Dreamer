@@ -40,6 +40,11 @@
 | **Phase 7: Admin, Ads & Sessions** | 7.2 Milestone Sponsored Ads | Completed | Real matching ads served in milestone slots via `pickActiveAd`, privacy-first telemetry recording views and clicks in `ad_events` without student ID, free alternative always displayed below |
 | **Phase 7: Admin, Ads & Sessions** | 7.3 Advisor Sessions & Booking | Completed | Mentors session scheduling (max 2/week, max 25 seats), `canBookSession` capacity checks, `BookingPaymentModal`, interactive group sessions linked on milestone and mentor profiles |
 | **Phase 7: Admin, Ads & Sessions** | 7.4 Payments Sandbox & Edge Functions | Completed | Supabase Edge Functions `create-payment` and `payment-callback` with sandbox simulation for bKash, Nagad, and SSLCommerz |
+| **Phase 9: Country Hubs & FAQs** | 9.1 Content & Country Dossiers | Completed | 18 destination countries in `content/countries/countries.json` with BDT costs, German Sperrkonto €11,904, Dhaka VFS timelines, work rights, and PSW/PR rules |
+| **Phase 9: Country Hubs & FAQs** | 9.2 Journey Engine Logic | Completed | Pure functions in `packages/journey-engine/src/countries.ts` (`listCountries`, `getCountryByCode`, `filterCountries`, `getEstimatedFirstYearCostBdt`, `validateCountryData`) + 9 Vitest unit tests |
+| **Phase 9: Country Hubs & FAQs** | 9.3 Data Layer & Slots | Completed | `loadCountries()`, `loadCountryByCode()` in `store.ts`, registered `student_banking` slot with Bangladesh Bank free alternative in `slots.ts` |
+| **Phase 9: Country Hubs & FAQs** | 9.4 Web Routes & Mobile Verification | Completed | Public directory `/countries` with search & budget filters, dynamic `/countries/[code]` with 5 hubs, verified clean at 375 × 812 viewport via Browser Inspector |
+
 
 ---
 
@@ -449,17 +454,53 @@
 
 ---
 
+### Phase 9: Country Hubs & FAQs
+
+#### 9.1 Content Dossiers (`content/countries/countries.json`)
+- Curated 18 destination countries: Germany (DE), Japan (JP), United States (US), Canada (CA), United Kingdom (GB), Australia (AU), Finland (FI), Sweden (SE), Netherlands (NL), Ireland (IE), Malaysia (MY), South Korea (KR), Hungary (HU), Italy (IT), France (FR), Poland (PL), New Zealand (NZ), China (CN).
+- Comprehensive dataset covering:
+  - Exact tuition range and monthly living costs in BDT (with active exchange rates).
+  - Proof of funds & blocked account amounts (e.g. German Sperrkonto €11,904 ~ 15.5 Lakh BDT, Canadian GIC CAD 20,635 ~ 18.5 Lakh BDT).
+  - Legal part-time working hours permitted during term.
+  - Post-study work visa (PSW) rights and permanent residency (PR) pathway feasibility.
+  - VFS Dhaka & consular appointment realities (waitlist months, interview requirements, VFS address, and appointment tips).
+  - Standardized Bangladeshi document attestation checklists (Board -> MoE -> MoFA -> Embassy).
+  - Bangladeshi applicant FAQs addressing study gap tolerance, spouse visa rights, and tuition waiver options.
+
+#### 9.2 Journey Engine Logic (`packages/journey-engine/src/countries.ts`)
+- Pure functions decoupled from UI:
+  - `listCountries()`: Returns all 18 destination profiles.
+  - `getCountryByCode(code)`: Case-insensitive ISO lookup.
+  - `filterCountries(filters)`: Multi-criteria filtering by search query, region, budget in BDT, and blocked account requirement.
+  - `getEstimatedFirstYearCostBdt(country)`: Calculates minimum and maximum first-year financial outlay in BDT.
+  - `validateCountryData(country)`: Schema consistency validator.
+- 9 Vitest unit tests in `packages/journey-engine/test/countries.test.ts` bringing total test suite count to 123 passing tests.
+
+#### 9.3 Data Layer & Commercial Slots (`apps/web/src/lib/`)
+- Added `loadCountries()` and `loadCountryByCode()` to `store.ts`.
+- Registered `student_banking` slot in `slots.ts` with permanent official Bangladesh Bank guidelines and checklist link (`https://www.bb.org.bd`).
+
+#### 9.4 Web Routes & UI Presentation (`apps/web/src/app/countries/`)
+- Public index route `/countries`:
+  - Search bar and filtering by Region, Tuition in BDT tier, and Blocked Account requirement.
+  - 18 responsive `.window` cards displaying snapshot metrics, notable universities, and link to full dossier.
+- Dynamic hub route `/countries/[code]`:
+  - 5 interactive tabs: *Overview & Viability*, *Document Checklist* (with interactive completion checkboxes), *Blocked Account & Banking* (featuring commercial sponsor slot and Bangladesh Bank free alternative), *Universities & Intakes*, and *Dhaka Embassy & FAQs* (with expandable accordions).
+- Footer link added on home dashboard.
+- Verified bug-free at 375 × 812 mobile viewport via Browser Inspector.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-7/admin-ads-sessions` (and previous phases `phase-6/mentors`, `phase-5/language-tracks`, `phase-4/course-and-lessons`, `phase-3/streaks-and-reminders`, `phase-2/daily-quest`, `phase-0/ci-check`).
+- [x] **No Direct Commits to Main**: All work performed on `phase-9/country-hubs` (and previous phase branches).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, seed content in `content/ads/` and `content/sessions/`, data access strictly through `store.ts`.
-- [x] **Database Migration**: `0005_admin_and_sessions.sql` created with schema enhancements, trigger constraints, and indexing.
-- [x] **Privacy & Compliance**: Telemetry in `ad_events` recorded strictly without student IDs. Advisor proofs accessible only to admins with 30-day purge option.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/admin`, `/milestone/[key]`, `/mentors/[id]`, and `BookingPaymentModal`.
-- [x] **Tests Passing**: All 114 vitest tests passing in `packages/journey-engine` across 8 test suites (engine, daily, streak, course, languages, mentors, ads, sessions).
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/countries/`, data access strictly through `store.ts`.
+- [x] **Commercial Compliance & Ethics**: Sponsored bank placement labelled `[SPONSORED]` with "Meets our standards as of [Date]" (never "verified" or "safe"), coupled with mandatory Bangladesh Bank free alternative directly below.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/countries` and `/countries/[code]` (all 5 tabs tested with no horizontal scroll issues).
+- [x] **Tests Passing**: All 123 vitest tests passing in `packages/journey-engine` across 9 test suites (countries, mentors, engine, languages, streak, ads, daily, sessions, course).
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled all routes cleanly with static and dynamic optimizations).
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 18 routes cleanly with static and dynamic optimizations).
 
 ---
 

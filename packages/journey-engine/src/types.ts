@@ -466,3 +466,59 @@ export interface PayoutRecord {
   createdAt?: string;
 }
 
+// ---------- Country Guides & Destinations (Phase 9) ----------
+
+export interface CountryEmbassyDhaka {
+  waitlistMonths: string;
+  interviewRequired: boolean;
+  vfsLocation: string;
+  appointmentTips: string[];
+}
+
+export interface CountryDocumentCategory {
+  category: string;
+  items: string[];
+}
+
+export interface CountryBlockedAccountInfo {
+  required: boolean;
+  providerName: string;
+  amountLocal?: string;
+  amountBDT: string;
+  bdBankProcedure: string;
+}
+
+export interface CountryFaq {
+  question: string;
+  answer: string;
+}
+
+export interface CountryInfo {
+  code: string;
+  name: string;
+  region: string;
+  capital: string;
+  currency: string;
+  currencySymbol: string;
+  bdtRate: number;
+  avgTuitionYearBdt: { min: number; max: number };
+  avgMonthlyLivingBdt: { min: number; max: number };
+  proofOfFundsBdt: number;
+  proofOfFundsName: string;
+  partTimeHoursTerm: number;
+  postStudyWorkYears: string;
+  prPathwayRating: "high" | "moderate" | "selective" | "difficult";
+  prPathwayNote: string;
+  languageRequired: string;
+  intakeMonths: string[];
+  topUniversities: string[];
+  keyPros: string[];
+  keyCons: string[];
+  overview: string;
+  embassyDhaka: CountryEmbassyDhaka;
+  documentsChecklist: CountryDocumentCategory[];
+  blockedAccountInfo: CountryBlockedAccountInfo;
+  commonFaqs: CountryFaq[];
+}
+
+

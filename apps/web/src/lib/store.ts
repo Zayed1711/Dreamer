@@ -21,7 +21,11 @@ import {
   type PaymentRecord,
   type PayoutRecord,
   type PaymentProvider,
+  type CountryInfo,
   defaultMentors,
+  defaultCountries,
+  listCountries,
+  getCountryByCode,
   defaultAdvertisers,
   defaultAds,
   defaultSessions,
@@ -601,6 +605,17 @@ interface AdvisorRow {
   topics: string[] | null;
   is_founding: boolean | null;
   profiles: { display_name?: string } | null;
+}
+
+// ---------- Destination Countries (Phase 9) ----------
+
+export async function loadCountries(): Promise<CountryInfo[]> {
+  return listCountries();
+}
+
+export async function loadCountryByCode(code: string): Promise<CountryInfo | null> {
+  const country = getCountryByCode(defaultCountries, code);
+  return country ?? null;
 }
 
 export async function loadMentors(): Promise<MentorProfile[]> {

@@ -36,6 +36,14 @@ export const SLOTS: Record<string, { label: string; free: { title: string; note:
     label: "Study-abroad agency",
     free: { title: "Apply directly to the university", note: "Every university accepts direct applications. Agents are optional, never required." },
   },
+  student_banking: {
+    label: "Student File & Blocked Account",
+    free: {
+      title: "Authorized Dealer Banks (Bangladesh Bank)",
+      note: "You can open a student file at any Authorized Dealer bank branch across Bangladesh under official Bangladesh Bank foreign exchange rules.",
+      url: "https://www.bb.org.bd",
+    },
+  },
 };
 
 export const ADVISOR_TOPICS: Record<string, string> = {

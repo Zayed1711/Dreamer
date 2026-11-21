@@ -1,0 +1,2042 @@
+[
+  {
+    "code": "DE",
+    "name": "Germany",
+    "region": "Europe",
+    "capital": "Berlin",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "bdtRate": 130,
+    "avgTuitionYearBdt": {
+      "min": 0,
+      "max": 400000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 110000,
+      "max": 140000
+    },
+    "proofOfFundsBdt": 1550000,
+    "proofOfFundsName": "Blocked Account (Sperrkonto ~11,904 EUR)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "18 months",
+    "prPathwayRating": "high",
+    "prPathwayNote": "EU Blue Card eligibility after graduation; permanent residency possible in 21–27 months with German language proficiency.",
+    "languageRequired": "English (IELTS 6.5) for English-taught master's; German A1/B1 highly recommended for student jobs and daily life.",
+    "intakeMonths": [
+      "September/October (Winter)",
+      "March/April (Summer)"
+    ],
+    "topUniversities": [
+      "Technical University of Munich (TUM)",
+      "RWTH Aachen University",
+      "Heidelberg University",
+      "TU Berlin",
+      "University of Stuttgart"
+    ],
+    "keyPros": [
+      "Nearly zero tuition fees at public universities",
+      "18-month job seeker visa after graduation",
+      "Strong engineering, IT and manufacturing industry",
+      "Direct permanent residency pathway via EU Blue Card"
+    ],
+    "keyCons": [
+      "High competition for English-taught master's seats",
+      "German bureaucracy and embassy visa appointment wait times",
+      "German language needed for social integration and local student jobs"
+    ],
+    "overview": "Germany is the #1 choice for Bangladeshi engineering and science graduates seeking tuition-free world-class education with clear, structured permanent residency pathways.",
+    "embassyDhaka": {
+      "waitlistMonths": "12-18 months",
+      "interviewRequired": true,
+      "vfsLocation": "VFS Global Germany Visa Application Centre, Delta Life Tower, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Register on the German Embassy Dhaka / VFS appointment waitlist as early as possible.",
+        "A Bachelor degree CGPA of 3.0+ from a recognized Bangladeshi university significantly smooths admission and visa processing.",
+        "Your Sperrkonto blocked account must be opened in your exact passport name."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Blocked Account (Sperrkonto ~11,904 EUR) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": true,
+      "providerName": "Sperrkonto (Expatrio, Coracle, or Fintiba)",
+      "amountLocal": "€11,904 EUR",
+      "amountBDT": "15.5 Lakh BDT",
+      "bdBankProcedure": "Open a Student File with any Bangladesh Bank Authorized Dealer branch (e.g. EBL, City Bank, BRAC Bank, MTB) and wire €11,904 to your Expatrio/Coracle blocked account."
+    },
+    "commonFaqs": [
+      {
+        "question": "Is German language knowledge mandatory for applying to German universities?",
+        "answer": "No. There are over 1,500 English-taught master programs in Germany where only an IELTS score (typically 6.5) is required. However, learning A1/A2 German before departure is strongly recommended for part-time student jobs and daily life."
+      },
+      {
+        "question": "How long is the VFS Germany visa waitlist in Dhaka right now?",
+        "answer": "The current appointment waiting list for Category B (regular student visa) at VFS Dhaka is approximately 12 to 18 months. Students with CGPA 3.5+ or DAAD scholarships qualify for expedited appointment slots (Category A)."
+      },
+      {
+        "question": "Are public universities in Germany really 100% tuition-free?",
+        "answer": "Yes. In 15 out of 16 German federal states, public universities charge zero tuition fees for all students regardless of nationality. You only pay a semester administrative fee of €150-€350, which usually includes free regional public transit."
+      },
+      {
+        "question": "Can I apply to Germany with a study gap?",
+        "answer": "German universities accept study gaps if you provide valid proof of professional work experience, publications, or career progression related to your chosen field of study."
+      }
+    ]
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "region": "Asia-Pacific",
+    "capital": "Tokyo",
+    "currency": "JPY",
+    "currencySymbol": "¥",
+    "bdtRate": 0.8,
+    "avgTuitionYearBdt": {
+      "min": 420000,
+      "max": 750000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 90000,
+      "max": 130000
+    },
+    "proofOfFundsBdt": 1600000,
+    "proofOfFundsName": "Bank Solvency & Sponsor Certificate (~2 Million JPY)",
+    "partTimeHoursTerm": 28,
+    "postStudyWorkYears": "1–2 years",
+    "prPathwayRating": "high",
+    "prPathwayNote": "Highly Skilled Professional visa point system allows PR in as little as 1 to 3 years for university graduates.",
+    "languageRequired": "English (IELTS 6.0+) for English Degree Programs; Japanese N5–N3 recommended for campus life and jobs.",
+    "intakeMonths": [
+      "April (Spring - Main)",
+      "September/October (Autumn)"
+    ],
+    "topUniversities": [
+      "University of Tokyo",
+      "Kyoto University",
+      "Tokyo Institute of Technology",
+      "Osaka University",
+      "Tohoku University"
+    ],
+    "keyPros": [
+      "MEXT scholarship covers 100% tuition plus generous monthly living stipend",
+      "Generous 28 hours/week part-time work permit during terms",
+      "High graduate employment rate due to aging population and talent shortage",
+      "Extremely safe, technologically advanced society"
+    ],
+    "keyCons": [
+      "Japanese proficiency (N2/N1) required for most corporate domestic careers",
+      "Hierarchical academic lab culture (Sensei professor endorsement mandatory)",
+      "High upfront rent and apartment guarantor fees in central Tokyo"
+    ],
+    "overview": "Japan offers generous government scholarships (MEXT), world-leading research laboratories, and immediate post-graduate hiring for STEM and international business graduates.",
+    "embassyDhaka": {
+      "waitlistMonths": "1-2 months",
+      "interviewRequired": false,
+      "vfsLocation": "Consular Section, Embassy of Japan, Dutabash Road, Baridhara, Dhaka",
+      "appointmentTips": [
+        "Visa processing takes only 5-7 working days after receiving your Certificate of Eligibility (COE) from your Japanese university.",
+        "Ensure family relationship and bank solvency documents are translated and notarized."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Bank Solvency & Sponsor Certificate (~2 Million JPY) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency & Sponsor Certificate",
+      "amountLocal": "¥2,000,000 JPY",
+      "amountBDT": "16.0 Lakh BDT",
+      "bdBankProcedure": "Maintain funds in sponsor bank account in Bangladesh with minimum 6 months history and tax return proof."
+    },
+    "commonFaqs": [
+      {
+        "question": "Can I study in Japan without knowing Japanese?",
+        "answer": "Yes! Japan offers English-Degree Programs (Global 30 and university-specific tracks) where courses are 100% taught in English. You only need an IELTS (6.0-6.5) or TOEFL score for admission."
+      },
+      {
+        "question": "What is the MEXT Scholarship and how can Bangladeshi students apply?",
+        "answer": "MEXT is the Japanese Government Scholarship covering 100% tuition, round-trip airfare, and a monthly stipend of ¥143,000-¥145,000. Bangladeshi students can apply through the Embassy Recommendation (announced by Ministry of Education around April/May) or directly through University Recommendation."
+      },
+      {
+        "question": "How many hours can international students work in Japan?",
+        "answer": "Students can legally work up to 28 hours per week during academic terms, and up to 40 hours per week during official semester vacations."
+      }
+    ]
+  },
+  {
+    "code": "US",
+    "name": "United States",
+    "region": "North America",
+    "capital": "Washington, D.C.",
+    "currency": "USD",
+    "currencySymbol": "$",
+    "bdtRate": 122,
+    "avgTuitionYearBdt": {
+      "min": 2400000,
+      "max": 6500000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 140000,
+      "max": 220000
+    },
+    "proofOfFundsBdt": 4000000,
+    "proofOfFundsName": "I-20 Form First Year Cost Certification",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "1–3 years (STEM OPT)",
+    "prPathwayRating": "selective",
+    "prPathwayNote": "H-1B specialty occupation visa lottery followed by employer-sponsored Green Card (EB-2 / EB-3 / NIW).",
+    "languageRequired": "English (IELTS 6.5–7.5 / TOEFL 90–105; Duolingo accepted by many institutions).",
+    "intakeMonths": [
+      "August/September (Fall - Main)",
+      "January (Spring)"
+    ],
+    "topUniversities": [
+      "Massachusetts Institute of Technology (MIT)",
+      "Stanford University",
+      "University of Texas at Austin",
+      "University of Michigan",
+      "Purdue University"
+    ],
+    "keyPros": [
+      "Massive graduate research funding: Graduate Assistantships (RA/TA) cover full tuition + stipend",
+      "Up to 36 months (3 years) of STEM OPT work authorization",
+      "Highest global starting tech and finance graduate salaries",
+      "Vast network of active Bangladeshi student associations (BSA)"
+    ],
+    "keyCons": [
+      "Very high tuition if self-funded without assistantships",
+      "H-1B visa lottery system creates post-OPT uncertainty",
+      "Strict in-person consular visa interview (F-1 214b non-immigrant intent)"
+    ],
+    "overview": "The premier destination for funded graduate research in STEM, offering Graduate Teaching and Research Assistantships that make full degrees essentially free for strong academic profiles.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-4 months",
+      "interviewRequired": true,
+      "vfsLocation": "Consular Section, US Embassy Dhaka, Madani Avenue, Baridhara, Dhaka",
+      "appointmentTips": [
+        "Book your F-1 consular interview slot immediately upon receiving your I-20 form.",
+        "Pay the SEVIS I-901 fee online via an international dual-currency card or student file.",
+        "Focus interview answers on academic intent, research plans, and definite career return to Bangladesh."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "I-20 Form First Year Cost Certification confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency Certificate for I-20 Form",
+      "amountLocal": ",000 - ,000 USD",
+      "amountBDT": "36 - 65 Lakh BDT (or  with Graduate Assistantship RA/TA)",
+      "bdBankProcedure": "Obtain Bank Solvency Certificate and 6-month statement from sponsor bank. If funded by university assistantship, no personal bank deposit is required."
+    },
+    "commonFaqs": [
+      {
+        "question": "How do Bangladeshi students get fully funded in the US for Master and PhD?",
+        "answer": "In the US, STEM graduate students often receive Graduate Teaching Assistantships (TA) or Graduate Research Assistantships (RA). An assistantship waives 100% of your tuition fees and pays a monthly stipend of ,800 to ,800 in exchange for 20 hours/week of academic work."
+      },
+      {
+        "question": "Can I stay and work in the US after graduation?",
+        "answer": "Yes. Graduates from STEM-designated degree programs receive a total of 36 months (3 years) of post-study work authorization under STEM OPT without needing an immediate H-1B visa sponsor."
+      },
+      {
+        "question": "What is the most common reason for US student visa refusal in Dhaka?",
+        "answer": "The most frequent refusal reason under INA 214(b) is failing to demonstrate strong non-immigrant intent and clear career plans in Bangladesh, or giving rehearsed, memorized answers during the 2-minute consular interview."
+      }
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "region": "North America",
+    "capital": "Ottawa",
+    "currency": "CAD",
+    "currencySymbol": "C$",
+    "bdtRate": 89,
+    "avgTuitionYearBdt": {
+      "min": 1800000,
+      "max": 4200000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 120000,
+      "max": 180000
+    },
+    "proofOfFundsBdt": 1850000,
+    "proofOfFundsName": "Guaranteed Investment Certificate (GIC ~20,635 CAD)",
+    "partTimeHoursTerm": 24,
+    "postStudyWorkYears": "Up to 3 years",
+    "prPathwayRating": "high",
+    "prPathwayNote": "Post-Graduation Work Permit (PGWP) leads directly to Canadian Experience Class (Express Entry) and Provincial Nominee Programs (PNP).",
+    "languageRequired": "English (IELTS Academic 6.5 overall, no band below 6.0).",
+    "intakeMonths": [
+      "September (Fall - Main)",
+      "January (Winter)",
+      "May (Spring/Summer)"
+    ],
+    "topUniversities": [
+      "University of Toronto",
+      "University of British Columbia (UBC)",
+      "McGill University",
+      "University of Alberta",
+      "McMaster University"
+    ],
+    "keyPros": [
+      "Clear, transparent post-graduation work permit (PGWP up to 3 years)",
+      "Direct permanent residency pathways through Express Entry & PNP",
+      "24 hours per week off-campus work allowed during academic sessions",
+      "Spouse open work permit options for master's and doctoral students"
+    ],
+    "keyCons": [
+      "High GIC cost requirement upfront",
+      "Severe housing shortages and rising rents in Toronto and Vancouver",
+      "Recent national caps on international student study permits"
+    ],
+    "overview": "Canada remains a top choice for Bangladeshi families seeking quality North American degrees backed by reliable post-study work permits and established economic immigration streams.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-3 months",
+      "interviewRequired": false,
+      "vfsLocation": "Canada Visa Application Centre (VFS Global), Delta Life Tower, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Apply under the regular study permit stream with provincial attestation letter (PAL).",
+        "Undergo upfront medical examination at an approved IOM / Green Crescent panel clinic.",
+        "Include strong proof of funds and explanation of tuition remitted via Bangladeshi AD bank student file."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Guaranteed Investment Certificate (GIC ~20,635 CAD) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": true,
+      "providerName": "Guaranteed Investment Certificate (GIC)",
+      "amountLocal": ",635 CAD",
+      "amountBDT": "18.5 Lakh BDT",
+      "bdBankProcedure": "Open an international GIC account (Scotiabank, CIBC, or ICICI Canada) and remit CAD 20,635 through a Bangladeshi bank student file."
+    },
+    "commonFaqs": [
+      {
+        "question": "What is a Provincial Attestation Letter (PAL) for Canada?",
+        "answer": "Under current IRCC regulations, all undergraduate and non-degree students must obtain a Provincial Attestation Letter (PAL) from the provincial government via their university before submitting their study permit application. Master and PhD students are exempt."
+      },
+      {
+        "question": "Can Bangladeshi students work off-campus in Canada?",
+        "answer": "Yes. International students enrolled full-time can work up to 24 hours per week off-campus during academic terms, and full-time during scheduled breaks."
+      },
+      {
+        "question": "Is it easy to obtain Canadian Permanent Residency (PR) after graduation?",
+        "answer": "Graduates receive a Post-Graduation Work Permit (PGWP) of up to 3 years. Canadian study and work experience award high points in Express Entry (Canadian Experience Class) and Provincial Nominee Programs (PNP)."
+      }
+    ]
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "region": "Europe",
+    "capital": "London",
+    "currency": "GBP",
+    "currencySymbol": "£",
+    "bdtRate": 155,
+    "avgTuitionYearBdt": {
+      "min": 2100000,
+      "max": 4500000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 150000,
+      "max": 210000
+    },
+    "proofOfFundsBdt": 2200000,
+    "proofOfFundsName": "UKVI 28-Day Bank Maintenance Funds (~£9,207–£12,006)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "2 years (3 years for PhD)",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "Graduate Route visa (2 years) followed by Skilled Worker visa sponsorship leading to ILR after 5 years.",
+    "languageRequired": "English (IELTS Academic 6.0–7.0 / UKVI IELTS; MOI accepted by select universities).",
+    "intakeMonths": [
+      "September/October (Autumn - Main)",
+      "January/February (Spring)"
+    ],
+    "topUniversities": [
+      "University of Oxford",
+      "University of Cambridge",
+      "Imperial College London",
+      "University of Manchester",
+      "University of Edinburgh"
+    ],
+    "keyPros": [
+      "1-year master's degrees save an entire year of living expenses and tuition",
+      "2-year unsponsored Graduate Route visa to work in any job sector",
+      "Historic, globally respected university prestige and alumni networks",
+      "Established Bangladeshi diaspora, Halal food availability, and cultural familiarity"
+    ],
+    "keyCons": [
+      "High tuition and London living costs",
+      "Skilled Worker visa minimum salary thresholds recently raised",
+      "Strict 28-day bank holding period requirement for visa filing"
+    ],
+    "overview": "The 1-year master's format in the UK allows Bangladeshi students to finish their postgraduate qualification and enter the job market twice as fast as in North America.",
+    "embassyDhaka": {
+      "waitlistMonths": "3-6 weeks",
+      "interviewRequired": false,
+      "vfsLocation": "VFS Global UK Visa Application Centre, Delta Life Tower, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Ensure CAS (Confirmation of Acceptance for Studies) is received from your UK university.",
+        "Funds must be held in a recognized Bangladeshi bank account for a continuous 28-day period.",
+        "Mandatory Tuberculosis (TB) screening test at IOM Migration Health Assessment Clinic, Dhaka."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "UKVI 28-Day Bank Maintenance Funds (~£9,207–£12,006) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "28-Day Bank Statement Requirement",
+      "amountLocal": "£9,207 - £12,006 GBP",
+      "amountBDT": "14 - 18 Lakh BDT + remaining tuition",
+      "bdBankProcedure": "Funds must sit in student or parent Bangladeshi bank account continuously for at least 28 consecutive days before visa application date."
+    },
+    "commonFaqs": [
+      {
+        "question": "How long can I work in the UK after graduating?",
+        "answer": "Under the UK Graduate Route, international graduates can live and work in the UK for 2 years (3 years for PhD graduates) at any skill level without needing an employer sponsorship."
+      },
+      {
+        "question": "Can I bring my spouse/dependents to the UK on a student visa?",
+        "answer": "Only students enrolled in postgraduate research programs (PhD and research-based Master) or government-sponsored scholarship holders can bring dependents to the UK."
+      },
+      {
+        "question": "Can I apply to UK universities without IELTS?",
+        "answer": "Some UK universities accept Medium of Instruction (MOI) letters from recognized Bangladeshi universities or English marks from HSC (e.g. 70%+ in English). However, having IELTS 6.5 ensures the highest visa success rate."
+      }
+    ]
+  },
+  {
+    "code": "AU",
+    "name": "Australia",
+    "region": "Oceania",
+    "capital": "Canberra",
+    "currency": "AUD",
+    "currencySymbol": "A$",
+    "bdtRate": 80,
+    "avgTuitionYearBdt": {
+      "min": 2200000,
+      "max": 4800000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 140000,
+      "max": 200000
+    },
+    "proofOfFundsBdt": 2400000,
+    "proofOfFundsName": "Department of Home Affairs Living Cost (~29,710 AUD)",
+    "partTimeHoursTerm": 24,
+    "postStudyWorkYears": "2–4 years (Regional bonus)",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "Temporary Graduate (subclass 485) visa followed by General Skilled Migration (Subclass 189/190/491).",
+    "languageRequired": "English (IELTS Academic 6.5 overall, minimum 6.0 each band / PTE Academic 58+).",
+    "intakeMonths": [
+      "February/March (Semester 1 - Main)",
+      "July/August (Semester 2)"
+    ],
+    "topUniversities": [
+      "University of Melbourne",
+      "University of Sydney",
+      "Australian National University (ANU)",
+      "University of New South Wales (UNSW)",
+      "Monash University"
+    ],
+    "keyPros": [
+      "High minimum wage ($24.10 AUD/hr) provides solid part-time earnings",
+      "Extra post-study work years and regional migration points in cities like Adelaide, Perth, and Brisbane",
+      "Top-tier Group of Eight (Go8) research quality",
+      "Warm climate and multicultural society"
+    ],
+    "keyCons": [
+      "Strict Genuine Student (GS) assessment on visa applications",
+      "High financial solvency and tuition deposit requirements",
+      "Rental competition in Sydney and Melbourne"
+    ],
+    "overview": "Australia offers world-class research universities, excellent student wages, and generous post-study work rights—especially for students studying in designated regional cities.",
+    "embassyDhaka": {
+      "waitlistMonths": "1-3 months",
+      "interviewRequired": false,
+      "vfsLocation": "VFS Global Australia Visa Centre, Delta Life Tower, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Obtain Confirmation of Enrolment (CoE) and purchase Overseas Student Health Cover (OSHC).",
+        "Satisfy the Genuine Student (GS) requirement with a detailed explanation of your career trajectory in Bangladesh.",
+        "Biometrics collection at VFS Dhaka is mandatory."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Department of Home Affairs Living Cost (~29,710 AUD) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Annual Living Cost Financial Guarantee",
+      "amountLocal": ",710 AUD",
+      "amountBDT": "24.0 Lakh BDT",
+      "bdBankProcedure": "Show savings deposits or an approved education loan from a commercial bank covering 1 year tuition + AUD 29,710 living costs."
+    },
+    "commonFaqs": [
+      {
+        "question": "What is the Genuine Student (GS) requirement for Australian student visas?",
+        "answer": "The GS requirement replaced the GTE test. Applicants must provide targeted written statements demonstrating their academic background, career relevance, value to their future in Bangladesh, and reasons for choosing Australia."
+      },
+      {
+        "question": "What are the part-time work rights in Australia?",
+        "answer": "International students can work up to 48 hours per fortnight (24 hours/week on average) while their course is in session, and unlimited hours during semester breaks."
+      }
+    ]
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "region": "Europe",
+    "capital": "Helsinki",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "bdtRate": 130,
+    "avgTuitionYearBdt": {
+      "min": 1000000,
+      "max": 2200000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 90000,
+      "max": 130000
+    },
+    "proofOfFundsBdt": 1200000,
+    "proofOfFundsName": "Bank Solvency & Health Insurance (~6,720 EUR/year)",
+    "partTimeHoursTerm": 30,
+    "postStudyWorkYears": "2 years",
+    "prPathwayRating": "high",
+    "prPathwayNote": "Permanent residency after 4 years of continuous residence permit (A-permit for studies counts toward PR).",
+    "languageRequired": "English (IELTS Academic 6.5 overall).",
+    "intakeMonths": [
+      "January (Joint Application)",
+      "August/September (Autumn)"
+    ],
+    "topUniversities": [
+      "University of Helsinki",
+      "Aalto University",
+      "Tampere University",
+      "University of Oulu",
+      "Lappeenranta-Lahti University of Technology (LUT)"
+    ],
+    "keyPros": [
+      "Students receive 'A-type' continuous residence permits that count toward PR",
+      "Generous 50% to 100% early-bird and merit tuition waivers for international students",
+      "30 hours per week part-time work allowance during studies",
+      "World's happiest country with zero corruption and safe society"
+    ],
+    "keyCons": [
+      "Single annual joint application deadline in January",
+      "Cold, dark Nordic winter climate",
+      "Finnish language needed for customer-facing service jobs"
+    ],
+    "overview": "Finland offers student-friendly immigration laws where study years directly count toward permanent residency, paired with generous 50–100% university tuition scholarships.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-3 months",
+      "interviewRequired": true,
+      "vfsLocation": "Embassy of Finland / VFS Global, Dhaka (or New Delhi for biometrics if required)",
+      "appointmentTips": [
+        "Finland First Residence Permit requires €560/month living cost (€6,720/year).",
+        "Full tuition fee or scholarship waiver letter must be submitted with the online Enter Finland application.",
+        "Comprehensive private health insurance (e.g. Swisscare) is mandatory."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Bank Solvency & Health Insurance (~6,720 EUR/year) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Deposit & Account Balance",
+      "amountLocal": "€6,720 EUR/year",
+      "amountBDT": "8.7 Lakh BDT",
+      "bdBankProcedure": "Deposit €6,720 in student own bank account and provide official bank statement for the Enter Finland online residence permit portal."
+    },
+    "commonFaqs": [
+      {
+        "question": "Are there tuition-free universities in Finland for non-EU students?",
+        "answer": "Public universities charge tuition fees for English-taught degrees, but almost every Finnish university offers 50% to 100% merit-based tuition waivers for high-achieving international applicants upon admission."
+      },
+      {
+        "question": "What are the post-graduation work rights in Finland?",
+        "answer": "Finland grants an exceptional 2-year post-study job seeker residence permit after graduation. Time spent on a student permit counts at 50% toward the 4-year permanent residency (PR) requirement."
+      }
+    ]
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "region": "Europe",
+    "capital": "Stockholm",
+    "currency": "SEK",
+    "currencySymbol": "kr",
+    "bdtRate": 11.5,
+    "avgTuitionYearBdt": {
+      "min": 1400000,
+      "max": 2800000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 100000,
+      "max": 140000
+    },
+    "proofOfFundsBdt": 1400000,
+    "proofOfFundsName": "Migrationsverket Maintenance (~10,314 SEK/month)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "1 year",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "1-year post-study job seeker visa; work permit leading to permanent residency after 4 years of employment.",
+    "languageRequired": "English (IELTS Academic 6.5, no band below 5.5).",
+    "intakeMonths": [
+      "January (National Admissions - Main)",
+      "August/September (Autumn)"
+    ],
+    "topUniversities": [
+      "KTH Royal Institute of Technology",
+      "Lund University",
+      "Uppsala University",
+      "Chalmers University of Technology",
+      "Stockholm University"
+    ],
+    "keyPros": [
+      "Swedish Institute (SISGP) full-ride government scholarship covers 100% tuition + 12,000 SEK/month",
+      "Centralized national application portal (universityadmissions.se) allows 4 master's choices",
+      "No official legal limit on student working hours (must maintain study progress)",
+      "Global innovation powerhouse (Spotify, Ericsson, Volvo, Klarna)"
+    ],
+    "keyCons": [
+      "Strict national admission deadline in mid-January",
+      "High housing queue times in Stockholm and Gothenburg",
+      "Tuition fees apply to non-EU students since 2011"
+    ],
+    "overview": "Sweden is a tech innovation hub with centralized university admissions and the prestigious SISGP full scholarship for Bangladeshi emerging leaders.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-3 months",
+      "interviewRequired": false,
+      "vfsLocation": "Embassy of Sweden, Bay's Edgewater, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Swedish Migration Agency requires proof of SEK 10,314/month for living expenses.",
+        "First semester tuition fee must be remitted via Bangladeshi student file prior to residence permit application.",
+        "Residence permit card photo and biometrics taken at Embassy of Sweden Dhaka."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Migrationsverket Maintenance (~10,314 SEK/month) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Account Balance Certificate",
+      "amountLocal": "SEK 10,314/month (~SEK 103,140/yr)",
+      "amountBDT": "12.0 Lakh BDT",
+      "bdBankProcedure": "Provide bank statement in student sole name showing total living costs for the entire permit duration before applying to Migrationsverket."
+    },
+    "commonFaqs": [
+      {
+        "question": "How can Bangladeshi students get scholarships in Sweden?",
+        "answer": "The Swedish Institute (SI) Scholarship for Global Professionals covers 100% tuition, monthly living expenses (SEK 12,000/month), travel grant, and health insurance. Universities also offer internal 25%-100% tuition waivers."
+      },
+      {
+        "question": "Can international students work during studies in Sweden?",
+        "answer": "Sweden has no legal limit on the number of hours an international student can work during their studies, provided they make normal academic progress (at least 15 credits per semester)."
+      }
+    ]
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "region": "Europe",
+    "capital": "Amsterdam",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "bdtRate": 130,
+    "avgTuitionYearBdt": {
+      "min": 1600000,
+      "max": 3200000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 130000,
+      "max": 180000
+    },
+    "proofOfFundsBdt": 1600000,
+    "proofOfFundsName": "IND Living Maintenance (~1,050 EUR/month)",
+    "partTimeHoursTerm": 16,
+    "postStudyWorkYears": "1 year (Zoekjaar)",
+    "prPathwayRating": "high",
+    "prPathwayNote": "1-year Orientation Year (Zoekjaar) visa for top graduates, followed by Highly Skilled Migrant visa and PR in 5 years.",
+    "languageRequired": "English (IELTS Academic 6.5 overall, 6.0 in writing).",
+    "intakeMonths": [
+      "September (Fall - Main)",
+      "February (Spring)"
+    ],
+    "topUniversities": [
+      "Delft University of Technology (TU Delft)",
+      "University of Amsterdam",
+      "Eindhoven University of Technology",
+      "Utrecht University",
+      "Erasmus University Rotterdam"
+    ],
+    "keyPros": [
+      "Highest English proficiency in continental Europe (95%+ speak fluent English)",
+      "1-year Zoekjaar job search permit allows graduates to take any job",
+      "Major European logistics, agriculture and semiconductor hub (ASML)",
+      "Practical, interactive problem-based learning curriculum"
+    ],
+    "keyCons": [
+      "Severe student housing shortage across all Dutch university cities",
+      "Employer work permit (TWV) required for part-time student jobs",
+      "Tuition fees for non-EU students are higher than in Germany"
+    ],
+    "overview": "The Netherlands offers more than 2,100 English-taught university programs and an Orientation Year (Zoekjaar) work permit for graduates joining Europe's tech giants.",
+    "embassyDhaka": {
+      "waitlistMonths": "1-2 months",
+      "interviewRequired": false,
+      "vfsLocation": "Embassy of the Kingdom of the Netherlands, Road 90, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Dutch universities apply for the MVV (entry visa) and VVR (residence permit) on your behalf through IND.",
+        "Remit living allowance and tuition into university account, which acts as financial guarantee.",
+        "Pick up your MVV sticker at the Dutch Embassy Dhaka."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "IND Living Maintenance (~1,050 EUR/month) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": true,
+      "providerName": "University Living Cost Guarantee Deposit",
+      "amountLocal": "€12,500 - €15,000 EUR",
+      "amountBDT": "16.5 - 20 Lakh BDT",
+      "bdBankProcedure": "Wire living funds and tuition directly to university bank account in the Netherlands via Bangladeshi AD bank student file; university pays back in monthly stipends."
+    },
+    "commonFaqs": [
+      {
+        "question": "What is the post-study orientation year (Zoekjaar) in the Netherlands?",
+        "answer": "Graduates from Dutch universities can obtain an Orientation Year visa (Zoekjaar) granting 1 full year to work freely in the Dutch economy with a reduced salary threshold for subsequent High Skilled Migrant permits."
+      },
+      {
+        "question": "How is housing in the Netherlands for international students?",
+        "answer": "Student housing in Dutch university cities is extremely competitive. Students must start searching for accommodation via university housing lotteries or platforms (Room.nl) as early as March/April."
+      }
+    ]
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "region": "Europe",
+    "capital": "Dublin",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "bdtRate": 130,
+    "avgTuitionYearBdt": {
+      "min": 1800000,
+      "max": 3500000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 140000,
+      "max": 200000
+    },
+    "proofOfFundsBdt": 1400000,
+    "proofOfFundsName": "Irish Immigration Service Delivery (~10,000 EUR)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "2 years (Master's)",
+    "prPathwayRating": "high",
+    "prPathwayNote": "2-year Third Level Graduate Scheme leads to Critical Skills Employment Permit and Stamp 4 permanent residency.",
+    "languageRequired": "English (IELTS 6.5 overall, no band below 6.0).",
+    "intakeMonths": [
+      "September (Autumn - Main)",
+      "January (Spring)"
+    ],
+    "topUniversities": [
+      "Trinity College Dublin (TCD)",
+      "University College Dublin (UCD)",
+      "University College Cork",
+      "University of Galway",
+      "Dublin City University (DCU)"
+    ],
+    "keyPros": [
+      "Only native English-speaking country remaining in the European Union",
+      "European headquarters of Google, Meta, Apple, Pfizer, and Stripe",
+      "2-year post-study work visa for Master's degree holders",
+      "Fast-track 2-year Critical Skills Employment Permit path to residency"
+    ],
+    "keyCons": [
+      "High rental prices and accommodation shortages in Dublin",
+      "Rainy and windy weather year-round",
+      "Tuition fees are substantial for non-EU applicants"
+    ],
+    "overview": "Ireland is Europe's tech capital and the only native English-speaking EU country, offering master's graduates a 2-year post-study work visa and rapid tech employment.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-3 months",
+      "interviewRequired": false,
+      "vfsLocation": "VFS Global Ireland Visa Centre, Delta Life Tower, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Ireland requires demonstration of €10,000 living funds or Education Bond.",
+        "Complete the AVATS online visa application form accurately with all gap year explanations.",
+        "Private medical insurance covering €25,000 medical expenses is required."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Irish Immigration Service Delivery (~10,000 EUR) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Education Bond or Bank Statement",
+      "amountLocal": "€10,000 EUR",
+      "amountBDT": "13.0 Lakh BDT",
+      "bdBankProcedure": "Show €10,000 readily accessible funds in bank account or deposit into an approved Irish Education Bond (e.g. EduBond)."
+    },
+    "commonFaqs": [
+      {
+        "question": "What is Ireland Third Level Graduate Scheme (Stamp 1G)?",
+        "answer": "Non-EU Master and PhD graduates receive a 24-month (2-year) Stamp 1G stay-back option to work full-time (up to 40 hours/week) in Ireland, which frequently leads to a Critical Skills Employment Permit."
+      },
+      {
+        "question": "Why is Ireland popular for tech and pharmaceutical graduates from Bangladesh?",
+        "answer": "Ireland hosts the European headquarters of Google, Meta, Apple, Pfizer, and Intel, creating robust graduate hiring opportunities in Dublin, Cork, and Galway."
+      }
+    ]
+  },
+  {
+    "code": "MY",
+    "name": "Malaysia",
+    "region": "Asia-Pacific",
+    "capital": "Kuala Lumpur",
+    "currency": "MYR",
+    "currencySymbol": "RM",
+    "bdtRate": 28,
+    "avgTuitionYearBdt": {
+      "min": 450000,
+      "max": 950000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 45000,
+      "max": 75000
+    },
+    "proofOfFundsBdt": 700000,
+    "proofOfFundsName": "EMGS Student Visa Bank Solvency (~25,000 MYR)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "1 year (Graduate Pass)",
+    "prPathwayRating": "selective",
+    "prPathwayNote": "Employment Pass (EP) sponsored by corporate employers; permanent residence is rare and selective.",
+    "languageRequired": "English (IELTS 5.5–6.0 or university English placement).",
+    "intakeMonths": [
+      "February/March",
+      "July",
+      "September/October"
+    ],
+    "topUniversities": [
+      "Universiti Malaya (UM)",
+      "Universiti Putra Malaysia (UPM)",
+      "Monash University Malaysia (Branch)",
+      "University of Nottingham Malaysia",
+      "Taylor's University"
+    ],
+    "keyPros": [
+      "Most affordable high-quality study abroad destination for Bangladeshi middle-class families",
+      "Branch campuses of top UK and Australian universities award identical foreign degrees at 1/3 cost",
+      "Culturally welcoming Islamic society with 100% Halal food everywhere",
+      "Low airfare and convenient 4-hour direct flights from Dhaka"
+    ],
+    "keyCons": [
+      "Limited legal part-time work sectors during academic semesters",
+      "Strict foreign employment visa quotas after graduation",
+      "No direct or guaranteed permanent residency pathway"
+    ],
+    "overview": "Malaysia is the premier affordable option for undergraduate and master's students, providing prestigious foreign branch campus degrees at a fraction of Western costs.",
+    "embassyDhaka": {
+      "waitlistMonths": "4-6 weeks",
+      "interviewRequired": false,
+      "vfsLocation": "High Commission of Malaysia, Baridhara, Dhaka / One-Stop Centre (OSC)",
+      "appointmentTips": [
+        "University applies for your Visa Approval Letter (VAL) through Education Malaysia Global Services (EMGS).",
+        "Upon receiving e-VAL, apply for Single Entry Visa (SEV) in Dhaka.",
+        "Post-arrival medical screening in Malaysia is mandatory within 7 days."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "EMGS Student Visa Bank Solvency (~25,000 MYR) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency Letter",
+      "amountLocal": "RM 10,000 - 15,000 MYR",
+      "amountBDT": "2.5 - 4.0 Lakh BDT",
+      "bdBankProcedure": "Provide sponsor bank solvency certificate and last 3 months bank statement to university international office for EMGS VAL processing."
+    },
+    "commonFaqs": [
+      {
+        "question": "Why choose Malaysia for higher education from Bangladesh?",
+        "answer": "Malaysia offers prestigious UK and Australian branch campuses (University of Nottingham, Monash University, Curtin) where students receive the identical British/Australian degree at one-third of the tuition and living cost."
+      },
+      {
+        "question": "How long does the Malaysian student visa take from Dhaka?",
+        "answer": "EMGS processing takes approximately 3-4 weeks for the electronic Visa Approval Letter (e-VAL), followed by 5-7 working days for the Single Entry Visa (SEV) at the Malaysian High Commission in Dhaka."
+      }
+    ]
+  },
+  {
+    "code": "KR",
+    "name": "South Korea",
+    "region": "Asia-Pacific",
+    "capital": "Seoul",
+    "currency": "KRW",
+    "currencySymbol": "₩",
+    "bdtRate": 0.088,
+    "avgTuitionYearBdt": {
+      "min": 500000,
+      "max": 1200000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 85000,
+      "max": 130000
+    },
+    "proofOfFundsBdt": 2200000,
+    "proofOfFundsName": "Korean Immigration Bank Certificate (~$18,000–$20,000 USD)",
+    "partTimeHoursTerm": 25,
+    "postStudyWorkYears": "1–2 years (D-10)",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "D-10 Job Seeker visa followed by E-7 professional work visa; points-based F-2-7 resident visa pathway.",
+    "languageRequired": "English (IELTS 6.0+) for English tracks; TOPIK Level 3+ for Korean tracks.",
+    "intakeMonths": [
+      "March (Spring - Main)",
+      "September (Fall)"
+    ],
+    "topUniversities": [
+      "Seoul National University (SNU)",
+      "KAIST (Korea Advanced Institute of Science and Technology)",
+      "Yonsei University",
+      "Korea University",
+      "POSTECH"
+    ],
+    "keyPros": [
+      "Global Korea Scholarship (GKS) covers 100% tuition, airfare, insurance, and 1M KRW/month stipend",
+      "World leader in semiconductor, robotics, display, and EV battery research",
+      "Generous laboratory funding for graduate research assistants (RA)",
+      "25 hours per week part-time work allowance during term"
+    ],
+    "keyCons": [
+      "High academic pressure and intense laboratory working hours",
+      "Korean language (TOPIK 4+) needed for corporate careers outside research",
+      "High bank balance requirement for embassy student visa"
+    ],
+    "overview": "South Korea is an Asian high-tech powerhouse offering the full-ride GKS scholarship and funded graduate lab positions in AI, robotics, semiconductors, and biotechnology.",
+    "embassyDhaka": {
+      "waitlistMonths": "1-2 months",
+      "interviewRequired": false,
+      "vfsLocation": "Consular Section, Embassy of Republic of Korea, Madani Avenue, Baridhara, Dhaka",
+      "appointmentTips": [
+        "Obtain Certificate of Admission (CoA) from accredited Korean university.",
+        "Bank solvency certificate of minimum ,000 USD held for more than 1 month.",
+        "Submit apostilled/notarized educational documents and verified sponsor certificates."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Korean Immigration Bank Certificate (~$18,000–$20,000 USD) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency Certificate",
+      "amountLocal": ",000 USD (Seoul) / ,000 USD (Outside)",
+      "amountBDT": "22 - 24 Lakh BDT",
+      "bdBankProcedure": "Maintain minimum ,000 in student or sponsor account for at least 30 days before visa issuance."
+    },
+    "commonFaqs": [
+      {
+        "question": "What is the Global Korea Scholarship (GKS)?",
+        "answer": "GKS covers full tuition, roundtrip airfare, 1 year of Korean language training, and a monthly stipend of 1,000,000 KRW. Bangladeshi candidates apply either via the Embassy track (UGC circular) or University track."
+      },
+      {
+        "question": "Can I work part-time while studying in South Korea?",
+        "answer": "Yes, after completing 1 semester (6 months), students can work up to 20-25 hours per week with permission from their university international office and local immigration office."
+      }
+    ]
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "region": "Europe",
+    "capital": "Budapest",
+    "currency": "HUF",
+    "currencySymbol": "Ft",
+    "bdtRate": 0.33,
+    "avgTuitionYearBdt": {
+      "min": 350000,
+      "max": 800000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 65000,
+      "max": 95000
+    },
+    "proofOfFundsBdt": 850000,
+    "proofOfFundsName": "Bank Solvency & Accommodation Guarantee",
+    "partTimeHoursTerm": 24,
+    "postStudyWorkYears": "9 months",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "9-month 'Study-to-Work' residence permit allows graduates to secure employment and convert to National Work Permit.",
+    "languageRequired": "English (IELTS 5.5–6.5 or equivalent).",
+    "intakeMonths": [
+      "September (Autumn - Main)",
+      "February (Spring)"
+    ],
+    "topUniversities": [
+      "Eötvös Loránd University (ELTE)",
+      "Budapest University of Technology and Economics (BME)",
+      "University of Debrecen",
+      "University of Szeged",
+      "Corvinus University of Budapest"
+    ],
+    "keyPros": [
+      "Stipendium Hungaricum Government Scholarship provides 100% tuition waiver + free dorm + monthly stipend",
+      "Hundreds of Bangladeshi students win the scholarship every year via Ministry of Education nominations",
+      "Extremely affordable cost of living compared to Western Europe",
+      "Schengen visa allows travel across 29 European countries"
+    ],
+    "keyCons": [
+      "Self-funded degrees have modest global prestige compared to Western universities",
+      "Hungarian language is notoriously difficult for non-native speakers",
+      "Post-study job seeker visa is only 9 months"
+    ],
+    "overview": "Hungary is famous in Bangladesh for the bilateral Stipendium Hungaricum scholarship, which awards hundreds of fully funded bachelor's and master's seats annually.",
+    "embassyDhaka": {
+      "waitlistMonths": "1-2 months",
+      "interviewRequired": true,
+      "vfsLocation": "Embassy of Hungary / VFS Visa Application Centre, Dhaka",
+      "appointmentTips": [
+        "For Stipendium Hungaricum scholarship holders, visa fee is waived and processing is expedited.",
+        "Self-funded students must show accommodation confirmation and €8,000+ living funds.",
+        "Prepare for a brief consular interview covering study motivation."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Bank Solvency & Accommodation Guarantee confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Proof of Financial Means (Waived for Stipendium Hungaricum)",
+      "amountLocal": "€8,000 EUR (Self-funded only)",
+      "amountBDT": "10.5 Lakh BDT (0 BDT for scholarship holders)",
+      "bdBankProcedure": "Stipendium Hungaricum scholarship recipients require no bank statement. Self-funded students show bank solvency certificate via parent sponsor."
+    },
+    "commonFaqs": [
+      {
+        "question": "How does the Stipendium Hungaricum scholarship work in Bangladesh?",
+        "answer": "The Hungarian Government awards 140 fully funded scholarships to Bangladeshi students annually through a bilateral agreement with the Ministry of Education Bangladesh / UGC. It covers 100% tuition, dormitory accommodation or allowance, and monthly stipend."
+      },
+      {
+        "question": "What is the cost of studying in Hungary if self-funded?",
+        "answer": "Hungary is one of the most affordable European destinations. Tuition ranges from €2,500 to €5,000 per year, and living costs in Budapest are approximately 60,000 to 90,000 BDT per month."
+      }
+    ]
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "region": "Europe",
+    "capital": "Rome",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "bdtRate": 130,
+    "avgTuitionYearBdt": {
+      "min": 150000,
+      "max": 500000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 85000,
+      "max": 130000
+    },
+    "proofOfFundsBdt": 1100000,
+    "proofOfFundsName": "Embassy Bank Solvency (~6,000 EUR/year)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "1 year",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "1-year Permesso di Soggiorno per Ricerca Lavoro (Job Seeker permit) convertible to Subordinate Work Permit.",
+    "languageRequired": "English (IELTS 6.0–6.5 for English-taught programs).",
+    "intakeMonths": [
+      "September/October (Autumn - Main)"
+    ],
+    "topUniversities": [
+      "Politecnico di Milano",
+      "Sapienza University of Rome",
+      "University of Bologna",
+      "Politecnico di Torino",
+      "University of Padua"
+    ],
+    "keyPros": [
+      "DSU Regional Scholarships offer tuition waivers + free university canteen meals + cash stipends based on family income",
+      "Tuition at public universities is calculated by family income bracket (ISEE)",
+      "Europe's oldest, highly prestigious architecture, design, and engineering faculties",
+      "Schengen mobility and affordable Mediterranean student lifestyle"
+    ],
+    "keyCons": [
+      "Lengthy pre-enrolment (Universitaly) and Declaration of Value (DOV) paperwork",
+      "Italian embassy appointment backlogs in Dhaka",
+      "Italian proficiency needed for local student jobs outside university campuses"
+    ],
+    "overview": "Italy is celebrated for its regional DSU scholarships based on family income, giving Bangladeshi students access to Europe's finest design and engineering schools almost cost-free.",
+    "embassyDhaka": {
+      "waitlistMonths": "3-6 months",
+      "interviewRequired": true,
+      "vfsLocation": "Embassy of Italy / VFS Italy Visa Application Centre, Gulshan, Dhaka",
+      "appointmentTips": [
+        "Complete pre-enrolment on the Universitaly portal as early as May.",
+        "Obtain Declaration of Value (DOV) or CIMEA comparability certificate for Bangladeshi diplomas.",
+        "Apply for regional DSU scholarships (covers tuition + stipend) based on family ISEE Parificato."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Embassy Bank Solvency (~6,000 EUR/year) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Statement / DSU Scholarship Waiver",
+      "amountLocal": "€6,000 EUR/year",
+      "amountBDT": "7.8 Lakh BDT",
+      "bdBankProcedure": "Show minimum €6,000 per academic year in sponsor account. Most students apply for Regional DSU scholarships which waive tuition and pay €5,000-€7,000/year."
+    },
+    "commonFaqs": [
+      {
+        "question": "What are regional DSU scholarships in Italy?",
+        "answer": "Regional Italian government scholarships (e.g. DSU Toscana, EDISU Piemonte, LazioDisco) are awarded based on family financial need (ISEE Parificato). They provide 100% tuition waiver, free student canteen meals, and a cash stipend of €5,000-€7,500/year."
+      },
+      {
+        "question": "What is the CIMEA comparability certificate for Italy?",
+        "answer": "CIMEA is an official verification statement of your academic qualifications required by Italian universities and the Italian Embassy in Dhaka, replacing or supplementing the traditional Declaration of Value (DOV)."
+      }
+    ]
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "region": "Europe",
+    "capital": "Paris",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "bdtRate": 130,
+    "avgTuitionYearBdt": {
+      "min": 350000,
+      "max": 1200000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 100000,
+      "max": 160000
+    },
+    "proofOfFundsBdt": 1150000,
+    "proofOfFundsName": "Consular Bank Solvency (~615 EUR/month)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "1–2 years",
+    "prPathwayRating": "high",
+    "prPathwayNote": "2-year Master's graduates qualify for accelerated 2-year naturalization / permanent residence pathway under French law.",
+    "languageRequired": "English (IELTS 6.0–6.5) for English programs; French B1/B2 recommended for daily life.",
+    "intakeMonths": [
+      "September (Fall - Main)",
+      "January (Spring)"
+    ],
+    "topUniversities": [
+      "Sorbonne University",
+      "Institut Polytechnique de Paris",
+      "Université Paris-Saclay",
+      "Sciences Po",
+      "École Polytechnique"
+    ],
+    "keyPros": [
+      "French government provides CAF housing allowance (reimburses 20–40% of student rent)",
+      "Fast-track 2-year naturalization timeline for master's degree holders",
+      "Eiffel Excellence scholarship covers full tuition + travel + generous stipend",
+      "Low tuition at public universities compared to UK and North America"
+    ],
+    "keyCons": [
+      "Mandatory Campus France procedural interview and review",
+      "French language required for corporate internships and daily administrative tasks",
+      "High cost of living in central Paris (regional cities are far cheaper)"
+    ],
+    "overview": "France combines subsidized public tuition and universal CAF student rent assistance with an accelerated 2-year naturalization policy for graduates of French master's degrees.",
+    "embassyDhaka": {
+      "waitlistMonths": "1-2 months",
+      "interviewRequired": true,
+      "vfsLocation": "Campus France Dhaka (Alliance Française) & VFS France, Gulshan-2, Dhaka",
+      "appointmentTips": [
+        "Complete the mandatory Études en France (Campus France) online procedure and in-person academic interview.",
+        "After Campus France validation, book your visa appointment at VFS France Dhaka.",
+        "Monthly living expense requirement is €615/month."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Consular Bank Solvency (~615 EUR/month) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Monthly Living Allowance Guarantee",
+      "amountLocal": "€7,380 EUR/year (€615/mo)",
+      "amountBDT": "9.6 Lakh BDT",
+      "bdBankProcedure": "Show bank certificate or irrevocable bank guarantee of at least €615 per month from a sponsor, or scholarship award letter."
+    },
+    "commonFaqs": [
+      {
+        "question": "Are there low-tuition public universities in France?",
+        "answer": "French public universities are heavily subsidized by the French government. Non-EU students at universities applying differentiated fees pay €2,770/year for Bachelor degrees and €3,770/year for Master degrees."
+      },
+      {
+        "question": "What is the CAF housing assistance subsidy in France?",
+        "answer": "All students in France (including international students) are eligible for CAF (Caisse d Allocations Familiales), a government subsidy that refunds 20% to 40% of your monthly room rent."
+      }
+    ]
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "region": "Europe",
+    "capital": "Warsaw",
+    "currency": "PLN",
+    "currencySymbol": "zł",
+    "bdtRate": 30,
+    "avgTuitionYearBdt": {
+      "min": 300000,
+      "max": 650000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 60000,
+      "max": 90000
+    },
+    "proofOfFundsBdt": 900000,
+    "proofOfFundsName": "Bank Solvency Certificate (~25,000 PLN)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "9 months",
+    "prPathwayRating": "moderate",
+    "prPathwayNote": "Temporary Residence Card (Karta Pobytu) for graduates looking for work or self-employment.",
+    "languageRequired": "English (IELTS 6.0 or Medium of Instruction certificate).",
+    "intakeMonths": [
+      "October (Winter - Main)",
+      "February (Summer)"
+    ],
+    "topUniversities": [
+      "University of Warsaw",
+      "Jagiellonian University",
+      "Warsaw University of Technology",
+      "Wrocław University of Science and Technology",
+      "AGH University of Krakow"
+    ],
+    "keyPros": [
+      "Very low tuition fees and living costs among European Union members",
+      "High student visa success rates for authentic Bangladeshi applicants",
+      "Central European IT outsourcing boom provides tech entry roles",
+      "Straightforward bank statement requirements without blocked account lockups"
+    ],
+    "keyCons": [
+      "Polish language required for most non-tech local jobs",
+      "Lower starting salaries than Germany or the Netherlands",
+      "Cold winter temperatures"
+    ],
+    "overview": "Poland provides an affordable, accessible entry into the European Union and Schengen zone with low tuition fees, high visa reliability, and a booming tech sector.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-4 months",
+      "interviewRequired": true,
+      "vfsLocation": "Embassy of Republic of Poland, New Delhi (or VFS Poland submission in Dhaka if active)",
+      "appointmentTips": [
+        "Educational certificates must have NAWA recognition or Polish consular legalization.",
+        "Proof of funds required covers living costs (~PLN 776/month), return travel, and accommodation.",
+        "English proficiency certificate (IELTS 6.0+) or university entrance interview required."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Bank Solvency Certificate (~25,000 PLN) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Statement with Living Funds",
+      "amountLocal": "PLN 12,000 - 15,000 PLN",
+      "amountBDT": "4.0 - 5.0 Lakh BDT",
+      "bdBankProcedure": "Show bank account statement covering 1 year living expenses and accommodation costs in Poland."
+    },
+    "commonFaqs": [
+      {
+        "question": "Why do Bangladeshi students choose Poland?",
+        "answer": "Poland offers European Union degrees at competitive tuition rates (typically €2,000-€4,000/year) with low living costs (~PLN 2,000-2,500/month). It has strong technical universities in Warsaw, Wroclaw, and Poznan."
+      },
+      {
+        "question": "Can international students work in Poland?",
+        "answer": "Full-time students in Poland are legally entitled to work without a separate work permit during their studies and semester vacations."
+      }
+    ]
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "region": "Oceania",
+    "capital": "Wellington",
+    "currency": "NZD",
+    "currencySymbol": "NZ$",
+    "bdtRate": 72,
+    "avgTuitionYearBdt": {
+      "min": 2100000,
+      "max": 4200000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 130000,
+      "max": 180000
+    },
+    "proofOfFundsBdt": 2100000,
+    "proofOfFundsName": "Immigration New Zealand Funds (~20,000 NZD/year)",
+    "partTimeHoursTerm": 20,
+    "postStudyWorkYears": "Up to 3 years",
+    "prPathwayRating": "high",
+    "prPathwayNote": "Post-Study Work Visa (up to 3 years) followed by the Skilled Migrant Category (SMC) points system.",
+    "languageRequired": "English (IELTS Academic 6.5 overall, no band below 6.0).",
+    "intakeMonths": [
+      "February (Semester 1 - Main)",
+      "July (Semester 2)"
+    ],
+    "topUniversities": [
+      "University of Auckland",
+      "University of Otago",
+      "Victoria University of Wellington",
+      "University of Canterbury",
+      "Massey University"
+    ],
+    "keyPros": [
+      "3-year Post-Study Work Visa for master's degree completers",
+      "World-class environmental, agricultural, and biotechnology research",
+      "Exceptionally safe, peaceful, and clean island nation",
+      "Spouse open work rights for postgraduate students"
+    ],
+    "keyCons": [
+      "High distance and travel time from Bangladesh",
+      "Smaller domestic economy and fewer total job openings than Australia",
+      "High cost of living and imported goods"
+    ],
+    "overview": "New Zealand offers clean, peaceful student living with a 3-year post-study work visa for master's degree graduates and clear points-based pathways to residency.",
+    "embassyDhaka": {
+      "waitlistMonths": "2-3 months",
+      "interviewRequired": false,
+      "vfsLocation": "Immigration New Zealand (Online RealMe portal) / TT Services Dhaka for biometrics",
+      "appointmentTips": [
+        "Proof of living funds is NZD ,000 per year plus paid first year tuition fee.",
+        "Undergo medical chest X-ray at approved New Zealand panel clinic in Dhaka.",
+        "Explain genuine temporary entry (GTE) intentions in your Statement of Purpose."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Immigration New Zealand Funds (~20,000 NZD/year) confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Funds Verification or FTS (Funds Transfer Scheme)",
+      "amountLocal": "NZD ,000/year",
+      "amountBDT": "14.5 Lakh BDT",
+      "bdBankProcedure": "Show 6-month genuine savings or transfer living expenses into ANZ Bank New Zealand Funds Transfer Scheme (FTS) via Bangladeshi student file."
+    },
+    "commonFaqs": [
+      {
+        "question": "What are the post-study work rights in New Zealand?",
+        "answer": "Master degree graduates receive a 3-year post-study open work visa. Spouses of Master students in New Zealand can also obtain an open work visa with full-time work rights."
+      },
+      {
+        "question": "What is the Funds Transfer Scheme (FTS) for New Zealand visas from Bangladesh?",
+        "answer": "FTS allows students to transfer their living funds (NZD ,000) into an ANZ Bank account in New Zealand. The funds are locked and released in monthly instalments of ,666, serving as proof of genuine financial capacity."
+      }
+    ]
+  },
+  {
+    "code": "CN",
+    "name": "China",
+    "region": "Asia-Pacific",
+    "capital": "Beijing",
+    "currency": "CNY",
+    "currencySymbol": "¥",
+    "bdtRate": 17,
+    "avgTuitionYearBdt": {
+      "min": 300000,
+      "max": 700000
+    },
+    "avgMonthlyLivingBdt": {
+      "min": 50000,
+      "max": 80000
+    },
+    "proofOfFundsBdt": 750000,
+    "proofOfFundsName": "Bank Statement & Health Physical Examination",
+    "partTimeHoursTerm": 0,
+    "postStudyWorkYears": "1–2 years",
+    "prPathwayRating": "selective",
+    "prPathwayNote": "Work visa (Z-visa) for graduates securing qualified professional employment in multinational or Chinese firms.",
+    "languageRequired": "English (IELTS 6.0) for English tracks; HSK 4+ for Chinese-taught programs.",
+    "intakeMonths": [
+      "September (Autumn - Main)",
+      "March (Spring)"
+    ],
+    "topUniversities": [
+      "Tsinghua University",
+      "Peking University",
+      "Zhejiang University",
+      "Fudan University",
+      "Shanghai Jiao Tong University"
+    ],
+    "keyPros": [
+      "Chinese Government Scholarship (CSC) awards 100% tuition + free campus dorm + monthly stipend",
+      "World-leading STEM laboratories and state-backed scientific research budgets",
+      "Very low living costs and subsidized campus canteens",
+      "Proximity to Bangladesh and close bilateral educational cooperation"
+    ],
+    "keyCons": [
+      "Part-time student off-campus work is strictly regulated and generally not allowed",
+      "Mandatory Chinese proficiency (HSK) needed for long-term domestic career growth",
+      "Internet access restrictions (VPN required for Google/Western academic resources)"
+    ],
+    "overview": "China's massive CSC scholarship program and top-tier technological universities offer Bangladeshi engineering and medical students generous funding with modern campus facilities.",
+    "embassyDhaka": {
+      "waitlistMonths": "3-4 weeks",
+      "interviewRequired": false,
+      "vfsLocation": "Chinese Visa Application Service Center, Dhaka",
+      "appointmentTips": [
+        "Ensure you receive the official JW201 / JW202 visa form from your Chinese university.",
+        "Undergo the Foreigner Physical Examination form with hospital seal in Dhaka.",
+        "CSC and provincial scholarship recipients get full tuition exemption and free campus dormitory."
+      ]
+    },
+    "documentsChecklist": [
+      {
+        "category": "Educational Records & Attestation",
+        "items": [
+          "Original SSC & HSC Certificates and Academic Transcripts",
+          "Attestation from respective Education Board (Dhaka, Rajshahi, Chittagong, etc.)",
+          "Attestation from Ministry of Education (Secretariat, Dhaka)",
+          "Consular Attestation from Ministry of Foreign Affairs (MoFA Segunbagicha, Dhaka)",
+          "Bachelor Degree Certificate & Official Transcripts (for Master applicants)"
+        ]
+      },
+      {
+        "category": "Language & Standardized Tests",
+        "items": [
+          "Original IELTS Academic / PTE Academic / TOEFL iBT Test Report Form",
+          "Medium of Instruction (MOI) Certificate from Bachelor University (if applicable)",
+          "Language Certificate (Goethe/ÖSD for German; JLPT/NAT for Japanese, if applicable)"
+        ]
+      },
+      {
+        "category": "Financial & Banking Documents",
+        "items": [
+          "Student File opened at a Bangladesh Bank Authorized Dealer (AD) branch",
+          "Bank Statement & Health Physical Examination confirmation certificate",
+          "Bank Solvency Certificate and minimum 6-month continuous bank statement",
+          "Sponsor Affidavit of Financial Support with Tax Return (TIN/IT-10B) documents"
+        ]
+      },
+      {
+        "category": "Identity & Legal Records",
+        "items": [
+          "Machine Readable / E-Passport valid for at least 12-18 months",
+          "National ID (NID) Card and certified English translation",
+          "Police Clearance Certificate issued by Bangladesh Police (online police clearance portal)",
+          "Certified English Birth Registration Certificate (17-digit online verified)"
+        ]
+      }
+    ],
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency (Waived for CSC Scholarship)",
+      "amountLocal": "¥20,000 - 30,000 RMB",
+      "amountBDT": "3.5 - 5.5 Lakh BDT (0 BDT for CSC recipients)",
+      "bdBankProcedure": "Government scholarship winners are exempt. Self-funded students provide sponsor bank solvency certificate of 3.5 - 5 Lakh BDT."
+    },
+    "commonFaqs": [
+      {
+        "question": "What scholarships are available for Bangladeshi students in China?",
+        "answer": "The Chinese Government Scholarship (CSC Type A via Ministry of Education Bangladesh and Type B via Universities), Belt and Road Scholarships, and Mayor/Provincial Scholarships cover full tuition, free accommodation, and monthly stipends (RMB 2,500-3,500/month)."
+      },
+      {
+        "question": "Are programs in China taught in English?",
+        "answer": "Yes, thousands of programs in engineering, medicine (MBBS), computer science, and international trade are offered 100% in English."
+      }
+    ]
+  }
+]
