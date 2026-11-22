@@ -1,0 +1,606 @@
+[
+  {
+    "id": "de-daad-epos",
+    "name": "DAAD EPOS (Development-Related Postgraduate Courses)",
+    "provider": "German Academic Exchange Service (DAAD)",
+    "targetCountryCodes": [
+      "DE"
+    ],
+    "targetCountryNames": [
+      "Germany"
+    ],
+    "degreeLevels": [
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~30 Lakh BDT/yr value)",
+    "benefits": [
+      "100% Tuition fee exemption at partner universities",
+      "Monthly living stipend of €934 for Master / €1,300 for PhD",
+      "Round-trip international flight airfare",
+      "Comprehensive German health, accident, and liability insurance",
+      "2 to 6 months preparatory German language course in Germany"
+    ],
+    "minRequirements": {
+      "minCgpa": 3,
+      "minIelts": 6.5,
+      "workExpYears": 2
+    },
+    "applicationWindow": {
+      "opens": "August 1",
+      "deadline": "October - November (varies by program)"
+    },
+    "bdSpecificNotes": "Requires at least 2 years of relevant professional work experience after Bachelor graduation. Apply directly to the selected German university offering the EPOS course.",
+    "applicationUrl": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/"
+  },
+  {
+    "id": "de-daad-ppgg",
+    "name": "Helmut-Schmidt-Programme (DAAD PPGG)",
+    "provider": "DAAD & German Federal Foreign Office",
+    "targetCountryCodes": [
+      "DE"
+    ],
+    "targetCountryNames": [
+      "Germany"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~30 Lakh BDT/yr value)",
+    "benefits": [
+      "Full tuition waiver for Master programs in Public Policy and Governance",
+      "Monthly scholarship rate of €934",
+      "Travel allowance for flights to and from Germany",
+      "Health insurance and study/research subsidies",
+      "Free 6-month preparatory German language course"
+    ],
+    "minRequirements": {
+      "minCgpa": 3,
+      "minIelts": 6.5,
+      "workExpYears": 0
+    },
+    "applicationWindow": {
+      "opens": "June 1",
+      "deadline": "July 31"
+    },
+    "bdSpecificNotes": "Designed for future leaders in politics, law, economics, and public administration. Candidates apply to up to two participating German universities simultaneously.",
+    "applicationUrl": "https://www.daad.de/en/study-and-research-in-germany/scholarships/helmut-schmidt-programme/"
+  },
+  {
+    "id": "de-deutschlandstipendium",
+    "name": "Deutschlandstipendium (National Scholarship Programme)",
+    "provider": "German Federal Government & Private Sponsors",
+    "targetCountryCodes": [
+      "DE"
+    ],
+    "targetCountryNames": [
+      "Germany"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master"
+    ],
+    "coverageType": "partial_stipend",
+    "coverageAmountBDT": "€300/month (~40,000 BDT/month)",
+    "benefits": [
+      "€300 per month non-repayable cash stipend for at least 2 semesters",
+      "Can be received regardless of personal or parental income",
+      "Networking with corporate sponsors and alumni mentors"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.3
+    },
+    "applicationWindow": {
+      "opens": "June - July",
+      "deadline": "August - September (University specific)"
+    },
+    "bdSpecificNotes": "Available to enrolled international students at virtually all German universities based on outstanding academic results and social commitment.",
+    "applicationUrl": "https://www.deutschlandstipendium.de/deutschlandstipendium/en/"
+  },
+  {
+    "id": "gb-chevening",
+    "name": "Chevening Scholarships",
+    "provider": "UK Foreign, Commonwealth & Development Office (FCDO)",
+    "targetCountryCodes": [
+      "GB"
+    ],
+    "targetCountryNames": [
+      "United Kingdom"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~45 Lakh BDT value)",
+    "benefits": [
+      "Full university tuition fees for any 1-year Master degree in the UK",
+      "Monthly living allowance / stipend",
+      "Economy class return airfare to the UK from Dhaka",
+      "Arrival and excess baggage allowances",
+      "Access to exclusive networking events and British diplomatic receptions"
+    ],
+    "minRequirements": {
+      "minCgpa": 3,
+      "minIelts": 6.5,
+      "workExpYears": 2
+    },
+    "applicationWindow": {
+      "opens": "August (First Tuesday)",
+      "deadline": "November (First Tuesday)"
+    },
+    "bdSpecificNotes": "Mandatory minimum 2 years (2,800 hours) of work experience. Applicants must demonstrate strong leadership potential and commit to returning to Bangladesh for at least 2 years.",
+    "applicationUrl": "https://www.chevening.org/scholarship/bangladesh/"
+  },
+  {
+    "id": "gb-commonwealth-master",
+    "name": "Commonwealth Master's Scholarships",
+    "provider": "Commonwealth Scholarship Commission (CSC UK)",
+    "targetCountryCodes": [
+      "GB"
+    ],
+    "targetCountryNames": [
+      "United Kingdom"
+    ],
+    "degreeLevels": [
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~40 - 50 Lakh BDT value)",
+    "benefits": [
+      "Approved airfare from Bangladesh to the UK and return",
+      "Full tuition and examination fees",
+      "Stipend of £1,347 per month (or £1,652 per month for London universities)",
+      "Warm clothing allowance and study travel grants"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.3,
+      "minIelts": 6.5
+    },
+    "applicationWindow": {
+      "opens": "September",
+      "deadline": "October - November"
+    },
+    "bdSpecificNotes": "Nominations are handled through the University Grants Commission (UGC) Bangladesh / Ministry of Education. Watch for the UGC official circular in September.",
+    "applicationUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"
+  },
+  {
+    "id": "gb-great",
+    "name": "GREAT Scholarships",
+    "provider": "British Council & UK Universities",
+    "targetCountryCodes": [
+      "GB"
+    ],
+    "targetCountryNames": [
+      "United Kingdom"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "tuition_waiver",
+    "coverageAmountBDT": "£10,000 Tuition Waiver (~15 Lakh BDT)",
+    "benefits": [
+      "Direct £10,000 tuition fee discount applied to 1-year postgraduate taught courses",
+      "Exclusive invitation to a welcome event hosted by the British Council in the UK"
+    ],
+    "minRequirements": {
+      "minCgpa": 3,
+      "minIelts": 6.5
+    },
+    "applicationWindow": {
+      "opens": "November",
+      "deadline": "April - May (Varies by UK institution)"
+    },
+    "bdSpecificNotes": "Open to passport holders from Bangladesh. Must hold an offer of admission from a participating UK university before applying.",
+    "applicationUrl": "https://study-uk.britishcouncil.org/scholarships-funding/great-scholarships"
+  },
+  {
+    "id": "us-fulbright",
+    "name": "Fulbright Foreign Student Program",
+    "provider": "U.S. Department of State / US Embassy Dhaka",
+    "targetCountryCodes": [
+      "US"
+    ],
+    "targetCountryNames": [
+      "United States"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~60 - 80 Lakh BDT value)",
+    "benefits": [
+      "Full tuition and all university academic fees",
+      "Monthly living stipend tailored to the US university city",
+      "Round-trip international air travel",
+      "Health benefit plan (ASPE)",
+      "Pre-academic English training and professional enrichment seminars"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.25,
+      "minIelts": 7,
+      "workExpYears": 2
+    },
+    "applicationWindow": {
+      "opens": "February / March",
+      "deadline": "May - June"
+    },
+    "bdSpecificNotes": "Administered directly by the Public Affairs Section of the U.S. Embassy in Dhaka. Strong preference for junior faculty, public servants, and civil society leaders.",
+    "applicationUrl": "https://bd.usembassy.gov/education-culture/student-exchange-programs/"
+  },
+  {
+    "id": "us-graduate-assistantship",
+    "name": "US Graduate Teaching & Research Assistantship (TA/RA)",
+    "provider": "US Universities & Academic Departments",
+    "targetCountryCodes": [
+      "US"
+    ],
+    "targetCountryNames": [
+      "United States"
+    ],
+    "degreeLevels": [
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Full Tuition Waiver + ,800 - ,800/month",
+    "benefits": [
+      "100% Tuition waiver for 9 to 12 credit hours per semester",
+      "Monthly salary/stipend (,800 to ,800/mo depending on department)",
+      "Subsidized university student health insurance",
+      "In-state tuition rate qualification for additional courses"
+    ],
+    "minRequirements": {
+      "minCgpa": 3,
+      "minIelts": 6.5
+    },
+    "applicationWindow": {
+      "opens": "September 1",
+      "deadline": "December 15 - February 15 (Fall priority funding)"
+    },
+    "bdSpecificNotes": "The primary way Bangladeshi STEM students fund their Master and PhD in America. Awarded directly by university academic departments in exchange for 20 hrs/week teaching or lab research.",
+    "applicationUrl": "https://educationusa.state.gov/"
+  },
+  {
+    "id": "jp-mext-embassy",
+    "name": "MEXT Scholarship (Japanese Government - Embassy Track)",
+    "provider": "Ministry of Education, Culture, Sports, Science and Technology (MEXT)",
+    "targetCountryCodes": [
+      "JP"
+    ],
+    "targetCountryNames": [
+      "Japan"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~25 - 35 Lakh BDT/yr value)",
+    "benefits": [
+      "100% University admission and tuition fees waived",
+      "Monthly allowance: ¥143,000 (Master) to ¥145,000 (PhD)",
+      "Round-trip international flight tickets between Dhaka and Tokyo",
+      "6 months intensive Japanese language training in Japan"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.2,
+      "minIelts": 6.5,
+      "ageLimit": 35
+    },
+    "applicationWindow": {
+      "opens": "April / May",
+      "deadline": "May - June"
+    },
+    "bdSpecificNotes": "Application is announced annually by the Ministry of Education Bangladesh. Involves written screening exams (English/Japanese/Math) at the Embassy of Japan in Dhaka.",
+    "applicationUrl": "https://www.bd.emb.japan.go.jp/itpr_en/education.html"
+  },
+  {
+    "id": "hu-stipendium",
+    "name": "Stipendium Hungaricum Scholarship",
+    "provider": "Tempus Public Foundation & Hungarian Government",
+    "targetCountryCodes": [
+      "HU"
+    ],
+    "targetCountryNames": [
+      "Hungary"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~12 - 18 Lakh BDT/yr value)",
+    "benefits": [
+      "100% Exemption from tuition fees for the entire duration of study",
+      "Free dormitory placement or housing contribution of HUF 40,000/month",
+      "Monthly stipend: HUF 43,700 (Bachelor/Master) / HUF 140,000-180,000 (PhD)",
+      "Comprehensive national health insurance coverage in Hungary"
+    ],
+    "minRequirements": {
+      "minCgpa": 2.8,
+      "minIelts": 6
+    },
+    "applicationWindow": {
+      "opens": "November 15",
+      "deadline": "January 15"
+    },
+    "bdSpecificNotes": "Bilateral agreement with 140 reserved seats for Bangladesh. Students must apply on the DreamApply portal AND submit documents to the Ministry of Education Bangladesh / UGC.",
+    "applicationUrl": "https://stipendiumhungaricum.hu/"
+  },
+  {
+    "id": "eu-erasmus-mundus",
+    "name": "Erasmus Mundus Joint Master Degrees (EMJMD)",
+    "provider": "European Commission",
+    "targetCountryCodes": [
+      "GLOBAL"
+    ],
+    "targetCountryNames": [
+      "Europe-Wide (Multiple Countries)"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~40 - 55 Lakh BDT value)",
+    "benefits": [
+      "Full participation costs (tuition, laboratory, library access) covered",
+      "Monthly living allowance of €1,400 per month for 24 months",
+      "€2,000 - €3,000 annual travel and installation grant",
+      "Worldwide health and accident insurance",
+      "Joint or multiple Master degrees from at least two European universities"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.2,
+      "minIelts": 6.5
+    },
+    "applicationWindow": {
+      "opens": "October",
+      "deadline": "January - February"
+    },
+    "bdSpecificNotes": "Bangladesh consistently ranks in the top 3 recipient countries worldwide for Erasmus Mundus scholarships. Students study across 2 to 3 different European countries during their 2-year degree.",
+    "applicationUrl": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+  },
+  {
+    "id": "tr-turkiye-burslari",
+    "name": "Türkiye Bursları (Turkey Government Scholarships)",
+    "provider": "Presidency for Turks Abroad and Related Communities (YTB)",
+    "targetCountryCodes": [
+      "GLOBAL"
+    ],
+    "targetCountryNames": [
+      "Turkey"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~15 - 20 Lakh BDT/yr value)",
+    "benefits": [
+      "100% University tuition fee waiver",
+      "Free university dormitory accommodation",
+      "Monthly stipend: 3,500 TL (Bachelor), 5,000 TL (Master), 6,500 TL (PhD)",
+      "One-time return flight ticket between Dhaka and Turkey",
+      "1-year free Turkish language course"
+    ],
+    "minRequirements": {
+      "minCgpa": 2.8,
+      "ageLimit": 30
+    },
+    "applicationWindow": {
+      "opens": "January 10",
+      "deadline": "February 20"
+    },
+    "bdSpecificNotes": "Application is completely free and submitted online directly through the Türkiye Bursları portal. Shortlisted candidates are interviewed in-person in Dhaka.",
+    "applicationUrl": "https://www.turkiyeburslari.gov.tr/"
+  },
+  {
+    "id": "cn-csc",
+    "name": "Chinese Government Scholarship (CSC)",
+    "provider": "China Scholarship Council (CSC)",
+    "targetCountryCodes": [
+      "CN"
+    ],
+    "targetCountryNames": [
+      "China"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~15 - 25 Lakh BDT/yr value)",
+    "benefits": [
+      "Full tuition fee waiver",
+      "Free campus dormitory accommodation or subsidized housing",
+      "Monthly living stipend: RMB 2,500 (Bachelor), RMB 3,000 (Master), RMB 3,500 (PhD)",
+      "Comprehensive medical insurance in China"
+    ],
+    "minRequirements": {
+      "minCgpa": 2.8,
+      "minIelts": 6,
+      "ageLimit": 35
+    },
+    "applicationWindow": {
+      "opens": "December 1",
+      "deadline": "March 31"
+    },
+    "bdSpecificNotes": "Type A is applied via the Ministry of Education Bangladesh. Type B is applied directly to Chinese designated universities. Many English-taught STEM and medical programs available.",
+    "applicationUrl": "https://www.campuschina.org/"
+  },
+  {
+    "id": "kr-gks",
+    "name": "Global Korea Scholarship (GKS)",
+    "provider": "National Institute for International Education (NIIED), South Korea",
+    "targetCountryCodes": [
+      "KR"
+    ],
+    "targetCountryNames": [
+      "South Korea"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master",
+      "phd"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~25 - 35 Lakh BDT/yr value)",
+    "benefits": [
+      "100% Full university tuition fees covered",
+      "Round-trip international airfare",
+      "Monthly allowance of 1,000,000 KRW (~80,000 BDT/month)",
+      "Settlement allowance of 200,000 KRW upon arrival",
+      "1 full year of intensive Korean language training before degree"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.2,
+      "minIelts": 6.5,
+      "ageLimit": 40
+    },
+    "applicationWindow": {
+      "opens": "September (Undergrad) / February (Graduate)",
+      "deadline": "October (Undergrad) / March (Graduate)"
+    },
+    "bdSpecificNotes": "Embassy Track circular published by the Ministry of Education Bangladesh. University Track applications are submitted directly to partner Korean universities.",
+    "applicationUrl": "https://www.studyinkorea.go.kr/"
+  },
+  {
+    "id": "se-si",
+    "name": "Swedish Institute (SI) Scholarship for Global Professionals",
+    "provider": "Swedish Institute / Government of Sweden",
+    "targetCountryCodes": [
+      "SE"
+    ],
+    "targetCountryNames": [
+      "Sweden"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~35 - 45 Lakh BDT value)",
+    "benefits": [
+      "Full tuition fee paid directly to the Swedish university",
+      "Monthly living expenses stipend of SEK 12,000 (~1.4 Lakh BDT/month)",
+      "One-time travel grant of SEK 15,000 for flights from Bangladesh",
+      "Health and accident insurance",
+      "Membership in the SI Network for Future Global Leaders (NFGL)"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.2,
+      "minIelts": 6.5,
+      "workExpYears": 3
+    },
+    "applicationWindow": {
+      "opens": "February (Application window: 10 days)",
+      "deadline": "Mid-February"
+    },
+    "bdSpecificNotes": "Requires a minimum of 3,000 documented hours of work experience and demonstrated leadership experience. Must first apply to a Swedish Master course via UniversityAdmissions.se in January.",
+    "applicationUrl": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"
+  },
+  {
+    "id": "fi-finland-scholarship",
+    "name": "Finland Scholarship & University Tuition Waivers",
+    "provider": "Finnish National Agency for Education (EDUFI) & Finnish Universities",
+    "targetCountryCodes": [
+      "FI"
+    ],
+    "targetCountryNames": [
+      "Finland"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "tuition_waiver",
+    "coverageAmountBDT": "100% Tuition Waiver + €5,000 Relocation Grant",
+    "benefits": [
+      "100% Tuition fee waiver for the entire 2-year Master degree",
+      "€5,000 relocation grant paid directly upon arrival in Finland",
+      "Automated consideration upon submitting study application"
+    ],
+    "minRequirements": {
+      "minCgpa": 3.3,
+      "minIelts": 6.5
+    },
+    "applicationWindow": {
+      "opens": "November 30",
+      "deadline": "January 3 - 17 (Joint Application Period)"
+    },
+    "bdSpecificNotes": "No separate scholarship application required. You simply tick the scholarship box during the joint study application on Studyinfo.fi.",
+    "applicationUrl": "https://www.studyinfinland.fi/scholarships"
+  },
+  {
+    "id": "it-dsu",
+    "name": "Italian Regional DSU Scholarships (EDISU / DSU Toscana / LazioDisco)",
+    "provider": "Italian Regional Governments",
+    "targetCountryCodes": [
+      "IT"
+    ],
+    "targetCountryNames": [
+      "Italy"
+    ],
+    "degreeLevels": [
+      "bachelor",
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "100% Tuition Waiver + Free Meals + €6,000 - €7,500/year",
+    "benefits": [
+      "Complete exemption from university tuition fees",
+      "Free university accommodation or annual housing stipend",
+      "Free daily meals at university cafeterias / canteens",
+      "Cash stipend of up to €7,500/year paid in two semester instalments"
+    ],
+    "minRequirements": {
+      "minCgpa": 2.8,
+      "minIelts": 6
+    },
+    "applicationWindow": {
+      "opens": "June / July",
+      "deadline": "August - September"
+    },
+    "bdSpecificNotes": "Need-based rather than merit-based. Bangladeshi families with annual income under 25,000 EUR qualify by submitting an ISEE Parificato document issued via official CAF in Italy.",
+    "applicationUrl": "https://www.universitaly.it/"
+  },
+  {
+    "id": "au-australia-awards",
+    "name": "Australia Awards Scholarships",
+    "provider": "Australian Department of Foreign Affairs and Trade (DFAT)",
+    "targetCountryCodes": [
+      "AU"
+    ],
+    "targetCountryNames": [
+      "Australia"
+    ],
+    "degreeLevels": [
+      "master"
+    ],
+    "coverageType": "fully_funded",
+    "coverageAmountBDT": "Fully Funded (~50 - 65 Lakh BDT value)",
+    "benefits": [
+      "Full tuition fees for Master degree in Australia",
+      "Return air travel economy class",
+      "Contribution to living expenses (CLE) paid fortnightly",
+      "Overseas Student Health Cover (OSHC) for the duration of the award",
+      "One-off establishment allowance for accommodation and books"
+    ],
+    "minRequirements": {
+      "minCgpa": 3,
+      "minIelts": 6.5,
+      "workExpYears": 2
+    },
+    "applicationWindow": {
+      "opens": "February 1",
+      "deadline": "April 30"
+    },
+    "bdSpecificNotes": "Targeted priority fields: Economic Growth, Education, Governance, Health, Gender Equality, and Climate Change. Applicants must return to Bangladesh for at least 2 years.",
+    "applicationUrl": "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships"
+  }
+]

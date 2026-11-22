@@ -567,5 +567,47 @@ export interface UniversityFilter {
   season?: "Winter/Fall" | "Summer/Spring" | "ALL";
 }
 
+// ---------- Scholarship & Tuition Waiver Finder (Phase 11) ----------
+
+export type ScholarshipCoverage = "fully_funded" | "tuition_waiver" | "partial_stipend";
+
+export interface ScholarshipMinRequirements {
+  minCgpa?: number;
+  minIelts?: number;
+  workExpYears?: number;
+  ageLimit?: number;
+}
+
+export interface ScholarshipApplicationWindow {
+  opens: string;
+  deadline: string;
+}
+
+export interface ScholarshipItem {
+  id: string;
+  name: string;
+  provider: string;
+  targetCountryCodes: string[];
+  targetCountryNames: string[];
+  degreeLevels: ("bachelor" | "master" | "phd")[];
+  coverageType: ScholarshipCoverage;
+  coverageAmountBDT: string;
+  benefits: string[];
+  minRequirements: ScholarshipMinRequirements;
+  applicationWindow: ScholarshipApplicationWindow;
+  bdSpecificNotes?: string;
+  applicationUrl: string;
+}
+
+export interface ScholarshipFilter {
+  query?: string;
+  countryCode?: string;
+  degreeLevel?: "bachelor" | "master" | "phd";
+  coverageType?: ScholarshipCoverage | "ALL";
+  studentCgpa?: number;
+  studentIelts?: number;
+}
+
+
 
 

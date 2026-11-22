@@ -48,6 +48,10 @@
 | **Phase 10: University Search & Timelines** | 10.2 Journey Engine Logic | Completed | Pure filtering in `packages/journey-engine/src/universities.ts` (`filterUniversities`, `getUniversityById`, `listUniversities`, `validateUniversityData`) with BDT budget tiers + 12 Vitest unit tests |
 | **Phase 10: University Search & Timelines** | 10.3 Data Layer & Navigation | Completed | `loadUniversities()`, `loadUniversityById()` in `store.ts`, `/universities` link added to dashboard navigation |
 | **Phase 10: University Search & Timelines** | 10.4 Web Route & Mobile Verification | Completed | Public discovery route `/universities` with BDT budget selector, degree filter, intake season, CGPA/IELTS sliders, verified at 375 × 812 via Browser Inspector |
+| **Phase 11: Scholarship & Waiver Finder** | 11.1 Curated Database | Completed | 18 top global/bilateral schemes in `content/scholarships/scholarships.json` (DAAD, Chevening, MEXT, Stipendium Hungaricum, Erasmus Mundus, Fulbright, CSC, GKS, etc.) with BDT coverage values |
+| **Phase 11: Scholarship & Waiver Finder** | 11.2 Journey Engine Logic | Completed | Pure filtering in `packages/journey-engine/src/scholarships.ts` (`filterScholarships`, `getScholarshipById`, `listScholarships`, `validateScholarshipData`) + 10 Vitest unit tests |
+| **Phase 11: Scholarship & Waiver Finder** | 11.3 Data Layer & Navigation | Completed | `loadScholarships()`, `loadScholarshipById()` in `store.ts`, `/scholarships` link added to dashboard and exploration hubs |
+| **Phase 11: Scholarship & Waiver Finder** | 11.4 Web Route & Mobile Verification | Completed | Public discovery route `/scholarships` with coverage filters, BDT award values, Bangladesh route circular guidance, verified at 375 × 812 with 0 horizontal overflow |
 
 
 
@@ -532,14 +536,64 @@
 
 ---
 
+### Phase 11: Scholarship & Tuition Waiver Finder
+
+#### 11.1 Curated Scholarships Catalog (`content/scholarships/scholarships.json`)
+- Curated 18 leading bilateral, government, and institutional funding programs open to Bangladeshi citizens:
+  - **Germany**: DAAD EPOS, DAAD Helmut-Schmidt-Programme (PPGG), Deutschlandstipendium.
+  - **UK**: Chevening Scholarships, Commonwealth Master's & PhD Scholarships, British Council GREAT Scholarships.
+  - **USA**: Fulbright Foreign Student Program, US Graduate Assistantships (Teaching & Research Assistantships with tuition waivers).
+  - **Japan**: MEXT Japanese Government Scholarship (Embassy & University Tracks).
+  - **Hungary**: Stipendium Hungaricum Scholarship Programme (via Bangladesh UGC bilateral agreement).
+  - **Europe-Wide**: Erasmus Mundus Joint Master Degrees (EMJM).
+  - **Türkiye**: Türkiye Bursları Scholarships (YTB).
+  - **China**: Chinese Government Scholarship (CSC / Silk Road).
+  - **South Korea**: Global Korea Scholarship (GKS - NIIED).
+  - **Sweden**: SI Scholarship for Global Professionals.
+  - **Finland**: Finland Scholarship (EDUFI national tuition waiver + relocation grant).
+  - **Italy**: Regional DSU Grants & Tuition Waivers (based on family ISEE Parificato).
+  - **Australia**: Australia Awards Scholarships (DFAT).
+- Each program includes:
+  - Estimated coverage amount converted to BDT (e.g. 50L–80L BDT for full master's degrees).
+  - Coverage tier: `fully_funded`, `tuition_waiver`, or `partial_stipend`.
+  - Academic eligibility baselines: Minimum CGPA, minimum IELTS, work experience prerequisites.
+  - Application window (annual opening month and deadline).
+  - Specific Bangladesh application route instructions (e.g. UGC Bangladesh circular submission requirements for Hungary and Commonwealth, Baridhara embassy submissions for MEXT).
+  - Direct official application portal link (no commercial agents).
+
+#### 11.2 Journey Engine Logic (`packages/journey-engine/src/scholarships.ts`)
+- Pure filtering and retrieval functions:
+  - `listScholarships()`: Returns full catalog.
+  - `getScholarshipById(id)`: Looks up scheme by ID.
+  - `filterScholarships(scholarships, filter)`: High-performance filter matching keyword query, target destination country, coverage tier, degree level, student CGPA, and IELTS score.
+  - `validateScholarshipData(s)`: Runtime schema validation.
+- Exported from root `@dreamer/journey-engine` package entry point (`src/index.ts`).
+- Added 10 Vitest unit tests in `packages/journey-engine/test/scholarships.test.ts` bringing total test suite count to 145 passing tests across 11 test files.
+
+#### 11.3 Data Layer & Navigation (`apps/web/src/lib/store.ts`)
+- Added `loadScholarships()` and `loadScholarshipById()` with fallback to built-in JSON catalog.
+- Added `SCHOLARSHIPS` navigation links in Dashboard footer, `/countries`, and `/universities` header toolbars.
+
+#### 11.4 Web Route & Mobile Verification (`apps/web/src/app/scholarships/page.tsx`)
+- Public discovery route `/scholarships`:
+  - Instant text search across title, provider, benefits, and keywords.
+  - Coverage type filter pills (`All Schemes`, `Fully Funded`, `Tuition Fee Waiver`, `Monthly Stipend`).
+  - Destination country dropdown and degree level filter pills (`Bachelor's`, `Master's`, `PhD`).
+  - Expandable **My Eligibility** drawer allowing students to filter scholarships matching their CGPA and IELTS score.
+  - Benefit checklists with checkmarks and estimated BDT value badges.
+  - Direct official application portal action button.
+- Mobile responsiveness: Verified at 375 × 812 viewport with Browser Inspector subagent. Identified initial horizontal scroll issue, refactored layout with `overflow-x-hidden`, responsive flex wrapping, and `break-words` on long strings, achieving 0 horizontal overflow (content width 360px within 375px viewport).
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-10/university-search` (and previous phase branches).
+- [x] **No Direct Commits to Main**: All work performed on `phase-11/scholarships-finder` (and previous phase branches).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/universities/`, data access strictly through `store.ts`.
-- [x] **Commercial Compliance & Ethics**: Transparent direct links to official university admissions portals; no third-party agent referral links.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/universities` with no horizontal overflow.
-- [x] **Tests Passing**: All 135 vitest tests passing in `packages/journey-engine` across 10 test suites.
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/scholarships/`, data access strictly through `store.ts`.
+- [x] **Commercial Compliance & Ethics**: Transparent direct links to official government and university scholarship portals; no third-party agent referral links.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/scholarships` with 0 horizontal overflow.
+- [x] **Tests Passing**: All 145 vitest tests passing in `packages/journey-engine` across 11 test suites.
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
 - [x] **Next.js Production Build**: Succeeded (`next build` compiled all routes cleanly with static and dynamic optimizations).
 

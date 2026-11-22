@@ -69,6 +69,14 @@ export {
   filterUniversities,
   validateUniversityData,
 } from "./universities";
+export {
+  defaultScholarships,
+  listScholarships,
+  getScholarshipById,
+  filterScholarships,
+  validateScholarshipData,
+} from "./scholarships";
+
 
 
 

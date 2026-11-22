@@ -70,9 +70,23 @@ export default function CountriesPage() {
           <ArrowLeft className="w-4 h-4" />
           <span>[BACK TO DASHBOARD]</span>
         </Link>
-        <span className="text-[10px] font-mono uppercase tracking-widest text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5">
-          18 DESTINATIONS ACTIVE
-        </span>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/universities"
+            className="text-xs font-mono text-slate-400 hover:text-[#4db5ff] border border-[#1b2b3a] px-2.5 py-1"
+          >
+            UNIVERSITIES
+          </Link>
+          <Link
+            href="/scholarships"
+            className="text-xs font-mono text-slate-400 hover:text-[#4db5ff] border border-[#1b2b3a] px-2.5 py-1"
+          >
+            SCHOLARSHIPS
+          </Link>
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5">
+            18 DESTINATIONS ACTIVE
+          </span>
+        </div>
       </div>
 
       {/* Hero Banner */}

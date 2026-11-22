@@ -23,13 +23,17 @@ import {
   type PaymentProvider,
   type CountryInfo,
   type UniversityItem,
+  type ScholarshipItem,
   defaultMentors,
   defaultCountries,
   defaultUniversities,
+  defaultScholarships,
   listCountries,
   listUniversities,
+  listScholarships,
   getCountryByCode,
   getUniversityById,
+  getScholarshipById,
   defaultAdvertisers,
   defaultAds,
   defaultSessions,
@@ -632,6 +636,18 @@ export async function loadUniversityById(id: string): Promise<UniversityItem | n
   const uni = getUniversityById(defaultUniversities, id);
   return uni ?? null;
 }
+
+// ---------- Scholarship Finder (Phase 11) ----------
+
+export async function loadScholarships(): Promise<ScholarshipItem[]> {
+  return listScholarships();
+}
+
+export async function loadScholarshipById(id: string): Promise<ScholarshipItem | null> {
+  const s = getScholarshipById(defaultScholarships, id);
+  return s ?? null;
+}
+
 
 
 export async function loadMentors(): Promise<MentorProfile[]> {
