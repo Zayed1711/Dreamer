@@ -22,10 +22,14 @@ import {
   type PayoutRecord,
   type PaymentProvider,
   type CountryInfo,
+  type UniversityItem,
   defaultMentors,
   defaultCountries,
+  defaultUniversities,
   listCountries,
+  listUniversities,
   getCountryByCode,
+  getUniversityById,
   defaultAdvertisers,
   defaultAds,
   defaultSessions,
@@ -617,6 +621,18 @@ export async function loadCountryByCode(code: string): Promise<CountryInfo | nul
   const country = getCountryByCode(defaultCountries, code);
   return country ?? null;
 }
+
+// ---------- University Search & Applications (Phase 10) ----------
+
+export async function loadUniversities(): Promise<UniversityItem[]> {
+  return listUniversities();
+}
+
+export async function loadUniversityById(id: string): Promise<UniversityItem | null> {
+  const uni = getUniversityById(defaultUniversities, id);
+  return uni ?? null;
+}
+
 
 export async function loadMentors(): Promise<MentorProfile[]> {
   const uid = await currentUserId();

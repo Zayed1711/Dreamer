@@ -44,6 +44,11 @@
 | **Phase 9: Country Hubs & FAQs** | 9.2 Journey Engine Logic | Completed | Pure functions in `packages/journey-engine/src/countries.ts` (`listCountries`, `getCountryByCode`, `filterCountries`, `getEstimatedFirstYearCostBdt`, `validateCountryData`) + 9 Vitest unit tests |
 | **Phase 9: Country Hubs & FAQs** | 9.3 Data Layer & Slots | Completed | `loadCountries()`, `loadCountryByCode()` in `store.ts`, registered `student_banking` slot with Bangladesh Bank free alternative in `slots.ts` |
 | **Phase 9: Country Hubs & FAQs** | 9.4 Web Routes & Mobile Verification | Completed | Public directory `/countries` with search & budget filters, dynamic `/countries/[code]` with 5 hubs, verified clean at 375 × 812 viewport via Browser Inspector |
+| **Phase 10: University Search & Timelines** | 10.1 Curated Database | Completed | 26 curated institutions in `content/universities/universities.json` across top destinations with BDT tuition, intakes, and direct portal links |
+| **Phase 10: University Search & Timelines** | 10.2 Journey Engine Logic | Completed | Pure filtering in `packages/journey-engine/src/universities.ts` (`filterUniversities`, `getUniversityById`, `listUniversities`, `validateUniversityData`) with BDT budget tiers + 12 Vitest unit tests |
+| **Phase 10: University Search & Timelines** | 10.3 Data Layer & Navigation | Completed | `loadUniversities()`, `loadUniversityById()` in `store.ts`, `/universities` link added to dashboard navigation |
+| **Phase 10: University Search & Timelines** | 10.4 Web Route & Mobile Verification | Completed | Public discovery route `/universities` with BDT budget selector, degree filter, intake season, CGPA/IELTS sliders, verified at 375 × 812 via Browser Inspector |
+
 
 
 ---
@@ -491,16 +496,52 @@
 
 ---
 
+### Phase 10: University Search & Application Timelines Engine
+
+#### 10.1 Curated Database (`content/universities/universities.json`)
+- Curated 26 leading universities across Germany, USA, UK, Canada, Australia, Japan, Sweden, Finland, Malaysia, Hungary, Italy, and South Korea where Bangladeshi students actively study.
+- Detailed dataset per institution:
+  - Exact tuition fee in BDT and classification into budget tiers (`low`: < 2L BDT/yr, `moderate`: 2L–15L BDT/yr, `high`: 15L+ BDT/yr).
+  - Degree levels offered (`bachelor`, `master`).
+  - Upcoming intake deadlines for both Fall/Winter and Spring/Summer cycles.
+  - Application channels (`uni-assist`, `Direct`, `CommonApp`, `EMGS`).
+  - Academic eligibility baselines: Minimum CGPA, minimum IELTS, GRE requirement, and Duolingo acceptance.
+  - Known waivers and scholarships (e.g. DAAD, GKS, Stipendium Hungaricum, graduate assistantships).
+  - Direct link to official university admissions portal (eliminating agency middlemen).
+
+#### 10.2 Journey Engine Logic (`packages/journey-engine/src/universities.ts`)
+- Pure functions decoupled from presentation:
+  - `listUniversities()`: Returns curated institutions.
+  - `getUniversityById(id)`: Case-insensitive lookup.
+  - `filterUniversities(filter)`: Multi-criteria filter supporting keyword search, country code, degree level, budget tier, maximum tuition in BDT, student CGPA/IELTS eligibility, and intake season.
+  - `validateUniversityData(u)`: Schema validator.
+- 12 Vitest unit tests in `packages/journey-engine/test/universities.test.ts` bringing total test suite count to 135 passing tests.
+
+#### 10.3 Data Layer & Navigation (`apps/web/src/lib/`)
+- Added `loadUniversities()` and `loadUniversityById()` to `store.ts`.
+- Added `UNIVERSITIES` link in `apps/web/src/components/Dashboard.tsx` footer navigation.
+
+#### 10.4 Web Route & Mobile Verification (`apps/web/src/app/universities/`)
+- Public route `/universities`:
+  - Search input with instant keyword matching.
+  - Founder-mandated **Annual Tuition Budget in BDT** selector (`All Budgets`, `Low < 2L BDT`, `Moderate 2L–15L`, `High 15L+`).
+  - Interactive country, degree level, and intake season filter pills.
+  - Expandable **My Eligibility** drawer allowing students to filter institutions by their own CGPA and IELTS score.
+  - Responsive `.window` cards displaying tuition in BDT, application method, deadlines, popular programs, and direct portal link.
+- Verified responsive and clean at 375 × 812 mobile viewport via Browser Inspector.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-9/country-hubs` (and previous phase branches).
+- [x] **No Direct Commits to Main**: All work performed on `phase-10/university-search` (and previous phase branches).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/countries/`, data access strictly through `store.ts`.
-- [x] **Commercial Compliance & Ethics**: Sponsored bank placement labelled `[SPONSORED]` with "Meets our standards as of [Date]" (never "verified" or "safe"), coupled with mandatory Bangladesh Bank free alternative directly below.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/countries` and `/countries/[code]` (all 5 tabs tested with no horizontal scroll issues).
-- [x] **Tests Passing**: All 123 vitest tests passing in `packages/journey-engine` across 9 test suites (countries, mentors, engine, languages, streak, ads, daily, sessions, course).
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/universities/`, data access strictly through `store.ts`.
+- [x] **Commercial Compliance & Ethics**: Transparent direct links to official university admissions portals; no third-party agent referral links.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/universities` with no horizontal overflow.
+- [x] **Tests Passing**: All 135 vitest tests passing in `packages/journey-engine` across 10 test suites.
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 18 routes cleanly with static and dynamic optimizations).
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all routes cleanly with static and dynamic optimizations).
 
 ---
 

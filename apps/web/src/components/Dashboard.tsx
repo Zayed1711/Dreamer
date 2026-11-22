@@ -443,6 +443,7 @@ export function Dashboard({
         </ul>
         <div className="font-mono mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] text-[var(--muted)]">
           <Link href="/countries" className="hover:text-[var(--accent)] text-[var(--accent)]">COUNTRIES</Link>
+          <Link href="/universities" className="hover:text-[var(--accent)] text-[var(--accent)]">UNIVERSITIES</Link>
           <Link href="/course" className="hover:text-[var(--accent)]">IELTS COURSE</Link>
           <Link href="/mentors" className="hover:text-[var(--accent)]">MENTORS</Link>
           <Link href="/admin" className="hover:text-[var(--accent)] text-[var(--accent)]/80">ADMIN</Link>

@@ -62,5 +62,13 @@ export {
   validateCountryData,
   type CountryFilters,
 } from "./countries";
+export {
+  defaultUniversities,
+  listUniversities,
+  getUniversityById,
+  filterUniversities,
+  validateUniversityData,
+} from "./universities";
+
 
 

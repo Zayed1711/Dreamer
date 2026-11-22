@@ -521,4 +521,51 @@ export interface CountryInfo {
   commonFaqs: CountryFaq[];
 }
 
+// ---------- University Search & Applications (Phase 10) ----------
+
+export type TuitionCategory = "low" | "moderate" | "high"; // low: < 2L BDT/yr, moderate: 2-15L BDT/yr, high: > 15L BDT/yr
+
+export interface UniversityIntake {
+  season: "Winter/Fall" | "Summer/Spring";
+  windowOpens: string;
+  applicationDeadline: string;
+}
+
+export interface UniversityMinRequirements {
+  minCgpa: number;
+  minIelts: number;
+  greRequired: boolean;
+  duolingoAccepted?: boolean;
+}
+
+export interface UniversityItem {
+  id: string;
+  name: string;
+  countryCode: string;
+  countryName: string;
+  city: string;
+  tuitionBDTAnnual: string;
+  tuitionBDTAnnualMin: number;
+  tuitionCategory: TuitionCategory;
+  degreeLevels: ("bachelor" | "master")[];
+  popularPrograms: string[];
+  intakes: UniversityIntake[];
+  applicationMethod: "Direct" | "uni-assist" | "CommonApp" | "UAC" | "OUAC" | "EMGS";
+  minRequirements: UniversityMinRequirements;
+  waiversAndScholarships: string[];
+  admissionsPortalUrl: string;
+}
+
+export interface UniversityFilter {
+  query?: string;
+  countryCode?: string;
+  degreeLevel?: "bachelor" | "master";
+  tuitionCategory?: TuitionCategory | "ALL";
+  maxTuitionBDT?: number;
+  studentCgpa?: number;
+  studentIelts?: number;
+  season?: "Winter/Fall" | "Summer/Spring" | "ALL";
+}
+
+
 
