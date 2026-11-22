@@ -56,6 +56,8 @@
 | **Phase 12: Cross-Platform Ad Engine & PWA** | 12.2 Journey Engine Logic | Completed | `pickTickerAds`, `pickFloatingAd`, `pickStageAd` in `packages/journey-engine/src/ads.ts` + 5 new Vitest unit tests (150 total tests passing) |
 | **Phase 12: Cross-Platform Ad Engine & PWA** | 12.3 Website Ticker & Floating Spotlight | Completed | `AirportFidsTicker.tsx` retro flight board & `FloatingPartnerAd.tsx` on `/`, `/countries`, `/universities`, `/scholarships` |
 | **Phase 12: Cross-Platform Ad Engine & PWA** | 12.4 Mobile App Tracker & PWA | Completed | `StageAdModal.tsx` contextual stage pop-ups with free alternatives, W3C standalone manifest, service worker (`sw.js`), and `PwaInstallPrompt.tsx` |
+| **Phase 8: Rebranding & Web/App Separation** | 8.1 WayPoint Identity & Motto | Completed | Rebranded platform to **WayPoint** (`waypointbd.com`) with official motto: *"No dream is too big and no dreamer is too small"* |
+| **Phase 8: Rebranding & Web/App Separation** | 8.2 Distinct Website UI vs. Gamified Tracker | Completed | Built separate minimal, user-friendly website homepage (`/`) with 6 intelligence pillars & moved gamified flight tracker to `/tracker` |
 
 
 
@@ -631,16 +633,44 @@
 
 ---
 
+### Phase 8: Rebranding & Web / Mobile App Architecture Separation
+
+#### 8.1 Rebranding & Identity (`waypointbd.com`)
+- Officially rebranded the platform from "Dreamer" to **WayPoint** (`waypointbd.com`).
+- Prominently incorporated the official founder-chosen motto from the movie *Turbo*:  
+  > *"No dream is too big and no dreamer is too small."*
+- Updated web app metadata, titles, OpenGraph tags, PWA manifests, navigation bars, and footers across the app.
+
+#### 8.2 Distinct Website UI vs. Gamified Mobile App UI
+- **The Website (`waypointbd.com` / `/`)**:
+  - Re-architected the root route `/` into a clean, minimal, non-flashy, user-friendly discovery and intelligence platform.
+  - Visitors and students exploring options are not forced into an onboarding loop to view information.
+  - Features the 6 core public intelligence pillars:
+    1. **Country Hubs & FAQs** (`/countries`) — 18 destination dossiers, living costs in BDT, German Sperrkonto online portal (`digital.diplo.de`), Dhaka VFS timelines, PR rules.
+    2. **University Directory & Timelines** (`/universities`) — Curated institutions with interactive Annual Tuition Budget in BDT filter (< 2L, 2L–15L, 15L+), deadlines, and direct links.
+    3. **Scholarship & Waiver Finder** (`/scholarships`) — 18 global and bilateral government awards with BDT valuations and UGC circular guidance.
+    4. **Founder's IELTS Masterclass** (`/course`) — 12 lessons and reading practice modules.
+    5. **Agency Scam Shield** (`/scam-check`) — 8-point agency contract audit.
+    6. **Verified Senior Mentors** (`/mentors`) — Direct advisory sessions with Bangladeshi scholars abroad.
+  - Features the Airport FIDS Tickerboard at the top and Floating Partner Spotlight at the bottom.
+  - Prominent showcase section driving students to install and open the gamified mobile application.
+- **The Mobile Application (The Game / `/tracker`)**:
+  - The tracking experience is decoupled into its own dedicated gamified application at `/tracker`.
+  - Level progression from E-Rank to S-Rank Dreamer, flight progress bar (Dhaka to destination), passport stamps, weekly study streaks, and daily vocabulary/language quests.
+  - Serves as the web preview and engine foundation for the standalone mobile APK.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-12/ads-engine-and-pwa` (and previous phase branches).
+- [x] **No Direct Commits to Main**: All work performed on `phase-8/rebrand-waypoint` (and previous phase branches).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/ads/`, data access strictly through `store.ts`.
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/`, data access strictly through `store.ts`.
 - [x] **Commercial Compliance & Ethics**: Strict `[SPONSORED]` labeling; "Meets our standards as of [Date]"; never "verified" or "safe"; free alternatives always displayed; zero EXP for ads.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/`, `/countries`, `/scholarships`, and `/universities` with 0 horizontal overflow.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/`, `/tracker`, `/countries`, `/scholarships`, and `/universities` with 0 horizontal overflow.
 - [x] **Tests Passing**: All 150 vitest tests passing in `packages/journey-engine` across 11 test suites.
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled all routes cleanly with static and dynamic optimizations).
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 19 routes cleanly with code 0).
 
 ---
 

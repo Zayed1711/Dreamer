@@ -167,6 +167,16 @@ export function Dashboard({
 
   return (
     <main className="mx-auto max-w-md space-y-4 px-4 pt-5 pb-12">
+      {/* WayPoint Home Navigation Header */}
+      <div className="flex items-center justify-between font-mono text-xs text-slate-400 mb-1">
+        <Link href="/" className="hover:text-[#4db5ff] flex items-center gap-1 transition-colors">
+          <span>← WAYPOINT HOME</span>
+        </Link>
+        <span className="text-[10px] text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5 uppercase font-bold tracking-wider">
+          FLIGHT TRACKER
+        </span>
+      </div>
+
       {/* Contextual Stage Milestone Modal */}
       <StageAdModal stage={stage} />
 
@@ -457,9 +467,10 @@ export function Dashboard({
           ))}
         </ul>
         <div className="font-mono mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] text-[var(--muted)]">
-          <Link href="/countries" className="hover:text-[var(--accent)] text-[var(--accent)]">COUNTRIES</Link>
-          <Link href="/universities" className="hover:text-[var(--accent)] text-[var(--accent)]">UNIVERSITIES</Link>
-          <Link href="/scholarships" className="hover:text-[var(--accent)] text-[var(--accent)]">SCHOLARSHIPS</Link>
+          <Link href="/" className="hover:text-[var(--accent)] text-[var(--accent)] font-semibold">WAYPOINT HOME</Link>
+          <Link href="/countries" className="hover:text-[var(--accent)]">COUNTRIES</Link>
+          <Link href="/universities" className="hover:text-[var(--accent)]">UNIVERSITIES</Link>
+          <Link href="/scholarships" className="hover:text-[var(--accent)]">SCHOLARSHIPS</Link>
           <Link href="/course" className="hover:text-[var(--accent)]">IELTS COURSE</Link>
           <Link href="/mentors" className="hover:text-[var(--accent)]">MENTORS</Link>
           <Link href="/admin" className="hover:text-[var(--accent)] text-[var(--accent)]/80">ADMIN</Link>

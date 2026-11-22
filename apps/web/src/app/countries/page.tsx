@@ -64,15 +64,15 @@ export default function CountriesPage() {
   return (
     <main className="min-h-screen bg-[#05080f] text-[#c9d4e4] p-4 sm:p-6 max-w-6xl mx-auto">
       {/* Top Header */}
-      <div className="flex items-center justify-between gap-3 mb-6">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-[#4db5ff] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>[BACK TO DASHBOARD]</span>
+          <span>[WAYPOINT HOME]</span>
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <Link
             href="/universities"
             className="text-xs font-mono text-slate-400 hover:text-[#4db5ff] border border-[#1b2b3a] px-2.5 py-1"
@@ -84,6 +84,12 @@ export default function CountriesPage() {
             className="text-xs font-mono text-slate-400 hover:text-[#4db5ff] border border-[#1b2b3a] px-2.5 py-1"
           >
             SCHOLARSHIPS
+          </Link>
+          <Link
+            href="/tracker"
+            className="text-xs font-mono text-[#4db5ff] border border-[#4db5ff] bg-[#102030] px-2.5 py-1 font-bold hover:bg-[#4db5ff] hover:text-black transition-colors"
+          >
+            TRACKER APP
           </Link>
           <span className="text-[10px] font-mono uppercase tracking-widest text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5">
             18 DESTINATIONS ACTIVE

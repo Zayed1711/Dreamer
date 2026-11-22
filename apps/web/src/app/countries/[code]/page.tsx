@@ -127,13 +127,22 @@ export default function CountryDetailPage() {
     <main className="min-h-screen bg-[#05080f] text-[#c9d4e4] p-4 sm:p-6 max-w-5xl mx-auto">
       {/* Back Link & Breadcrumb */}
       <div className="flex items-center justify-between gap-3 mb-4">
-        <Link
-          href="/countries"
-          className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-[#4db5ff] transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>[ALL DESTINATIONS]</span>
-        </Link>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Link
+            href="/"
+            className="text-xs font-mono text-slate-400 hover:text-[#4db5ff] transition-colors"
+          >
+            [WAYPOINT]
+          </Link>
+          <span className="text-slate-600 font-mono text-xs">/</span>
+          <Link
+            href="/countries"
+            className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-[#4db5ff] transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>COUNTRIES</span>
+          </Link>
+        </div>
         <span className="text-[10px] font-mono uppercase tracking-widest text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5">
           {country.region} · {country.code}
         </span>

@@ -85,7 +85,7 @@ export default function ScholarshipsPage() {
           className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-[#4db5ff] transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
-          <span>[DASHBOARD]</span>
+          <span>[WAYPOINT HOME]</span>
         </Link>
         <div className="flex flex-wrap items-center gap-2">
           <Link
@@ -99,6 +99,12 @@ export default function ScholarshipsPage() {
             className="text-xs font-mono text-slate-400 hover:text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5"
           >
             UNIVERSITIES
+          </Link>
+          <Link
+            href="/tracker"
+            className="text-xs font-mono text-[#4db5ff] border border-[#4db5ff] bg-[#102030] px-2 py-0.5 font-bold hover:bg-[#4db5ff] hover:text-black transition-colors"
+          >
+            TRACKER APP
           </Link>
           <span className="text-[10px] font-mono uppercase tracking-widest text-[#4db5ff] border border-[#1b2b3a] px-2 py-0.5">
             {scholarships.length} PROGRAMS
