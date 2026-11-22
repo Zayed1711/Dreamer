@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" fill="#05080f"/>
+  <rect x="16" y="16" width="160" height="160" fill="none" stroke="#1b2b3a" stroke-width="2"/>
+  <!-- Corner brackets -->
+  <path d="M 24 40 L 24 24 L 40 24" fill="none" stroke="#4db5ff" stroke-width="4"/>
+  <path d="M 168 40 L 168 24 L 152 24" fill="none" stroke="#4db5ff" stroke-width="4"/>
+  <path d="M 24 152 L 24 168 L 40 168" fill="none" stroke="#4db5ff" stroke-width="4"/>
+  <path d="M 168 152 L 168 168 L 152 168" fill="none" stroke="#4db5ff" stroke-width="4"/>
+  <!-- Flight / WayPoint Icon -->
+  <path d="M 96 44 L 140 136 L 96 118 L 52 136 Z" fill="#102030" stroke="#4db5ff" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="96" cy="96" r="6" fill="#4db5ff"/>
+</svg>

@@ -18,10 +18,14 @@ import {
   type Journey,
   type JourneyItem,
   type Stat,
+  type Stage,
 } from "@dreamer/journey-engine";
 import { Check, Flame, Lock } from "lucide-react";
 import { FlightBar } from "./FlightBar";
 import { MilestoneIcon, StatIcon } from "./MilestoneIcon";
+import { AirportFidsTicker } from "./AirportFidsTicker";
+import { PwaInstallPrompt } from "./PwaInstallPrompt";
+import { StageAdModal } from "./StageAdModal";
 import { monthLabel } from "@/lib/format";
 import { loadDailyState, loadWeeklyStreak, setTaskDone, signOut, type DailyState } from "@/lib/store";
 import { supabaseEnabled } from "@/lib/supabase";
@@ -45,12 +49,14 @@ export function Dashboard({
   initialCompleted,
   extraExp = 0,
   targetCountries,
+  stage,
 }: {
   journey: Journey;
   today: string;
   initialCompleted: string[];
   extraExp?: number;
   targetCountries?: string[];
+  stage?: Stage;
 }) {
   const [completed, setCompleted] = useState<Set<string>>(() => new Set(initialCompleted));
   const [notice, setNotice] = useState<Notice | null>(null);
@@ -161,6 +167,15 @@ export function Dashboard({
 
   return (
     <main className="mx-auto max-w-md space-y-4 px-4 pt-5 pb-12">
+      {/* Contextual Stage Milestone Modal */}
+      <StageAdModal stage={stage} />
+
+      {/* Airport FIDS Tickerboard */}
+      <AirportFidsTicker className="mb-1" />
+
+      {/* PWA Home Screen Install Banner */}
+      <PwaInstallPrompt />
+
       {/* In-app reminder banner */}
       {reminder && (
         <Link

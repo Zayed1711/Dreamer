@@ -44,6 +44,30 @@ export const SLOTS: Record<string, { label: string; free: { title: string; note:
       url: "https://www.bb.org.bd",
     },
   },
+  pte_coaching: {
+    label: "PTE Academic Coaching & Centre",
+    free: {
+      title: "Official Pearson PTE Practice Materials",
+      note: "Free scored sample questions and offline practice tests provided by Pearson.",
+      url: "https://www.pearsonpte.com/preparation/resources",
+    },
+  },
+  german_centre: {
+    label: "German Language Course",
+    free: {
+      title: "Deutsche Welle (DW) Nicos Weg",
+      note: "Comprehensive free video courses from A1 to B1 provided by German public broadcaster Deutsche Welle.",
+      url: "https://learngerman.dw.com",
+    },
+  },
+  bank_offers: {
+    label: "Student Banking & Education Forex",
+    free: {
+      title: "Bangladesh Bank Foreign Exchange Guidelines",
+      note: "Read the official GFET guidelines for educational outward remittance without paying third-party fees.",
+      url: "https://www.bb.org.bd",
+    },
+  },
 };
 
 export const ADVISOR_TOPICS: Record<string, string> = {

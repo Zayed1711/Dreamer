@@ -65,6 +65,102 @@ export function pickActiveAd(ads: Ad[], context: AdMatchContext): Ad | null {
 }
 
 /**
+ * Returns active ads formatted for the airport FIDS ticker board.
+ * Matches ads that have placement === "ticker" or "all", or unspecified placement.
+ */
+export function pickTickerAds(ads: Ad[], maxCount = 5, todayStr?: string): Ad[] {
+  const today = todayStr ?? new Date().toISOString().slice(0, 10);
+  const activeAds = ads.filter((ad) => {
+    if (!ad.active) return false;
+    if (ad.startsOn && today < ad.startsOn) return false;
+    if (ad.endsOn && today > ad.endsOn) return false;
+    if (ad.placement && ad.placement !== "all" && ad.placement !== "ticker") return false;
+    return true;
+  });
+
+  activeAds.sort((a, b) => {
+    // Ads with a flight tag get prioritized on the ticker board
+    if (Boolean(a.flightTag) !== Boolean(b.flightTag)) {
+      return a.flightTag ? -1 : 1;
+    }
+    return a.id.localeCompare(b.id);
+  });
+
+  return activeAds.slice(0, maxCount);
+}
+
+/**
+ * Selects a floating partner spotlight ad matching user context.
+ * On public exploration pages where context.stage may not yet be set, allows
+ * ads targeting the slot without requiring an authenticated student profile.
+ */
+export function pickFloatingAd(ads: Ad[], context: AdMatchContext): Ad | null {
+  const matches = ads.filter((ad) => {
+    if (!ad.active) return false;
+    if (ad.placement && ad.placement !== "all" && ad.placement !== "floating") return false;
+    if (context.slot && ad.slot !== context.slot) return false;
+
+    const todayStr = context.date ?? new Date().toISOString().slice(0, 10);
+    if (ad.startsOn && todayStr < ad.startsOn) return false;
+    if (ad.endsOn && todayStr > ad.endsOn) return false;
+
+    // If student stage is known, verify stage targeting
+    if (context.stage && ad.targetStages && ad.targetStages.length > 0) {
+      if (!ad.targetStages.includes(context.stage)) return false;
+    }
+
+    // If country is specified, verify country targeting
+    if (context.country && ad.targetCountries && ad.targetCountries.length > 0) {
+      const targetUpper = ad.targetCountries.map((c) => c.toUpperCase());
+      if (!targetUpper.includes(context.country.toUpperCase())) return false;
+    }
+
+    return true;
+  });
+
+  if (matches.length === 0) return null;
+
+  matches.sort((a, b) => a.id.localeCompare(b.id));
+  return matches[0] ?? null;
+}
+
+/**
+ * Selects a contextual stage modal / pop-up ad for the mobile app tracker.
+ * Only triggers if the ad targets the current stage and has not been dismissed.
+ */
+export function pickStageAd(
+  ads: Ad[],
+  stage: Stage,
+  dismissedAdIds: string[] = [],
+  todayStr?: string,
+): Ad | null {
+  const today = todayStr ?? new Date().toISOString().slice(0, 10);
+  const dismissedSet = new Set(dismissedAdIds);
+
+  const matches = ads.filter((ad) => {
+    if (!ad.active) return false;
+    if (dismissedSet.has(ad.id)) return false;
+    if (ad.startsOn && today < ad.startsOn) return false;
+    if (ad.endsOn && today > ad.endsOn) return false;
+    if (ad.placement && ad.placement !== "all" && ad.placement !== "stage_modal") return false;
+
+    // Must match the current stage
+    if (!ad.targetStages || ad.targetStages.length === 0) return true;
+    return ad.targetStages.includes(stage);
+  });
+
+  if (matches.length === 0) return null;
+
+  // Stable ordering
+  matches.sort((a, b) => {
+    if (a.startsOn !== b.startsOn) return a.startsOn.localeCompare(b.startsOn);
+    return a.id.localeCompare(b.id);
+  });
+
+  return matches[0] ?? null;
+}
+
+/**
  * Validates input parameters for creating or updating an ad.
  */
 export function validateAdInput(input: Partial<Ad>): { valid: boolean; problems: string[] } {

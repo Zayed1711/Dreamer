@@ -8,8 +8,14 @@ const mono = IBM_Plex_Mono({ weight: ["400", "500", "600"], subsets: ["latin"], 
 const body = IBM_Plex_Sans({ weight: ["400", "500", "600"], subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  title: "Dreamer",
-  description: "Your study-abroad journey, from E-Rank to S-Rank Dreamer.",
+  title: "WayPoint — Study Abroad Flight Tracker",
+  description: "No dream is too big and no dreamer is too small. Your step-by-step study-abroad flight tracker from Bangladesh to the world.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "WayPoint",
+  },
 };
 
 export const viewport: Viewport = {

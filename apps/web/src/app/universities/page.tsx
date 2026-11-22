@@ -18,6 +18,8 @@ import {
   type TuitionCategory,
 } from "@dreamer/journey-engine";
 import { loadUniversities } from "@/lib/store";
+import { AirportFidsTicker } from "@/components/AirportFidsTicker";
+import { FloatingPartnerAd } from "@/components/FloatingPartnerAd";
 
 export default function UniversitiesPage() {
   const [universities, setUniversities] = useState<UniversityItem[]>([]);
@@ -106,6 +108,9 @@ export default function UniversitiesPage() {
           </span>
         </div>
       </div>
+
+      {/* Airport FIDS Flight & Partner Notice Tickerboard */}
+      <AirportFidsTicker className="mb-6" />
 
       {/* Hero Banner */}
       <section className="window p-6 mb-8 border border-[#1b2b3a] bg-[#0c1219]">
@@ -458,6 +463,9 @@ export default function UniversitiesPage() {
           </div>
         </div>
       )}
+
+      {/* Floating Partner Spotlight */}
+      <FloatingPartnerAd slot="student_banking" />
     </main>
   );
 }

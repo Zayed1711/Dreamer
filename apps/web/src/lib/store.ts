@@ -38,6 +38,9 @@ import {
   defaultAds,
   defaultSessions,
   pickActiveAd,
+  pickTickerAds,
+  pickFloatingAd,
+  pickStageAd,
   validateAdInput,
   calculateAdStats,
   canBookSession,
@@ -1028,6 +1031,34 @@ export async function loadActiveAdForSlot(
     country: context.country,
     english: context.english,
   });
+}
+
+export async function loadTickerAds(maxCount = 5): Promise<Ad[]> {
+  const ads = await loadAds();
+  return pickTickerAds(ads, maxCount);
+}
+
+export async function loadFloatingAd(context: {
+  stage?: Stage;
+  country?: string;
+  english?: EnglishLevel;
+  slot?: string;
+}): Promise<Ad | null> {
+  const ads = await loadAds();
+  return pickFloatingAd(ads, {
+    slot: context.slot ?? "student_banking",
+    stage: context.stage,
+    country: context.country,
+    english: context.english,
+  });
+}
+
+export async function loadStageAd(
+  stage: Stage,
+  dismissedAdIds: string[] = [],
+): Promise<Ad | null> {
+  const ads = await loadAds();
+  return pickStageAd(ads, stage, dismissedAdIds);
 }
 
 /**

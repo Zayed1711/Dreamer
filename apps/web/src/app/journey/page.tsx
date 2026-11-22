@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { defaultContent, parseMonth, taskId, type JourneyItem } from "@dreamer/journey-engine";
 import { monthLabel } from "@/lib/format";
 import { MilestoneIcon } from "@/components/MilestoneIcon";
+import { StageAdModal } from "@/components/StageAdModal";
 import { useStudent } from "@/lib/student";
 
 export default function JourneyPage() {
@@ -35,6 +36,9 @@ export default function JourneyPage() {
 
   return (
     <main className="mx-auto max-w-md px-4 pt-5 pb-12">
+      {/* Contextual Stage Milestone Modal */}
+      <StageAdModal stage={profile?.stage} />
+
       <div className="font-mono mb-5 flex items-center justify-between text-[11px]">
         <Link href="/" className="text-[var(--accent)]">
           ← BACK

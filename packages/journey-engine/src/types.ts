@@ -353,7 +353,7 @@ export interface MentorApplicationInput {
 
 // ---------- Ads & Advertisers (Phase 7) ----------
 
-export type AdvertiserType = "ielts_provider" | "agency" | "bank" | "other";
+export type AdvertiserType = "ielts_provider" | "pte_provider" | "agency" | "bank" | "language_centre" | "other";
 
 export type AdvertiserStatus = "active" | "suspended" | "removed";
 
@@ -364,8 +364,11 @@ export interface Advertiser {
   standardsAcceptedAt?: string;
   status: AdvertiserStatus;
   contact?: string;
+  website?: string;
   createdAt?: string;
 }
+
+export type AdPlacement = "all" | "slot" | "ticker" | "floating" | "stage_modal";
 
 export interface Ad {
   id: string;
@@ -384,6 +387,9 @@ export interface Ad {
   endsOn: string;
   active: boolean;
   standardsAcceptedAt?: string;
+  placement?: AdPlacement;
+  flightTag?: string; // e.g. "DAC ✈ BER", "IELTS 8.0", "STUDENT FILE"
+  badge?: string;     // e.g. "OFFICIAL TEST CENTRE", "ZERO FOREX MARGIN"
   createdAt?: string;
 }
 

@@ -52,6 +52,10 @@
 | **Phase 11: Scholarship & Waiver Finder** | 11.2 Journey Engine Logic | Completed | Pure filtering in `packages/journey-engine/src/scholarships.ts` (`filterScholarships`, `getScholarshipById`, `listScholarships`, `validateScholarshipData`) + 10 Vitest unit tests |
 | **Phase 11: Scholarship & Waiver Finder** | 11.3 Data Layer & Navigation | Completed | `loadScholarships()`, `loadScholarshipById()` in `store.ts`, `/scholarships` link added to dashboard and exploration hubs |
 | **Phase 11: Scholarship & Waiver Finder** | 11.4 Web Route & Mobile Verification | Completed | Public discovery route `/scholarships` with coverage filters, BDT award values, Bangladesh route circular guidance, verified at 375 × 812 with 0 horizontal overflow |
+| **Phase 12: Cross-Platform Ad Engine & PWA** | 12.1 Commercial Roster & Slots | Completed | Added IELTS/PTE centres, Authorized Dealer bank schemes (City Bank, EBL, SCB), and Goethe-Institut in `content/ads/` with permanent free alternatives in `slots.ts` |
+| **Phase 12: Cross-Platform Ad Engine & PWA** | 12.2 Journey Engine Logic | Completed | `pickTickerAds`, `pickFloatingAd`, `pickStageAd` in `packages/journey-engine/src/ads.ts` + 5 new Vitest unit tests (150 total tests passing) |
+| **Phase 12: Cross-Platform Ad Engine & PWA** | 12.3 Website Ticker & Floating Spotlight | Completed | `AirportFidsTicker.tsx` retro flight board & `FloatingPartnerAd.tsx` on `/`, `/countries`, `/universities`, `/scholarships` |
+| **Phase 12: Cross-Platform Ad Engine & PWA** | 12.4 Mobile App Tracker & PWA | Completed | `StageAdModal.tsx` contextual stage pop-ups with free alternatives, W3C standalone manifest, service worker (`sw.js`), and `PwaInstallPrompt.tsx` |
 
 
 
@@ -586,14 +590,55 @@
 
 ---
 
+### Phase 12: Cross-Platform Ad Engine & PWA
+
+#### 12.1 Commercial Roster Expansion & Slots (`content/ads/` & `apps/web/src/lib/slots.ts`)
+- Added vetted commercial sponsors across founder-mandated categories:
+  - **IELTS / PTE Test Centres & Courses**: British Council Bangladesh, IDP Education Bangladesh, Mentors' Education Dhaka, Pearson PTE Academic Bangladesh (`adv-pearson-pte`).
+  - **Bank Offers & Student File Schemes**: City Bank PLC (`adv-city-bank`), Eastern Bank PLC (`adv-ebl`), Standard Chartered Bangladesh (`adv-scb`).
+  - **Language Centres**: Goethe-Institut Bangladesh (`adv-goethe-dhaka` in Dhanmondi, Dhaka).
+- Added `pte_coaching`, `german_centre`, and `bank_offers` slots to `SLOTS` in `slots.ts`.
+- Mandatory Free Alternatives: Every commercial slot is strictly paired with a permanent, official free alternative (e.g. Bangladesh Bank Authorized Dealer foreign exchange guidelines, Pearson official practice tests, Deutsche Welle *Nicos Weg*).
+- All ads include verified standards dates (`standardsAcceptedAt`), referral codes for privacy-safe attribution, and explicit disclosures. No words like "verified" or "safe" are ever used.
+
+#### 12.2 Journey Engine Logic (`packages/journey-engine/src/ads.ts`)
+- Extended `Ad` and `Advertiser` types with `flightTag`, `badge`, `placement`, `website`, and `AdvertiserType` extensions.
+- Pure functions:
+  - `pickTickerAds(ads, maxCount, todayStr)`: Returns active ads for airport flight information display system (FIDS) ticker board, prioritizing flights with route tags.
+  - `pickFloatingAd(ads, context)`: Selects active partner spotlight ad, supporting both authenticated student targeting and unauthenticated public visitors on exploration hubs.
+  - `pickStageAd(ads, stage, dismissedAdIds, todayStr)`: Deterministically selects a stage-specific milestone ad while respecting session dismissals.
+- Exported from root `@dreamer/journey-engine` (`src/index.ts`).
+- Added 5 new Vitest unit tests in `packages/journey-engine/test/ads.test.ts`, bringing total test suite count to 150 passing tests across 11 test files.
+
+#### 12.3 Website Ad Components (`AirportFidsTicker.tsx` & `FloatingPartnerAd.tsx`)
+- **Airport FIDS Tickerboard (`apps/web/src/components/AirportFidsTicker.tsx`)**:
+  - Real airport flight information display styling with monospace terminal aesthetics (`TERMINAL FIDS · NOTICE 1/6 · SPONSORED`).
+  - Displays flight route tags (e.g. `DAC ✈ WORLD`, `DAC ✈ BER`), sponsor headlines, promo codes, and live pause/resume/cycling controls.
+  - Mounted across `/`, `/countries`, `/universities`, and `/scholarships`.
+- **Floating Partner Spotlight (`apps/web/src/components/FloatingPartnerAd.tsx`)**:
+  - Discrete bottom-right card with `[SPONSORED]` pill, promo code, minimize button (collapses to small bottom-right tab), and dismiss button persisting to `sessionStorage`.
+  - Mounted on exploration hubs (`/countries`, `/universities`, `/scholarships`).
+
+#### 12.4 Mobile App Tracker & Progressive Web App (PWA)
+- **Stage Ad Modal (`apps/web/src/components/StageAdModal.tsx`)**:
+  - Contextual modal in mobile tracker (`/` and `/journey`) triggered when students enter key milestone stages (such as IELTS Gate or Visa & Financial Proof).
+  - Displays vetted partner offer side-by-side with the official free alternative (Bangladesh Bank / British Council official site) and session dismissal.
+- **PWA Configuration**:
+  - Web App Manifest (`apps/web/public/manifest.json`) configured with `display: "standalone"`, `portrait-primary` orientation, theme color `#05080f`, and vector icons (`icon-192.svg`, `icon-512.svg`).
+  - Service worker (`apps/web/public/sw.js`) providing offline shell caching and fast mobile loading.
+  - PWA Install Prompt component (`apps/web/src/components/PwaInstallPrompt.tsx`) capturing `beforeinstallprompt` on Android/Chromium and showing Safari Add-to-Home-Screen instructions on iOS.
+- Mobile Verification: Tested and verified at 375 × 812 viewport via Browser Inspector subagent with 0 horizontal overflow.
+
+---
+
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-11/scholarships-finder` (and previous phase branches).
+- [x] **No Direct Commits to Main**: All work performed on `phase-12/ads-engine-and-pwa` (and previous phase branches).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
-- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/scholarships/`, data access strictly through `store.ts`.
-- [x] **Commercial Compliance & Ethics**: Transparent direct links to official government and university scholarship portals; no third-party agent referral links.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/scholarships` with 0 horizontal overflow.
-- [x] **Tests Passing**: All 145 vitest tests passing in `packages/journey-engine` across 11 test suites.
+- [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/ads/`, data access strictly through `store.ts`.
+- [x] **Commercial Compliance & Ethics**: Strict `[SPONSORED]` labeling; "Meets our standards as of [Date]"; never "verified" or "safe"; free alternatives always displayed; zero EXP for ads.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/`, `/countries`, `/scholarships`, and `/universities` with 0 horizontal overflow.
+- [x] **Tests Passing**: All 150 vitest tests passing in `packages/journey-engine` across 11 test suites.
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
 - [x] **Next.js Production Build**: Succeeded (`next build` compiled all routes cleanly with static and dynamic optimizations).
 

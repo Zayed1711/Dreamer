@@ -3,6 +3,9 @@ import {
   calculateAdStats,
   matchAd,
   pickActiveAd,
+  pickFloatingAd,
+  pickStageAd,
+  pickTickerAds,
   validateAdInput,
   type Ad,
 } from "../src";
@@ -186,6 +189,82 @@ describe("Ads & Targeting (Phase 7)", () => {
       expect(stats.views).toBe(0);
       expect(stats.clicks).toBe(0);
       expect(stats.ctr).toBe(0);
+    });
+  });
+
+  describe("pickTickerAds (Phase 12)", () => {
+    const tickerAd1: Ad = {
+      ...sampleAd,
+      id: "ad-ticker-1",
+      placement: "ticker",
+      flightTag: "DAC ✈ BER",
+    };
+    const tickerAd2: Ad = {
+      ...sampleAd,
+      id: "ad-ticker-2",
+      placement: "all",
+      flightTag: "DAC ✈ LHR",
+    };
+    const modalOnlyAd: Ad = {
+      ...sampleAd,
+      id: "ad-modal-1",
+      placement: "stage_modal",
+    };
+
+    it("filters ads eligible for airport FIDS ticker board", () => {
+      const res = pickTickerAds([tickerAd1, tickerAd2, modalOnlyAd], 5, "2026-06-15");
+      expect(res).toHaveLength(2);
+      expect(res.map((a) => a.id)).toEqual(["ad-ticker-1", "ad-ticker-2"]);
+    });
+
+    it("respects maxCount limit", () => {
+      const res = pickTickerAds([tickerAd1, tickerAd2], 1, "2026-06-15");
+      expect(res).toHaveLength(1);
+    });
+  });
+
+  describe("pickFloatingAd (Phase 12)", () => {
+    const floatingAd: Ad = {
+      ...sampleAd,
+      id: "ad-float-1",
+      placement: "floating",
+      slot: "ielts_coaching",
+    };
+
+    it("matches and returns eligible floating ad", () => {
+      const res = pickFloatingAd([floatingAd], {
+        slot: "ielts_coaching",
+        stage: "hsc1",
+        country: "GB",
+        english: "intermediate",
+        date: "2026-06-15",
+      });
+      expect(res?.id).toBe("ad-float-1");
+    });
+  });
+
+  describe("pickStageAd (Phase 12)", () => {
+    const stageAd1: Ad = {
+      ...sampleAd,
+      id: "ad-stage-ielts",
+      targetStages: ["ug2", "ug3"],
+      placement: "stage_modal",
+    };
+    const stageAd2: Ad = {
+      ...sampleAd,
+      id: "ad-stage-visa",
+      targetStages: ["ug4", "graduated"],
+      placement: "stage_modal",
+    };
+
+    it("returns matching ad for the current stage", () => {
+      const res = pickStageAd([stageAd1, stageAd2], "ug2", [], "2026-06-15");
+      expect(res?.id).toBe("ad-stage-ielts");
+    });
+
+    it("respects dismissed ad IDs for user session", () => {
+      const res = pickStageAd([stageAd1, stageAd2], "ug2", ["ad-stage-ielts"], "2026-06-15");
+      expect(res).toBeNull();
     });
   });
 });

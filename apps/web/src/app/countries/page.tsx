@@ -5,6 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowUpRight, Lock, Search } from "lucide-react";
 import { filterCountries, listCountries, type CountryInfo } from "@dreamer/journey-engine";
 import { loadCountries } from "@/lib/store";
+import { AirportFidsTicker } from "@/components/AirportFidsTicker";
+import { FloatingPartnerAd } from "@/components/FloatingPartnerAd";
 
 export default function CountriesPage() {
   const [countries, setCountries] = useState<CountryInfo[]>([]);
@@ -88,6 +90,9 @@ export default function CountriesPage() {
           </span>
         </div>
       </div>
+
+      {/* Airport FIDS Flight & Partner Notice Tickerboard */}
+      <AirportFidsTicker className="mb-6" />
 
       {/* Hero Banner */}
       <section className="window p-6 mb-8 border border-[#1b2b3a] bg-[#0c1219]">
@@ -302,6 +307,9 @@ export default function CountriesPage() {
           })}
         </div>
       )}
+
+      {/* Floating Partner Spotlight */}
+      <FloatingPartnerAd slot="student_banking" />
     </main>
   );
 }

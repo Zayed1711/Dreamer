@@ -30,5 +30,50 @@
     "standardsAcceptedAt": "2026-11-01T00:00:00Z",
     "status": "active",
     "contact": "admissions@edwisepathways.com"
+  },
+  {
+    "id": "adv-pearson-pte",
+    "name": "Pearson PTE Academic Bangladesh",
+    "type": "pte_provider",
+    "standardsAcceptedAt": "2026-10-10T00:00:00Z",
+    "status": "active",
+    "contact": "pte.support.bd@pearson.com",
+    "website": "https://www.pearsonpte.com"
+  },
+  {
+    "id": "adv-city-bank",
+    "name": "City Bank PLC (Authorized Dealer)",
+    "type": "bank",
+    "standardsAcceptedAt": "2026-10-20T00:00:00Z",
+    "status": "active",
+    "contact": "studentfile@thecitybank.com",
+    "website": "https://www.thecitybank.com"
+  },
+  {
+    "id": "adv-ebl",
+    "name": "Eastern Bank PLC (Authorized Dealer)",
+    "type": "bank",
+    "standardsAcceptedAt": "2026-10-25T00:00:00Z",
+    "status": "active",
+    "contact": "education@ebl-bd.com",
+    "website": "https://www.ebl.com.bd"
+  },
+  {
+    "id": "adv-scb",
+    "name": "Standard Chartered Bangladesh",
+    "type": "bank",
+    "standardsAcceptedAt": "2026-11-05T00:00:00Z",
+    "status": "active",
+    "contact": "studentbanking.bd@sc.com",
+    "website": "https://www.sc.com/bd"
+  },
+  {
+    "id": "adv-goethe-dhaka",
+    "name": "Goethe-Institut Bangladesh",
+    "type": "language_centre",
+    "standardsAcceptedAt": "2026-10-12T00:00:00Z",
+    "status": "active",
+    "contact": "info-dhaka@goethe.de",
+    "website": "https://www.goethe.de/ins/bd/en/index.html"
   }
 ]

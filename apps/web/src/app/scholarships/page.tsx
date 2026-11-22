@@ -16,6 +16,8 @@ import {
   type ScholarshipItem,
 } from "@dreamer/journey-engine";
 import { loadScholarships } from "@/lib/store";
+import { AirportFidsTicker } from "@/components/AirportFidsTicker";
+import { FloatingPartnerAd } from "@/components/FloatingPartnerAd";
 
 export default function ScholarshipsPage() {
   const [scholarships, setScholarships] = useState<ScholarshipItem[]>([]);
@@ -103,6 +105,9 @@ export default function ScholarshipsPage() {
           </span>
         </div>
       </div>
+
+      {/* Airport FIDS Flight & Partner Notice Tickerboard */}
+      <AirportFidsTicker className="mb-6" />
 
       {/* Hero Banner */}
       <section className="window p-4 sm:p-6 mb-6 border border-[#1b2b3a] bg-[#0c1219]">
@@ -407,6 +412,9 @@ export default function ScholarshipsPage() {
           </div>
         </div>
       )}
+
+      {/* Floating Partner Spotlight */}
+      <FloatingPartnerAd slot="student_banking" />
     </main>
   );
 }

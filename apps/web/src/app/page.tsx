@@ -24,7 +24,17 @@ export default function Home() {
       </main>
     );
   }
-  if (!journey) return null;
+
+  if (!ready || !journey) {
+    return (
+      <main className="min-h-screen bg-[#05080f] text-[#c9d4e4] flex items-center justify-center p-6 font-mono text-xs">
+        <div className="window p-6 border border-[#1b2b3a] bg-[#0c1219] text-center space-y-2">
+          <div className="text-[#4db5ff] font-bold tracking-widest">[WAYPOINT FLIGHT TRACKER]</div>
+          <p className="text-slate-400">Initializing flight instruments...</p>
+        </div>
+      </main>
+    );
+  }
   return (
     <Dashboard
       journey={journey}
@@ -32,6 +42,7 @@ export default function Home() {
       initialCompleted={completed}
       extraExp={extraExp}
       targetCountries={profile?.countries}
+      stage={profile?.stage}
     />
   );
 }
