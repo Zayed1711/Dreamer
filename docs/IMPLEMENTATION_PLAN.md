@@ -101,7 +101,7 @@ Dreamer/
 | Flight plan page | ✅ Done |
 | Scam Check and the Scam Shield milestone | ✅ Done |
 | Flags, icons, destination photos, credits | ✅ Done (18 countries including Poland) |
-| Sign-in screen | ⚠️ Built for **phone** OTP; must change to **email** OTP (Phase 1) |
+| Sign-in screen | ✅ Done: Google 1-Click OAuth + 6-digit Email OTP (Phase 1) |
 | Supabase | ⚠️ Schema written but never run; no project connected; the data layer has never run against a real database |
 | Streaks | ❌ Not built (the `streaks` table exists) |
 | Daily quest, course, language tracks | ❌ Not built |

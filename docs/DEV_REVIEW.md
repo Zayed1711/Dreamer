@@ -13,7 +13,7 @@
 |---|---|---|---|
 | **Phase 0: Housekeeping** | Task 0.1: Pending docs | Verified (Already committed on `main` in `b25850a`) | `AGENTS.md`, `docs/IMPLEMENTATION_PLAN.md`, `docs/product-design.md` |
 | **Phase 0: Housekeeping** | Task 0.2: CI Workflow | Completed & Pushed (`phase-0/ci-check`) | `.github/workflows/ci.yml` running `npm ci`, vitest tests, typechecks, lint, and production build |
-| **Phase 1: Auth & Supabase** | Email OTP & Schema | Skipped for now | Deferred per founder instruction until credentials/setup ready |
+| **Phase 1: Auth & Supabase** | Google OAuth & Email OTP | Completed & Pushed (`phase-1/google-email-auth`) | Google 1-Click Sign-In + 6-digit Email OTP, local-to-cloud progress migration, `auth/callback` handler, removed phone SMS dependency |
 | **Phase 2: Daily Quest** | 2.1 Content | Completed | 6 graded word lists (600+ words), 60 prompts, 5,849-word dictionary & CC0 license |
 | **Phase 2: Daily Quest** | 2.2 Engine Logic | Completed | `packages/journey-engine/src/daily.ts` (pure functions) + 25 vitest tests |
 | **Phase 2: Daily Quest** | 2.3 EXP Integration | Completed | `computeProgress(..., extraExp = 0)` in `progress.ts` + unit tests |
@@ -78,6 +78,30 @@
      - `npm run lint --workspace @dreamer/web`.
      - `npm run build --workspace @dreamer/web`.
    - Branch: `phase-0/ci-check`, PR link: `https://github.com/Zayed1711/Dreamer/pull/new/phase-0/ci-check`.
+
+---
+
+### Phase 1: Authentication & Supabase Connection (Google OAuth + Email OTP)
+
+#### 1.1 Architecture & Flow
+- **Pattern Match with KhoboraKhobor**:
+  - Implemented 1-click Google OAuth authentication via Supabase Auth (`supabase.auth.signInWithOAuth({ provider: "google" })`), matching the seamless single-tap authentication established in sibling project KhoboraKhobor (`E:\KhoboraKhobor`).
+  - Added a secondary fallback of passwordless 6-digit Email OTP (`supabase.auth.signInWithOtp({ email })` and `supabase.auth.verifyOtp({ token, type: 'email' })`).
+  - Completely removed SMS phone number verification and deprecated `normalizeBdMobile` / `apps/web/src/lib/phone.ts` to avoid flaky Bangladeshi SMS gateways, international roaming friction, and costly telecom API charges.
+
+#### 1.2 Auth Callback & Progress Migration (`apps/web/src/app/auth/callback/page.tsx`)
+- Handles OAuth code exchange and session retrieval securely on the client.
+- Automatically calls `moveLocalProgressToAccount()` from `apps/web/src/lib/store.ts` upon successful session establishment, migrating all existing guest progress (`profiles`, `task_completions`, `daily_quest_submissions`, `language_progress`, and `practice_completions`) from `localStorage` directly into Supabase cloud PostgreSQL with RLS.
+- Checks if the authenticated user has an active student profile:
+  - If profile exists: redirects immediately to the gamified flight tracker at `/tracker`.
+  - If new student: routes to `/onboarding` to customize destination, rank, and roadmap.
+
+#### 1.3 Sign-In UI & System Aesthetic (`apps/web/src/app/signin/page.tsx`)
+- Fully redesigned within the approved "System" theme (#4db5ff, `.window` card, Chakra Petch & IBM Plex fonts, zero emojis, zero blur/glow).
+- Direct "Continue with Google" button with official SVG icon and loading state.
+- Discrete "── OR WITH EMAIL ──" divider.
+- Resend countdown timer (60s), change email button, and user-friendly error translations.
+- Preview mode fallback support (simulated 1-click Google sign-in and demo code `123456`) when Supabase credentials are not locally configured.
 
 ---
 
@@ -663,14 +687,14 @@
 
 ## 3. Verification & Compliance Checklist
 
-- [x] **No Direct Commits to Main**: All work performed on `phase-8/rebrand-waypoint` (and previous phase branches).
+- [x] **No Direct Commits to Main**: All work performed on `phase-1/google-email-auth` (and previous phase branches `phase-8/rebrand-waypoint`, `phase-12/ads-engine-and-pwa`, `phase-11/scholarships-finder`, etc.).
 - [x] **No Forbidden Aesthetics**: Approved "System" theme strictly maintained (accent `#4db5ff`, `.window` cards, Chakra Petch and IBM Plex fonts; no gradients, blur, glow, or emoji).
 - [x] **Separation of Concerns**: Pure logic in `packages/journey-engine`, content in `content/`, data access strictly through `store.ts`.
 - [x] **Commercial Compliance & Ethics**: Strict `[SPONSORED]` labeling; "Meets our standards as of [Date]"; never "verified" or "safe"; free alternatives always displayed; zero EXP for ads.
-- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/`, `/tracker`, `/countries`, `/scholarships`, and `/universities` with 0 horizontal overflow.
+- [x] **Mobile Responsiveness**: 375 × 812 viewport verified across `/`, `/signin`, `/auth/callback`, `/tracker`, `/countries`, `/scholarships`, and `/universities` with 0 horizontal overflow.
 - [x] **Tests Passing**: All 150 vitest tests passing in `packages/journey-engine` across 11 test suites.
 - [x] **Typecheck & Lint**: Both packages passing `tsc --noEmit` and ESLint with 0 errors and 0 warnings.
-- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 19 routes cleanly with code 0).
+- [x] **Next.js Production Build**: Succeeded (`next build` compiled all 20 routes cleanly with code 0).
 
 ---
 
