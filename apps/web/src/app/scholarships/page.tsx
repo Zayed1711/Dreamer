@@ -10,14 +10,16 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import {
+  daysUntil,
   filterScholarships,
+  formatYearlyDate,
   listScholarships,
   type ScholarshipCoverage,
   type ScholarshipItem,
 } from "@dreamer/journey-engine";
 import { loadScholarships } from "@/lib/store";
+import { FactsFooter } from "@/components/FactsNotes";
 import { AirportFidsTicker } from "@/components/AirportFidsTicker";
-import { FloatingPartnerAd } from "@/components/FloatingPartnerAd";
 
 export default function ScholarshipsPage() {
   const [scholarships, setScholarships] = useState<ScholarshipItem[]>([]);
@@ -384,7 +386,11 @@ export default function ScholarshipsPage() {
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5 sm:gap-2">
                         <span className="text-slate-400 shrink-0">Application Cycle:</span>
                         <span className="text-[#4db5ff] break-words sm:text-right">
-                          Opens: {s.applicationWindow.opens} · Deadline: {s.applicationWindow.deadline}
+                          Opens: {formatYearlyDate(s.applicationWindow.opens)} · Deadline: {formatYearlyDate(s.applicationWindow.deadline)}
+                          {(() => {
+                            const d = daysUntil(s.applicationWindow.deadline);
+                            return d !== null && d <= 60 ? <span className="text-amber-300"> · {d === 0 ? "today" : `${d} days left`}</span> : null;
+                          })()}
                         </span>
                       </div>
                     </div>
@@ -402,6 +408,7 @@ export default function ScholarshipsPage() {
 
                   {/* Direct Official Link */}
                   <div className="pt-2 border-t border-[#1b2b3a]">
+                    <FactsFooter lastChecked={s.lastChecked} />
                     <a
                       href={s.applicationUrl}
                       target="_blank"
@@ -420,7 +427,6 @@ export default function ScholarshipsPage() {
       )}
 
       {/* Floating Partner Spotlight */}
-      <FloatingPartnerAd slot="student_banking" />
     </main>
   );
 }

@@ -5,9 +5,6 @@
     "countryCode": "DE",
     "countryName": "Germany",
     "city": "Munich",
-    "tuitionBDTAnnual": "110,000 BDT (Semester Fee + Admin Fee)",
-    "tuitionBDTAnnualMin": 110000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -17,18 +14,6 @@
       "Mechanical Engineering",
       "Data Engineering",
       "Management & Technology"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "January 1",
-        "applicationDeadline": "May 31 (uni-assist VPD required)"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "September 1",
-        "applicationDeadline": "January 15"
-      }
     ],
     "applicationMethod": "uni-assist",
     "minRequirements": {
@@ -42,7 +27,38 @@
       "Deutschlandstipendium (€300/mo)",
       "TUM Graduate School Grants"
     ],
-    "admissionsPortalUrl": "https://www.tum.de/en/studies/application"
+    "tuition": {
+      "amount": 110000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Semester Fee + Admin Fee"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "01-01"
+        },
+        "deadline": {
+          "date": "05-31",
+          "note": "uni-assist VPD required"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "01-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.tum.de/en/studies/application",
+    "sources": [
+      "https://www.tum.de/en/studies/application"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-rwth-aachen",
@@ -50,9 +66,6 @@
     "countryCode": "DE",
     "countryName": "Germany",
     "city": "Aachen",
-    "tuitionBDTAnnual": "85,000 BDT (Semester Ticket Fee)",
-    "tuitionBDTAnnualMin": 85000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -62,18 +75,6 @@
       "Electrical Engineering",
       "Software Systems Engineering",
       "Production Engineering"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "December 1",
-        "applicationDeadline": "March 1 (International Applicants)"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "June 1",
-        "applicationDeadline": "September 1"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -87,7 +88,39 @@
       "RWTH Education Fund",
       "NRW Scholarship Program"
     ],
-    "admissionsPortalUrl": "https://www.rwth-aachen.de/cms/root/studium/vor-dem-studium/bewerbung-um-einen-studienplatz/~dqx/internationale-bewerber/?lidx=1"
+    "tuition": {
+      "amount": 85000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Semester Ticket Fee"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "12-01"
+        },
+        "deadline": {
+          "date": "03-01",
+          "note": "International Applicants"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "06-01"
+        },
+        "deadline": {
+          "date": "09-01"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.rwth-aachen.de/cms/root/studium/vor-dem-studium/bewerbung-um-einen-studienplatz/master-bewerbung/~dqml/bewerbung-master-internationale/?lidx=1",
+    "sources": [
+      "https://www.rwth-aachen.de/cms/root/studium/vor-dem-studium/~bsottx/bewerbungs-und-einschreibefrist/?lidx=1",
+      "https://www.rwth-aachen.de/cms/root/studium/vor-dem-studium/bewerbung-um-einen-studienplatz/master-bewerbung/~dqml/bewerbung-master-internationale/?lidx=1"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-tu-berlin",
@@ -95,9 +128,6 @@
     "countryCode": "DE",
     "countryName": "Germany",
     "city": "Berlin",
-    "tuitionBDTAnnual": "80,000 BDT (Semester Fee)",
-    "tuitionBDTAnnualMin": 80000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -107,18 +137,6 @@
       "Information Systems Management",
       "Global Production Engineering",
       "Architecture"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "April 1",
-        "applicationDeadline": "July 15 via uni-assist"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "October 1",
-        "applicationDeadline": "January 15"
-      }
     ],
     "applicationMethod": "uni-assist",
     "minRequirements": {
@@ -131,7 +149,38 @@
       "DAAD Scholarship Eligible",
       "Deutschlandstipendium"
     ],
-    "admissionsPortalUrl": "https://www.tu.berlin/en/studying/admissions"
+    "tuition": {
+      "amount": 80000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Semester Fee"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "04-01"
+        },
+        "deadline": {
+          "date": "05-15",
+          "note": "English-taught master's with restricted admission; German-taught master's 15 June; uni-assist VPD needed"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "10-01"
+        },
+        "deadline": {
+          "date": "01-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.tu.berlin/en/studying/applying-and-enrolling/dates-deadlines",
+    "sources": [
+      "https://www.tu.berlin/en/studying/applying-and-enrolling/dates-deadlines"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-stuttgart",
@@ -139,9 +188,6 @@
     "countryCode": "DE",
     "countryName": "Germany",
     "city": "Stuttgart",
-    "tuitionBDTAnnual": "390,000 BDT (€1,500/semester for non-EU)",
-    "tuitionBDTAnnualMin": 390000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "master"
     ],
@@ -150,18 +196,6 @@
       "INFOTECH",
       "GEOENGINE",
       "Water Resources (WAREM)"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "November 15",
-        "applicationDeadline": "February 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "June 1",
-        "applicationDeadline": "July 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -174,7 +208,37 @@
       "DAAD EPOS Fully Funded",
       "Baden-Württemberg Merit Grant"
     ],
-    "admissionsPortalUrl": "https://www.uni-stuttgart.de/en/study/application/"
+    "tuition": {
+      "amount": 1500,
+      "currency": "EUR",
+      "per": "semester",
+      "note": "€1,500/semester for non-EU"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "11-15"
+        },
+        "deadline": {
+          "date": "02-15"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "06-01"
+        },
+        "deadline": {
+          "date": "07-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.uni-stuttgart.de/en/study/application/",
+    "sources": [
+      "https://www.uni-stuttgart.de/en/study/application/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-passau",
@@ -182,9 +246,6 @@
     "countryCode": "DE",
     "countryName": "Germany",
     "city": "Passau",
-    "tuitionBDTAnnual": "25,000 BDT (Semester administrative contribution)",
-    "tuitionBDTAnnualMin": 25000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "master"
     ],
@@ -192,18 +253,6 @@
       "M.Sc. Computer Science",
       "M.Sc. Artificial Intelligence",
       "MA Development Studies"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "April 1",
-        "applicationDeadline": "June 30"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "October 1",
-        "applicationDeadline": "January 15"
-      }
     ],
     "applicationMethod": "uni-assist",
     "minRequirements": {
@@ -216,7 +265,37 @@
       "DAAD Helmut-Schmidt Programme (PPGG)",
       "Bavarian Government Grant"
     ],
-    "admissionsPortalUrl": "https://www.uni-passau.de/en/apply"
+    "tuition": {
+      "amount": 25000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Semester administrative contribution"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "04-01"
+        },
+        "deadline": {
+          "date": "06-30"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "10-01"
+        },
+        "deadline": {
+          "date": "01-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.uni-passau.de/en/apply",
+    "sources": [
+      "https://www.uni-passau.de/en/apply"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-chemnitz",
@@ -224,9 +303,6 @@
     "countryCode": "DE",
     "countryName": "Germany",
     "city": "Chemnitz",
-    "tuitionBDTAnnual": "65,000 BDT (Public University Semester Contribution)",
-    "tuitionBDTAnnualMin": 65000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -236,18 +312,6 @@
       "Data Science",
       "Embedded Systems",
       "Micro and Nano Systems"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "May 1",
-        "applicationDeadline": "July 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "November 1",
-        "applicationDeadline": "January 15"
-      }
     ],
     "applicationMethod": "uni-assist",
     "minRequirements": {
@@ -260,7 +324,37 @@
       "Saxony State Fellowship",
       "Deutschlandstipendium"
     ],
-    "admissionsPortalUrl": "https://www.tu-chemnitz.de/studierendenservice/stupa/index.php.en"
+    "tuition": {
+      "amount": 65000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Public University Semester Contribution"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "05-01"
+        },
+        "deadline": {
+          "date": "07-15"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "11-01"
+        },
+        "deadline": {
+          "date": "01-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.tu-chemnitz.de/studierendenservice/studserv/bewerbung/bew_bamala.php.en",
+    "sources": [
+      "https://www.tu-chemnitz.de/studierendenservice/studserv/bewerbung/bew_bamala.php.en"
+    ],
+    "lastChecked": null
   },
   {
     "id": "us-uta",
@@ -268,9 +362,6 @@
     "countryCode": "US",
     "countryName": "United States",
     "city": "Arlington, Texas",
-    "tuitionBDTAnnual": "1,400,000 BDT (With In-State Tuition Waiver)",
-    "tuitionBDTAnnualMin": 1400000,
-    "tuitionCategory": "moderate",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -280,18 +371,6 @@
       "Data Science",
       "Civil Engineering",
       "Biomedical Engineering"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "September 1",
-        "applicationDeadline": "March 15 (Priority for funding)"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "April 1",
-        "applicationDeadline": "October 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -304,7 +383,38 @@
       "Competitive Scholarship Waiver (grants in-state tuition rate)",
       "Graduate Research Assistantship (RA/TA) covers 100% tuition + ,000/mo"
     ],
-    "admissionsPortalUrl": "https://www.uta.edu/admissions"
+    "tuition": {
+      "amount": 1400000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "With In-State Tuition Waiver"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "03-15",
+          "note": "Priority for funding"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "04-01"
+        },
+        "deadline": {
+          "date": "10-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.uta.edu/admissions/apply/international-graduate",
+    "sources": [
+      "https://www.uta.edu/admissions/apply/international-graduate"
+    ],
+    "lastChecked": null
   },
   {
     "id": "us-usf",
@@ -312,9 +422,6 @@
     "countryCode": "US",
     "countryName": "United States",
     "city": "Tampa, Florida",
-    "tuitionBDTAnnual": "1,800,000 BDT (Out-of-state) / 0 BDT with Assistantship",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "moderate",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -324,18 +431,6 @@
       "Cybersecurity",
       "Public Health",
       "Business Analytics"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "August 1",
-        "applicationDeadline": "February 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "March 1",
-        "applicationDeadline": "September 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -348,7 +443,40 @@
       "Graduate Teaching Assistantship (Full tuition waiver + ,800/mo stipend)",
       "USF International Merit Scholarship (,000/yr)"
     ],
-    "admissionsPortalUrl": "https://www.usf.edu/admissions/"
+    "tuition": {
+      "amount": 1800000,
+      "currency": "BDT",
+      "per": "year",
+      "withFunding": 0,
+      "note": "Out-of-state / 0 BDT with Assistantship"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "08-01"
+        },
+        "deadline": {
+          "date": "06-01",
+          "note": "Final international deadline, master's; doctoral 15 Feb; departments may be earlier"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "03-01"
+        },
+        "deadline": {
+          "date": "10-15",
+          "note": "Final international deadline"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.usf.edu/admissions/graduate/admission-information/requirements-deadlines.aspx",
+    "sources": [
+      "https://www.usf.edu/admissions/graduate/admission-information/requirements-deadlines.aspx"
+    ],
+    "lastChecked": null
   },
   {
     "id": "us-tamu",
@@ -356,9 +484,6 @@
     "countryCode": "US",
     "countryName": "United States",
     "city": "College Station, Texas",
-    "tuitionBDTAnnual": "2,600,000 BDT (Full) / 0 BDT with Assistantship",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "master"
     ],
@@ -367,13 +492,6 @@
       "Aerospace Engineering",
       "Computer Engineering",
       "Statistics"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "August 1",
-        "applicationDeadline": "January 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -386,7 +504,29 @@
       "Graduate Assistantship Research (GAR) with full tuition waiver",
       "Departmental Fellowships"
     ],
-    "admissionsPortalUrl": "https://admissions.tamu.edu/"
+    "tuition": {
+      "amount": 2600000,
+      "currency": "BDT",
+      "per": "year",
+      "withFunding": 0,
+      "note": "Full / 0 BDT with Assistantship"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "08-01"
+        },
+        "deadline": {
+          "date": "01-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://engineering.tamu.edu/electrical/admissions-and-aid/graduate-admissions/index.html",
+    "sources": [
+      "https://engineering.tamu.edu/electrical/admissions-and-aid/graduate-admissions/index.html"
+    ],
+    "lastChecked": null
   },
   {
     "id": "us-wichita",
@@ -394,9 +534,6 @@
     "countryCode": "US",
     "countryName": "United States",
     "city": "Wichita, Kansas",
-    "tuitionBDTAnnual": "1,200,000 BDT (Very affordable Midwest tuition)",
-    "tuitionBDTAnnualMin": 1200000,
-    "tuitionCategory": "moderate",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -406,18 +543,6 @@
       "Industrial Engineering",
       "Computer Science",
       "Management Information Systems"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "October 1",
-        "applicationDeadline": "May 1"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "April 1",
-        "applicationDeadline": "October 1"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -430,7 +555,39 @@
       "Global Select Scholarship (reduces tuition by 36%)",
       "Campus Graduate Assistantships"
     ],
-    "admissionsPortalUrl": "https://www.wichita.edu/admissions/international/"
+    "tuition": {
+      "amount": 1200000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Very affordable Midwest tuition"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "10-01"
+        },
+        "deadline": {
+          "date": "03-01",
+          "note": "Priority date; secondary 30 April"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "04-01"
+        },
+        "deadline": {
+          "date": "08-31",
+          "note": "Priority date; secondary 30 September"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.wichita.edu/admissions/graduate/deadlines.php",
+    "sources": [
+      "https://www.wichita.edu/admissions/graduate/deadlines.php"
+    ],
+    "lastChecked": null
   },
   {
     "id": "gb-coventry",
@@ -438,9 +595,6 @@
     "countryCode": "GB",
     "countryName": "United Kingdom",
     "city": "Coventry / London",
-    "tuitionBDTAnnual": "2,200,000 BDT (£17,000 - £19,000)",
-    "tuitionBDTAnnualMin": 2200000,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -450,18 +604,6 @@
       "International Business Management",
       "Data Science and AI",
       "Cyber Security"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "October 1",
-        "applicationDeadline": "July 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "May 1",
-        "applicationDeadline": "November 30"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -473,7 +615,37 @@
     "waiversAndScholarships": [
       "Coventry International Academic Excellence Award (£2,000 - £4,000 reduction)"
     ],
-    "admissionsPortalUrl": "https://www.coventry.ac.uk/international-students-hub/"
+    "tuition": {
+      "amount": 17000,
+      "currency": "GBP",
+      "per": "year",
+      "note": "£17,000 - £19,000"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "10-01"
+        },
+        "deadline": {
+          "date": "07-15"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "05-01"
+        },
+        "deadline": {
+          "date": "11-30"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.coventry.ac.uk/international-students-hub/",
+    "sources": [
+      "https://www.coventry.ac.uk/international-students-hub/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "gb-birmingham",
@@ -481,9 +653,6 @@
     "countryCode": "GB",
     "countryName": "United Kingdom",
     "city": "Birmingham",
-    "tuitionBDTAnnual": "3,200,000 BDT (Russell Group Member)",
-    "tuitionBDTAnnualMin": 3200000,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -493,13 +662,6 @@
       "Computer Science",
       "Public Policy",
       "Finance"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "September 1",
-        "applicationDeadline": "June 30"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -513,7 +675,40 @@
       "Commonwealth Shared Scholarships",
       "Global Masters Scholarship (£2,000 - £10,000)"
     ],
-    "admissionsPortalUrl": "https://www.birmingham.ac.uk/postgraduate/courses"
+    "tuition": {
+      "amount": 3200000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Russell Group Member"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "07-02",
+          "note": "Overseas deadline for most taught master's; some courses close earlier"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": null,
+          "note": "Varies by course"
+        },
+        "deadline": {
+          "date": "10-30",
+          "note": "January entry, overseas deadline"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.birmingham.ac.uk/study/postgraduate/taught/apply",
+    "sources": [
+      "https://www.birmingham.ac.uk/study/postgraduate/taught/apply"
+    ],
+    "lastChecked": null
   },
   {
     "id": "gb-hertfordshire",
@@ -521,9 +716,6 @@
     "countryCode": "GB",
     "countryName": "United Kingdom",
     "city": "Hatfield (Greater London)",
-    "tuitionBDTAnnual": "1,950,000 BDT (£15,500 with placement year option)",
-    "tuitionBDTAnnualMin": 1950000,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -533,18 +725,6 @@
       "Pharmacology",
       "Aerospace Engineering",
       "Data Science"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "October 1",
-        "applicationDeadline": "July 1"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "May 1",
-        "applicationDeadline": "November 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -557,7 +737,37 @@
       "Chancellor International Scholarship (up to £4,000)",
       "Early Bird Payment Discount (£1,000)"
     ],
-    "admissionsPortalUrl": "https://www.herts.ac.uk/international"
+    "tuition": {
+      "amount": 15500,
+      "currency": "GBP",
+      "per": "year",
+      "note": "£15,500 with placement year option"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "10-01"
+        },
+        "deadline": {
+          "date": "07-01"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "05-01"
+        },
+        "deadline": {
+          "date": "11-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.herts.ac.uk/international",
+    "sources": [
+      "https://www.herts.ac.uk/international"
+    ],
+    "lastChecked": null
   },
   {
     "id": "ca-mun",
@@ -565,9 +775,6 @@
     "countryCode": "CA",
     "countryName": "Canada",
     "city": "St. John's, Newfoundland",
-    "tuitionBDTAnnual": "850,000 BDT (CAD ,666/year - Most affordable university in Canada)",
-    "tuitionBDTAnnualMin": 850000,
-    "tuitionCategory": "moderate",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -577,18 +784,6 @@
       "Oil and Gas Engineering",
       "Environmental Science",
       "Economics"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "September 1",
-        "applicationDeadline": "February 1"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "April 1",
-        "applicationDeadline": "September 1"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -600,7 +795,37 @@
     "waiversAndScholarships": [
       "School of Graduate Studies Baseline Fellowship (,000 CAD/year)"
     ],
-    "admissionsPortalUrl": "https://www.mun.ca/undergrad/admissions/"
+    "tuition": {
+      "amount": 850000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Most affordable university in Canada"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "02-01"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "04-01"
+        },
+        "deadline": {
+          "date": "09-01"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.mun.ca/undergrad/admissions/",
+    "sources": [
+      "https://www.mun.ca/undergrad/admissions/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "ca-windsor",
@@ -608,9 +833,6 @@
     "countryCode": "CA",
     "countryName": "Canada",
     "city": "Windsor, Ontario",
-    "tuitionBDTAnnual": "2,200,000 BDT (CAD ,000/yr)",
-    "tuitionBDTAnnualMin": 2200000,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "master"
     ],
@@ -619,18 +841,6 @@
       "Automotive Engineering",
       "Civil Engineering",
       "Management"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "September 1",
-        "applicationDeadline": "March 1"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "May 1",
-        "applicationDeadline": "September 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -643,7 +853,36 @@
       "Graduate Entrance Scholarships",
       "Teaching Assistantships for Master of Science students"
     ],
-    "admissionsPortalUrl": "https://www.uwindsor.ca/graduate-studies/"
+    "tuition": {
+      "amount": 2200000,
+      "currency": "BDT",
+      "per": "year"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "03-01"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "05-01"
+        },
+        "deadline": {
+          "date": "09-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.uwindsor.ca/graduate-studies/346/admission-requirements",
+    "sources": [
+      "https://www.uwindsor.ca/graduate-studies/346/admission-requirements"
+    ],
+    "lastChecked": null
   },
   {
     "id": "jp-u-tokyo",
@@ -651,9 +890,6 @@
     "countryCode": "JP",
     "countryName": "Japan",
     "city": "Tokyo",
-    "tuitionBDTAnnual": "450,000 BDT (¥535,800/yr) / 0 BDT on MEXT",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "master"
     ],
@@ -662,18 +898,6 @@
       "Public Policy (MPP/IP)",
       "International Bioengineering",
       "Sustainability Science"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "December 1",
-        "applicationDeadline": "January 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "June 1",
-        "applicationDeadline": "July 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -686,7 +910,39 @@
       "MEXT University Recommendation (Full tuition + ¥145,000/mo)",
       "University of Tokyo Fellowship"
     ],
-    "admissionsPortalUrl": "https://www.u-tokyo.ac.jp/en/admissions-and-programs/index.html"
+    "tuition": {
+      "amount": 535800,
+      "currency": "JPY",
+      "per": "year",
+      "withFunding": 0,
+      "note": "¥535,800/yr / 0 BDT on MEXT"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "12-01"
+        },
+        "deadline": {
+          "date": "01-15"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "06-01"
+        },
+        "deadline": {
+          "date": "07-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.u-tokyo.ac.jp/en/prospective-students/grad_admissions.html",
+    "sources": [
+      "https://www.u-tokyo.ac.jp/en/prospective-students/grad_admissions.html",
+      "https://www.u-tokyo.ac.jp/en/prospective-students/graduate_course_list.html"
+    ],
+    "lastChecked": null
   },
   {
     "id": "jp-apu",
@@ -694,9 +950,6 @@
     "countryCode": "JP",
     "countryName": "Japan",
     "city": "Beppu, Oita",
-    "tuitionBDTAnnual": "500,000 BDT (After 65% - 80% Tuition Reduction Scholarship)",
-    "tuitionBDTAnnualMin": 350000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -705,18 +958,6 @@
       "Asia Pacific Studies",
       "International Management (MBA)",
       "Sustainability Tourism"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "September 1",
-        "applicationDeadline": "March 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "June 1",
-        "applicationDeadline": "October 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -728,7 +969,37 @@
     "waiversAndScholarships": [
       "APU Tuition Reduction Scholarship (30%, 50%, 65%, 80%, or 100% waiver upon admission)"
     ],
-    "admissionsPortalUrl": "https://admissions.apu.ac.jp/"
+    "tuition": {
+      "amount": 500000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "After 65% - 80% Tuition Reduction Scholarship"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "03-15"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "06-01"
+        },
+        "deadline": {
+          "date": "10-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://admissions.apu.ac.jp/",
+    "sources": [
+      "https://admissions.apu.ac.jp/graduate/how_to_apply/schedule_2027"
+    ],
+    "lastChecked": null
   },
   {
     "id": "hu-elte",
@@ -736,9 +1007,6 @@
     "countryCode": "HU",
     "countryName": "Hungary",
     "city": "Budapest",
-    "tuitionBDTAnnual": "350,000 BDT (€2,500/yr) / 0 BDT with Stipendium Hungaricum",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -748,13 +1016,6 @@
       "Computational Biology",
       "Psychology",
       "European Law"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "November 15",
-        "applicationDeadline": "January 15 (Stipendium Hungaricum via UGC BD)"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -766,7 +1027,30 @@
     "waiversAndScholarships": [
       "Stipendium Hungaricum (100% tuition, free dorm/housing allowance, monthly stipend)"
     ],
-    "admissionsPortalUrl": "https://www.elte.hu/en/study-with-us"
+    "tuition": {
+      "amount": 2700,
+      "currency": "EUR",
+      "per": "semester",
+      "withFunding": 0,
+      "note": "From €2,700 per semester for non-EU students; many programmes cost more (International Relations MA €3,500, Psychology BA €4,700). 0 with Stipendium Hungaricum"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "11-15"
+        },
+        "deadline": {
+          "date": "01-15",
+          "note": "Stipendium Hungaricum via UGC BD"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.elte.hu/en/study-with-us",
+    "sources": [
+      "https://www.elte.hu/en/study-with-us"
+    ],
+    "lastChecked": null
   },
   {
     "id": "hu-debrecen",
@@ -774,9 +1058,6 @@
     "countryCode": "HU",
     "countryName": "Hungary",
     "city": "Debrecen",
-    "tuitionBDTAnnual": "450,000 BDT / 0 BDT with Scholarship",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -786,13 +1067,6 @@
       "Biochemical Engineering",
       "Business Informatics",
       "Medicine / Pharmacy"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "November 15",
-        "applicationDeadline": "January 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -804,7 +1078,41 @@
     "waiversAndScholarships": [
       "Stipendium Hungaricum Fully Funded Bilateral Scholarship via Ministry of Education BD"
     ],
-    "admissionsPortalUrl": "https://www.edu.unideb.hu/"
+    "tuition": {
+      "amount": 450000,
+      "currency": "BDT",
+      "per": "year",
+      "withFunding": 0,
+      "note": "0 BDT with Scholarship"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "11-15"
+        },
+        "deadline": {
+          "date": "06-15",
+          "note": "September intake, most programmes; doctoral 15 May"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": null,
+          "note": "Varies by programme"
+        },
+        "deadline": {
+          "date": "11-30",
+          "note": "February intake, non-medical programmes"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.edu.unideb.hu/",
+    "sources": [
+      "https://edu.unideb.hu/faq.php"
+    ],
+    "lastChecked": null
   },
   {
     "id": "my-um",
@@ -812,9 +1120,6 @@
     "countryCode": "MY",
     "countryName": "Malaysia",
     "city": "Kuala Lumpur",
-    "tuitionBDTAnnual": "480,000 BDT (RM 18,000/yr - Top 60 World Ranking)",
-    "tuitionBDTAnnualMin": 480000,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -824,18 +1129,6 @@
       "Biomedical Engineering",
       "Economics",
       "Management"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "February 1",
-        "applicationDeadline": "June 30"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "September 1",
-        "applicationDeadline": "November 30"
-      }
     ],
     "applicationMethod": "EMGS",
     "minRequirements": {
@@ -848,7 +1141,37 @@
       "Malaysian Technical Cooperation Programme (MTCP)",
       "UM Graduate Fellowship"
     ],
-    "admissionsPortalUrl": "https://apply.um.edu.my/"
+    "tuition": {
+      "amount": 18000,
+      "currency": "MYR",
+      "per": "year",
+      "note": "RM 18,000/yr - Top 60 World Ranking"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "02-01"
+        },
+        "deadline": {
+          "date": "06-30"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": "11-30"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://apply.um.edu.my/",
+    "sources": [
+      "https://apply.um.edu.my/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "my-nottingham",
@@ -856,9 +1179,6 @@
     "countryCode": "MY",
     "countryName": "Malaysia",
     "city": "Semenyih, Selangor",
-    "tuitionBDTAnnual": "1,100,000 BDT (Identical UK Degree at 1/3 Cost)",
-    "tuitionBDTAnnualMin": 1100000,
-    "tuitionCategory": "moderate",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -868,18 +1188,6 @@
       "Computer Science with AI",
       "Finance and Investment",
       "International Relations"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "January 1",
-        "applicationDeadline": "July 15"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "August 1",
-        "applicationDeadline": "December 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -891,7 +1199,37 @@
     "waiversAndScholarships": [
       "Dean Excellence Scholarship (25% tuition fee waiver)"
     ],
-    "admissionsPortalUrl": "https://www.nottingham.edu.my/Study/Study.aspx"
+    "tuition": {
+      "amount": 1100000,
+      "currency": "BDT",
+      "per": "year",
+      "note": "Identical UK Degree at 1/3 Cost"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "01-01"
+        },
+        "deadline": {
+          "date": "07-15"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "08-01"
+        },
+        "deadline": {
+          "date": "12-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.nottingham.edu.my/Study/Study.aspx",
+    "sources": [
+      "https://www.nottingham.edu.my/Study/Study.aspx"
+    ],
+    "lastChecked": null
   },
   {
     "id": "fi-aalto",
@@ -899,9 +1237,6 @@
     "countryCode": "FI",
     "countryName": "Finland",
     "city": "Espoo / Helsinki",
-    "tuitionBDTAnnual": "1,950,000 BDT (€15,000/yr) / 0 BDT on 100% Tuition Waiver",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "moderate",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -911,13 +1246,6 @@
       "Game Design and Production",
       "Automation and Electrical Engineering",
       "Architecture"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "November 30",
-        "applicationDeadline": "January 3"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -930,7 +1258,29 @@
       "Aalto University Scholarship (100% full tuition waiver awarded based on merit at admission)",
       "Finland Scholarship (100% tuition + €5,000 relocation grant)"
     ],
-    "admissionsPortalUrl": "https://www.aalto.fi/en/admissions"
+    "tuition": {
+      "amount": 15000,
+      "currency": "EUR",
+      "per": "year",
+      "withFunding": 0,
+      "note": "€15,000/yr / 0 BDT on 100% Tuition Waiver"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "11-30"
+        },
+        "deadline": {
+          "date": "01-03"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.aalto.fi/en/admissions",
+    "sources": [
+      "https://www.aalto.fi/en/admissions"
+    ],
+    "lastChecked": null
   },
   {
     "id": "se-kth",
@@ -938,9 +1288,6 @@
     "countryCode": "SE",
     "countryName": "Sweden",
     "city": "Stockholm",
-    "tuitionBDTAnnual": "2,200,000 BDT (SEK 160,000) / 0 BDT on SI Scholarship",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "master"
     ],
@@ -949,13 +1296,6 @@
       "Information and Network Engineering",
       "Sustainable Energy Engineering",
       "Machine Learning"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "October 15",
-        "applicationDeadline": "January 15 (via UniversityAdmissions.se)"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -968,7 +1308,30 @@
       "Swedish Institute (SI) Scholarship for Global Professionals (100% tuition + SEK 12,000/mo stipend)",
       "KTH Scholarship (covers 100% tuition)"
     ],
-    "admissionsPortalUrl": "https://www.kth.se/en/studies/master/general-admissions"
+    "tuition": {
+      "amount": 160000,
+      "currency": "SEK",
+      "per": "year",
+      "withFunding": 0,
+      "note": "SEK 160,000 / 0 BDT on SI Scholarship"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "10-16"
+        },
+        "deadline": {
+          "date": "01-15",
+          "note": "Via UniversityAdmissions.se"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.kth.se/en/studies/master/admissions/how-to-apply-for-masters-studies-1.68487",
+    "sources": [
+      "https://www.kth.se/en/studies/master/admissions/how-to-apply-for-masters-studies-1.68487"
+    ],
+    "lastChecked": null
   },
   {
     "id": "au-deakin",
@@ -976,9 +1339,6 @@
     "countryCode": "AU",
     "countryName": "Australia",
     "city": "Melbourne / Geelong",
-    "tuitionBDTAnnual": "2,800,000 BDT (AUD ,000/yr)",
-    "tuitionBDTAnnualMin": 2800000,
-    "tuitionCategory": "high",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -988,18 +1348,6 @@
       "Cyber Security",
       "Construction Management",
       "Nursing"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "August 1",
-        "applicationDeadline": "November 15 (Trimester 1)"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "February 1",
-        "applicationDeadline": "May 30 (Trimester 2)"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -1012,7 +1360,38 @@
       "Deakin Global Health Leaders Scholarship (20% tuition reduction)",
       "Deakin STEM Scholarship (20% fee reduction)"
     ],
-    "admissionsPortalUrl": "https://www.deakin.edu.au/international-students"
+    "tuition": {
+      "amount": 2800000,
+      "currency": "BDT",
+      "per": "year"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "08-01"
+        },
+        "deadline": {
+          "date": "11-15",
+          "note": "Trimester 1"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "02-01"
+        },
+        "deadline": {
+          "date": "05-30",
+          "note": "Trimester 2"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.deakin.edu.au/international-students",
+    "sources": [
+      "https://www.deakin.edu.au/international-students"
+    ],
+    "lastChecked": null
   },
   {
     "id": "it-polimi",
@@ -1020,9 +1399,6 @@
     "countryCode": "IT",
     "countryName": "Italy",
     "city": "Milan",
-    "tuitionBDTAnnual": "490,000 BDT (€3,800/yr) / 0 BDT with DSU Regional Scholarship",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "master"
     ],
@@ -1031,18 +1407,6 @@
       "Mechanical Engineering",
       "Architecture and Urban Design",
       "Civil Engineering"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "September 1",
-        "applicationDeadline": "November 15 (First Call) / February 15 (Second Call)"
-      },
-      {
-        "season": "Summer/Spring",
-        "windowOpens": "May 1",
-        "applicationDeadline": "July 15"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -1055,7 +1419,39 @@
       "DSU Regional Scholarship (100% tuition waiver, free meals, €7,000/yr stipend based on family income)",
       "PoliMi Merit Gold/Platinum Scholarships"
     ],
-    "admissionsPortalUrl": "https://www.polimi.it/en/international-prospective-students"
+    "tuition": {
+      "amount": 3800,
+      "currency": "EUR",
+      "per": "year",
+      "withFunding": 0,
+      "note": "€3,800/yr / 0 BDT with DSU Regional Scholarship"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "09-01"
+        },
+        "deadline": {
+          "date": null,
+          "note": "November 15 (First Call) / February 15 (Second Call)"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "05-01"
+        },
+        "deadline": {
+          "date": "07-15"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://www.polimi.it/en/international-prospective-students",
+    "sources": [
+      "https://www.polimi.it/en/international-prospective-students"
+    ],
+    "lastChecked": null
   },
   {
     "id": "kr-kaist",
@@ -1063,9 +1459,6 @@
     "countryCode": "KR",
     "countryName": "South Korea",
     "city": "Daejeon",
-    "tuitionBDTAnnual": "0 BDT (KAIST International Scholarship covers 100% tuition for all admitted students)",
-    "tuitionBDTAnnualMin": 0,
-    "tuitionCategory": "low",
     "degreeLevels": [
       "bachelor",
       "master"
@@ -1075,13 +1468,6 @@
       "Electrical Engineering",
       "Mechanical Engineering",
       "Bio and Brain Engineering"
-    ],
-    "intakes": [
-      {
-        "season": "Winter/Fall",
-        "windowOpens": "December 1",
-        "applicationDeadline": "March 1"
-      }
     ],
     "applicationMethod": "Direct",
     "minRequirements": {
@@ -1094,6 +1480,38 @@
       "KAIST Full International Student Scholarship (100% tuition waiver + 350,000 KRW/month living allowance)",
       "Global Korea Scholarship (GKS)"
     ],
-    "admissionsPortalUrl": "https://admission.kaist.ac.kr/intl-graduate/"
+    "tuition": {
+      "amount": 0,
+      "currency": "BDT",
+      "per": "year",
+      "note": "KAIST International Scholarship covers 100% tuition for all admitted students"
+    },
+    "intakes": [
+      {
+        "season": "Winter/Fall",
+        "opens": {
+          "date": "01-07"
+        },
+        "deadline": {
+          "date": "02-05",
+          "note": "Fall entry; dates shift slightly each year"
+        }
+      },
+      {
+        "season": "Summer/Spring",
+        "opens": {
+          "date": "08-18"
+        },
+        "deadline": {
+          "date": "09-01",
+          "note": "Spring entry"
+        }
+      }
+    ],
+    "admissionsPortalUrl": "https://admission.kaist.ac.kr/intl-graduate/Admission/YearlyTimelines",
+    "sources": [
+      "https://admission.kaist.ac.kr/intl-graduate/Admission/YearlyTimelines"
+    ],
+    "lastChecked": null
   }
 ]

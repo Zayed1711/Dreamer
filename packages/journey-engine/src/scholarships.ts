@@ -1,5 +1,6 @@
 import scholarshipsJson from "../../../content/scholarships/scholarships.json";
 import type { ScholarshipFilter, ScholarshipItem } from "./types";
+import { validYearlyDate } from "./universities";
 
 export const defaultScholarships: ScholarshipItem[] = scholarshipsJson as ScholarshipItem[];
 
@@ -100,5 +101,7 @@ export function validateScholarshipData(s: ScholarshipItem): boolean {
   if (!["fully_funded", "tuition_waiver", "partial_stipend"].includes(s.coverageType)) return false;
   if (!Array.isArray(s.benefits) || s.benefits.length === 0) return false;
   if (!s.applicationUrl || !s.applicationUrl.startsWith("http")) return false;
+  if (!s.applicationWindow || !validYearlyDate(s.applicationWindow.opens) || !validYearlyDate(s.applicationWindow.deadline)) return false;
+  if (!Array.isArray(s.sources) || s.sources.length === 0) return false;
   return true;
 }

@@ -531,10 +531,35 @@ export interface CountryInfo {
 
 export type TuitionCategory = "low" | "moderate" | "high"; // low: < 2L BDT/yr, moderate: 2-15L BDT/yr, high: > 15L BDT/yr
 
+/** An amount in its official currency (ISO 4217); converted to BDT at display time with the day's rate. */
+export interface Money {
+  amount: number;
+  currency: string;
+}
+
+/** A date that repeats every year, as "MM-DD", or null when it varies. `note` keeps the official wording. */
+export interface YearlyDate {
+  date: string | null;
+  note?: string;
+}
+
+/** Where a record's facts come from and when a person last checked them (ISO date, null = not yet checked). */
+export interface SourcedFacts {
+  sources: string[];
+  lastChecked: string | null;
+}
+
+export interface UniversityTuition extends Money {
+  per: "year" | "semester";
+  /** What is left to pay with the best funding listed, in the same currency (0 = fully covered). */
+  withFunding?: number;
+  note?: string;
+}
+
 export interface UniversityIntake {
   season: "Winter/Fall" | "Summer/Spring";
-  windowOpens: string;
-  applicationDeadline: string;
+  opens: YearlyDate;
+  deadline: YearlyDate;
 }
 
 export interface UniversityMinRequirements {
@@ -544,13 +569,14 @@ export interface UniversityMinRequirements {
   duolingoAccepted?: boolean;
 }
 
-export interface UniversityItem {
+export interface UniversityItem extends SourcedFacts {
   id: string;
   name: string;
   countryCode: string;
   countryName: string;
   city: string;
-  tuitionBDTAnnual: string;
+  tuition: UniversityTuition;
+  /** Computed from `tuition` and the day's rate by withLiveCosts(); not stored in content. */
   tuitionBDTAnnualMin: number;
   tuitionCategory: TuitionCategory;
   degreeLevels: ("bachelor" | "master")[];
@@ -585,11 +611,11 @@ export interface ScholarshipMinRequirements {
 }
 
 export interface ScholarshipApplicationWindow {
-  opens: string;
-  deadline: string;
+  opens: YearlyDate;
+  deadline: YearlyDate;
 }
 
-export interface ScholarshipItem {
+export interface ScholarshipItem extends SourcedFacts {
   id: string;
   name: string;
   provider: string;

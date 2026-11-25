@@ -71,7 +71,10 @@ export {
   getUniversityById,
   filterUniversities,
   validateUniversityData,
+  validYearlyDate,
+  withLiveCosts,
 } from "./universities";
+export { FALLBACK_BDT_RATES, toBdt, formatYearlyDate, daysUntil, type BdtRates } from "./facts";
 export {
   defaultScholarships,
   listScholarships,

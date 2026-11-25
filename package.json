@@ -7,6 +7,8 @@
   ],
   "scripts": {
     "test": "npm test --workspace @dreamer/journey-engine",
-    "demo": "npm run demo --workspace @dreamer/journey-engine"
+    "demo": "npm run demo --workspace @dreamer/journey-engine",
+    "watch:sources": "node scripts/watch-sources.mjs",
+    "test:watch": "node --test scripts/watch-sources.test.mjs"
   }
 }

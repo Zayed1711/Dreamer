@@ -1,0 +1,52 @@
+# Every Monday: visit the official pages behind our deadlines, fees and scholarships.
+# If anything changed, open a pull request with content/watch/REPORT.md for a person to review.
+# Nothing reaches students until that pull request is merged.
+name: Watch official sources
+
+on:
+  schedule:
+    - cron: "0 3 * * 1" # Monday 03:00 UTC (09:00 in Dhaka)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: watch-sources
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Self-check the watcher
+        run: node --test scripts/watch-sources.test.mjs
+
+      - name: Visit sources
+        id: watch
+        run: node scripts/watch-sources.mjs
+
+      - name: Open a review pull request
+        if: steps.watch.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="watch/sources-$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add content/watch
+          git commit -m "chore(watch): official sources changed $(date -u +%Y-%m-%d)"
+          git push --force -u origin "$branch"
+          gh pr create --base "${{ github.event.repository.default_branch }}" --head "$branch" \
+            --title "Source watch $(date -u +%Y-%m-%d): review changed deadlines and fees" \
+            --body-file content/watch/REPORT.md \
+          || echo "A pull request for $branch already exists; it now has the latest report."

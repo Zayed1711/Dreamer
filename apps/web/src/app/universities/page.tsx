@@ -12,14 +12,19 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import {
+  daysUntil,
   filterUniversities,
+  formatYearlyDate,
   listUniversities,
+  toBdt,
+  withLiveCosts,
   type UniversityItem,
   type TuitionCategory,
 } from "@dreamer/journey-engine";
 import { loadUniversities } from "@/lib/store";
+import { formatBdt, useBdtRates } from "@/lib/rates";
+import { FactsFooter, RatesNote } from "@/components/FactsNotes";
 import { AirportFidsTicker } from "@/components/AirportFidsTicker";
-import { FloatingPartnerAd } from "@/components/FloatingPartnerAd";
 
 export default function UniversitiesPage() {
   const [universities, setUniversities] = useState<UniversityItem[]>([]);
@@ -34,6 +39,8 @@ export default function UniversitiesPage() {
   const [myCgpa, setMyCgpa] = useState<number | null>(null);
   const [myIelts, setMyIelts] = useState<number | null>(null);
   const [showAdvanced, setShowAdvanced] = useState(false);
+  const fx = useBdtRates();
+  const priced = useMemo(() => withLiveCosts(universities, fx.rates), [universities, fx.rates]);
 
   useEffect(() => {
     loadUniversities()
@@ -58,7 +65,7 @@ export default function UniversitiesPage() {
   }, [universities]);
 
   const filtered = useMemo(() => {
-    return filterUniversities(universities, {
+    return filterUniversities(priced, {
       query,
       countryCode: selectedCountry === "ALL" ? undefined : selectedCountry,
       degreeLevel: degreeLevel === "ALL" ? undefined : degreeLevel,
@@ -67,7 +74,7 @@ export default function UniversitiesPage() {
       studentCgpa: myCgpa ?? undefined,
       studentIelts: myIelts ?? undefined,
     });
-  }, [universities, query, selectedCountry, degreeLevel, budgetTier, season, myCgpa, myIelts]);
+  }, [priced, query, selectedCountry, degreeLevel, budgetTier, season, myCgpa, myIelts]);
 
   const resetFilters = () => {
     setQuery("");
@@ -343,6 +350,7 @@ export default function UniversitiesPage() {
           <div className="text-xs font-mono text-slate-500 mb-2">
             Showing {filtered.length} {filtered.length === 1 ? "institution" : "institutions"}
           </div>
+          <RatesNote fx={fx} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filtered.map((u) => {
@@ -382,9 +390,22 @@ export default function UniversitiesPage() {
                     {/* Tuition & Application Method Banner */}
                     <div className="p-3 my-3 bg-[#080d14] border border-[#1b2b3a] text-xs font-mono space-y-1.5">
                       <div className="flex justify-between items-center">
-                        <span className="text-slate-400">Tuition in BDT:</span>
-                        <span className="text-white font-medium">{u.tuitionBDTAnnual}</span>
+                        <span className="text-slate-400">Tuition:</span>
+                        <span className="text-white font-medium text-right">
+                          {u.tuition.currency === "BDT"
+                            ? `${formatBdt(u.tuition.amount)} / ${u.tuition.per}`
+                            : `${u.tuition.amount.toLocaleString("en-US")} ${u.tuition.currency} / ${u.tuition.per}`}
+                        </span>
                       </div>
+                      {u.tuition.currency !== "BDT" && toBdt(u.tuition, fx.rates) !== null && (
+                        <div className="flex justify-between items-center">
+                          <span className="text-slate-400">In BDT today:</span>
+                          <span className="text-white font-medium">
+                            ≈ {formatBdt(toBdt(u.tuition, fx.rates)! * (u.tuition.per === "semester" ? 2 : 1))} / year
+                          </span>
+                        </div>
+                      )}
+                      {u.tuition.note && <div className="text-[11px] text-slate-500">{u.tuition.note}</div>}
                       <div className="flex justify-between items-center">
                         <span className="text-slate-400">Application Method:</span>
                         <span className="text-[#4db5ff] font-semibold">{u.applicationMethod}</span>
@@ -404,8 +425,9 @@ export default function UniversitiesPage() {
                             className="flex justify-between items-center px-2 py-1 bg-[#102030]/40 border border-[#1b2b3a]/60 text-[11px]"
                           >
                             <span className="text-slate-300">{intake.season}:</span>
-                            <span className="text-emerald-400 font-medium">
-                              Deadline: {intake.applicationDeadline}
+                            <span className="text-emerald-400 font-medium text-right">
+                              Deadline: {formatYearlyDate(intake.deadline)}
+                              <DaysLeft days={daysUntil(intake.deadline)} />
                             </span>
                           </div>
                         ))}
@@ -453,6 +475,7 @@ export default function UniversitiesPage() {
 
                   {/* Direct Official Link - Anti-Agency Middlemen */}
                   <div className="pt-2 border-t border-[#1b2b3a]">
+                    <FactsFooter lastChecked={u.lastChecked} />
                     <a
                       href={u.admissionsPortalUrl}
                       target="_blank"
@@ -471,7 +494,12 @@ export default function UniversitiesPage() {
       )}
 
       {/* Floating Partner Spotlight */}
-      <FloatingPartnerAd slot="student_banking" />
     </main>
   );
+}
+
+/** Only near deadlines get a countdown; far ones would just be noise. */
+function DaysLeft({ days }: { days: number | null }) {
+  if (days === null || days > 60) return null;
+  return <span className="ml-1 text-amber-300">· {days === 0 ? "today" : `${days} days left`}</span>;
 }

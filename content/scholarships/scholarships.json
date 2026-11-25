@@ -28,11 +28,20 @@
       "workExpYears": 2
     },
     "applicationWindow": {
-      "opens": "August 1",
-      "deadline": "October - November (varies by program)"
+      "opens": {
+        "date": "08-01"
+      },
+      "deadline": {
+        "date": null,
+        "note": "October - November (varies by program)"
+      }
     },
     "bdSpecificNotes": "Requires at least 2 years of relevant professional work experience after Bachelor graduation. Apply directly to the selected German university offering the EPOS course.",
-    "applicationUrl": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/"
+    "applicationUrl": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/",
+    "sources": [
+      "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-daad-ppgg",
@@ -62,11 +71,19 @@
       "workExpYears": 0
     },
     "applicationWindow": {
-      "opens": "June 1",
-      "deadline": "July 31"
+      "opens": {
+        "date": "06-01"
+      },
+      "deadline": {
+        "date": "07-31"
+      }
     },
     "bdSpecificNotes": "Designed for future leaders in politics, law, economics, and public administration. Candidates apply to up to two participating German universities simultaneously.",
-    "applicationUrl": "https://www.daad.de/en/study-and-research-in-germany/scholarships/helmut-schmidt-programme/"
+    "applicationUrl": "https://www.daad.de/en/study-and-research-in-germany/scholarships/helmut-schmidt-programme/",
+    "sources": [
+      "https://www.daad.de/en/study-and-research-in-germany/scholarships/helmut-schmidt-programme/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "de-deutschlandstipendium",
@@ -93,11 +110,21 @@
       "minCgpa": 3.3
     },
     "applicationWindow": {
-      "opens": "June - July",
-      "deadline": "August - September (University specific)"
+      "opens": {
+        "date": null,
+        "note": "June - July"
+      },
+      "deadline": {
+        "date": null,
+        "note": "August - September (University specific)"
+      }
     },
     "bdSpecificNotes": "Available to enrolled international students at virtually all German universities based on outstanding academic results and social commitment.",
-    "applicationUrl": "https://www.deutschlandstipendium.de/deutschlandstipendium/en/"
+    "applicationUrl": "https://www.deutschlandstipendium.de/deutschlandstipendium/en/",
+    "sources": [
+      "https://www.deutschlandstipendium.de/deutschlandstipendium/en/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "gb-chevening",
@@ -127,11 +154,22 @@
       "workExpYears": 2
     },
     "applicationWindow": {
-      "opens": "August (First Tuesday)",
-      "deadline": "November (First Tuesday)"
+      "opens": {
+        "date": null,
+        "note": "August (First Tuesday)"
+      },
+      "deadline": {
+        "date": null,
+        "note": "Early October; exact date on the Bangladesh country page"
+      }
     },
     "bdSpecificNotes": "Mandatory minimum 2 years (2,800 hours) of work experience. Applicants must demonstrate strong leadership potential and commit to returning to Bangladesh for at least 2 years.",
-    "applicationUrl": "https://www.chevening.org/scholarship/bangladesh/"
+    "applicationUrl": "https://www.chevening.org/scholarship/bangladesh/",
+    "sources": [
+      "https://www.chevening.org/scholarship/bangladesh/",
+      "https://www.chevening.org/scholarships/application-timeline/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "gb-commonwealth-master",
@@ -160,11 +198,21 @@
       "minIelts": 6.5
     },
     "applicationWindow": {
-      "opens": "September",
-      "deadline": "October - November"
+      "opens": {
+        "date": null,
+        "note": "September"
+      },
+      "deadline": {
+        "date": null,
+        "note": "October - November"
+      }
     },
     "bdSpecificNotes": "Nominations are handled through the University Grants Commission (UGC) Bangladesh / Ministry of Education. Watch for the UGC official circular in September.",
-    "applicationUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"
+    "applicationUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+    "sources": [
+      "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "gb-great",
@@ -190,11 +238,21 @@
       "minIelts": 6.5
     },
     "applicationWindow": {
-      "opens": "November",
-      "deadline": "April - May (Varies by UK institution)"
+      "opens": {
+        "date": null,
+        "note": "November"
+      },
+      "deadline": {
+        "date": null,
+        "note": "April - May (Varies by UK institution)"
+      }
     },
     "bdSpecificNotes": "Open to passport holders from Bangladesh. Must hold an offer of admission from a participating UK university before applying.",
-    "applicationUrl": "https://study-uk.britishcouncil.org/scholarships-funding/great-scholarships"
+    "applicationUrl": "https://www.britishcouncil.org.bd/en/great-scholarships-bangladesh",
+    "sources": [
+      "https://www.britishcouncil.org.bd/en/great-scholarships-bangladesh"
+    ],
+    "lastChecked": null
   },
   {
     "id": "us-fulbright",
@@ -224,11 +282,21 @@
       "workExpYears": 2
     },
     "applicationWindow": {
-      "opens": "February / March",
-      "deadline": "May - June"
+      "opens": {
+        "date": null,
+        "note": "February / March"
+      },
+      "deadline": {
+        "date": null,
+        "note": "11 July 2026 for the 2027-28 cycle; changes every year"
+      }
     },
     "bdSpecificNotes": "Administered directly by the Public Affairs Section of the U.S. Embassy in Dhaka. Strong preference for junior faculty, public servants, and civil society leaders.",
-    "applicationUrl": "https://bd.usembassy.gov/education-culture/student-exchange-programs/"
+    "applicationUrl": "https://bd.usembassy.gov/programs-for-academics-educators-and-researchers/",
+    "sources": [
+      "https://bd.usembassy.gov/programs-for-academics-educators-and-researchers/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "us-graduate-assistantship",
@@ -257,11 +325,20 @@
       "minIelts": 6.5
     },
     "applicationWindow": {
-      "opens": "September 1",
-      "deadline": "December 15 - February 15 (Fall priority funding)"
+      "opens": {
+        "date": "09-01"
+      },
+      "deadline": {
+        "date": null,
+        "note": "December 15 - February 15 (Fall priority funding)"
+      }
     },
     "bdSpecificNotes": "The primary way Bangladeshi STEM students fund their Master and PhD in America. Awarded directly by university academic departments in exchange for 20 hrs/week teaching or lab research.",
-    "applicationUrl": "https://educationusa.state.gov/"
+    "applicationUrl": "https://educationusa.state.gov/",
+    "sources": [
+      "https://educationusa.state.gov/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "jp-mext-embassy",
@@ -292,11 +369,21 @@
       "ageLimit": 35
     },
     "applicationWindow": {
-      "opens": "April / May",
-      "deadline": "May - June"
+      "opens": {
+        "date": null,
+        "note": "April / May"
+      },
+      "deadline": {
+        "date": null,
+        "note": "May - June"
+      }
     },
     "bdSpecificNotes": "Application is announced annually by the Ministry of Education Bangladesh. Involves written screening exams (English/Japanese/Math) at the Embassy of Japan in Dhaka.",
-    "applicationUrl": "https://www.bd.emb.japan.go.jp/itpr_en/education.html"
+    "applicationUrl": "https://www.bd.emb-japan.go.jp/itpr_en/scholarshipnotice.html",
+    "sources": [
+      "https://www.bd.emb-japan.go.jp/itpr_en/scholarshipnotice.html"
+    ],
+    "lastChecked": null
   },
   {
     "id": "hu-stipendium",
@@ -326,11 +413,19 @@
       "minIelts": 6
     },
     "applicationWindow": {
-      "opens": "November 15",
-      "deadline": "January 15"
+      "opens": {
+        "date": "11-15"
+      },
+      "deadline": {
+        "date": "01-15"
+      }
     },
     "bdSpecificNotes": "Bilateral agreement with 140 reserved seats for Bangladesh. Students must apply on the DreamApply portal AND submit documents to the Ministry of Education Bangladesh / UGC.",
-    "applicationUrl": "https://stipendiumhungaricum.hu/"
+    "applicationUrl": "https://stipendiumhungaricum.hu/",
+    "sources": [
+      "https://stipendiumhungaricum.hu/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "eu-erasmus-mundus",
@@ -359,11 +454,21 @@
       "minIelts": 6.5
     },
     "applicationWindow": {
-      "opens": "October",
-      "deadline": "January - February"
+      "opens": {
+        "date": null,
+        "note": "October"
+      },
+      "deadline": {
+        "date": null,
+        "note": "January - February"
+      }
     },
     "bdSpecificNotes": "Bangladesh consistently ranks in the top 3 recipient countries worldwide for Erasmus Mundus scholarships. Students study across 2 to 3 different European countries during their 2-year degree.",
-    "applicationUrl": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+    "applicationUrl": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
+    "sources": [
+      "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters"
+    ],
+    "lastChecked": null
   },
   {
     "id": "tr-turkiye-burslari",
@@ -394,11 +499,19 @@
       "ageLimit": 30
     },
     "applicationWindow": {
-      "opens": "January 10",
-      "deadline": "February 20"
+      "opens": {
+        "date": "01-10"
+      },
+      "deadline": {
+        "date": "02-20"
+      }
     },
     "bdSpecificNotes": "Application is completely free and submitted online directly through the Türkiye Bursları portal. Shortlisted candidates are interviewed in-person in Dhaka.",
-    "applicationUrl": "https://www.turkiyeburslari.gov.tr/"
+    "applicationUrl": "https://www.turkiyeburslari.gov.tr/",
+    "sources": [
+      "https://www.turkiyeburslari.gov.tr/calendar"
+    ],
+    "lastChecked": null
   },
   {
     "id": "cn-csc",
@@ -429,11 +542,19 @@
       "ageLimit": 35
     },
     "applicationWindow": {
-      "opens": "December 1",
-      "deadline": "March 31"
+      "opens": {
+        "date": "12-01"
+      },
+      "deadline": {
+        "date": "03-31"
+      }
     },
     "bdSpecificNotes": "Type A is applied via the Ministry of Education Bangladesh. Type B is applied directly to Chinese designated universities. Many English-taught STEM and medical programs available.",
-    "applicationUrl": "https://www.campuschina.org/"
+    "applicationUrl": "https://www.campuschina.org/",
+    "sources": [
+      "https://www.campuschina.org/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "kr-gks",
@@ -465,11 +586,21 @@
       "ageLimit": 40
     },
     "applicationWindow": {
-      "opens": "September (Undergrad) / February (Graduate)",
-      "deadline": "October (Undergrad) / March (Graduate)"
+      "opens": {
+        "date": null,
+        "note": "September (Undergrad) / February (Graduate)"
+      },
+      "deadline": {
+        "date": null,
+        "note": "October (Undergrad) / March (Graduate)"
+      }
     },
     "bdSpecificNotes": "Embassy Track circular published by the Ministry of Education Bangladesh. University Track applications are submitted directly to partner Korean universities.",
-    "applicationUrl": "https://www.studyinkorea.go.kr/"
+    "applicationUrl": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do",
+    "sources": [
+      "https://www.studyinkorea.go.kr/ko/plan/scholarship.do"
+    ],
+    "lastChecked": null
   },
   {
     "id": "se-si",
@@ -499,11 +630,21 @@
       "workExpYears": 3
     },
     "applicationWindow": {
-      "opens": "February (Application window: 10 days)",
-      "deadline": "Mid-February"
+      "opens": {
+        "date": null,
+        "note": "February (Application window: 10 days)"
+      },
+      "deadline": {
+        "date": null,
+        "note": "Mid-February"
+      }
     },
     "bdSpecificNotes": "Requires a minimum of 3,000 documented hours of work experience and demonstrated leadership experience. Must first apply to a Swedish Master course via UniversityAdmissions.se in January.",
-    "applicationUrl": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"
+    "applicationUrl": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+    "sources": [
+      "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"
+    ],
+    "lastChecked": null
   },
   {
     "id": "fi-finland-scholarship",
@@ -530,11 +671,20 @@
       "minIelts": 6.5
     },
     "applicationWindow": {
-      "opens": "November 30",
-      "deadline": "January 3 - 17 (Joint Application Period)"
+      "opens": {
+        "date": "11-30"
+      },
+      "deadline": {
+        "date": null,
+        "note": "January 3 - 17 (Joint Application Period)"
+      }
     },
     "bdSpecificNotes": "No separate scholarship application required. You simply tick the scholarship box during the joint study application on Studyinfo.fi.",
-    "applicationUrl": "https://www.studyinfinland.fi/scholarships"
+    "applicationUrl": "https://www.studyinfinland.fi/scholarships",
+    "sources": [
+      "https://www.studyinfinland.fi/scholarships"
+    ],
+    "lastChecked": null
   },
   {
     "id": "it-dsu",
@@ -563,11 +713,21 @@
       "minIelts": 6
     },
     "applicationWindow": {
-      "opens": "June / July",
-      "deadline": "August - September"
+      "opens": {
+        "date": null,
+        "note": "June / July"
+      },
+      "deadline": {
+        "date": null,
+        "note": "August - September"
+      }
     },
     "bdSpecificNotes": "Need-based rather than merit-based. Bangladeshi families with annual income under 25,000 EUR qualify by submitting an ISEE Parificato document issued via official CAF in Italy.",
-    "applicationUrl": "https://www.universitaly.it/"
+    "applicationUrl": "https://www.universitaly.it/",
+    "sources": [
+      "https://www.polimi.it/en/students/tuition-fees-scholarships-and-financial-aid/university-financial-aid-diritto-allo-studio-universitario-dsu"
+    ],
+    "lastChecked": null
   },
   {
     "id": "au-australia-awards",
@@ -597,10 +757,18 @@
       "workExpYears": 2
     },
     "applicationWindow": {
-      "opens": "February 1",
-      "deadline": "April 30"
+      "opens": {
+        "date": "02-01"
+      },
+      "deadline": {
+        "date": "04-30"
+      }
     },
     "bdSpecificNotes": "Targeted priority fields: Economic Growth, Education, Governance, Health, Gender Equality, and Climate Change. Applicants must return to Bangladesh for at least 2 years.",
-    "applicationUrl": "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships"
+    "applicationUrl": "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships",
+    "sources": [
+      "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-scholarships"
+    ],
+    "lastChecked": null
   }
 ]

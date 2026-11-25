@@ -1,7 +1,33 @@
 import universitiesJson from "../../../content/universities/universities.json";
-import type { UniversityFilter, UniversityItem } from "./types";
+import { FALLBACK_BDT_RATES, toBdt, type BdtRates } from "./facts";
+import type { TuitionCategory, UniversityFilter, UniversityItem } from "./types";
 
-export const defaultUniversities: UniversityItem[] = universitiesJson as UniversityItem[];
+type StoredUniversity = Omit<UniversityItem, "tuitionBDTAnnualMin" | "tuitionCategory">;
+
+function category(annualBdt: number): TuitionCategory {
+  if (annualBdt < 200_000) return "low";
+  if (annualBdt <= 1_500_000) return "moderate";
+  return "high";
+}
+
+/**
+ * Fills in the BDT figures from each university's official-currency tuition and the given rates.
+ * Category uses the full fee; the budget filter uses what is left after the best listed funding.
+ */
+export function withLiveCosts(universities: StoredUniversity[], rates: BdtRates): UniversityItem[] {
+  return universities.map((u) => {
+    const perYear = u.tuition.per === "semester" ? 2 : 1;
+    const full = (toBdt(u.tuition, rates) ?? toBdt(u.tuition, FALLBACK_BDT_RATES) ?? 0) * perYear;
+    const left = u.tuition.withFunding ?? u.tuition.amount;
+    const min = left === u.tuition.amount ? full : (toBdt({ ...u.tuition, amount: left }, rates) ?? 0) * perYear;
+    return { ...u, tuitionBDTAnnualMin: min, tuitionCategory: category(full) };
+  });
+}
+
+export const defaultUniversities: UniversityItem[] = withLiveCosts(
+  universitiesJson as StoredUniversity[],
+  FALLBACK_BDT_RATES,
+);
 
 /**
  * Returns the list of curated universities.
@@ -92,6 +118,16 @@ export function filterUniversities(
 /**
  * Validates consistency of a university record.
  */
+/** "MM-DD" that exists in a year, or null with the official wording kept as a note. */
+export function validYearlyDate(d: { date: string | null; note?: string } | undefined): boolean {
+  if (!d) return false;
+  if (d.date === null) return !!d.note;
+  const m = /^(\d{2})-(\d{2})$/.exec(d.date);
+  if (!m) return false;
+  const day = new Date(Date.UTC(2024, Number(m[1]) - 1, Number(m[2]))); // leap year, so 02-29 is allowed
+  return day.getUTCMonth() === Number(m[1]) - 1 && day.getUTCDate() === Number(m[2]);
+}
+
 export function validateUniversityData(u: UniversityItem): boolean {
   if (!u.id || u.id.trim().length === 0) return false;
   if (!u.name || u.name.trim().length === 0) return false;
@@ -100,6 +136,9 @@ export function validateUniversityData(u: UniversityItem): boolean {
   if (!["low", "moderate", "high"].includes(u.tuitionCategory)) return false;
   if (!Array.isArray(u.degreeLevels) || u.degreeLevels.length === 0) return false;
   if (!Array.isArray(u.intakes) || u.intakes.length === 0) return false;
+  if (!u.tuition || typeof u.tuition.amount !== "number" || !/^[A-Z]{3}$/.test(u.tuition.currency)) return false;
+  if (u.intakes.some((i) => !validYearlyDate(i.opens) || !validYearlyDate(i.deadline))) return false;
+  if (!Array.isArray(u.sources) || u.sources.length === 0) return false;
   if (!u.minRequirements || typeof u.minRequirements.minCgpa !== "number") return false;
   if (!u.admissionsPortalUrl || !u.admissionsPortalUrl.startsWith("http")) return false;
   return true;
