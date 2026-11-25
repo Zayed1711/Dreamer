@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowUpRight, Lock, Search } from "lucide-react";
 import { filterCountries, listCountries, type CountryInfo } from "@dreamer/journey-engine";
 import { loadCountries } from "@/lib/store";
 import { AirportFidsTicker } from "@/components/AirportFidsTicker";
-import { FloatingPartnerAd } from "@/components/FloatingPartnerAd";
 
 export default function CountriesPage() {
   const [countries, setCountries] = useState<CountryInfo[]>([]);
@@ -315,7 +314,6 @@ export default function CountriesPage() {
       )}
 
       {/* Floating Partner Spotlight */}
-      <FloatingPartnerAd slot="student_banking" />
     </main>
   );
 }

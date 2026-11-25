@@ -125,3 +125,37 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .plane, .notify, .open-center { animation: none; }
 }
+
+/* ---------- Public website (editorial) ---------- */
+/* Destination name ticker: content is rendered twice, so -50% loops seamlessly. */
+@keyframes wp-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.wp-ticker { animation: wp-ticker 40s linear infinite; }
+
+/* Hero flag badge: slow float with a slight 3D tilt. */
+@keyframes wp-float {
+  0%, 100% { transform: translateY(0) rotateX(8deg) rotateY(-12deg); }
+  50% { transform: translateY(-10px) rotateX(5deg) rotateY(-6deg); }
+}
+.wp-float { animation: wp-float 6s ease-in-out infinite; }
+
+@keyframes wp-fade-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Hero badge sliding in from the side the student moved towards. */
+@keyframes wp-slide-next {
+  from { opacity: 0; transform: translateX(70px) scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes wp-slide-prev {
+  from { opacity: 0; transform: translateX(-70px) scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-ticker, .wp-float { animation: none; }
+}
