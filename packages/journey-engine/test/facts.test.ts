@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { daysUntil, formatYearlyDate, toBdt } from "../src/facts";
 import { defaultUniversities, validYearlyDate, withLiveCosts } from "../src/universities";
 import { defaultScholarships } from "../src/scholarships";
+import { defaultCountries, withLiveCountryCosts } from "../src/countries";
 
 describe("live facts", () => {
   it("converts official-currency amounts to BDT", () => {
@@ -16,6 +17,29 @@ describe("live facts", () => {
     const [dear] = withLiveCosts([stuttgart], { EUR: 200 });
     expect(cheap!.tuitionBDTAnnualMin).toBe(300_000); // €1,500 per semester, two semesters
     expect(dear!.tuitionBDTAnnualMin).toBe(600_000);
+  });
+
+  it("converts country costs from their own currency, including funds held in another currency", () => {
+    const [de] = withLiveCountryCosts(defaultCountries.filter((c) => c.code === "DE"), { EUR: 100 });
+    expect(de!.avgMonthlyLivingBdt.min).toBe(de!.costs.livingMonth.min * 100);
+    expect(de!.proofOfFundsBdt).toBe(1_190_400); // €11,904 blocked account
+    const [kr] = withLiveCountryCosts(defaultCountries.filter((c) => c.code === "KR"), { KRW: 0.1, USD: 100 });
+    expect(kr!.proofOfFundsBdt).toBe(kr!.costs.proofOfFunds.amount * 100); // stated in USD, not won
+  });
+
+  it("a country with no published proof-of-funds amount says so instead of showing 0", () => {
+    const us = defaultCountries.find((c) => c.code === "US")!;
+    expect(us.costs.proofOfFunds.amount).toBe(0);
+    expect(us.blockedAccountInfo.amountLocal).toBe("No fixed amount");
+    expect(us.costs.proofOfFunds.note).toBeTruthy();
+  });
+
+  it("every country carries the website's stage data", () => {
+    expect(defaultCountries).toHaveLength(18);
+    for (const c of defaultCountries) {
+      expect(c.site.accentColor).toMatch(/^#[0-9a-f]{6}$/i);
+      expect(c.site.steps.length).toBeGreaterThan(0);
+    }
   });
 
   it("counts days to the next yearly deadline, rolling into next year", () => {

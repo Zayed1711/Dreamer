@@ -23,10 +23,13 @@ import {
   getEstimatedFirstYearCostBdt,
   listCountries,
   pickActiveAd,
+  withLiveCountryCosts,
   type CountryInfo,
   type Ad,
 } from "@dreamer/journey-engine";
 import { loadAds, loadCountryByCode, recordAdEvent } from "@/lib/store";
+import { useBdtRates } from "@/lib/rates";
+import { RatesNote } from "@/components/FactsNotes";
 import { SLOTS } from "@/lib/slots";
 
 type TabKey = "overview" | "documents" | "banking" | "universities" | "faqs";
@@ -35,7 +38,12 @@ export default function CountryDetailPage() {
   const params = useParams();
   const code = (params.code as string)?.toUpperCase();
 
-  const [country, setCountry] = useState<CountryInfo | null>(null);
+  const [storedCountry, setCountry] = useState<CountryInfo | null>(null);
+  const fx = useBdtRates();
+  const country = useMemo(
+    () => (storedCountry ? withLiveCountryCosts([storedCountry], fx.rates)[0]! : null),
+    [storedCountry, fx.rates],
+  );
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<TabKey>("overview");
   const [checkedDocs, setCheckedDocs] = useState<Record<string, boolean>>({});
@@ -162,8 +170,19 @@ export default function CountryDetailPage() {
             </div>
             <p className="text-xs font-mono text-slate-400 mt-1">
               Capital: {country.capital} · Currency: {country.currency} ({country.currencySymbol}) · Exchange Rate: 1{" "}
-              {country.currency} ≈ {country.bdtRate} BDT
+              {country.currency} ≈ {country.bdtRate.toFixed(country.bdtRate < 1 ? 3 : 2)} BDT
             </p>
+            <div className="mt-1">
+              <RatesNote fx={fx} />
+              <p className="text-[11px] font-mono text-slate-500">
+                {country.costs.note}
+                {country.sources.map((url, i) => (
+                  <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="ml-1 underline">
+                    Source {i + 1}
+                  </a>
+                ))}
+              </p>
+            </div>
           </div>
           <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-[#1b2b3a] pt-3 sm:pt-0">
             <span className="text-[10px] font-mono uppercase text-slate-400">Est. 1st Year Outlay</span>
@@ -406,11 +425,13 @@ export default function CountryDetailPage() {
                   Required Proof Amount in BDT
                 </span>
                 <span className="text-xs font-mono text-[#4db5ff] font-bold block mt-0.5">
-                  {country.blockedAccountInfo.amountBDT}
-                  {country.blockedAccountInfo.amountLocal
-                    ? ` (${country.blockedAccountInfo.amountLocal})`
-                    : ""}
+                  {country.costs.proofOfFunds.amount
+                    ? `${country.blockedAccountInfo.amountBDT} (${country.blockedAccountInfo.amountLocal})`
+                    : country.blockedAccountInfo.amountLocal}
                 </span>
+                {country.costs.proofOfFunds.note && (
+                  <span className="text-[11px] font-sans text-slate-400 block mt-1">{country.costs.proofOfFunds.note}</span>
+                )}
               </div>
             </div>
 

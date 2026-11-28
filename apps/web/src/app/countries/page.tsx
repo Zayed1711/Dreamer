@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowUpRight, Lock, Search } from "lucide-react";
-import { filterCountries, listCountries, type CountryInfo } from "@dreamer/journey-engine";
+import { filterCountries, listCountries, withLiveCountryCosts, type CountryInfo } from "@dreamer/journey-engine";
 import { loadCountries } from "@/lib/store";
+import { useBdtRates } from "@/lib/rates";
+import { RatesNote } from "@/components/FactsNotes";
 import { AirportFidsTicker } from "@/components/AirportFidsTicker";
 
 export default function CountriesPage() {
@@ -16,6 +18,7 @@ export default function CountriesPage() {
   const [selectedRegion, setSelectedRegion] = useState("ALL");
   const [tuitionFilter, setTuitionFilter] = useState<"ALL" | "LOW" | "MODERATE" | "HIGH">("ALL");
   const [blockedOnly, setBlockedOnly] = useState(false);
+  const fx = useBdtRates();
 
   useEffect(() => {
     loadCountries()
@@ -35,7 +38,7 @@ export default function CountriesPage() {
   }, [countries]);
 
   const filteredCountries = useMemo(() => {
-    let result = filterCountries(countries, {
+    let result = filterCountries(withLiveCountryCosts(countries, fx.rates), {
       query: searchQuery,
       region: selectedRegion === "ALL" ? undefined : selectedRegion,
       blockedAccountOnly: blockedOnly,
@@ -52,7 +55,7 @@ export default function CountriesPage() {
     }
 
     return result;
-  }, [countries, searchQuery, selectedRegion, tuitionFilter, blockedOnly]);
+  }, [countries, fx.rates, searchQuery, selectedRegion, tuitionFilter, blockedOnly]);
 
   const formatLakh = (amount: number) => {
     if (amount === 0) return "Free";
@@ -198,6 +201,10 @@ export default function CountriesPage() {
             <span>Blocked Account Required</span>
           </button>
         </div>
+      </div>
+
+      <div className="mb-4">
+        <RatesNote fx={fx} />
       </div>
 
       {/* Countries Grid */}

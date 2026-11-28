@@ -1,7 +1,39 @@
 import countriesJson from "../../../content/countries/countries.json";
+import { FALLBACK_BDT_RATES, toBdt, type BdtRates } from "./facts";
 import type { CountryInfo } from "./types";
 
-export const defaultCountries: CountryInfo[] = countriesJson as CountryInfo[];
+type StoredCountry = Omit<CountryInfo, "bdtRate" | "avgTuitionYearBdt" | "avgMonthlyLivingBdt" | "proofOfFundsBdt">;
+
+const lakh = (bdt: number) => `${(bdt / 100_000).toFixed(1)} Lakh BDT`;
+
+/** Fills in every BDT figure from the official-currency costs and the given rates (BDT per unit). */
+export function withLiveCountryCosts(countries: StoredCountry[], rates: BdtRates): CountryInfo[] {
+  return countries.map((c) => {
+    const rate = rates[c.currency] ?? FALLBACK_BDT_RATES[c.currency] ?? 0;
+    const bdt = (n: number) => Math.round(n * rate);
+    const { tuitionYear, livingMonth, proofOfFunds } = c.costs;
+    const fundsBdt = toBdt(proofOfFunds, rates) ?? toBdt(proofOfFunds, FALLBACK_BDT_RATES) ?? 0;
+    return {
+      ...c,
+      bdtRate: rate,
+      avgTuitionYearBdt: { min: bdt(tuitionYear.min), max: bdt(tuitionYear.max) },
+      avgMonthlyLivingBdt: { min: bdt(livingMonth.min), max: bdt(livingMonth.max) },
+      proofOfFundsBdt: fundsBdt,
+      blockedAccountInfo: {
+        ...c.blockedAccountInfo,
+        amountLocal: proofOfFunds.amount
+          ? `${proofOfFunds.amount.toLocaleString("en-US")} ${proofOfFunds.currency}`
+          : "No fixed amount",
+        amountBDT: proofOfFunds.amount ? lakh(fundsBdt) : "Set by your university or the embassy",
+      },
+    };
+  });
+}
+
+export const defaultCountries: CountryInfo[] = withLiveCountryCosts(
+  countriesJson as unknown as StoredCountry[],
+  FALLBACK_BDT_RATES,
+);
 
 /**
  * Returns the full list of available destination country profiles.
@@ -71,8 +103,8 @@ export function filterCountries(
 
 /**
  * Calculates estimated first-year total financial outlay in BDT:
- * Minimum: min annual tuition + (min monthly living * 12) + proof of funds
- * Maximum: max annual tuition + (max monthly living * 12) + proof of funds
+ * Minimum: min annual tuition + the larger of (min monthly living * 12) and proof of funds
+ * Maximum: max annual tuition + the larger of (max monthly living * 12) and proof of funds
  */
 export function getEstimatedFirstYearCostBdt(country: CountryInfo): { min: number; max: number } {
   const tuitionMin = country.avgTuitionYearBdt?.min ?? 0;
@@ -81,9 +113,11 @@ export function getEstimatedFirstYearCostBdt(country: CountryInfo): { min: numbe
   const livingMax = (country.avgMonthlyLivingBdt?.max ?? 0) * 12;
   const funds = country.proofOfFundsBdt ?? 0;
 
+  // Proof of funds (e.g. a blocked account) is the student's own living money, released during the year,
+  // so the year costs whichever is larger, not both.
   return {
-    min: tuitionMin + livingMin + funds,
-    max: tuitionMax + livingMax + funds,
+    min: tuitionMin + Math.max(livingMin, funds),
+    max: tuitionMax + Math.max(livingMax, funds),
   };
 }
 
@@ -95,6 +129,8 @@ export function validateCountryData(country: CountryInfo): boolean {
   if (!country.name || country.name.trim().length === 0) return false;
   if (!country.currency || !country.capital) return false;
   if (typeof country.bdtRate !== "number" || country.bdtRate <= 0) return false;
+  if (!country.costs || !country.costs.proofOfFunds || !/^[A-Z]{3}$/.test(country.costs.proofOfFunds.currency)) return false;
+  if (!country.site || !country.site.accentColor || !Array.isArray(country.site.steps)) return false;
   if (!country.avgTuitionYearBdt || typeof country.avgTuitionYearBdt.min !== "number") return false;
   if (!country.avgMonthlyLivingBdt || typeof country.avgMonthlyLivingBdt.min !== "number") return false;
   if (!Array.isArray(country.documentsChecklist)) return false;

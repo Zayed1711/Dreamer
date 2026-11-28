@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Flag } from "./Flag";
-import type { CountryDossier } from "@/lib/destinations";
+import { defaultContent, type CountryInfo } from "@dreamer/journey-engine";
 import { DESTINATION_PHOTOS } from "@/lib/photos";
 
 /**
@@ -17,7 +17,7 @@ export function DestinationStage({
   index,
   onChange,
 }: {
-  countries: CountryDossier[];
+  countries: CountryInfo[];
   index: number;
   onChange: (index: number) => void;
 }) {
@@ -30,14 +30,14 @@ export function DestinationStage({
   };
   const dragX = useRef<number | null>(null);
   const wheelAt = useRef(0);
-  const ticker = Array.from({ length: 6 }, () => country.backdropTitle).join("  •  ") + "  •  ";
+  const ticker = Array.from({ length: 6 }, () => country.site.nativeName).join("  •  ") + "  •  ";
   const photo = DESTINATION_PHOTOS[country.code];
 
   return (
     <section
       aria-label="Choose your destination"
       className="relative overflow-hidden transition-colors duration-700"
-      style={{ backgroundColor: country.accentColor, color: country.textColor }}
+      style={{ backgroundColor: country.site.accentColor, color: country.site.textColor }}
       onKeyDown={(e) => {
         if (e.key === "ArrowLeft") go(-1);
         if (e.key === "ArrowRight") go(1);
@@ -124,9 +124,10 @@ export function DestinationStage({
           <h2 className="text-4xl leading-tight sm:text-6xl" style={{ fontFamily: "var(--font-serif), Georgia, serif" }}>
             {country.name}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed opacity-85 sm:text-base">{country.tagline}</p>
+          <p className="mt-3 text-sm leading-relaxed opacity-85 sm:text-base">{country.site.tagline}</p>
           <p className="mt-4 text-[11px] tracking-wider uppercase opacity-75" style={{ fontFamily: "var(--font-mono), monospace" }}>
-            {country.annualBdt} / year · {country.intake} · DAC → {country.airport}
+            From {formatLakh(country.avgTuitionYearBdt.min + country.avgMonthlyLivingBdt.min * 12)} a year ·{" "}
+            {country.intakeMonths.map((m) => m.split(" (")[0]).join(" / ")} · DAC → {airportOf(country.code).code}
           </p>
           <p className="mt-5 text-[11px] tracking-[0.3em] opacity-60" style={{ fontFamily: "var(--font-mono), monospace" }}>
             {String(index + 1).padStart(2, "0")} / {count}
@@ -188,4 +189,14 @@ function FlagBadge({ code, still = false }: { code: string; still?: boolean }) {
       </div>
     </div>
   );
+}
+
+/** Arrival airport, the same one the tracker's flight bar uses. */
+export function airportOf(code: string) {
+  return defaultContent.airports.destinations.byCountry[code] ?? defaultContent.airports.destinations.unknown;
+}
+
+/** "৳15.5 lakh" for the editorial site. */
+function formatLakh(bdt: number) {
+  return `৳${(bdt / 100_000).toFixed(1)} lakh`;
 }

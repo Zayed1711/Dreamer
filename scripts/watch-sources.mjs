@@ -90,13 +90,17 @@ export function robotsAllows(robotsTxt, pathname) {
 
 /** Every source URL in content/, with the records that cite it. */
 export function collectSources(root) {
-  const files = ["content/universities/universities.json", "content/scholarships/scholarships.json"];
+  const files = [
+    "content/universities/universities.json",
+    "content/scholarships/scholarships.json",
+    "content/countries/countries.json",
+  ];
   const byUrl = new Map();
   for (const f of files) {
     for (const rec of JSON.parse(fs.readFileSync(path.join(root, f), "utf8"))) {
       for (const url of rec.sources ?? []) {
         if (!byUrl.has(url)) byUrl.set(url, []);
-        byUrl.get(url).push({ id: rec.id, name: rec.name, lastChecked: rec.lastChecked ?? null });
+        byUrl.get(url).push({ id: rec.id ?? rec.code, name: rec.name, lastChecked: rec.lastChecked ?? null });
       }
     }
   }

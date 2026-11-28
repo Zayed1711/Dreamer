@@ -79,14 +79,16 @@ describe("countries engine", () => {
     const de = getCountryByCode(defaultCountries, "DE")!;
     const cost = getEstimatedFirstYearCostBdt(de);
 
+    // The blocked account is paid back as living money, so it is not added on top of living costs.
     const expectedMin =
-      de.avgTuitionYearBdt.min + de.avgMonthlyLivingBdt.min * 12 + de.proofOfFundsBdt;
+      de.avgTuitionYearBdt.min + Math.max(de.avgMonthlyLivingBdt.min * 12, de.proofOfFundsBdt);
     const expectedMax =
-      de.avgTuitionYearBdt.max + de.avgMonthlyLivingBdt.max * 12 + de.proofOfFundsBdt;
+      de.avgTuitionYearBdt.max + Math.max(de.avgMonthlyLivingBdt.max * 12, de.proofOfFundsBdt);
 
     expect(cost.min).toBe(expectedMin);
     expect(cost.max).toBe(expectedMax);
-    expect(cost.min).toBeGreaterThan(2000000); // 20+ Lakh BDT
+    expect(cost.min).toBeGreaterThan(1_000_000); // 10+ Lakh BDT
+    expect(cost.min).toBeLessThan(de.avgTuitionYearBdt.min + de.avgMonthlyLivingBdt.min * 12 + de.proofOfFundsBdt);
   });
 
   it("validates all 18 country objects", () => {

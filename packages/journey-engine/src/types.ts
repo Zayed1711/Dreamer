@@ -499,6 +499,24 @@ export interface CountryFaq {
   answer: string;
 }
 
+/** Costs in the country's own currency (proof of funds in the currency the authority states). */
+export interface CountryCosts {
+  tuitionYear: { min: number; max: number };
+  livingMonth: { min: number; max: number };
+  /** amount 0 = the authority publishes no fixed amount (see note). */
+  proofOfFunds: Money & { note?: string };
+  note?: string;
+}
+
+/** What the public website needs on top of the guide: stage colours, native name, packing-story steps. */
+export interface CountrySite {
+  nativeName: string;
+  tagline: string;
+  accentColor: string;
+  textColor: string;
+  steps: { icon: "passport" | "attestation" | "ielts" | "offer" | "solvency" | "visa"; subtitle: string; description: string }[];
+}
+
 export interface CountryInfo {
   code: string;
   name: string;
@@ -506,6 +524,13 @@ export interface CountryInfo {
   capital: string;
   currency: string;
   currencySymbol: string;
+  costs: CountryCosts;
+  site: CountrySite;
+  /** Official pages the costs come from; the weekly watcher visits them. */
+  sources: string[];
+  /** ISO date a person last checked the costs against official pages; null = not yet. */
+  lastChecked: string | null;
+  // The BDT figures below are computed from `costs` and the day's rate by withLiveCountryCosts(); not stored in content.
   bdtRate: number;
   avgTuitionYearBdt: { min: number; max: number };
   avgMonthlyLivingBdt: { min: number; max: number };

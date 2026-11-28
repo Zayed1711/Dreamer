@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import type { CountryDossier } from "@/lib/destinations";
+import type { CountryInfo } from "@dreamer/journey-engine";
+import { airportOf } from "./DestinationStage";
 
 /**
  * "Good things fall into place", modelled on the coffee scroll-story reel:
@@ -11,7 +12,7 @@ import type { CountryDossier } from "@/lib/destinations";
  * giant faded word for each step, then the finale: the suitcase rises, is packed and closes.
  */
 
-type Icon = CountryDossier["steps"][number]["icon"];
+type Icon = CountryInfo["site"]["steps"][number]["icon"];
 
 const OBJECTS: { icon: Icon; img: string; word: string; bg: string; fallback: { subtitle: string; description: string } }[] = [
   { icon: "passport", img: "/story/story-passport.webp", word: "Ready", bg: "#efe9df",
@@ -40,13 +41,13 @@ const imageBlend: React.CSSProperties = {
   WebkitMaskImage: "radial-gradient(ellipse 44% 54% at 50% 52%, #000 42%, transparent 100%)",
 };
 
-function stepText(country: CountryDossier, i: number) {
+function stepText(country: CountryInfo, i: number) {
   const o = OBJECTS[i]!;
-  const s = country.steps.find((step) => step.icon === o.icon);
+  const s = country.site.steps.find((step) => step.icon === o.icon);
   return s ? { subtitle: s.subtitle, description: s.description } : o.fallback;
 }
 
-export function PackingStory({ country }: { country: CountryDossier }) {
+export function PackingStory({ country }: { country: CountryInfo }) {
   const ref = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -81,7 +82,7 @@ export function PackingStory({ country }: { country: CountryDossier }) {
 
   const headline = (
     <h2 className="text-center text-2xl leading-tight text-slate-900 sm:text-5xl" style={{ fontFamily: "var(--font-serif), Georgia, serif" }}>
-      Good things <em style={{ color: country.accentColor }}>fall</em> into place.
+      Good things <em style={{ color: country.site.accentColor }}>fall</em> into place.
     </h2>
   );
 
@@ -172,7 +173,7 @@ export function PackingStory({ country }: { country: CountryDossier }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/story/suitcase-closed.webp"
-              alt={closed > 0.5 ? `A packed suitcase, ready to fly to ${country.city}` : ""}
+              alt={closed > 0.5 ? `A packed suitcase, ready to fly to ${airportOf(country.code).city}` : ""}
               className="absolute inset-0 h-full w-full"
               style={{ ...imageBlend, opacity: closed }}
             />
@@ -204,20 +205,20 @@ export function PackingStory({ country }: { country: CountryDossier }) {
   );
 }
 
-function LuggageTag({ country }: { country: CountryDossier }) {
+function LuggageTag({ country }: { country: CountryInfo }) {
   return (
     <div className="flex items-center gap-3 rounded-md border border-[#d9cdb6] bg-[#f6efe2] py-2 pr-4 pl-3 shadow-[0_8px_20px_-8px_rgba(0,0,0,0.3)]">
       <span className="h-2.5 w-2.5 rounded-full border border-[#c9b896] bg-[#e8dcc4]" aria-hidden="true" />
       <span className="text-sm tracking-[0.2em] text-slate-800" style={{ fontFamily: "var(--font-mono), monospace" }}>
-        DAC → {country.airport}
+        DAC → {airportOf(country.code).code}
       </span>
-      <span className="text-xs text-slate-500">{country.city}</span>
+      <span className="text-xs text-slate-500">{airportOf(country.code).city}</span>
     </div>
   );
 }
 
 /** For students who turn off motion: the same story as a calm stack. */
-function StaticStory({ country, headline }: { country: CountryDossier; headline: React.ReactNode }) {
+function StaticStory({ country, headline }: { country: CountryInfo; headline: React.ReactNode }) {
   return (
     <section aria-label="How your journey comes together" className="bg-[#efe9df] px-4 py-16">
       {headline}
@@ -235,7 +236,7 @@ function StaticStory({ country, headline }: { country: CountryDossier; headline:
       </ol>
       <div className="mx-auto mt-12 flex max-w-xl flex-col items-center gap-4 text-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/story/suitcase-closed.webp" alt={`A packed suitcase, ready to fly to ${country.city}`} className="w-[min(86vw,480px)]" style={imageBlend} />
+        <img src="/story/suitcase-closed.webp" alt={`A packed suitcase, ready to fly to ${airportOf(country.code).city}`} className="w-[min(86vw,480px)]" style={imageBlend} />
         <LuggageTag country={country} />
         <Link href="/tracker" className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white">
           Start my journey <ArrowRight size={16} aria-hidden="true" />

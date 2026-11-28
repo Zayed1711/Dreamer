@@ -31,5 +31,6 @@ test("every record in content has at least one watched source", () => {
   const sources = collectSources(process.cwd());
   const ids = [...sources.values()].flat().map((r) => r.id);
   assert.ok(ids.includes("de-tum") && ids.includes("gb-chevening"));
+  assert.ok(ids.includes("DE"), "country cost sources are watched too");
   assert.ok(sources.size >= 40);
 });

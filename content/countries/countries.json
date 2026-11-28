@@ -6,16 +6,6 @@
     "capital": "Berlin",
     "currency": "EUR",
     "currencySymbol": "€",
-    "bdtRate": 130,
-    "avgTuitionYearBdt": {
-      "min": 0,
-      "max": 400000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 110000,
-      "max": 140000
-    },
-    "proofOfFundsBdt": 1550000,
     "proofOfFundsName": "Blocked Account (Sperrkonto ~11,904 EUR)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "18 months",
@@ -94,13 +84,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": true,
-      "providerName": "Sperrkonto (Expatrio, Coracle, or Fintiba)",
-      "amountLocal": "€11,904 EUR",
-      "amountBDT": "15.5 Lakh BDT",
-      "bdBankProcedure": "Open a Student File with any Bangladesh Bank Authorized Dealer branch (e.g. EBL, City Bank, BRAC Bank, MTB) and wire €11,904 to your Expatrio/Coracle blocked account."
-    },
     "commonFaqs": [
       {
         "question": "How does the new German online visa application process work for Bangladeshi students?",
@@ -118,6 +101,69 @@
         "question": "Can I apply to Germany with a study gap?",
         "answer": "German universities accept study gaps if you provide valid proof of professional work experience, publications, or career progression related to your chosen field of study."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 0,
+        "max": 3100
+      },
+      "livingMonth": {
+        "min": 992,
+        "max": 1100
+      },
+      "proofOfFunds": {
+        "amount": 11904,
+        "currency": "EUR",
+        "note": "Blocked account: €992 a month for 12 months"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": true,
+      "providerName": "Sperrkonto (Expatrio, Coracle, or Fintiba)",
+      "bdBankProcedure": "Open a Student File with any Bangladesh Bank Authorized Dealer branch (e.g. EBL, City Bank, BRAC Bank, MTB) and wire €11,904 to your Expatrio/Coracle blocked account."
+    },
+    "site": {
+      "nativeName": "DEUTSCHLAND",
+      "tagline": "Tuition-free public universities, APS verification, and the €11,904 blocked account.",
+      "accentColor": "#0f3d2a",
+      "textColor": "#f0fdf4",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi E-Passport",
+          "description": "Valid for at least 18 months beyond enrollment with certified English translation."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Academic Attestation & APS",
+          "description": "HSC & Bachelor certificates attested by Education Ministry, MoFA & APS verification."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "IELTS / Goethe-Zertifikat",
+          "description": "Minimum IELTS Band 6.0 or Goethe-Institut B1/B2 level proficiency certificate."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Zulassungsbescheid (Offer Letter)",
+          "description": "Direct unconditional admission letter from an accredited public German university."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Sperrkonto Solvency (€11,904)",
+          "description": "Statutory blocked account confirmation deposited in Coracle, Expatrio, or Fintiba."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "German National Student Visa (Category D)",
+          "description": "Entry clearance sticker affixed by the German Embassy in Dhaka with Schengen rights."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://dhaka.diplo.de/bd-en/service/2685884-2685884"
     ]
   },
   {
@@ -127,16 +173,6 @@
     "capital": "Tokyo",
     "currency": "JPY",
     "currencySymbol": "¥",
-    "bdtRate": 0.8,
-    "avgTuitionYearBdt": {
-      "min": 420000,
-      "max": 750000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 90000,
-      "max": 130000
-    },
-    "proofOfFundsBdt": 1600000,
     "proofOfFundsName": "Bank Solvency & Sponsor Certificate (~2 Million JPY)",
     "partTimeHoursTerm": 28,
     "postStudyWorkYears": "1–2 years",
@@ -213,13 +249,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Solvency & Sponsor Certificate",
-      "amountLocal": "¥2,000,000 JPY",
-      "amountBDT": "16.0 Lakh BDT",
-      "bdBankProcedure": "Maintain funds in sponsor bank account in Bangladesh with minimum 6 months history and tax return proof."
-    },
     "commonFaqs": [
       {
         "question": "Can I study in Japan without knowing Japanese?",
@@ -233,6 +262,70 @@
         "question": "How many hours can international students work in Japan?",
         "answer": "Students can legally work up to 28 hours per week during academic terms, and up to 40 hours per week during official semester vacations."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 535800,
+        "max": 1300000
+      },
+      "livingMonth": {
+        "min": 105000,
+        "max": 160000
+      },
+      "proofOfFunds": {
+        "amount": 0,
+        "currency": "JPY",
+        "note": "No fixed national amount; show you can cover tuition and living for the first year"
+      },
+      "note": "From official sources: minimum living cost, tuition range. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency & Sponsor Certificate",
+      "bdBankProcedure": "Maintain funds in sponsor bank account in Bangladesh with minimum 6 months history and tax return proof."
+    },
+    "site": {
+      "nativeName": "NIHON",
+      "tagline": "World-leading technology, MEXT national grants, and 28-hour airport-stamped work rights.",
+      "accentColor": "#9c271b",
+      "textColor": "#fff5f5",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Machine-Readable Passport",
+          "description": "Standard passport valid for the duration of the Japanese visa."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "JLPT N5/N4 or NAT-TEST",
+          "description": "Japanese language competency certificate proving at least 150 hours of structured study."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "University Acceptance Offer",
+          "description": "Official Letter of Acceptance from a Japanese Ministry of Justice designated institution."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Immigration COE (Certificate of Eligibility)",
+          "description": "Statutory clearance document issued directly by the Immigration Services Agency of Japan."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Sponsor Solvency Guarantee (¥2M)",
+          "description": "Sponsor tax identification, relationship certificate, and 2-3 year income solvency proof."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Japan Student Visa Foil",
+          "description": "Official visa foil stamped into passport by the Embassy of Japan in Dhaka."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.studyinjapan.go.jp/en/life/cost-of-living/",
+      "https://www.studyinjapan.go.jp/en/planning/academic-fees/"
     ]
   },
   {
@@ -242,16 +335,6 @@
     "capital": "Washington, D.C.",
     "currency": "USD",
     "currencySymbol": "$",
-    "bdtRate": 122,
-    "avgTuitionYearBdt": {
-      "min": 2400000,
-      "max": 6500000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 140000,
-      "max": 220000
-    },
-    "proofOfFundsBdt": 4000000,
     "proofOfFundsName": "I-20 Form First Year Cost Certification",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "1–3 years (STEM OPT)",
@@ -329,13 +412,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Solvency Certificate for I-20 Form",
-      "amountLocal": ",000 - ,000 USD",
-      "amountBDT": "36 - 65 Lakh BDT (or  with Graduate Assistantship RA/TA)",
-      "bdBankProcedure": "Obtain Bank Solvency Certificate and 6-month statement from sponsor bank. If funded by university assistantship, no personal bank deposit is required."
-    },
     "commonFaqs": [
       {
         "question": "How do Bangladeshi students get fully funded in the US for Master and PhD?",
@@ -349,7 +425,68 @@
         "question": "What is the most common reason for US student visa refusal in Dhaka?",
         "answer": "The most frequent refusal reason under INA 214(b) is failing to demonstrate strong non-immigrant intent and clear career plans in Bangladesh, or giving rehearsed, memorized answers during the 2-minute consular interview."
       }
-    ]
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 20000,
+        "max": 53000
+      },
+      "livingMonth": {
+        "min": 1100,
+        "max": 1800
+      },
+      "proofOfFunds": {
+        "amount": 0,
+        "currency": "USD",
+        "note": "No fixed amount: show the first-year cost printed on your university's I-20"
+      },
+      "note": "Estimates; no official national figures are published."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency Certificate for I-20 Form",
+      "bdBankProcedure": "Obtain Bank Solvency Certificate and 6-month statement from sponsor bank. If funded by university assistantship, no personal bank deposit is required."
+    },
+    "site": {
+      "nativeName": "AMERICA",
+      "tagline": "World-class university research, Graduate Assistantships, and STEM 3-year OPT extensions.",
+      "accentColor": "#1e2f4f",
+      "textColor": "#f8fafc",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport & NID",
+          "description": "Valid for at least six months beyond the intended stay in the United States."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "WES Transcripts & Standardized Tests",
+          "description": "Academic evaluation and institutional score reports (GRE / GMAT if required)."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "IELTS 6.5+ / TOEFL iBT 90+",
+          "description": "Official English proficiency score sent directly via institutional code."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Form I-20 Certificate",
+          "description": "Official SEVIS Form I-20 signed by the Designated School Official (DSO)."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "SEVIS I-901 Receipt ($350) & Bank File",
+          "description": "Mandatory federal SEVIS fee payment receipt and 1st year total solvency proof."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "F-1 Nonimmigrant Student Visa",
+          "description": "Visa foil affixed after consular interview at the US Embassy in Dhaka."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": []
   },
   {
     "code": "CA",
@@ -358,16 +495,6 @@
     "capital": "Ottawa",
     "currency": "CAD",
     "currencySymbol": "C$",
-    "bdtRate": 89,
-    "avgTuitionYearBdt": {
-      "min": 1800000,
-      "max": 4200000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 120000,
-      "max": 180000
-    },
-    "proofOfFundsBdt": 1850000,
     "proofOfFundsName": "Guaranteed Investment Certificate (GIC ~20,635 CAD)",
     "partTimeHoursTerm": 24,
     "postStudyWorkYears": "Up to 3 years",
@@ -446,13 +573,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": true,
-      "providerName": "Guaranteed Investment Certificate (GIC)",
-      "amountLocal": ",635 CAD",
-      "amountBDT": "18.5 Lakh BDT",
-      "bdBankProcedure": "Open an international GIC account (Scotiabank, CIBC, or ICICI Canada) and remit CAD 20,635 through a Bangladeshi bank student file."
-    },
     "commonFaqs": [
       {
         "question": "What is a Provincial Attestation Letter (PAL) for Canada?",
@@ -466,6 +586,69 @@
         "question": "Is it easy to obtain Canadian Permanent Residency (PR) after graduation?",
         "answer": "Graduates receive a Post-Graduation Work Permit (PGWP) of up to 3 years. Canadian study and work experience award high points in Express Entry (Canadian Experience Class) and Provincial Nominee Programs (PNP)."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 20000,
+        "max": 47000
+      },
+      "livingMonth": {
+        "min": 1908,
+        "max": 2000
+      },
+      "proofOfFunds": {
+        "amount": 22895,
+        "currency": "CAD",
+        "note": "Single applicant outside Quebec, on top of tuition and travel; updated each September"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": true,
+      "providerName": "Guaranteed Investment Certificate (GIC)",
+      "bdBankProcedure": "Open an international GIC account (Scotiabank, CIBC, or ICICI Canada) and remit CAD 20,635 through a Bangladeshi bank student file."
+    },
+    "site": {
+      "nativeName": "CANADA",
+      "tagline": "High quality of life, Provincial Attestation Letters (PAL), and Post-Graduation Work Permits.",
+      "accentColor": "#8f1d1d",
+      "textColor": "#fef2f2",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi E-Passport",
+          "description": "Valid for the entire duration of the academic study permit application."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "IELTS Academic (Min 6.0 Each Band)",
+          "description": "Language proficiency testing adhering to Canadian DLI institutional benchmarks."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "DLI Acceptance Letter + PAL",
+          "description": "Official Letter of Acceptance from a Designated Learning Institution and Provincial Attestation Letter."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Upfront Medical & Biometrics",
+          "description": "Panel physician medical clearance at IOM Dhaka and biometric scanning at VFS."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Financial Solvency Proof ($20,635 CAD)",
+          "description": "Documented 1-year living cost solvency or Guaranteed Investment Certificate (GIC)."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "IRCC Port of Entry Introduction Letter",
+          "description": "Final study permit approval notice and passport counterfoil issued by IRCC."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html"
     ]
   },
   {
@@ -475,16 +658,6 @@
     "capital": "London",
     "currency": "GBP",
     "currencySymbol": "£",
-    "bdtRate": 155,
-    "avgTuitionYearBdt": {
-      "min": 2100000,
-      "max": 4500000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 150000,
-      "max": 210000
-    },
-    "proofOfFundsBdt": 2200000,
     "proofOfFundsName": "UKVI 28-Day Bank Maintenance Funds (~£9,207–£12,006)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "2 years (3 years for PhD)",
@@ -562,13 +735,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "28-Day Bank Statement Requirement",
-      "amountLocal": "£9,207 - £12,006 GBP",
-      "amountBDT": "14 - 18 Lakh BDT + remaining tuition",
-      "bdBankProcedure": "Funds must sit in student or parent Bangladeshi bank account continuously for at least 28 consecutive days before visa application date."
-    },
     "commonFaqs": [
       {
         "question": "How long can I work in the UK after graduating?",
@@ -582,6 +748,69 @@
         "question": "Can I apply to UK universities without IELTS?",
         "answer": "Some UK universities accept Medium of Instruction (MOI) letters from recognized Bangladeshi universities or English marks from HSC (e.g. 70%+ in English). However, having IELTS 6.5 ensures the highest visa success rate."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 14000,
+        "max": 29000
+      },
+      "livingMonth": {
+        "min": 1171,
+        "max": 1529
+      },
+      "proofOfFunds": {
+        "amount": 10539,
+        "currency": "GBP",
+        "note": "£1,171 a month for 9 months outside London; London £1,529 a month (£13,761)"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "28-Day Bank Statement Requirement",
+      "bdBankProcedure": "Funds must sit in student or parent Bangladeshi bank account continuously for at least 28 consecutive days before visa application date."
+    },
+    "site": {
+      "nativeName": "BRITAIN",
+      "tagline": "Prestigious 1-year master's degrees, SELT English waivers, and 2-year Graduate Route PSW.",
+      "accentColor": "#173663",
+      "textColor": "#f0f7ff",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi E-Passport",
+          "description": "Standard passport valid for the duration of the UK study program with blank pages."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "IELTS for UKVI (SELT 6.0+)",
+          "description": "Secure English Language Test with minimum component scores for Home Office compliance."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Unconditional University Offer",
+          "description": "Confirmed place on a degree course from a Home Office licensed Student Sponsor university."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "CAS Reference Number",
+          "description": "Unique electronic reference number containing approved course fees and student sponsorship details."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "28-Day Bank Statement & NHS IHS",
+          "description": "Tuition balance + living funds (£9,207-£12,006) held consecutive 28 days in an AD bank."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "UK Student Visa Vignette",
+          "description": "90-day travel vignette passport sticker and official BRP biometric collection directive."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.gov.uk/student-visa/money"
     ]
   },
   {
@@ -591,16 +820,6 @@
     "capital": "Canberra",
     "currency": "AUD",
     "currencySymbol": "A$",
-    "bdtRate": 80,
-    "avgTuitionYearBdt": {
-      "min": 2200000,
-      "max": 4800000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 140000,
-      "max": 200000
-    },
-    "proofOfFundsBdt": 2400000,
     "proofOfFundsName": "Department of Home Affairs Living Cost (~29,710 AUD)",
     "partTimeHoursTerm": 24,
     "postStudyWorkYears": "2–4 years (Regional bonus)",
@@ -678,13 +897,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Annual Living Cost Financial Guarantee",
-      "amountLocal": ",710 AUD",
-      "amountBDT": "24.0 Lakh BDT",
-      "bdBankProcedure": "Show savings deposits or an approved education loan from a commercial bank covering 1 year tuition + AUD 29,710 living costs."
-    },
     "commonFaqs": [
       {
         "question": "What is the Genuine Student (GS) requirement for Australian student visas?",
@@ -694,6 +906,69 @@
         "question": "What are the part-time work rights in Australia?",
         "answer": "International students can work up to 48 hours per fortnight (24 hours/week on average) while their course is in session, and unlimited hours during semester breaks."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 28000,
+        "max": 60000
+      },
+      "livingMonth": {
+        "min": 2476,
+        "max": 2500
+      },
+      "proofOfFunds": {
+        "amount": 29710,
+        "currency": "AUD",
+        "note": "12 months of living costs, on top of tuition and travel"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Annual Living Cost Financial Guarantee",
+      "bdBankProcedure": "Show savings deposits or an approved education loan from a commercial bank covering 1 year tuition + AUD 29,710 living costs."
+    },
+    "site": {
+      "nativeName": "AUSTRALIA",
+      "tagline": "48h/fortnight work rights, 2–4 year post-study work streams, and Confirmation of Enrolment (CoE).",
+      "accentColor": "#0f4236",
+      "textColor": "#f0fdf4",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport & Genuine Student Test",
+          "description": "Machine-readable passport and Genuine Student (GS) assessment statement."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "IELTS / PTE Academic (6.0+)",
+          "description": "English score requirement meeting Department of Home Affairs guidelines."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Electronic Confirmation of Enrolment (CoE)",
+          "description": "Official CoE generated via PRISMS after initial deposit payment to the university."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Financial Capacity (AUD $29,710)",
+          "description": "Documented 12-month living allowance, travel, and remaining course tuition fees."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "OSHC (Overseas Student Health Cover)",
+          "description": "Mandatory Australian health insurance covering medical, hospital, and prescriptions."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Subclass 500 Student Visa Grant",
+          "description": "Electronic visa grant notification issued by Department of Home Affairs."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
     ]
   },
   {
@@ -703,16 +978,6 @@
     "capital": "Helsinki",
     "currency": "EUR",
     "currencySymbol": "€",
-    "bdtRate": 130,
-    "avgTuitionYearBdt": {
-      "min": 1000000,
-      "max": 2200000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 90000,
-      "max": 130000
-    },
-    "proofOfFundsBdt": 1200000,
     "proofOfFundsName": "Bank Solvency & Health Insurance (~6,720 EUR/year)",
     "partTimeHoursTerm": 30,
     "postStudyWorkYears": "2 years",
@@ -790,13 +1055,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Deposit & Account Balance",
-      "amountLocal": "€6,720 EUR/year",
-      "amountBDT": "8.7 Lakh BDT",
-      "bdBankProcedure": "Deposit €6,720 in student own bank account and provide official bank statement for the Enter Finland online residence permit portal."
-    },
     "commonFaqs": [
       {
         "question": "Are there tuition-free universities in Finland for non-EU students?",
@@ -806,6 +1064,70 @@
         "question": "What are the post-graduation work rights in Finland?",
         "answer": "Finland grants an exceptional 2-year post-study job seeker residence permit after graduation. Time spent on a student permit counts at 50% toward the 4-year permanent residency (PR) requirement."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 9000,
+        "max": 20000
+      },
+      "livingMonth": {
+        "min": 800,
+        "max": 1200
+      },
+      "proofOfFunds": {
+        "amount": 9600,
+        "currency": "EUR",
+        "note": "€800 a month for a year"
+      },
+      "note": "From official sources: minimum living cost, tuition range, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Deposit & Account Balance",
+      "bdBankProcedure": "Deposit €6,720 in student own bank account and provide official bank statement for the Enter Finland online residence permit portal."
+    },
+    "site": {
+      "nativeName": "FINLAND",
+      "tagline": "World-class tech innovation, early bird tuition discounts, and 30h/wk student work rights.",
+      "accentColor": "#173f5a",
+      "textColor": "#f0fdfa",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport",
+          "description": "Valid for at least the full two-year initial residence permit duration."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Studyinfo Joint Application Acceptance",
+          "description": "Formal study place confirmation from Finnish University or UAS portal."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "1st Year Tuition Payment Receipt",
+          "description": "Official payment verification with 10%–50% early bird tuition scholarship waiver."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Living Expense Account (€6,720/yr)",
+          "description": "Bank statement showing €6,720 held in the student's personal bank account."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Private Health Insurance Policy",
+          "description": "Comprehensive medical insurance meeting Migri requirements (e.g. Swisscare / SIP)."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Finnish Residence Permit Card (Type B)",
+          "description": "Biometric European residence permit card enabling instant European work and travel rights."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.studyinfinland.fi/funding-your-studies/fees-and-cost-living",
+      "https://migri.fi/en/income-requirement-for-students"
     ]
   },
   {
@@ -815,16 +1137,6 @@
     "capital": "Stockholm",
     "currency": "SEK",
     "currencySymbol": "kr",
-    "bdtRate": 11.5,
-    "avgTuitionYearBdt": {
-      "min": 1400000,
-      "max": 2800000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 100000,
-      "max": 140000
-    },
-    "proofOfFundsBdt": 1400000,
     "proofOfFundsName": "Migrationsverket Maintenance (~10,314 SEK/month)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "1 year",
@@ -902,13 +1214,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Account Balance Certificate",
-      "amountLocal": "SEK 10,314/month (~SEK 103,140/yr)",
-      "amountBDT": "12.0 Lakh BDT",
-      "bdBankProcedure": "Provide bank statement in student sole name showing total living costs for the entire permit duration before applying to Migrationsverket."
-    },
     "commonFaqs": [
       {
         "question": "How can Bangladeshi students get scholarships in Sweden?",
@@ -918,6 +1223,70 @@
         "question": "Can international students work during studies in Sweden?",
         "answer": "Sweden has no legal limit on the number of hours an international student can work during their studies, provided they make normal academic progress (at least 15 credits per semester)."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 80000,
+        "max": 320000
+      },
+      "livingMonth": {
+        "min": 10656,
+        "max": 12000
+      },
+      "proofOfFunds": {
+        "amount": 127872,
+        "currency": "SEK",
+        "note": "SEK 10,656 for each month of the permit (12 shown)"
+      },
+      "note": "From official sources: minimum living cost, tuition range, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Account Balance Certificate",
+      "bdBankProcedure": "Provide bank statement in student sole name showing total living costs for the entire permit duration before applying to Migrationsverket."
+    },
+    "site": {
+      "nativeName": "SVERIGE",
+      "tagline": "Unrestricted student working hours, innovative English master's degrees, and Swedish Institute grants.",
+      "accentColor": "#10375c",
+      "textColor": "#f0f7ff",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport",
+          "description": "Valid for at least the full initial residence permit duration."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Universityadmissions.se Offer",
+          "description": "Centralized national Swedish university admissions confirmation letter."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "First Semester Tuition Installment",
+          "description": "Payment confirmation for the first semester tuition fee directly to the university."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Maintenance Funds (SEK 10,314/mo)",
+          "description": "Bank funds deposited in the student's name showing 10-12 months of living expenses."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Comprehensive Comprehensive Health Cover",
+          "description": "Kammarkollegiet FAS health insurance policy through Swedish university registration."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Swedish Residence Permit (UT-Kort)",
+          "description": "Biometric residence card issued by Swedish Migration Agency (Migrationsverket)."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
+      "https://studyinsweden.se/plan-your-studies/fees-costs/"
     ]
   },
   {
@@ -927,16 +1296,6 @@
     "capital": "Amsterdam",
     "currency": "EUR",
     "currencySymbol": "€",
-    "bdtRate": 130,
-    "avgTuitionYearBdt": {
-      "min": 1600000,
-      "max": 3200000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 130000,
-      "max": 180000
-    },
-    "proofOfFundsBdt": 1600000,
     "proofOfFundsName": "IND Living Maintenance (~1,050 EUR/month)",
     "partTimeHoursTerm": 16,
     "postStudyWorkYears": "1 year (Zoekjaar)",
@@ -1014,13 +1373,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": true,
-      "providerName": "University Living Cost Guarantee Deposit",
-      "amountLocal": "€12,500 - €15,000 EUR",
-      "amountBDT": "16.5 - 20 Lakh BDT",
-      "bdBankProcedure": "Wire living funds and tuition directly to university bank account in the Netherlands via Bangladeshi AD bank student file; university pays back in monthly stipends."
-    },
     "commonFaqs": [
       {
         "question": "What is the post-study orientation year (Zoekjaar) in the Netherlands?",
@@ -1030,6 +1382,70 @@
         "question": "How is housing in the Netherlands for international students?",
         "answer": "Student housing in Dutch university cities is extremely competitive. Students must start searching for accommodation via university housing lotteries or platforms (Room.nl) as early as March/April."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 9000,
+        "max": 30000
+      },
+      "livingMonth": {
+        "min": 1131,
+        "max": 1400
+      },
+      "proofOfFunds": {
+        "amount": 13569,
+        "currency": "EUR",
+        "note": "€1,130.77 a month for a year (2026 rate, updated each January and July)"
+      },
+      "note": "From official sources: minimum living cost, tuition range, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": true,
+      "providerName": "University Living Cost Guarantee Deposit",
+      "bdBankProcedure": "Wire living funds and tuition directly to university bank account in the Netherlands via Bangladeshi AD bank student file; university pays back in monthly stipends."
+    },
+    "site": {
+      "nativeName": "NEDERLAND",
+      "tagline": "Over 2,100 English-taught programs, 1-year 'Zoekjaar' orientation year, and university-sponsored IND visa.",
+      "accentColor": "#9e3f12",
+      "textColor": "#fff7ed",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport & NID",
+          "description": "Valid for at least 18 months with certified English translation."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Studielink Unconditional Acceptance",
+          "description": "Formal unconditional acceptance letter from a Dutch Research University or UAS."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Living Expenses Deposit (€12,125/yr)",
+          "description": "Living funds transferred directly to the university's third-party escrow account."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "IND Fast-Track Visa Clearance",
+          "description": "Positive visa advice letter issued by the Dutch Immigration and Naturalisation Service."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "MVV Entry Sticker in Passport",
+          "description": "Provisional residence sticker placed in passport at the Netherlands Embassy in Dhaka."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "VVR Residence Permit Card",
+          "description": "Dutch biometric residence permit card collected upon arrival in the Netherlands."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://ind.nl/en/required-amounts-income-requirements",
+      "https://www.studyinnl.org/finances/tuition-fees"
     ]
   },
   {
@@ -1039,16 +1455,6 @@
     "capital": "Dublin",
     "currency": "EUR",
     "currencySymbol": "€",
-    "bdtRate": 130,
-    "avgTuitionYearBdt": {
-      "min": 1800000,
-      "max": 3500000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 140000,
-      "max": 200000
-    },
-    "proofOfFundsBdt": 1400000,
     "proofOfFundsName": "Irish Immigration Service Delivery (~10,000 EUR)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "2 years (Master's)",
@@ -1126,13 +1532,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Education Bond or Bank Statement",
-      "amountLocal": "€10,000 EUR",
-      "amountBDT": "13.0 Lakh BDT",
-      "bdBankProcedure": "Show €10,000 readily accessible funds in bank account or deposit into an approved Irish Education Bond (e.g. EduBond)."
-    },
     "commonFaqs": [
       {
         "question": "What is Ireland Third Level Graduate Scheme (Stamp 1G)?",
@@ -1142,6 +1541,69 @@
         "question": "Why is Ireland popular for tech and pharmaceutical graduates from Bangladesh?",
         "answer": "Ireland hosts the European headquarters of Google, Meta, Apple, Pfizer, and Intel, creating robust graduate hiring opportunities in Dublin, Cork, and Galway."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 14000,
+        "max": 27000
+      },
+      "livingMonth": {
+        "min": 833,
+        "max": 1500
+      },
+      "proofOfFunds": {
+        "amount": 10000,
+        "currency": "EUR",
+        "note": "Immediate access to €10,000 for each year of study"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Education Bond or Bank Statement",
+      "bdBankProcedure": "Show €10,000 readily accessible funds in bank account or deposit into an approved Irish Education Bond (e.g. EduBond)."
+    },
+    "site": {
+      "nativeName": "IRELAND",
+      "tagline": "European Silicon Valley, English native environment, and 2-year Third Level Graduate Scheme PSW.",
+      "accentColor": "#0b462c",
+      "textColor": "#f0fdf4",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport & Police Clearance",
+          "description": "Valid for at least 12 months with verified online police clearance certificate."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Unconditional University Offer",
+          "description": "Official Letter of Acceptance from an accredited Irish university or Institute of Technology."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Tuition Fee Electronic Transfer (Pay to Study)",
+          "description": "Full receipt of 1st year tuition fee paid directly to the Irish university."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Living Solvency Proof (€10,000)",
+          "description": "Proof of €10,000 living expenses immediately accessible in the student's name."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Private Medical Insurance",
+          "description": "Private health insurance covering emergency medical treatment in Ireland."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Irish Study Visa (Stamp 2)",
+          "description": "Long-term D-study visa sticker affixed by Irish Immigration."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.irishimmigration.ie/reminder-on-student-finance-requirements-from-30-june-2025/"
     ]
   },
   {
@@ -1151,16 +1613,6 @@
     "capital": "Kuala Lumpur",
     "currency": "MYR",
     "currencySymbol": "RM",
-    "bdtRate": 28,
-    "avgTuitionYearBdt": {
-      "min": 450000,
-      "max": 950000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 45000,
-      "max": 75000
-    },
-    "proofOfFundsBdt": 700000,
     "proofOfFundsName": "EMGS Student Visa Bank Solvency (~25,000 MYR)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "1 year (Graduate Pass)",
@@ -1239,13 +1691,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Solvency Letter",
-      "amountLocal": "RM 10,000 - 15,000 MYR",
-      "amountBDT": "2.5 - 4.0 Lakh BDT",
-      "bdBankProcedure": "Provide sponsor bank solvency certificate and last 3 months bank statement to university international office for EMGS VAL processing."
-    },
     "commonFaqs": [
       {
         "question": "Why choose Malaysia for higher education from Bangladesh?",
@@ -1255,6 +1700,69 @@
         "question": "How long does the Malaysian student visa take from Dhaka?",
         "answer": "EMGS processing takes approximately 3-4 weeks for the electronic Visa Approval Letter (e-VAL), followed by 5-7 working days for the Single Entry Visa (SEV) at the Malaysian High Commission in Dhaka."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 16000,
+        "max": 34000
+      },
+      "livingMonth": {
+        "min": 1600,
+        "max": 2700
+      },
+      "proofOfFunds": {
+        "amount": 0,
+        "currency": "MYR",
+        "note": "No fixed amount published by EMGS; the university lodges a personal bond for you"
+      },
+      "note": "Estimates; no official national figures are published."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency Letter",
+      "bdBankProcedure": "Provide sponsor bank solvency certificate and last 3 months bank statement to university international office for EMGS VAL processing."
+    },
+    "site": {
+      "nativeName": "MALAYSIA",
+      "tagline": "Extremely affordable living, UK & Australian branch campuses, and EMGS visa approval letter.",
+      "accentColor": "#123057",
+      "textColor": "#f0f7ff",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport (Minimum 18 Months)",
+          "description": "All pages scanned and uploaded directly to the EMGS portal."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "University Offer Letter",
+          "description": "Acceptance letter from a public Malaysian university or private branch campus."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Pre-Arrival Medical Health Declaration",
+          "description": "Approved medical examination at an EMGS-registered panel clinic in Dhaka."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Electronic Visa Approval Letter (eVAL)",
+          "description": "Official visa approval issued by the Immigration Department of Malaysia."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Single Entry Visa (eVISA SEV)",
+          "description": "SEV entry visa sticker or eVisa downloaded via the Malaysian Immigration portal."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Post-Arrival Student Pass Sticker",
+          "description": "Passport endorsed with multientry student pass after post-arrival medical in KL."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://visa.educationmalaysia.gov.my/guidelines"
     ]
   },
   {
@@ -1264,16 +1772,6 @@
     "capital": "Seoul",
     "currency": "KRW",
     "currencySymbol": "₩",
-    "bdtRate": 0.088,
-    "avgTuitionYearBdt": {
-      "min": 500000,
-      "max": 1200000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 85000,
-      "max": 130000
-    },
-    "proofOfFundsBdt": 2200000,
     "proofOfFundsName": "Korean Immigration Bank Certificate (~$18,000–$20,000 USD)",
     "partTimeHoursTerm": 25,
     "postStudyWorkYears": "1–2 years (D-10)",
@@ -1351,13 +1849,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Solvency Certificate",
-      "amountLocal": ",000 USD (Seoul) / ,000 USD (Outside)",
-      "amountBDT": "22 - 24 Lakh BDT",
-      "bdBankProcedure": "Maintain minimum ,000 in student or sponsor account for at least 30 days before visa issuance."
-    },
     "commonFaqs": [
       {
         "question": "What is the Global Korea Scholarship (GKS)?",
@@ -1367,6 +1858,69 @@
         "question": "Can I work part-time while studying in South Korea?",
         "answer": "Yes, after completing 1 semester (6 months), students can work up to 20-25 hours per week with permission from their university international office and local immigration office."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 5700000,
+        "max": 14000000
+      },
+      "livingMonth": {
+        "min": 970000,
+        "max": 1500000
+      },
+      "proofOfFunds": {
+        "amount": 0,
+        "currency": "USD",
+        "note": "Korean Embassy Dhaka asks for a bank solvency certificate and 6 months of statements but publishes no fixed amount"
+      },
+      "note": "Estimates; no official national figures are published."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency Certificate",
+      "bdBankProcedure": "Maintain minimum ,000 in student or sponsor account for at least 30 days before visa issuance."
+    },
+    "site": {
+      "nativeName": "HANGUK",
+      "tagline": "GKS full government scholarships, booming semiconductor tech, and D-2 student visa status.",
+      "accentColor": "#202a45",
+      "textColor": "#f8fafc",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport & Apostille / Notarization",
+          "description": "Certificates attested by Education Ministry & notarized by Korean Embassy Dhaka."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "TOPIK Level 3+ or IELTS 6.0+",
+          "description": "Korean language test score or IELTS score for international English tracks."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Certificate of Admission (CoA)",
+          "description": "Official Certificate of Admission issued by the Korean university president."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Financial Proof ($20,000 USD)",
+          "description": "Bank balance certificate showing at least $20,000 USD held continuously for 1 month."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Tuberculosis (TB) Test Certificate",
+          "description": "Official chest X-ray TB certificate from a Korean Embassy-designated hospital in Dhaka."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Korean D-2 Student Visa",
+          "description": "Official D-2 study visa confirmation letter or passport visa counterfoil."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://overseas.mofa.go.kr/bd-en/brd/m_23302/view.do?seq=2&page=2"
     ]
   },
   {
@@ -1376,16 +1930,6 @@
     "capital": "Budapest",
     "currency": "HUF",
     "currencySymbol": "Ft",
-    "bdtRate": 0.33,
-    "avgTuitionYearBdt": {
-      "min": 350000,
-      "max": 800000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 65000,
-      "max": 95000
-    },
-    "proofOfFundsBdt": 850000,
     "proofOfFundsName": "Bank Solvency & Accommodation Guarantee",
     "partTimeHoursTerm": 24,
     "postStudyWorkYears": "9 months",
@@ -1463,13 +2007,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Proof of Financial Means (Waived for Stipendium Hungaricum)",
-      "amountLocal": "€8,000 EUR (Self-funded only)",
-      "amountBDT": "10.5 Lakh BDT (0 BDT for scholarship holders)",
-      "bdBankProcedure": "Stipendium Hungaricum scholarship recipients require no bank statement. Self-funded students show bank solvency certificate via parent sponsor."
-    },
     "commonFaqs": [
       {
         "question": "How does the Stipendium Hungaricum scholarship work in Bangladesh?",
@@ -1479,6 +2016,69 @@
         "question": "What is the cost of studying in Hungary if self-funded?",
         "answer": "Hungary is one of the most affordable European destinations. Tuition ranges from €2,500 to €5,000 per year, and living costs in Budapest are approximately 60,000 to 90,000 BDT per month."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 1100000,
+        "max": 2400000
+      },
+      "livingMonth": {
+        "min": 200000,
+        "max": 290000
+      },
+      "proofOfFunds": {
+        "amount": 0,
+        "currency": "EUR",
+        "note": "No fixed amount: show enough money for living, housing and return travel"
+      },
+      "note": "Estimates; no official national figures are published."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Proof of Financial Means (Waived for Stipendium Hungaricum)",
+      "bdBankProcedure": "Stipendium Hungaricum scholarship recipients require no bank statement. Self-funded students show bank solvency certificate via parent sponsor."
+    },
+    "site": {
+      "nativeName": "MAGYAR",
+      "tagline": "Stipendium Hungaricum 100% full government scholarship, free dormitory, and Schengen mobility.",
+      "accentColor": "#2b4033",
+      "textColor": "#f0fdf4",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport & MoFA Attestation",
+          "description": "Academic transcripts attested by Bangladesh Education Board and Ministry of Foreign Affairs."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Stipendium Hungaricum Letter of Award",
+          "description": "Official scholarship letter covering 100% tuition fee, monthly stipend, and housing allowance."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "University Acceptance Letter",
+          "description": "Direct admission letter from a Hungarian state university (Debrecen, BME, ELTE, Szeged)."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Scholarship Guarantee or Bank File",
+          "description": "Tempus Foundation scholarship decree or self-funded living account certificate."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Dormitory Address Verification",
+          "description": "Official document proving allocated dormitory accommodation on university campus."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "D-Type Residence Permit Entry Visa",
+          "description": "National D visa sticker issued by the Embassy of Hungary in Dhaka."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://enterhungary.gov.hu/eh/tajekoztato/en/okmanytaulmanyok"
     ]
   },
   {
@@ -1488,16 +2088,6 @@
     "capital": "Rome",
     "currency": "EUR",
     "currencySymbol": "€",
-    "bdtRate": 130,
-    "avgTuitionYearBdt": {
-      "min": 150000,
-      "max": 500000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 85000,
-      "max": 130000
-    },
-    "proofOfFundsBdt": 1100000,
     "proofOfFundsName": "Embassy Bank Solvency (~6,000 EUR/year)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "1 year",
@@ -1574,13 +2164,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Statement / DSU Scholarship Waiver",
-      "amountLocal": "€6,000 EUR/year",
-      "amountBDT": "7.8 Lakh BDT",
-      "bdBankProcedure": "Show minimum €6,000 per academic year in sponsor account. Most students apply for Regional DSU scholarships which waive tuition and pay €5,000-€7,000/year."
-    },
     "commonFaqs": [
       {
         "question": "What are regional DSU scholarships in Italy?",
@@ -1590,6 +2173,69 @@
         "question": "What is the CIMEA comparability certificate for Italy?",
         "answer": "CIMEA is an official verification statement of your academic qualifications required by Italian universities and the Italian Embassy in Dhaka, replacing or supplementing the traditional Declaration of Value (DOV)."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 1200,
+        "max": 3800
+      },
+      "livingMonth": {
+        "min": 848,
+        "max": 1000
+      },
+      "proofOfFunds": {
+        "amount": 10180,
+        "currency": "EUR",
+        "note": "€10,179.85 a year as published by Italian embassies; check the Dhaka embassy's current figure"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Statement / DSU Scholarship Waiver",
+      "bdBankProcedure": "Show minimum €6,000 per academic year in sponsor account. Most students apply for Regional DSU scholarships which waive tuition and pay €5,000-€7,000/year."
+    },
+    "site": {
+      "nativeName": "ITALIA",
+      "tagline": "Regional DSU scholarships up to €8,000/yr, historic world universities, and Universitaly pre-enrollment.",
+      "accentColor": "#1d4734",
+      "textColor": "#f0fdf4",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport & Declaration of Value",
+          "description": "Academic papers attested by MoFA and certified with Dichiarazione di Valore (DoV) or CIMEA."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Universitaly Pre-Enrollment Summary (Summary Sheet)",
+          "description": "Official visa pre-check document validated by the university through Universitaly portal."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "University Admission Letter",
+          "description": "Letter of admission from an accredited Italian public university (Sapienza, Politecnico, Bologna)."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Regional DSU Scholarship / ISEE Parificato",
+          "description": "Family income evaluation (ISEE Parificato) qualifying for free meals, dormitory, and €8,000 stipend."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Bank Solvency Guarantee (€6,079/yr)",
+          "description": "Documented funds accessible in student or sponsor's account proving Italian statutory minimum."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Italian National Student Visa (Type D)",
+          "description": "Long-term D visa foil stamped by the Embassy of Italy in Dhaka."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://ambhanoi.esteri.it/en/italia-e-vietnam/diplomazia-culturale/studiare-in-italia/pre-enrollments-and-student-visas/"
     ]
   },
   {
@@ -1599,16 +2245,6 @@
     "capital": "Paris",
     "currency": "EUR",
     "currencySymbol": "€",
-    "bdtRate": 130,
-    "avgTuitionYearBdt": {
-      "min": 350000,
-      "max": 1200000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 100000,
-      "max": 160000
-    },
-    "proofOfFundsBdt": 1150000,
     "proofOfFundsName": "Consular Bank Solvency (~615 EUR/month)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "1–2 years",
@@ -1686,13 +2322,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Monthly Living Allowance Guarantee",
-      "amountLocal": "€7,380 EUR/year (€615/mo)",
-      "amountBDT": "9.6 Lakh BDT",
-      "bdBankProcedure": "Show bank certificate or irrevocable bank guarantee of at least €615 per month from a sponsor, or scholarship award letter."
-    },
     "commonFaqs": [
       {
         "question": "Are there low-tuition public universities in France?",
@@ -1702,6 +2331,70 @@
         "question": "What is the CAF housing assistance subsidy in France?",
         "answer": "All students in France (including international students) are eligible for CAF (Caisse d Allocations Familiales), a government subsidy that refunds 20% to 40% of your monthly room rent."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 2895,
+        "max": 3941
+      },
+      "livingMonth": {
+        "min": 878,
+        "max": 1200
+      },
+      "proofOfFunds": {
+        "amount": 10530,
+        "currency": "EUR",
+        "note": "€877.50 a month from 1 August 2026 (was €615)"
+      },
+      "note": "From official sources: minimum living cost, tuition range, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Monthly Living Allowance Guarantee",
+      "bdBankProcedure": "Show bank certificate or irrevocable bank guarantee of at least €615 per month from a sponsor, or scholarship award letter."
+    },
+    "site": {
+      "nativeName": "FRANCE",
+      "tagline": "Subsidized public university tuition, CAF government housing aid (up to 40%), and Études en France pre-check.",
+      "accentColor": "#17345f",
+      "textColor": "#f0f7ff",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport & Attestations",
+          "description": "All academic transcripts translated into English or French with consular MoFA seal."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Campus France EEF Acceptance & Interview",
+          "description": "In-person academic interview cleared at Campus France Dhaka (Alliance Française Dhanmondi)."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Attestation d'Admission (Offer Letter)",
+          "description": "Official registration certificate from an accredited French public university or Grande École."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Living Expenses Guarantee (€615/mo)",
+          "description": "Blocked transfer or irrecoverable bank solvency certificate showing at least €7,380 for 1st year."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Attestation d'Hébergement / CROUS Dorm",
+          "description": "Document proving booked student accommodation for the first 3 months in France."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "VLS-TS Student Long-Stay Visa",
+          "description": "Long-stay visa serving as residence permit stamped into passport by French Embassy Dhaka."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.japon.campusfrance.org/fr/modification-du-montant-des-ressources-exigees-pour-les-demandes-de-visa-etudiant-a-compter-du-1er",
+      "https://www.hongkong.campusfrance.org/tuition-fees-in-france-2025-2026"
     ]
   },
   {
@@ -1711,16 +2404,6 @@
     "capital": "Warsaw",
     "currency": "PLN",
     "currencySymbol": "zł",
-    "bdtRate": 30,
-    "avgTuitionYearBdt": {
-      "min": 300000,
-      "max": 650000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 60000,
-      "max": 90000
-    },
-    "proofOfFundsBdt": 900000,
     "proofOfFundsName": "Bank Solvency Certificate (~25,000 PLN)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "9 months",
@@ -1798,13 +2481,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Statement with Living Funds",
-      "amountLocal": "PLN 12,000 - 15,000 PLN",
-      "amountBDT": "4.0 - 5.0 Lakh BDT",
-      "bdBankProcedure": "Show bank account statement covering 1 year living expenses and accommodation costs in Poland."
-    },
     "commonFaqs": [
       {
         "question": "Why do Bangladeshi students choose Poland?",
@@ -1814,6 +2490,69 @@
         "question": "Can international students work in Poland?",
         "answer": "Full-time students in Poland are legally entitled to work without a separate work permit during their studies and semester vacations."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 10000,
+        "max": 22000
+      },
+      "livingMonth": {
+        "min": 1010,
+        "max": 3000
+      },
+      "proofOfFunds": {
+        "amount": 14620,
+        "currency": "PLN",
+        "note": "PLN 1,010 a month for a year plus PLN 2,500 for return travel, before tuition and housing"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Statement with Living Funds",
+      "bdBankProcedure": "Show bank account statement covering 1 year living expenses and accommodation costs in Poland."
+    },
+    "site": {
+      "nativeName": "POLSKA",
+      "tagline": "Low tuition fees in the European Union, full Schengen mobility, and straightforward NAWA recognition.",
+      "accentColor": "#7e1a24",
+      "textColor": "#fff5f5",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport & Sworn Translation",
+          "description": "Educational documents legalized by MoFA and translated by a Polish sworn translator."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "NAWA Recognition Certificate",
+          "description": "Secondary school certificate eligibility confirmation issued by NAWA or Polish Kuratorium."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "University Acceptance Letter (Zaswiadczenie)",
+          "description": "Official certificate confirming admission into full-time studies at a Polish university."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Tuition Fee Payment Proof (€2,000–€3,500)",
+          "description": "Bank transfer confirmation proving 1st year tuition fee fully received by the university."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Living Maintenance Funds (PLN 776/mo)",
+          "description": "Bank statement demonstrating sufficient funds for return flight, accommodation, and maintenance."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "National D-Type Student Visa",
+          "description": "Long-term D-type visa sticker issued for higher education studies in Poland."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://migrant.poznan.uw.gov.pl/en/slownik-pojec/sufficient-financial-resources-student"
     ]
   },
   {
@@ -1823,16 +2562,6 @@
     "capital": "Wellington",
     "currency": "NZD",
     "currencySymbol": "NZ$",
-    "bdtRate": 72,
-    "avgTuitionYearBdt": {
-      "min": 2100000,
-      "max": 4200000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 130000,
-      "max": 180000
-    },
-    "proofOfFundsBdt": 2100000,
     "proofOfFundsName": "Immigration New Zealand Funds (~20,000 NZD/year)",
     "partTimeHoursTerm": 20,
     "postStudyWorkYears": "Up to 3 years",
@@ -1910,13 +2639,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Funds Verification or FTS (Funds Transfer Scheme)",
-      "amountLocal": "NZD ,000/year",
-      "amountBDT": "14.5 Lakh BDT",
-      "bdBankProcedure": "Show 6-month genuine savings or transfer living expenses into ANZ Bank New Zealand Funds Transfer Scheme (FTS) via Bangladeshi student file."
-    },
     "commonFaqs": [
       {
         "question": "What are the post-study work rights in New Zealand?",
@@ -1926,6 +2648,69 @@
         "question": "What is the Funds Transfer Scheme (FTS) for New Zealand visas from Bangladesh?",
         "answer": "FTS allows students to transfer their living funds (NZD ,000) into an ANZ Bank account in New Zealand. The funds are locked and released in monthly instalments of ,666, serving as proof of genuine financial capacity."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 29000,
+        "max": 58000
+      },
+      "livingMonth": {
+        "min": 1667,
+        "max": 2500
+      },
+      "proofOfFunds": {
+        "amount": 20000,
+        "currency": "NZD",
+        "note": "For each year of study, on top of tuition"
+      },
+      "note": "From official sources: minimum living cost, proof of funds. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Funds Verification or FTS (Funds Transfer Scheme)",
+      "bdBankProcedure": "Show 6-month genuine savings or transfer living expenses into ANZ Bank New Zealand Funds Transfer Scheme (FTS) via Bangladeshi student file."
+    },
+    "site": {
+      "nativeName": "AOTEAROA",
+      "tagline": "Top 3% world-ranked universities, post-study work rights up to 3 years, and peaceful living environment.",
+      "accentColor": "#15354b",
+      "textColor": "#f0fdfa",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Bangladeshi Passport & Police Certificate",
+          "description": "Machine-readable passport valid for study period plus clean police clearance."
+        },
+        {
+          "icon": "ielts",
+          "subtitle": "IELTS / PTE Academic (6.0+)",
+          "description": "English score meeting Immigration New Zealand student visa threshold."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Unconditional Offer of a Place",
+          "description": "Official Letter of Offer from a New Zealand university or Te Pūkenga institute."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Tuition Fee Escrow / Payment Receipt",
+          "description": "Receipt of 1st year tuition fee or approval in principle (AIP) escrow transfer."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Living Expense Funds ($20,000 NZD/yr)",
+          "description": "Documented funds held in an Authorized Dealer bank or FTS student fund transfer scheme."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "Fee Paying Student Visa Grant",
+          "description": "Electronic visa approval letter issued by Immigration New Zealand."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/student-fund-requirements/"
     ]
   },
   {
@@ -1935,16 +2720,6 @@
     "capital": "Beijing",
     "currency": "CNY",
     "currencySymbol": "¥",
-    "bdtRate": 17,
-    "avgTuitionYearBdt": {
-      "min": 300000,
-      "max": 700000
-    },
-    "avgMonthlyLivingBdt": {
-      "min": 50000,
-      "max": 80000
-    },
-    "proofOfFundsBdt": 750000,
     "proofOfFundsName": "Bank Statement & Health Physical Examination",
     "partTimeHoursTerm": 0,
     "postStudyWorkYears": "1–2 years",
@@ -2022,13 +2797,6 @@
         ]
       }
     ],
-    "blockedAccountInfo": {
-      "required": false,
-      "providerName": "Bank Solvency (Waived for CSC Scholarship)",
-      "amountLocal": "¥20,000 - 30,000 RMB",
-      "amountBDT": "3.5 - 5.5 Lakh BDT (0 BDT for CSC recipients)",
-      "bdBankProcedure": "Government scholarship winners are exempt. Self-funded students provide sponsor bank solvency certificate of 3.5 - 5 Lakh BDT."
-    },
     "commonFaqs": [
       {
         "question": "What scholarships are available for Bangladeshi students in China?",
@@ -2038,6 +2806,69 @@
         "question": "Are programs in China taught in English?",
         "answer": "Yes, thousands of programs in engineering, medicine (MBBS), computer science, and international trade are offered 100% in English."
       }
+    ],
+    "costs": {
+      "tuitionYear": {
+        "min": 18000,
+        "max": 41000
+      },
+      "livingMonth": {
+        "min": 3000,
+        "max": 4700
+      },
+      "proofOfFunds": {
+        "amount": 0,
+        "currency": "CNY",
+        "note": "No fixed amount; not needed for CSC scholarship holders"
+      },
+      "note": "From official sources: minimum living cost. Other figures are estimates."
+    },
+    "blockedAccountInfo": {
+      "required": false,
+      "providerName": "Bank Solvency (Waived for CSC Scholarship)",
+      "bdBankProcedure": "Government scholarship winners are exempt. Self-funded students provide sponsor bank solvency certificate of 3.5 - 5 Lakh BDT."
+    },
+    "site": {
+      "nativeName": "ZHONGGUO",
+      "tagline": "Chinese Government CSC full scholarships, Belt & Road initiative grants, and world-class STEM labs.",
+      "accentColor": "#801b1b",
+      "textColor": "#fff5f5",
+      "steps": [
+        {
+          "icon": "passport",
+          "subtitle": "Valid Passport & Physical Examination",
+          "description": "Passport valid for 18+ months and Foreigner Physical Examination Form with hospital seal."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Chinese Government Scholarship (CSC Award)",
+          "description": "CSC scholarship award covering tuition, accommodation, and monthly stipend."
+        },
+        {
+          "icon": "offer",
+          "subtitle": "Original Admission Notice",
+          "description": "Official Admission Notice issued and stamped with red seal by the Chinese university."
+        },
+        {
+          "icon": "attestation",
+          "subtitle": "Official JW201 / JW202 Visa Application Form",
+          "description": "Official visa authorization form issued by the Chinese Ministry of Education."
+        },
+        {
+          "icon": "solvency",
+          "subtitle": "Financial Guarantee or CSC Stipend Certificate",
+          "description": "CSC scholarship award guarantee or bank statement showing living funds."
+        },
+        {
+          "icon": "visa",
+          "subtitle": "X1 Long-Term Student Visa",
+          "description": "X1 study visa sticker affixed by the Chinese Embassy in Dhaka for over 180 days study."
+        }
+      ]
+    },
+    "lastChecked": null,
+    "sources": [
+      "https://campuschina.org/content/details3_74776.html"
     ]
   }
 ]
